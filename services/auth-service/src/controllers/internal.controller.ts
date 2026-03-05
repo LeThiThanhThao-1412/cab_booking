@@ -41,7 +41,18 @@ export class InternalController {
     };
   }
 
+  @Post('drivers/:userId/approve')
+  @HttpCode(HttpStatus.OK)
+  async approveDriver(
+    @Param('userId') userId: string,
+  ): Promise<{ message: string }> {
 
+    await this.authService.approveDriver(userId);
+
+    return {
+      message: 'Driver approved successfully',
+    };
+  }
   @Get('health')
   health() {
     return {

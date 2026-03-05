@@ -15,10 +15,10 @@ async function bootstrap() {
     transform: true,
   }));
   
-  const port = process.env.PORT || 3003;
+  const port = process.env.PORT || 3001;
   await app.listen(port);
   
-  console.log(`✅ Auth service is running on http://localhost:${port}/api/v1/drivers`);
+  console.log(`✅ Auth service is running on http://localhost:${port}/api/v1/auth`);
 }
 
 bootstrap();

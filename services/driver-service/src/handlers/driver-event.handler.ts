@@ -6,7 +6,7 @@ import {
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RabbitMQService } from '@cab-booking/shared';
-import { Driver } from '../entities/driver.entity';
+import { Driver, DriverStatus } from '../entities/driver.entity';
 
 @Injectable()
 export class DriverEventHandler implements OnModuleInit {
@@ -22,7 +22,7 @@ export class DriverEventHandler implements OnModuleInit {
     await this.subscribeToEvents();
   }
 
-  private async subscribeToEvents() {
+  async subscribeToEvents() {
     try {
       await this.rabbitMQService.subscribe(
         'driver-service.queue',
@@ -30,8 +30,8 @@ export class DriverEventHandler implements OnModuleInit {
           await this.handleEvent(msg);
         },
         {
-          exchange: 'auth.events',
-          routingKey: 'auth.user.registered',
+          exchange: 'driver.exchange',
+          routingKey: 'driver.approved',
         },
       );
 
@@ -42,12 +42,32 @@ export class DriverEventHandler implements OnModuleInit {
       );
     }
   }
-
+  
   private async handleEvent(event: any) {
-    this.logger.log(
-      `Processing event: ${JSON.stringify(event)}`,
-    );
+    this.logger.log(`Processing event: ${JSON.stringify(event)}`);
 
-    // xử lý event tại đây nếu cần
+    const { userId, email, fullName, phone } = event;
+
+    const existingDriver = await this.driverRepository.findOne({
+      where: { userId },
+    });
+
+    if (existingDriver) {
+      this.logger.warn(`Driver already exists for userId: ${userId}`);
+      return;
+    }
+
+    const driver = this.driverRepository.create({
+      userId,
+      email,
+      fullName,
+      phone,
+      status: DriverStatus.ACTIVE,
+    });
+
+    await this.driverRepository.save(driver);
+
+    this.logger.log(`✅ Driver created for userId: ${userId}`);
   }
+  
 }

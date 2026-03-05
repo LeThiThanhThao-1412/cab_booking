@@ -4,7 +4,6 @@ import { Repository } from 'typeorm';
 import { RedisService } from '@cab-booking/shared';
 import { Driver, DriverStatus } from '../entities/driver.entity';
 import { UpdateDriverDto, DriverLocationDto, DriverResponseDto } from '../dto/driver.dto';
-import { NearbyDriverDto } from '../dto/driver.dto';
 
 @Injectable()
 export class DriverService {
@@ -37,7 +36,19 @@ export class DriverService {
       } : null,
     } as DriverResponseDto;
   }
+  async createDriver(data: any) {
+    const driver = this.driverRepository.create({
+      userId: data.userId,
+      email: data.email,
+      fullName: data.fullName,
+      phone: data.phone,
+      status: DriverStatus.OFFLINE,
+    });
 
+    return this.driverRepository.save(driver);
+  }
+
+    
   async updateDriver(userId: string, updateDto: UpdateDriverDto): Promise<DriverResponseDto> {
     const driver = await this.driverRepository.findOne({
       where: { userId },
@@ -54,20 +65,27 @@ export class DriverService {
   }
 
   async updateLocation(userId: string, locationDto: DriverLocationDto): Promise<void> {
-    // Lưu vào Redis GEO
+    // 1. Lưu vào Redis GEO (cho tìm kiếm gần nhất)
     await this.redisService.setDriverLocation(
       userId,
       locationDto.latitude,
       locationDto.longitude,
     );
 
-    // Cập nhật lastActive
+    // 2. Cập nhật currentLocation trong PostgreSQL (cho lưu trữ)
     await this.driverRepository.update(
       { userId },
-      { lastActiveAt: new Date() },
+      { 
+        currentLocation: {
+          lat: locationDto.latitude,
+          lng: locationDto.longitude,
+          updatedAt: new Date(),
+        },
+        lastActiveAt: new Date() 
+      },
     );
 
-    this.logger.debug(`📍 Driver ${userId} location updated`);
+    this.logger.debug(`📍 Driver ${userId} location updated in Redis and PostgreSQL`);
   }
 
   async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
@@ -102,43 +120,81 @@ export class DriverService {
 
     return driver as DriverResponseDto;
   }
+  
 
   async findNearbyDrivers(
-    latitude: number,
-    longitude: number,
-    radius: number = 5000,
-  ): Promise<NearbyDriverDto[]> {
-    // Tìm tài xế gần nhất trong Redis
+  latitude: number,
+  longitude: number,
+  radius: number = 5000,
+): Promise<any[]> {
+  try {
+    this.logger.log(`Finding nearby drivers at (${latitude}, ${longitude}) within ${radius}m`);
+
+    // 1. Tìm tài xế gần nhất trong Redis GEO
     const nearbyDrivers = await this.redisService.getNearbyDrivers(
       latitude,
       longitude,
       radius,
     );
 
-    // Lọc chỉ lấy tài xế đang active
-    const activeDrivers: NearbyDriverDto[] = [];
-    for (const { driverId, distance } of nearbyDrivers) {
-      const driver = await this.driverRepository.findOne({
-        where: { 
-          userId: driverId,
-          status: DriverStatus.ACTIVE,
-        },
-      });
+    this.logger.log(`Found ${nearbyDrivers.length} drivers in Redis`);
 
-      if (driver) {
-        activeDrivers.push({
-          driverId: driver.userId,
-          fullName: driver.fullName,
-          vehicleType: driver.vehicleType,
-          vehicleModel: driver.vehicleModel,
-          vehicleColor: driver.vehicleColor,
-          vehiclePlate: driver.vehiclePlate,
-          rating: driver.rating,
-          distance: Math.round(distance / 1000 * 10) / 10, // Convert to km
-        });
-      }
+    if (nearbyDrivers.length === 0) {
+      this.logger.log('No drivers found in Redis');
+      return []; // Trả về mảng rỗng, không throw error
     }
 
-    return activeDrivers;
+    // 2. Lấy thông tin chi tiết của các tài xế từ PostgreSQL
+    const driverIds = nearbyDrivers.map(d => d.driverId);
+    
+    const drivers = await this.driverRepository
+      .createQueryBuilder('driver')
+      .where('driver.userId IN (:...driverIds)', { driverIds })
+      .andWhere('driver.status = :status', { status: DriverStatus.ACTIVE })
+      .getMany();
+
+    this.logger.log(`Found ${drivers.length} active drivers in database`);
+
+    // 3. Kết hợp thông tin từ Redis và PostgreSQL
+    const result = drivers.map(driver => {
+      const redisInfo = nearbyDrivers.find(d => d.driverId === driver.userId);
+      return {
+        driverId: driver.userId,
+        fullName: driver.fullName,
+        vehicleType: driver.vehicleType,
+        vehicleModel: driver.vehicleModel,
+        vehicleColor: driver.vehicleColor,
+        vehiclePlate: driver.vehiclePlate,
+        rating: driver.rating,
+        distance: redisInfo ? redisInfo.distance : null, // Trả về meters
+      };
+    });
+
+    // Sắp xếp theo khoảng cách tăng dần
+    return result.sort((a, b) => (a.distance || 0) - (b.distance || 0));
+  } catch (error) {
+    this.logger.error(`Error finding nearby drivers: ${error.message}`);
+    return []; // Luôn trả về mảng rỗng thay vì throw
+  }
+}
+  async getOnlineDriversCount(): Promise<number> {
+    try {
+      const redisClient = this.redisService.getClient();
+      const count = await redisClient.zcard('driver:locations');
+      this.logger.log(`Online drivers count: ${count}`);
+      return count;
+    } catch (error) {
+      this.logger.error(`Error getting online drivers count: ${error.message}`);
+      return 0;
+    }
+  }
+
+  async isDriverOnline(userId: string): Promise<boolean> {
+    try {
+      const location = await this.redisService.getDriverLocation(userId);
+      return location !== null;
+    } catch (error) {
+      return false;
+    }
   }
 }

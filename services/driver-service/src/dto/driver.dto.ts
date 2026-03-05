@@ -67,7 +67,7 @@ export class DriverResponseDto {
   phone: string;
   avatar: string;
   status: string;
-  vehicleType: VehicleType;
+  vehicleType: string;
   vehicleModel: string;
   vehicleColor: string;
   vehiclePlate: string;
@@ -81,14 +81,4 @@ export class DriverResponseDto {
   lastActiveAt: Date;
   createdAt: Date;
   updatedAt: Date;
-}
-export class NearbyDriverDto {
-  driverId: string;
-  fullName: string;
-  vehicleType: VehicleType;
-  vehicleModel: string;
-  vehicleColor: string;
-  vehiclePlate: string;
-  rating: number;
-  distance: number;
 }

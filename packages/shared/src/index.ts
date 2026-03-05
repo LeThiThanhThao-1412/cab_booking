@@ -4,6 +4,7 @@ export * from './rabbitmq/rabbitmq.service';
 
 // Database
 export * from './database/postgres/postgres.module';
+export * from './database/mongodb/mongodb.module';  // Thêm dòng này
 
 // Redis
 export * from './redis/redis.module';

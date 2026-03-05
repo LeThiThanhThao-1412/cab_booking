@@ -12,18 +12,15 @@ import { UpdateDriverDto, DriverLocationDto, UpdateStatusDto, DriverResponseDto 
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 
 @Controller('drivers')
+@UseGuards(JwtAuthGuard)
 export class DriverController {
   constructor(private readonly driverService: DriverService) {}
 
-  // Driver phải login
-  @UseGuards(JwtAuthGuard)
   @Get('profile')
   async getProfile(@Request() req): Promise<DriverResponseDto> {
     return this.driverService.getDriverByUserId(req.user.sub);
   }
 
-  // Driver phải login
-  @UseGuards(JwtAuthGuard)
   @Patch('profile')
   async updateProfile(
     @Request() req,
@@ -32,8 +29,6 @@ export class DriverController {
     return this.driverService.updateDriver(req.user.sub, updateDto);
   }
 
-  // Driver phải login
-  @UseGuards(JwtAuthGuard)
   @Patch('location')
   async updateLocation(
     @Request() req,
@@ -43,8 +38,6 @@ export class DriverController {
     return { message: 'Location updated successfully' };
   }
 
-  // Driver phải login
-  @UseGuards(JwtAuthGuard)
   @Patch('status')
   async updateStatus(
     @Request() req,
@@ -53,7 +46,6 @@ export class DriverController {
     return this.driverService.updateStatus(req.user.sub, statusDto.status);
   }
 
-  // PUBLIC API
   @Get('nearby')
   async findNearbyDrivers(
     @Query('lat') latitude: number,
@@ -61,9 +53,9 @@ export class DriverController {
     @Query('radius') radius?: number,
   ) {
     return this.driverService.findNearbyDrivers(
-      Number(latitude),
-      Number(longitude),
-      radius ? Number(radius) : 5000,
+      latitude,
+      longitude,
+      radius ? parseInt(radius as any) : 5000,
     );
   }
 }
