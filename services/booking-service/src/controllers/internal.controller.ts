@@ -3,6 +3,8 @@ import {
   Get, 
   Param, 
   UseGuards,
+  Patch,
+  Body
 } from '@nestjs/common';
 import { InternalAuthGuard } from '@cab-booking/shared';
 import { BookingService } from '../services/booking.service';
@@ -11,6 +13,16 @@ import { BookingService } from '../services/booking.service';
 @UseGuards(InternalAuthGuard)
 export class InternalController {
   constructor(private readonly bookingService: BookingService) {}
+
+  // THÊM HÀM NÀY VÀO ĐÂY
+  @Patch('bookings/:id/assign-driver')
+  async assignDriver(
+    @Param('id') id: string,
+    @Body() data: { driverId: string, eta: number }
+  ) {
+    // Gọi sang service để xử lý logic update DB
+    return this.bookingService.assignDriver(id, data.driverId, data.eta);
+  }
 
   @Get('bookings/:id')
   async getBooking(@Param('id') id: string) {

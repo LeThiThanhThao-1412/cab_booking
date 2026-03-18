@@ -21,7 +21,7 @@ export class RedisService implements OnModuleDestroy {
       port: config.port,
       password: config.password,
       db: config.db || 0,
-      keyPrefix: config.keyPrefix || 'cab:',
+      keyPrefix: '', // Không dùng prefix vì đã có trong GEO_KEY
       retryStrategy: (times) => {
         const delay = Math.min(times * 50, 2000);
         return delay;
@@ -56,12 +56,15 @@ export class RedisService implements OnModuleDestroy {
     longitude: number,
   ): Promise<boolean> {
     try {
+      // GEOADD key longitude latitude member
       const result = await this.redisClient.geoadd(
         this.GEO_KEY,
         longitude,
         latitude,
-        driverId,
+        driverId
       );
+      
+      this.logger.debug(`📍 Driver ${driverId} location saved: ${result > 0 ? 'updated' : 'added'}`);
       return result > 0;
     } catch (error) {
       this.logger.error(`Error setting driver location: ${error.message}`);
@@ -72,8 +75,43 @@ export class RedisService implements OnModuleDestroy {
   /**
    * Lấy vị trí hiện tại của tài xế
    */
+  
+  /**
+   * Tìm tài xế gần nhất trong bán kính (meters)
+   */
+  async getNearbyDrivers(
+    latitude: number,
+    longitude: number,
+    radius: number = 5000,
+    unit: 'm' | 'km' = 'm'
+  ): Promise<Array<{ driverId: string; distance: number }>> {
+    try {
+      // GEORADIUS key longitude latitude radius unit WITHDIST
+      const results = await this.redisClient.georadius(
+        this.GEO_KEY,
+        longitude,
+        latitude,
+        radius,
+        unit,
+        'WITHDIST'
+      );
+
+      if (!results || results.length === 0) {
+        return [];
+      }
+
+      return results.map((item: any) => ({
+        driverId: item[0],
+        distance: parseFloat(item[1]),
+      }));
+    } catch (error) {
+      this.logger.error(`Error getting nearby drivers: ${error.message}`);
+      return [];
+    }
+  }
   async getDriverLocation(driverId: string): Promise<{ lat: number; lng: number } | null> {
     try {
+      // GEOPOS key member
       const result = await this.redisClient.geopos(this.GEO_KEY, driverId);
       if (result && result[0]) {
         const [lng, lat] = result[0].map(coord => parseFloat(coord));
@@ -85,41 +123,12 @@ export class RedisService implements OnModuleDestroy {
       return null;
     }
   }
-
-  /**
-   * Tìm tài xế gần nhất trong bán kính (meters)
-   */
-  async getNearbyDrivers(
-    latitude: number,
-    longitude: number,
-    radius: number = 5000, // default 5km
-    unit: 'm' | 'km' = 'm',
-  ): Promise<Array<{ driverId: string; distance: number }>> {
-    try {
-      const result = await this.redisClient.georadius(
-        this.GEO_KEY,
-        longitude,
-        latitude,
-        radius,
-        unit,
-        'WITHDIST',
-      );
-
-      return result.map((item: any) => ({
-        driverId: item[0],
-        distance: parseFloat(item[1]),
-      }));
-    } catch (error) {
-      this.logger.error(`Error getting nearby drivers: ${error.message}`);
-      return [];
-    }
-  }
-
   /**
    * Xóa vị trí tài xế (khi offline)
    */
   async removeDriverLocation(driverId: string): Promise<boolean> {
     try {
+      // ZREM key member
       const result = await this.redisClient.zrem(this.GEO_KEY, driverId);
       return result > 0;
     } catch (error) {

@@ -20,6 +20,7 @@ import {
   BookingResponseDto,
 } from '../dto/booking.dto';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+import { InternalAuthGuard } from '@cab-booking/shared/dist/guards/internal-auth.guard';
 
 @Controller('bookings')
 @UseGuards(JwtAuthGuard)
@@ -81,5 +82,19 @@ export class BookingController {
   ): Promise<void> {
     // Driver cập nhật vị trí
     await this.bookingService.updateLocation(id, req.user.sub, locationDto.location);
+  }
+  @Patch(':id/assign-driver')
+  @UseGuards(InternalAuthGuard)
+  async assignDriver(
+    @Param('id') id: string,
+    @Body() body: { driverId: string },
+  ) {
+    return this.bookingService.assignDriver(id, body.driverId);
+  }
+
+  @Patch(':id/no-driver')
+  @UseGuards(InternalAuthGuard)
+  async noDriverFound(@Param('id') id: string) {
+    return this.bookingService.updateStatus(id, { status: 'no_driver' });
   }
 }

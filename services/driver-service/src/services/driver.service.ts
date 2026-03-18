@@ -65,61 +65,72 @@ export class DriverService {
   }
 
   async updateLocation(userId: string, locationDto: DriverLocationDto): Promise<void> {
-    // 1. Lưu vào Redis GEO (cho tìm kiếm gần nhất)
-    await this.redisService.setDriverLocation(
-      userId,
-      locationDto.latitude,
-      locationDto.longitude,
-    );
+  // 1. Lưu vào Redis GEO
+  await this.redisService.setDriverLocation(
+    userId,
+    locationDto.latitude,
+    locationDto.longitude,
+  );
 
-    // 2. Cập nhật currentLocation trong PostgreSQL (cho lưu trữ)
-    await this.driverRepository.update(
-      { userId },
-      { 
-        currentLocation: {
-          lat: locationDto.latitude,
-          lng: locationDto.longitude,
-          updatedAt: new Date(),
-        },
-        lastActiveAt: new Date() 
+  // 2. Lưu driver status vào Redis
+  const redisClient = this.redisService.getClient();
+  await redisClient.setex(
+    `driver:status:${userId}`,
+    3600, // 1 hour
+    'online'
+  );
+
+  // 3. Cập nhật trong PostgreSQL
+  await this.driverRepository.update(
+    { userId },
+    { 
+      currentLocation: {
+        lat: locationDto.latitude,
+        lng: locationDto.longitude,
+        updatedAt: new Date(),
       },
-    );
+      lastActiveAt: new Date() 
+    },
+  );
 
-    this.logger.debug(`📍 Driver ${userId} location updated in Redis and PostgreSQL`);
+  this.logger.log(`📍 Driver ${userId} location updated in Redis GEO`);
+}
+
+async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
+  const driver = await this.driverRepository.findOne({
+    where: { userId },
+  });
+
+  if (!driver) {
+    throw new NotFoundException('Driver not found');
   }
 
-  async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
-    const driver = await this.driverRepository.findOne({
-      where: { userId },
-    });
+  let newStatus: DriverStatus;
+  const redisClient = this.redisService.getClient();
 
-    if (!driver) {
-      throw new NotFoundException('Driver not found');
-    }
-
-    // Map status từ request sang DriverStatus
-    let newStatus: DriverStatus;
-    switch (status) {
-      case 'online':
-        newStatus = DriverStatus.ACTIVE;
-        break;
-      case 'offline':
-        newStatus = DriverStatus.OFFLINE;
-        // Xóa location khỏi Redis khi offline
-        await this.redisService.removeDriverLocation(userId);
-        break;
-      case 'busy':
-        newStatus = DriverStatus.BUSY;
-        break;
-      default:
-        newStatus = driver.status;
-    }
-
-    driver.status = newStatus;
-    await this.driverRepository.save(driver);
-
-    return driver as DriverResponseDto;
+  switch (status) {
+    case 'online':
+      newStatus = DriverStatus.ACTIVE;
+      await redisClient.setex(`driver:status:${userId}`, 3600, 'online');
+      break;
+    case 'offline':
+      newStatus = DriverStatus.OFFLINE;
+      await redisClient.del(`driver:status:${userId}`);
+      await this.redisService.removeDriverLocation(userId); // Xóa khỏi GEO
+      break;
+    case 'busy':
+      newStatus = DriverStatus.BUSY;
+      await redisClient.setex(`driver:status:${userId}`, 3600, 'busy');
+      break;
+    default:
+      newStatus = driver.status;
   }
+
+  driver.status = newStatus;
+  await this.driverRepository.save(driver);
+
+  return driver as DriverResponseDto;
+}
   
 
   async findNearbyDrivers(
