@@ -7,13 +7,13 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api/v1');
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }));
-  app.enableCors({ origin: '*', credentials: true });
+  app.enableCors();
 
-  const port = process.env.PORT || 3005;
+  const port = process.env.PORT || 3007;
   await app.listen(port);
 
-  console.log(`✅ Ride service running on http://localhost:${port}/api/v1/rides`);
-  console.log(`📡 WebSocket: ws://localhost:${port}/rides`);
+  console.log(`✅ Payment service running on http://localhost:${port}/api/v1/payments`);
+  console.log(`📡 Saga pattern enabled for distributed transactions`);
 }
 
 bootstrap();

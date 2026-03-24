@@ -1,6 +1,21 @@
 import { IsString, IsNumber, IsEnum, IsOptional, IsLatitude, IsLongitude, Min, Max } from 'class-validator';
 import { RideStatus } from '../schemas/ride.schema';
 
+export class LocationDto {
+  @IsLatitude()
+  lat: number;
+
+  @IsLongitude()
+  lng: number;
+
+  @IsString()
+  address: string;
+
+  @IsOptional()
+  @IsString()
+  name?: string;
+}
+
 export class UpdateLocationDto {
   @IsLatitude()
   lat: number;
@@ -19,6 +34,11 @@ export class UpdateLocationDto {
   @Min(0)
   @Max(360)
   heading?: number;
+
+  @IsOptional()
+  @IsNumber()
+  @Min(0)
+  accuracy?: number;
 }
 
 export class UpdateStatusDto {
@@ -27,7 +47,7 @@ export class UpdateStatusDto {
 
   @IsOptional()
   @IsString()
-  reason?: string;  // Lý do hủy
+  reason?: string;
 }
 
 export class RateRideDto {
@@ -41,18 +61,43 @@ export class RateRideDto {
   feedback?: string;
 }
 
+// Thêm DTO cho Rating
+export class RatingDto {
+  @IsOptional()
+  @IsNumber()
+  @Min(1)
+  @Max(5)
+  customerRating?: number;
+
+  @IsOptional()
+  @IsNumber()
+  @Min(1)
+  @Max(5)
+  driverRating?: number;
+
+  @IsOptional()
+  @IsString()
+  customerFeedback?: string;
+
+  @IsOptional()
+  @IsString()
+  driverFeedback?: string;
+}
+
 export class RideResponseDto {
   id: string;
   bookingId: string;
   customerId: string;
   driverId: string;
-  pickupLocation: any;
-  dropoffLocation: any;
-  waypoints: any[];
+  pickupLocation: LocationDto;
+  dropoffLocation: LocationDto;
+  waypoints: LocationDto[];
   status: string;
   price: any;
   distance: number;
   duration: number;
+  estimatedDuration?: number;
+  estimatedDistance?: number;
   driverAcceptedAt?: Date;
   driverArrivedAt?: Date;
   rideStartedAt?: Date;
@@ -60,6 +105,7 @@ export class RideResponseDto {
   trackingPath: any[];
   cancellation?: any;
   isPaid: boolean;
+  rating?: RatingDto;  // THÊM DÒNG NÀY
   createdAt: Date;
   updatedAt: Date;
 }

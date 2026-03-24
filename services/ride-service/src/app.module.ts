@@ -1,11 +1,8 @@
-import { Module } from '@nestjs/common';
+import { Module, forwardRef } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
-import {
-  RabbitMQModule,
-  RedisModule,
-} from '@cab-booking/shared';
+import { RabbitMQModule, RedisModule } from '@cab-booking/shared';
 import { RideController } from './controllers/ride.controller';
 import { InternalController } from './controllers/internal.controller';
 import { RideService } from './services/ride.service';
@@ -15,12 +12,7 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Ride.name, schema: RideSchema }]),
-    ConfigModule.forRoot({
-      isGlobal: true,
-      envFilePath: '.env',
-    }),
-
+    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
@@ -29,8 +21,6 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       }),
       inject: [ConfigService],
     }),
-
-    // MongoDB
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
@@ -39,22 +29,14 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       }),
       inject: [ConfigService],
     }),
-
     MongooseModule.forFeature([{ name: Ride.name, schema: RideSchema }]),
-
-    // RabbitMQ
     RabbitMQModule.forRoot({
       urls: [process.env.RABBITMQ_URL || 'amqp://admin:password123@localhost:5672'],
     }),
-
-    // Redis
     RedisModule.forRoot(),
   ],
   controllers: [RideController, InternalController],
-  providers: [
-    RideService,
-    RideGateway,
-    JwtAuthGuard,
-  ],
+  providers: [RideService, RideGateway, JwtAuthGuard],
+  exports: [RideService, RideGateway],
 })
 export class AppModule {}

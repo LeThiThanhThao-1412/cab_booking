@@ -1,4 +1,4 @@
-import { Injectable, Logger, NotFoundException, BadRequestException } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException, BadRequestException, Inject, forwardRef, OnModuleInit } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { RedisService, RabbitMQService } from '@cab-booking/shared';
@@ -6,12 +6,12 @@ import { ConfigService } from '@nestjs/config';
 import { Ride, RideDocument, RideStatus } from '../schemas/ride.schema';
 import { UpdateLocationDto, UpdateStatusDto, RateRideDto, RideResponseDto } from '../dto/ride.dto';
 import { RideGateway } from '../gateways/ride.gateway';
-import { Inject, forwardRef } from '@nestjs/common';
 
 @Injectable()
-export class RideService {
+export class RideService implements OnModuleInit {
   private readonly logger = new Logger(RideService.name);
   private readonly LOCATION_EXPIRY = 3600; // 1 hour
+  private isSubscribed = false;
 
   constructor(
     @InjectModel(Ride.name) private rideModel: Model<RideDocument>,
@@ -20,134 +20,185 @@ export class RideService {
     private configService: ConfigService,
     @Inject(forwardRef(() => RideGateway))
     private rideGateway: RideGateway,
-  ) {
-    //this.subscribeToEvents();
-  }
+  ) {}
+
   async onModuleInit() {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    await this.subscribeWithRetry();
+  }
+
+  async subscribeWithRetry(retryCount = 0) {
+    const maxRetries = 10;
+    const retryDelay = 5000;
+
+    if (this.isSubscribed) {
+      this.logger.log('Already subscribed to events');
+      return;
+    }
+
     try {
       await this.subscribeToEvents();
-      this.logger.log('✅ RideService RabbitMQ subscriptions initialized');
+      this.isSubscribed = true;
+      this.logger.log('✅ Successfully subscribed to events');
     } catch (error) {
-      this.logger.error(`❌ Failed to initialize RabbitMQ subscriptions: ${error.message}`);
+      if (retryCount < maxRetries) {
+        this.logger.warn(`Failed to subscribe to events (attempt ${retryCount + 1}/${maxRetries}): ${error.message}`);
+        setTimeout(() => this.subscribeWithRetry(retryCount + 1), retryDelay);
+      } else {
+        this.logger.error(`Failed to subscribe to events after ${maxRetries} attempts.`);
+      }
     }
   }
+
   async subscribeToEvents() {
-    // Lắng nghe event booking.accepted từ booking-service
-    await this.rabbitMQService.subscribe(
-      'ride-service.queue',
-      async (msg: any) => {
-        await this.handleBookingAccepted(msg);
-      },
-      {
-        exchange: 'booking.events',
-        routingKey: 'booking.accepted',
-      },
-    );
+    try {
+      const channel = this.rabbitMQService['channel'];
+      if (!channel) {
+        throw new Error('RabbitMQ channel is not available');
+      }
 
-    // Lắng nghe event payment.completed từ payment-service
-    await this.rabbitMQService.subscribe(
-      'ride-service.queue',
-      async (msg: any) => {
-        await this.handlePaymentCompleted(msg);
-      },
-      {
-        exchange: 'payment.events',
-        routingKey: 'payment.completed',
-      },
-    );
+      this.logger.log('Subscribing to booking.accepted events...');
+      
+      await this.rabbitMQService.subscribe(
+        'ride-service.queue',
+        async (msg: any) => {
+          this.logger.debug(`Received message: ${JSON.stringify(msg)}`);
+          await this.handleBookingAccepted(msg);
+        },
+        {
+          exchange: 'booking.events',
+          routingKey: 'booking.accepted',
+        },
+      );
 
-    this.logger.log('✅ Subscribed to events');
+      this.logger.log('✅ Subscribed to booking.accepted events');
+    } catch (error) {
+      this.logger.error(`Failed to subscribe: ${error.message}`);
+      throw error;
+    }
   }
 
   async handleBookingAccepted(event: any) {
-    this.logger.log(`Processing booking.accepted event: ${JSON.stringify(event)}`);
+    this.logger.log(`Processing booking.accepted: ${JSON.stringify(event)}`);
 
     try {
-      // 1. Dữ liệu thực tế thường nằm trực tiếp trong event hoặc trong event.data
-      const payload = event.data || event;
+      const data = event.data || event;
+      const { 
+        bookingId, 
+        customerId, 
+        driverId, 
+        pickupLocation, 
+        dropoffLocation, 
+        distance, 
+        eta,
+        price 
+      } = data;
 
-      // 2. Bóc tách dữ liệu (Lưu ý: Booking Service gửi 'id', không phải 'bookingId')
-      const {
-        id,                // Đây chính là ID của booking
-        bookingId,         // Dự phòng nếu bookingService gửi field này
-        customerId,
-        driverId,
-        pickupLocation,
-        dropoffLocation,
-        waypoints,
-        estimatedPrice,
-        distance,
-      } = payload;
+      this.logger.log(`📦 Price from event: ${JSON.stringify(price)}`);
 
-      // 3. Xác định ID cuối cùng (Tránh lỗi Missing bookingId)
-      const finalBookingId = bookingId || id;
-
-      // 4. Kiểm tra dữ liệu bắt buộc
-      if (!finalBookingId || !pickupLocation || !dropoffLocation) {
-        this.logger.error(`❌ Missing fields - ID: ${finalBookingId}, Pickup: ${!!pickupLocation}, Dropoff: ${!!dropoffLocation}`);
+      const existingRide = await this.rideModel.findOne({ bookingId });
+      if (existingRide) {
+        this.logger.warn(`Ride already exists for booking ${bookingId}`);
         return;
       }
 
-      // 5. Tạo và lưu Ride
+      let ridePrice;
+      
+      if (price && typeof price === 'object' && price.total) {
+        ridePrice = {
+          basePrice: price.basePrice || 0,
+          distancePrice: price.distancePrice || 0,
+          timePrice: price.timePrice || 0,
+          surgeMultiplier: price.surgeMultiplier || 1,
+          total: price.total,
+          currency: price.currency || 'VND'
+        };
+        this.logger.log(`✅ Using price from event: ${ridePrice.total} ${ridePrice.currency}`);
+      } else {
+        this.logger.warn(`⚠️ No valid price in event, calculating default price`);
+        const basePrice = 20000;
+        const pricePerKm = 10000;
+        const pricePerMinute = 2000;
+        const dist = distance || 5.2;
+        const estimatedDuration = Math.round(dist * 2);
+        
+        ridePrice = {
+          basePrice: basePrice,
+          distancePrice: Math.round(dist * pricePerKm),
+          timePrice: Math.round(estimatedDuration * pricePerMinute),
+          surgeMultiplier: 1,
+          total: Math.round(basePrice + (dist * pricePerKm) + (estimatedDuration * pricePerMinute)),
+          currency: 'VND'
+        };
+        this.logger.log(`✅ Using calculated price: ${ridePrice.total} ${ridePrice.currency}`);
+      }
+
       const ride = new this.rideModel({
-        bookingId: finalBookingId,
+        bookingId,
         customerId,
         driverId,
         pickupLocation,
         dropoffLocation,
-        waypoints: waypoints || [],
-        price: estimatedPrice || { total: 0, currency: 'VND' },
+        price: ridePrice,
         distance: distance || 0,
         status: RideStatus.EN_ROUTE_TO_PICKUP,
+        estimatedDuration: eta || 5,
         driverAcceptedAt: new Date(),
         trackingPath: [],
       });
 
       await ride.save();
-      this.logger.log(`✅ Ride created successfully: ${ride._id}`);
 
-      // 6. Thông báo cho các bên
-      await this.rabbitMQService.publish('ride.events', 'ride.created', {
-        rideId: ride._id.toString(),
-        bookingId: finalBookingId,
-        customerId,
-        driverId,
-        status: ride.status,
-        timestamp: new Date().toISOString(),
+      const savedRide = await this.rideModel.findById(ride._id);
+      this.logger.log(`💾 Saved ride price: ${JSON.stringify(savedRide?.price)}`);
+      this.logger.log(`✅ Ride created: ${ride._id} with price: ${ridePrice.total} ${ridePrice.currency}`);
+
+      await this.rabbitMQService.publish(
+        'ride.events',
+        'ride.created',
+        {
+          rideId: ride._id.toString(),
+          bookingId,
+          customerId,
+          driverId,
+          status: ride.status,
+          price: ridePrice,
+          timestamp: new Date().toISOString(),
+        },
+      ).catch(error => {
+        this.logger.error(`Failed to publish ride.created: ${error.message}`);
       });
 
-      this.rideGateway.sendToUser(customerId, 'ride:created', {
-        rideId: ride._id.toString(),
-        driverId,
-        status: ride.status,
-      });
+      try {
+        this.rideGateway.sendToUser(customerId, 'ride:created', {
+          rideId: ride._id.toString(),
+          driverId,
+          status: ride.status,
+          eta: eta || 5,
+          price: ridePrice,
+          message: 'Tài xế đang trên đường đến đón bạn',
+        });
 
-    } catch (error: any) {
+        this.rideGateway.sendToUser(driverId, 'ride:assigned', {
+          rideId: ride._id.toString(),
+          customerId,
+          pickupLocation,
+          dropoffLocation,
+          price: ridePrice,
+        });
+      } catch (error) {
+        this.logger.error(`Failed to send WebSocket: ${error.message}`);
+      }
+
+    } catch (error) {
       this.logger.error(`Error handling booking.accepted: ${error.message}`);
+      this.logger.error(error.stack);
     }
   }
-
-  // Tìm trong ride.service.ts hàm xử lý payment
-async handlePaymentCompleted(event: any) {
-  const data = event.data || event;
-  // Lỗi của bạn là do bóc tách sai ID ở đây
-  const bookingId = data.bookingId; 
-  
-  const ride = await this.rideModel.findOne({ bookingId });
-  if (ride) {
-    ride.isPaid = true;
-    await ride.save();
-    this.logger.log(`✅ Ride ${ride._id} marked as paid`);
-  } else {
-    this.logger.warn(`⚠️ Could not find ride for booking ${bookingId} to mark as paid`);
-  }
-}
 
   async getRideById(rideId: string): Promise<RideResponseDto> {
     const ride = await this.rideModel.findById(rideId);
-    if (!ride) {
-      throw new NotFoundException('Ride not found');
-    }
+    if (!ride) throw new NotFoundException('Ride not found');
     return this.mapToResponse(ride);
   }
 
@@ -156,7 +207,6 @@ async handlePaymentCompleted(event: any) {
       driverId,
       status: { $in: [RideStatus.EN_ROUTE_TO_PICKUP, RideStatus.ARRIVED_AT_PICKUP, RideStatus.IN_PROGRESS] },
     }).sort({ createdAt: -1 });
-
     return ride ? this.mapToResponse(ride) : null;
   }
 
@@ -165,7 +215,6 @@ async handlePaymentCompleted(event: any) {
       customerId,
       status: { $in: [RideStatus.EN_ROUTE_TO_PICKUP, RideStatus.ARRIVED_AT_PICKUP, RideStatus.IN_PROGRESS] },
     }).sort({ createdAt: -1 });
-
     return ride ? this.mapToResponse(ride) : null;
   }
 
@@ -174,7 +223,6 @@ async handlePaymentCompleted(event: any) {
     driverId: string,
     locationDto: UpdateLocationDto,
   ): Promise<void> {
-    // Kiểm tra ride và quyền của driver
     const ride = await this.rideModel.findOne({
       _id: rideId,
       driverId,
@@ -182,36 +230,21 @@ async handlePaymentCompleted(event: any) {
     });
 
     if (!ride) {
-      throw new NotFoundException('Active ride not found for this driver');
+      throw new NotFoundException('Active ride not found');
     }
 
-    // 1. Lưu location vào Redis (cho real-time query)
     const locationKey = `ride:${rideId}:location`;
     await this.redisService.getClient().setex(
       locationKey,
       this.LOCATION_EXPIRY,
-      JSON.stringify({
-        ...locationDto,
-        timestamp: new Date().toISOString(),
-      }),
+      JSON.stringify({ ...locationDto, timestamp: new Date().toISOString() }),
     );
 
-    // 2. Lưu tracking point vào MongoDB
-    const trackingPoint = {
-      ...locationDto,
-      timestamp: new Date(),
-    };
-
     await this.rideModel.findByIdAndUpdate(rideId, {
-      $push: { trackingPath: trackingPoint },
+      $push: { trackingPath: { ...locationDto, timestamp: new Date() } },
     });
 
-    // 3. Broadcast location qua WebSocket cho customer
-    this.rideGateway.broadcastLocationToRide(rideId, {
-      ...locationDto,
-      timestamp: new Date().toISOString(),
-    });
-
+    this.rideGateway.broadcastLocationToRide(rideId, locationDto);
     this.logger.debug(`📍 Driver ${driverId} updated location for ride ${rideId}`);
   }
 
@@ -222,34 +255,21 @@ async handlePaymentCompleted(event: any) {
     updateDto: UpdateStatusDto,
   ): Promise<RideResponseDto> {
     const ride = await this.rideModel.findById(rideId);
-    if (!ride) {
-      throw new NotFoundException('Ride not found');
-    }
+    if (!ride) throw new NotFoundException('Ride not found');
 
-    // ABAC: Kiểm tra quyền dựa trên role và trạng thái
     if (role === 'driver' && ride.driverId !== userId) {
-      throw new BadRequestException('You are not the driver of this ride');
+      throw new BadRequestException('You are not the driver');
     }
-    if (role === 'customer' && ride.customerId !== userId) {
-      throw new BadRequestException('You are not the customer of this ride');
-    }
-
-    // Customer chỉ được hủy ride khi chưa bắt đầu
-    if (role === 'customer' && updateDto.status !== 'cancelled') {
-      throw new BadRequestException('Customer can only cancel ride');
+    if (role === 'customer' && ride.customerId !== userId && updateDto.status !== 'cancelled') {
+      throw new BadRequestException('You can only cancel the ride');
     }
 
     const oldStatus = ride.status;
     const newStatus = updateDto.status as RideStatus;
 
-    // Validate status transition
     this.validateStatusTransition(oldStatus, newStatus, role);
 
-    // Update status và timestamps
     switch (newStatus) {
-      case RideStatus.EN_ROUTE_TO_PICKUP:
-        // Đã được set từ lúc tạo
-        break;
       case RideStatus.ARRIVED_AT_PICKUP:
         ride.driverArrivedAt = new Date();
         break;
@@ -258,7 +278,6 @@ async handlePaymentCompleted(event: any) {
         break;
       case RideStatus.COMPLETED:
         ride.rideCompletedAt = new Date();
-        // Tính duration thực tế
         if (ride.rideStartedAt) {
           const duration = Math.round((new Date().getTime() - ride.rideStartedAt.getTime()) / 60000);
           ride.duration = duration;
@@ -266,7 +285,7 @@ async handlePaymentCompleted(event: any) {
         break;
       case RideStatus.CANCELLED:
         ride.cancellation = {
-          cancelledBy: role === 'customer' ? 'customer' : role === 'driver' ? 'driver' : 'system',
+          cancelledBy: role as any,
           reason: updateDto.reason || 'No reason provided',
           cancelledAt: new Date(),
         };
@@ -276,7 +295,6 @@ async handlePaymentCompleted(event: any) {
     ride.status = newStatus;
     await ride.save();
 
-    // Publish event
     await this.rabbitMQService.publish(
       'ride.events',
       `ride.${newStatus}`,
@@ -289,15 +307,12 @@ async handlePaymentCompleted(event: any) {
         newStatus,
         timestamp: new Date().toISOString(),
       },
-    );
-
-    // Broadcast status change
-    this.rideGateway.broadcastStatusChange(rideId, newStatus, {
-      oldStatus,
-      ...(newStatus === RideStatus.COMPLETED && { price: ride.price }),
+    ).catch(error => {
+      this.logger.error(`Failed to publish ride.${newStatus}: ${error.message}`);
     });
 
-    // Nếu hoàn thành, trigger payment
+    this.rideGateway.broadcastStatusChange(rideId, newStatus, { oldStatus });
+
     if (newStatus === RideStatus.COMPLETED) {
       await this.triggerPayment(ride);
     }
@@ -312,10 +327,7 @@ async handlePaymentCompleted(event: any) {
     rateDto: RateRideDto,
   ): Promise<RideResponseDto> {
     const ride = await this.rideModel.findById(rideId);
-    if (!ride) {
-      throw new NotFoundException('Ride not found');
-    }
-
+    if (!ride) throw new NotFoundException('Ride not found');
     if (ride.status !== RideStatus.COMPLETED) {
       throw new BadRequestException('Can only rate completed rides');
     }
@@ -324,45 +336,41 @@ async handlePaymentCompleted(event: any) {
     if (role === 'customer' && ride.customerId === userId) {
       update['rating.customerRating'] = rateDto.rating;
       update['rating.customerFeedback'] = rateDto.feedback;
+      this.logger.log(`Customer ${userId} rated ride ${rideId}: ${rateDto.rating} stars`);
     } else if (role === 'driver' && ride.driverId === userId) {
       update['rating.driverRating'] = rateDto.rating;
       update['rating.driverFeedback'] = rateDto.feedback;
+      this.logger.log(`Driver ${userId} rated ride ${rideId}: ${rateDto.rating} stars`);
     } else {
-      throw new BadRequestException('You are not authorized to rate this ride');
+      throw new BadRequestException('Unauthorized');
     }
 
     await this.rideModel.findByIdAndUpdate(rideId, { $set: update });
     
-    // Publish rating event
     await this.rabbitMQService.publish(
       'ride.events',
       'ride.rated',
       {
         rideId,
-        customerId: ride.customerId,
-        driverId: ride.driverId,
         rating: rateDto.rating,
         role,
+        feedback: rateDto.feedback,
         timestamp: new Date().toISOString(),
       },
-    );
+    ).catch(error => {
+      this.logger.error(`Failed to publish ride.rated: ${error.message}`);
+    });
 
+    // Trả về ride đã cập nhật với rating
     return this.getRideById(rideId);
   }
 
   async getDriverRides(driverId: string, page: number = 1, limit: number = 10): Promise<any> {
     const skip = (page - 1) * limit;
-    
     const [rides, total] = await Promise.all([
-      this.rideModel
-        .find({ driverId })
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .exec(),
+      this.rideModel.find({ driverId }).sort({ createdAt: -1 }).skip(skip).limit(limit),
       this.rideModel.countDocuments({ driverId }),
     ]);
-
     return {
       data: rides.map(r => this.mapToResponse(r)),
       total,
@@ -373,17 +381,10 @@ async handlePaymentCompleted(event: any) {
 
   async getCustomerRides(customerId: string, page: number = 1, limit: number = 10): Promise<any> {
     const skip = (page - 1) * limit;
-    
     const [rides, total] = await Promise.all([
-      this.rideModel
-        .find({ customerId })
-        .sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .exec(),
+      this.rideModel.find({ customerId }).sort({ createdAt: -1 }).skip(skip).limit(limit),
       this.rideModel.countDocuments({ customerId }),
     ]);
-
     return {
       data: rides.map(r => this.mapToResponse(r)),
       total,
@@ -399,24 +400,41 @@ async handlePaymentCompleted(event: any) {
   }
 
   private async triggerPayment(ride: RideDocument) {
-    // Publish event để payment service xử lý
-    await this.rabbitMQService.publish(
-      'payment.events',
-      'payment.requested',
-      {
-        rideId: ride._id.toString(),
-        bookingId: ride.bookingId,
-        customerId: ride.customerId,
-        driverId: ride.driverId,
-        amount: ride.price.total,
-        currency: ride.price.currency,
-        timestamp: new Date().toISOString(),
-      },
-    );
+    try {
+      if (!ride.price) {
+        this.logger.error(`Ride ${ride._id} has no price object`);
+        return;
+      }
+      
+      if (!ride.price.total) {
+        this.logger.error(`Ride ${ride._id} has no total price. Price: ${JSON.stringify(ride.price)}`);
+        return;
+      }
+
+      this.logger.log(`💰 Triggering payment for ride ${ride._id}: ${ride.price.total} ${ride.price.currency}`);
+
+      await this.rabbitMQService.publish(
+        'payment.events',
+        'payment.requested',
+        {
+          rideId: ride._id.toString(),
+          bookingId: ride.bookingId,
+          customerId: ride.customerId,
+          driverId: ride.driverId,
+          amount: ride.price.total,
+          currency: ride.price.currency,
+          priceDetails: ride.price,
+          timestamp: new Date().toISOString(),
+        },
+      );
+      this.logger.log(`✅ Payment requested for ride ${ride._id}`);
+    } catch (error) {
+      this.logger.error(`Failed to trigger payment for ride ${ride._id}: ${error.message}`);
+    }
   }
 
   private validateStatusTransition(oldStatus: RideStatus, newStatus: RideStatus, role: string) {
-    const validTransitions: Record<RideStatus, RideStatus[]> = {
+    const transitions: Record<RideStatus, RideStatus[]> = {
       [RideStatus.PENDING]: [RideStatus.EN_ROUTE_TO_PICKUP, RideStatus.CANCELLED],
       [RideStatus.EN_ROUTE_TO_PICKUP]: [RideStatus.ARRIVED_AT_PICKUP, RideStatus.CANCELLED],
       [RideStatus.ARRIVED_AT_PICKUP]: [RideStatus.IN_PROGRESS, RideStatus.CANCELLED],
@@ -424,14 +442,11 @@ async handlePaymentCompleted(event: any) {
       [RideStatus.COMPLETED]: [],
       [RideStatus.CANCELLED]: [],
     };
-    
-    if (!validTransitions[oldStatus]?.includes(newStatus)) {
-      throw new BadRequestException(
-        `Invalid status transition from ${oldStatus} to ${newStatus}`,
-      );
+
+    if (!transitions[oldStatus]?.includes(newStatus)) {
+      throw new BadRequestException(`Invalid transition from ${oldStatus} to ${newStatus}`);
     }
 
-    // Driver không thể hủy khi đang in_progress
     if (role === 'driver' && oldStatus === RideStatus.IN_PROGRESS && newStatus === RideStatus.CANCELLED) {
       throw new BadRequestException('Driver cannot cancel ride while in progress');
     }
@@ -451,6 +466,8 @@ async handlePaymentCompleted(event: any) {
       price: obj.price,
       distance: obj.distance,
       duration: obj.duration,
+      estimatedDuration: obj.estimatedDuration,
+      estimatedDistance: obj.estimatedDistance,
       driverAcceptedAt: obj.driverAcceptedAt,
       driverArrivedAt: obj.driverArrivedAt,
       rideStartedAt: obj.rideStartedAt,
@@ -458,6 +475,12 @@ async handlePaymentCompleted(event: any) {
       trackingPath: obj.trackingPath,
       cancellation: obj.cancellation,
       isPaid: obj.isPaid,
+      rating: obj.rating ? {
+        customerRating: obj.rating.customerRating,
+        driverRating: obj.rating.driverRating,
+        customerFeedback: obj.rating.customerFeedback,
+        driverFeedback: obj.rating.driverFeedback
+      } : undefined,
       createdAt: obj.createdAt,
       updatedAt: obj.updatedAt,
     };

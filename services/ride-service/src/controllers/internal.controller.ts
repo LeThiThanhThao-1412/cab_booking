@@ -34,10 +34,6 @@ export class InternalController {
 
   @Get('health')
   health() {
-    return {
-      status: 'ok',
-      service: 'ride-service',
-      timestamp: new Date().toISOString(),
-    };
+    return { status: 'ok', service: 'ride-service', timestamp: new Date().toISOString() };
   }
 }

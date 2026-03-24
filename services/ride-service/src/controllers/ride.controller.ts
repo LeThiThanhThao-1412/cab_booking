@@ -19,10 +19,7 @@ export class RideController {
   constructor(private readonly rideService: RideService) {}
 
   @Get(':id')
-  async getRide(
-    @Request() req,
-    @Param('id') id: string,
-  ): Promise<RideResponseDto> {
+  async getRide(@Param('id') id: string): Promise<RideResponseDto> {
     return this.rideService.getRideById(id);
   }
 
@@ -43,7 +40,7 @@ export class RideController {
     @Body() locationDto: UpdateLocationDto,
   ): Promise<{ message: string }> {
     await this.rideService.updateLocation(id, req.user.sub, locationDto);
-    return { message: 'Location updated successfully' };
+    return { message: 'Location updated' };
   }
 
   @Patch(':id/status')

@@ -4,18 +4,19 @@ import { Document, Types } from 'mongoose';
 export type RideDocument = Ride & Document;
 
 export enum RideStatus {
-  PENDING = 'pending',              // Chờ tài xế nhận
-  EN_ROUTE_TO_PICKUP = 'en_route_to_pickup', // Đang đến đón
-  ARRIVED_AT_PICKUP = 'arrived_at_pickup',   // Đã đến điểm đón
-  IN_PROGRESS = 'in_progress',       // Đang chở khách
-  COMPLETED = 'completed',           // Hoàn thành
-  CANCELLED = 'cancelled',           // Đã hủy
+  PENDING = 'pending',
+  EN_ROUTE_TO_PICKUP = 'en_route_to_pickup',
+  ARRIVED_AT_PICKUP = 'arrived_at_pickup',
+  IN_PROGRESS = 'in_progress',
+  COMPLETED = 'completed',
+  CANCELLED = 'cancelled',
 }
 
 export interface Location {
   lat: number;
   lng: number;
   address: string;
+  name?: string;
 }
 
 export interface TrackingPoint {
@@ -27,15 +28,24 @@ export interface TrackingPoint {
   accuracy?: number;
 }
 
+export interface PriceDetail {
+  basePrice: number;
+  distancePrice: number;
+  timePrice: number;
+  surgeMultiplier: number;
+  total: number;
+  currency: string;
+}
+
 @Schema({ timestamps: true, collection: 'rides' })
 export class Ride {
-  @Prop({ required: true, index: true })
-  bookingId: string;  // ID từ booking-service
+  @Prop({ required: true })
+  bookingId: string;
 
-  @Prop({ required: true, index: true })
+  @Prop({ required: true })
   customerId: string;
 
-  @Prop({ required: true, index: true })
+  @Prop({ required: true })
   driverId: string;
 
   @Prop({ required: true, type: Object })
@@ -44,41 +54,40 @@ export class Ride {
   @Prop({ required: true, type: Object })
   dropoffLocation: Location;
 
-  @Prop({ type: Array })
+  @Prop({ type: [Object], default: [] })
   waypoints: Location[];
 
   @Prop({ required: true, type: String, enum: RideStatus, default: RideStatus.PENDING })
   status: RideStatus;
 
   @Prop({ type: Object })
-  price: {
-    basePrice: number;
-    distancePrice: number;
-    timePrice: number;
-    surgeMultiplier: number;
-    total: number;
-    currency: string;
-  };
+  price: PriceDetail;
+
+  @Prop({ default: 0 })
+  distance: number;
+
+  @Prop({ default: 0 })
+  duration: number;
 
   @Prop()
-  distance: number;  // km
+  estimatedDuration: number;
 
   @Prop()
-  duration: number;  // phút
+  estimatedDistance: number;
 
-  @Prop({ type: Date })
+  @Prop()
   driverAcceptedAt: Date;
 
-  @Prop({ type: Date })
+  @Prop()
   driverArrivedAt: Date;
 
-  @Prop({ type: Date })
+  @Prop()
   rideStartedAt: Date;
 
-  @Prop({ type: Date })
+  @Prop()
   rideCompletedAt: Date;
 
-  @Prop({ type: Array })
+  @Prop({ type: [Object], default: [] })
   trackingPath: TrackingPoint[];
 
   @Prop({ type: Object })
@@ -102,7 +111,7 @@ export class Ride {
   @Prop()
   paymentId: string;
 
-  @Prop({ type: Object })
+  @Prop({ type: Object, default: {} })
   metadata: Record<string, any>;
 
   @Prop({ type: Date, default: Date.now })
@@ -114,7 +123,9 @@ export class Ride {
 
 export const RideSchema = SchemaFactory.createForClass(Ride);
 
-// Indexes
+// Indexes cho query nhanh - chỉ khai báo ở đây, không dùng index:true trong Prop
+RideSchema.index({ bookingId: 1 });
 RideSchema.index({ customerId: 1, createdAt: -1 });
 RideSchema.index({ driverId: 1, status: 1 });
 RideSchema.index({ status: 1, createdAt: 1 });
+RideSchema.index({ driverId: 1, status: 1, createdAt: -1 });
