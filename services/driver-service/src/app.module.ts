@@ -1,3 +1,4 @@
+// app.module.ts
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -11,6 +12,7 @@ import {
 
 import { DriverController } from './controllers/driver.controller';
 import { InternalController } from './controllers/internal.controller';
+import { HealthController } from './health/health.controller';  // THÊM VÀO
 import { DriverService } from './services/driver.service';
 import { DriverEventHandler } from './handlers/driver-event.handler';
 import { Driver } from './entities/driver.entity';
@@ -23,9 +25,6 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       envFilePath: '.env',
     }),
 
-    /**
-     * JWT - Zero Trust verification
-     */
     JwtModule.registerAsync({
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
@@ -36,15 +35,9 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       }),
     }),
 
-    /**
-     * Database
-     */
     PostgresModule.forRoot(),
     TypeOrmModule.forFeature([Driver]),
 
-    /**
-     * Messaging
-     */
     RabbitMQModule.forRoot({
       urls: [
         process.env.RABBITMQ_URL ||
@@ -52,13 +45,14 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       ],
     }),
 
-    /**
-     * Redis
-     */
     RedisModule.forRoot(),
   ],
 
-  controllers: [DriverController, InternalController],
+  controllers: [
+    HealthController,      // THÊM VÀO - ĐẶT TRƯỚC
+    InternalController,    // Có endpoint /internal/health
+    DriverController,
+  ],
 
   providers: [
     DriverService,

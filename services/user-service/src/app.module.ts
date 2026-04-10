@@ -1,3 +1,4 @@
+// app.module.ts
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
@@ -7,6 +8,8 @@ import {
   RabbitMQModule,
 } from '@cab-booking/shared';
 import { UserController } from './controllers/user.controller';
+import { HealthController } from './health/health.controller';
+import { InternalController } from './controllers/internal.controller';
 import { UserProfile } from './entities/user-profile.entity';
 import { UserEventHandler } from './handlers/user-event.handler';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
@@ -36,10 +39,14 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
       urls: [process.env.RABBITMQ_URL || 'amqp://admin:password123@localhost:5672'],
     }),
   ],
-  controllers: [UserController],
+  controllers: [
+    HealthController,     // Public health: /api/v1/health
+    InternalController,   // Internal health: /api/v1/internal/health
+    UserController,       // User routes: /api/v1/users/*
+  ],
   providers: [
     UserEventHandler,
-    JwtAuthGuard,  // Thêm guard vào providers
+    JwtAuthGuard,
   ],
 })
 export class AppModule {}

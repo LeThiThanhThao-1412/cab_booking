@@ -1,27 +1,43 @@
-import { IsString, IsNumber, IsEnum, IsOptional, IsUUID, Min, Max } from 'class-validator';
+import { IsString, IsNumber, IsEnum, IsOptional, IsUUID, Min, Max, IsLatitude, IsLongitude, ValidateNested } from 'class-validator';
+import { Type } from 'class-transformer';
 import { VehicleType } from '../enums/pricing.enum';
+
+export class LocationDto {
+  @IsLatitude()
+  lat: number;
+
+  @IsLongitude()
+  lng: number;
+
+  @IsString()
+  address: string;
+
+  @IsOptional()
+  @IsString()
+  name?: string;
+}
 
 export class CalculatePriceDto {
   @IsEnum(VehicleType)
   vehicleType: VehicleType;
 
+  @ValidateNested()
+  @Type(() => LocationDto)
+  pickupLocation: LocationDto;
+
+  @ValidateNested()
+  @Type(() => LocationDto)
+  dropoffLocation: LocationDto;
+
+  @IsOptional()
   @IsNumber()
   @Min(0.1)
-  distance: number; // km
+  distance?: number;
 
+  @IsOptional()
   @IsNumber()
   @Min(1)
-  duration: number; // phút
-
-  @IsNumber()
-  @Min(-90)
-  @Max(90)
-  latitude: number;
-
-  @IsNumber()
-  @Min(-180)
-  @Max(180)
-  longitude: number;
+  duration?: number;
 
   @IsOptional()
   @IsString()
@@ -113,6 +129,8 @@ export class PriceResponseDto {
   couponCode?: string;
   finalPrice: number;
   currency: string;
+  distance: number;
+  estimatedDuration: number;
   breakdown: {
     baseFare: number;
     perKm: number;

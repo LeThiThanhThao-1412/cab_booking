@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { HttpModule } from '@nestjs/axios';
 import { RabbitMQModule, RedisModule } from '@cab-booking/shared';
 import { PricingController } from './controllers/pricing.controller';
 import { InternalController } from './controllers/internal.controller';
 import { PricingService } from './services/pricing.service';
+import { DistanceService } from './services/distance.service';
 import { SurgePricingService } from './surge/surge-pricing.service';
 import { BasePrice } from './entities/base-price.entity';
 import { Coupon } from './entities/coupon.entity';
@@ -16,6 +18,8 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
+    
+    HttpModule,
     
     JwtModule.registerAsync({
       imports: [ConfigModule],
@@ -51,6 +55,11 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
     RedisModule.forRoot(),
   ],
   controllers: [PricingController, InternalController],
-  providers: [PricingService, SurgePricingService, JwtAuthGuard],
+  providers: [
+    PricingService,
+    DistanceService,      // ← THÊM DÒNG NÀY
+    SurgePricingService,
+    JwtAuthGuard,
+  ],
 })
 export class AppModule {}

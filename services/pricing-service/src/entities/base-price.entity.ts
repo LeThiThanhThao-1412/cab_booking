@@ -10,16 +10,16 @@ export class BasePrice {
   vehicleType: VehicleType;
 
   @Column('decimal', { precision: 10, scale: 0 })
-  baseFare: number; // Giá mở cửa
+  baseFare: number;
 
   @Column('decimal', { precision: 10, scale: 0 })
-  perKm: number; // Giá theo km
+  perKm: number;
 
   @Column('decimal', { precision: 10, scale: 0 })
-  perMinute: number; // Giá theo phút
+  perMinute: number;
 
   @Column('decimal', { precision: 10, scale: 0, default: 0 })
-  minimumFare: number; // Giá tối thiểu
+  minimumFare: number;
 
   @Column({ default: true })
   isActive: boolean;

@@ -1,4 +1,4 @@
-import { Injectable, Logger, NotFoundException, BadRequestException } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException, BadRequestException, OnModuleInit } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RedisService, RabbitMQService } from '@cab-booking/shared';
@@ -7,13 +7,16 @@ import { BasePrice } from '../entities/base-price.entity';
 import { Coupon } from '../entities/coupon.entity';
 import { CouponUsage } from '../entities/coupon-usage.entity';
 import { SurgePricingService } from '../surge/surge-pricing.service';
+import { DistanceService } from './distance.service';
 import { CalculatePriceDto, ApplyCouponDto, PriceResponseDto, CreateCouponDto } from '../dto/pricing.dto';
 import { VehicleType, CouponStatus, CouponType, SurgeLevel } from '../enums/pricing.enum';
 
 @Injectable()
-export class PricingService {
+export class PricingService implements OnModuleInit {
   private readonly logger = new Logger(PricingService.name);
   private readonly CURRENCY = 'VND';
+  private readonly AVERAGE_SPEED = 30;
+  private isSubscribed = false;
 
   constructor(
     @InjectRepository(BasePrice)
@@ -26,19 +29,74 @@ export class PricingService {
     private rabbitMQService: RabbitMQService,
     private configService: ConfigService,
     private surgePricingService: SurgePricingService,
-  ) {
-    this.initializeBasePrices();
-    this.initializeSurgeConfigs();
-    this.subscribeToEvents();
+    private distanceService: DistanceService,
+  ) {}
+
+  async onModuleInit() {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    await this.initializeBasePrices();
+    await this.initializeSurgeConfigs();
+    await this.subscribeWithRetry();
+  }
+
+  async subscribeWithRetry(retryCount = 0) {
+    const maxRetries = 10;
+    const retryDelay = 5000;
+
+    if (this.isSubscribed) {
+      this.logger.log('Already subscribed to events');
+      return;
+    }
+
+    try {
+      await this.subscribeToEvents();
+      this.isSubscribed = true;
+      this.logger.log('✅ Successfully subscribed to events');
+    } catch (error) {
+      if (retryCount < maxRetries) {
+        this.logger.warn(`Failed to subscribe (attempt ${retryCount + 1}/${maxRetries}): ${error.message}`);
+        setTimeout(() => this.subscribeWithRetry(retryCount + 1), retryDelay);
+      } else {
+        this.logger.error(`Failed to subscribe after ${maxRetries} attempts`);
+      }
+    }
+  }
+
+  async subscribeToEvents() {
+    try {
+      const channel = this.rabbitMQService['channel'];
+      if (!channel) {
+        throw new Error('RabbitMQ channel is not available');
+      }
+
+      await this.rabbitMQService.subscribe(
+        'pricing-service.queue',
+        async (msg: any) => {
+          await this.handleBookingEvent(msg);
+        },
+        {
+          exchange: 'booking.events',
+          routingKey: 'booking.created',
+        },
+      );
+      this.logger.log('✅ Subscribed to booking events');
+    } catch (error) {
+      this.logger.error(`Failed to subscribe: ${error.message}`);
+      throw error;
+    }
+  }
+
+  async handleBookingEvent(event: any) {
+    this.logger.log(`Received booking event: ${JSON.stringify(event)}`);
   }
 
   async initializeBasePrices() {
     const count = await this.basePriceRepository.count();
     if (count === 0) {
       const defaultPrices = [
-        { vehicleType: VehicleType.MOTORBIKE, baseFare: 10000, perKm: 5000, perMinute: 1000, minimumFare: 15000 },
-        { vehicleType: VehicleType.CAR_4, baseFare: 20000, perKm: 10000, perMinute: 1500, minimumFare: 30000 },
-        { vehicleType: VehicleType.CAR_7, baseFare: 25000, perKm: 12000, perMinute: 2000, minimumFare: 40000 },
+        { vehicleType: VehicleType.MOTORBIKE, baseFare: 10000, perKm: 5000, perMinute: 1000, minimumFare: 15000, isActive: true },
+        { vehicleType: VehicleType.CAR_4, baseFare: 20000, perKm: 10000, perMinute: 1500, minimumFare: 30000, isActive: true },
+        { vehicleType: VehicleType.CAR_7, baseFare: 25000, perKm: 12000, perMinute: 2000, minimumFare: 40000, isActive: true },
       ];
       await this.basePriceRepository.save(defaultPrices);
       this.logger.log('✅ Initialized base prices');
@@ -64,33 +122,30 @@ export class PricingService {
     }
   }
 
-  async subscribeToEvents() {
-    try {
-      await this.rabbitMQService.subscribe(
-        'pricing-service.queue',
-        async (msg: any) => {
-          await this.handleBookingEvent(msg);
-        },
-        {
-          exchange: 'booking.events',
-          routingKey: 'booking.created',
-        },
-      );
-      this.logger.log('✅ Subscribed to events');
-    } catch (error) {
-      this.logger.warn(`Failed to subscribe: ${error.message}`);
-    }
-  }
-
-  async handleBookingEvent(event: any) {
-    this.logger.log(`Received booking event: ${JSON.stringify(event)}`);
-    // Cập nhật metrics cho surge pricing
-  }
-
   async calculatePrice(calculateDto: CalculatePriceDto): Promise<PriceResponseDto> {
-    this.logger.log(`Calculating price for vehicle ${calculateDto.vehicleType}`);
+    this.logger.log(`Calculating price for ${calculateDto.vehicleType}`);
 
-    // 1. Lấy giá cơ bản
+    let distance = calculateDto.distance;
+    let estimatedDuration = calculateDto.duration;
+
+    if ((!distance || !estimatedDuration) && calculateDto.pickupLocation && calculateDto.dropoffLocation) {
+      const route = await this.distanceService.calculateDistance(
+        calculateDto.pickupLocation,
+        calculateDto.dropoffLocation,
+      );
+      distance = route.distance;
+      estimatedDuration = route.duration;
+      this.logger.log(`Calculated route: ${distance.toFixed(2)}km, ${estimatedDuration.toFixed(0)} min`);
+    }
+
+    if (!distance || distance <= 0) {
+      throw new BadRequestException('Invalid distance. Please provide pickup and dropoff locations.');
+    }
+
+    if (!estimatedDuration || estimatedDuration <= 0) {
+      estimatedDuration = (distance / this.AVERAGE_SPEED) * 60;
+    }
+
     const basePrice = await this.basePriceRepository.findOne({
       where: { vehicleType: calculateDto.vehicleType, isActive: true },
     });
@@ -99,22 +154,26 @@ export class PricingService {
       throw new NotFoundException('Base price not found for this vehicle type');
     }
 
-    // 2. Tính giá cơ bản
-    const distancePrice = calculateDto.distance * basePrice.perKm;
-    const timePrice = calculateDto.duration * basePrice.perMinute;
-    const subtotal = basePrice.baseFare + distancePrice + timePrice;
-    const baseTotal = Math.max(subtotal, basePrice.minimumFare);
+    // Convert to number to ensure proper calculation
+    const baseFare = Number(basePrice.baseFare);
+    const perKm = Number(basePrice.perKm);
+    const perMinute = Number(basePrice.perMinute);
+    const minimumFare = Number(basePrice.minimumFare);
 
-    // 3. Tính surge multiplier
+    const distancePrice = distance * perKm;
+    const timePrice = estimatedDuration * perMinute;
+    const subtotal = baseFare + distancePrice + timePrice;
+    const baseTotal = Math.max(subtotal, minimumFare);
+
     const surge = await this.surgePricingService.getSurgeMultiplier(
-      calculateDto.latitude,
-      calculateDto.longitude,
+      calculateDto.pickupLocation?.lat || 0,
+      calculateDto.pickupLocation?.lng || 0,
     );
 
-    const surgeAmount = baseTotal * (surge.multiplier - 1);
+    const surgeMultiplier = Number(surge.multiplier);
+    const surgeAmount = baseTotal * (surgeMultiplier - 1);
     const subtotalWithSurge = baseTotal + surgeAmount;
 
-    // 4. Áp dụng coupon (nếu có)
     let couponDiscount = 0;
     let couponCode: string | undefined = undefined;
 
@@ -127,7 +186,7 @@ export class PricingService {
           userId: calculateDto.userId,
         };
         const couponResult = await this.applyCoupon(applyDto);
-        couponDiscount = couponResult.discount;
+        couponDiscount = Number(couponResult.discount);
         couponCode = calculateDto.couponCode;
       } catch (error) {
         this.logger.warn(`Coupon invalid: ${error.message}`);
@@ -136,29 +195,29 @@ export class PricingService {
 
     const finalPrice = Math.max(subtotalWithSurge - couponDiscount, 0);
 
-    const response: PriceResponseDto = {
-      basePrice: basePrice.baseFare,
-      distancePrice,
-      timePrice,
-      subtotal: baseTotal,
-      surgeMultiplier: surge.multiplier,
+    return {
+      basePrice: Math.round(baseFare),
+      distancePrice: Math.round(distancePrice),
+      timePrice: Math.round(timePrice),
+      subtotal: Math.round(baseTotal),
+      surgeMultiplier: surgeMultiplier,
       surgeLevel: surge.level,
-      surgeAmount,
-      couponDiscount,
+      surgeAmount: Math.round(surgeAmount),
+      couponDiscount: Math.round(couponDiscount),
       couponCode,
-      finalPrice,
+      finalPrice: Math.round(finalPrice),
       currency: this.CURRENCY,
+      distance: Number(distance.toFixed(2)),
+      estimatedDuration: Math.round(estimatedDuration),
       breakdown: {
-        baseFare: basePrice.baseFare,
-        perKm: basePrice.perKm,
-        perMinute: basePrice.perMinute,
-        distance: calculateDto.distance,
-        duration: calculateDto.duration,
+        baseFare: Math.round(baseFare),
+        perKm: Math.round(perKm),
+        perMinute: Math.round(perMinute),
+        distance: Number(distance.toFixed(2)),
+        duration: Math.round(estimatedDuration),
         surgeReason: surge.reason,
       },
     };
-
-    return response;
   }
 
   async applyCoupon(applyDto: ApplyCouponDto): Promise<{ discount: number; finalAmount: number }> {
@@ -172,7 +231,6 @@ export class PricingService {
       throw new BadRequestException('Invalid coupon code');
     }
 
-    // Kiểm tra thời gian
     const now = new Date();
     if (coupon.validFrom && now < coupon.validFrom) {
       throw new BadRequestException('Coupon not yet valid');
@@ -181,31 +239,26 @@ export class PricingService {
       throw new BadRequestException('Coupon expired');
     }
 
-    // Kiểm tra giá trị đơn hàng tối thiểu
-    if (applyDto.amount < coupon.minOrderValue) {
-      throw new BadRequestException(`Minimum order value is ${coupon.minOrderValue.toLocaleString()} VND`);
+    if (applyDto.amount < Number(coupon.minOrderValue)) {
+      throw new BadRequestException(`Minimum order value is ${Number(coupon.minOrderValue).toLocaleString()} VND`);
     }
 
-    // Kiểm tra loại xe áp dụng
     if (coupon.applicableVehicles?.length > 0 && applyDto.vehicleType) {
       if (!coupon.applicableVehicles.includes(applyDto.vehicleType as any)) {
         throw new BadRequestException('Coupon not applicable for this vehicle type');
       }
     }
 
-    // Kiểm tra user có được áp dụng không
     if (coupon.applicableUserIds?.length > 0 && applyDto.userId) {
       if (!coupon.applicableUserIds.includes(applyDto.userId)) {
         throw new BadRequestException('Coupon not applicable for this user');
       }
     }
 
-    // Kiểm tra giới hạn số lượt dùng
     if (coupon.usageLimit > 0 && coupon.usedCount >= coupon.usageLimit) {
       throw new BadRequestException('Coupon usage limit reached');
     }
 
-    // Kiểm tra giới hạn mỗi user
     if (applyDto.userId && coupon.perUserLimit > 0) {
       const userUsageCount = await this.couponUsageRepository.count({
         where: { couponId: coupon.id, userId: applyDto.userId },
@@ -215,25 +268,24 @@ export class PricingService {
       }
     }
 
-    // Tính toán giảm giá
+    const amount = Number(applyDto.amount);
+    const couponValue = Number(coupon.value);
+    
     let discount = 0;
     if (coupon.type === CouponType.PERCENTAGE) {
-      discount = (applyDto.amount * coupon.value) / 100;
-      if (coupon.maxDiscount && discount > coupon.maxDiscount) {
-        discount = coupon.maxDiscount;
+      discount = (amount * couponValue) / 100;
+      if (coupon.maxDiscount && discount > Number(coupon.maxDiscount)) {
+        discount = Number(coupon.maxDiscount);
       }
     } else {
-      discount = coupon.value;
+      discount = couponValue;
     }
 
-    const finalAmount = Math.max(applyDto.amount - discount, 0);
-
-    return { discount, finalAmount };
+    const finalAmount = Math.max(amount - discount, 0);
+    return { discount: Math.round(discount), finalAmount: Math.round(finalAmount) };
   }
 
   async createCoupon(createDto: CreateCouponDto): Promise<Coupon> {
-    this.logger.log(`Creating coupon: ${createDto.code}`);
-
     const existing = await this.couponRepository.findOne({
       where: { code: createDto.code.toUpperCase() },
     });
@@ -261,7 +313,6 @@ export class PricingService {
 
     await this.couponRepository.save(coupon);
     this.logger.log(`✅ Coupon created: ${coupon.code}`);
-
     return coupon;
   }
 
@@ -275,12 +326,18 @@ export class PricingService {
       finalAmount: amount - discount,
     });
     await this.couponUsageRepository.save(usage);
-
     await this.couponRepository.increment({ id: couponId }, 'usedCount', 1);
   }
 
   async getBasePrices(): Promise<BasePrice[]> {
-    return this.basePriceRepository.find({ where: { isActive: true } });
+    const prices = await this.basePriceRepository.find({ where: { isActive: true } });
+    return prices.map(p => ({
+      ...p,
+      baseFare: Number(p.baseFare),
+      perKm: Number(p.perKm),
+      perMinute: Number(p.perMinute),
+      minimumFare: Number(p.minimumFare),
+    })) as BasePrice[];
   }
 
   async updateBasePrice(id: string, data: Partial<BasePrice>): Promise<BasePrice> {
@@ -289,11 +346,23 @@ export class PricingService {
     if (!updated) {
       throw new NotFoundException('Base price not found');
     }
-    return updated;
+    return {
+      ...updated,
+      baseFare: Number(updated.baseFare),
+      perKm: Number(updated.perKm),
+      perMinute: Number(updated.perMinute),
+      minimumFare: Number(updated.minimumFare),
+    } as BasePrice;
   }
 
   async getAllCoupons(): Promise<Coupon[]> {
-    return this.couponRepository.find({ order: { createdAt: 'DESC' } });
+    const coupons = await this.couponRepository.find({ order: { createdAt: 'DESC' } });
+    return coupons.map(c => ({
+      ...c,
+      value: Number(c.value),
+      maxDiscount: c.maxDiscount ? Number(c.maxDiscount) : undefined,
+      minOrderValue: Number(c.minOrderValue),
+    })) as Coupon[];
   }
 
   async disableCoupon(id: string): Promise<void> {
@@ -306,11 +375,16 @@ export class PricingService {
       order: { usedAt: 'DESC' },
       take: 100,
     });
-    const totalDiscount = usages.reduce((sum, u) => sum + u.discountAmount, 0);
+    const totalDiscount = usages.reduce((sum, u) => sum + Number(u.discountAmount), 0);
     return {
       totalUses: usages.length,
-      totalDiscount,
-      recentUsages: usages.slice(0, 10),
+      totalDiscount: Math.round(totalDiscount),
+      recentUsages: usages.slice(0, 10).map(u => ({
+        ...u,
+        originalAmount: Number(u.originalAmount),
+        discountAmount: Number(u.discountAmount),
+        finalAmount: Number(u.finalAmount),
+      })),
     };
   }
 }
