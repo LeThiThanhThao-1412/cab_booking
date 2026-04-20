@@ -33,8 +33,9 @@ export class ServiceRegistry implements OnModuleInit {
 
   async onModuleInit() {
     this.registerServices();
+    await this.checkHealth(); // Check health ngay khi start
     this.startHealthCheck();
-    this.logger.log('✅ Service Registry initialized');
+    this.logger.log(`✅ Service Registry initialized with ${this.services.size} services`);
   }
 
   private registerServices() {
@@ -49,6 +50,7 @@ export class ServiceRegistry implements OnModuleInit {
           { method: 'POST', path: '/auth/refresh', targetPath: '/api/v1/auth/refresh', authRequired: false },
           { method: 'POST', path: '/auth/logout', targetPath: '/api/v1/auth/logout', authRequired: true },
           { method: 'GET', path: '/auth/profile', targetPath: '/api/v1/auth/profile', authRequired: true },
+          { method: 'PATCH', path: '/internal/users/:userId/approve', targetPath: '/api/v1/internal/users/:userId/approve', authRequired: false },
         ],
       },
       {
@@ -150,10 +152,10 @@ export class ServiceRegistry implements OnModuleInit {
     for (const service of services) {
       this.services.set(service.name, {
         ...service,
-        health: true,
+        health: true, // Mặc định true, sẽ check lại ngay
         lastCheck: new Date(),
       });
-      this.logger.log(`Registered service: ${service.name} at ${service.url}`);
+      this.logger.log(`📝 Registered: ${service.name} (${service.url})`);
     }
   }
 
@@ -163,7 +165,7 @@ export class ServiceRegistry implements OnModuleInit {
   }
 
   private async checkHealth() {
-    for (const [name, service] of this.services) {
+    const checkPromises = Array.from(this.services.entries()).map(async ([name, service]) => {
       try {
         const response = await firstValueFrom(
           this.httpService.get(`${service.url}/api/v1/internal/health`, {
@@ -175,22 +177,25 @@ export class ServiceRegistry implements OnModuleInit {
           })
         );
         
-        if (response.data?.status === 'ok') {
-          service.health = true;
+        service.health = response.data?.status === 'ok';
+        
+        if (service.health) {
+          this.logger.debug(`✅ ${name} is healthy`);
         } else {
-          service.health = false;
+          this.logger.warn(`⚠️ ${name} health check returned non-ok status`);
         }
       } catch (error) {
         service.health = false;
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        this.logger.warn(`Health check failed for ${name}: ${errorMessage}`);
+        this.logger.warn(`❌ Health check failed for ${name}: ${errorMessage}`);
       }
       service.lastCheck = new Date();
-    }
+    });
+
+    await Promise.all(checkPromises);
   }
 
   findRoute(path: string, method: string): { service: ServiceInfo; route: ServiceRoute } | null {
-    // Loại bỏ prefix /api/v1
     const cleanPath = path.replace(/^\/api\/v1/, '');
     
     for (const service of this.services.values()) {
@@ -217,13 +222,11 @@ export class ServiceRegistry implements OnModuleInit {
   }
 
   buildTargetUrl(service: ServiceInfo, route: ServiceRoute, originalPath: string): string {
-    // Loại bỏ prefix /api/v1
     const cleanPath = originalPath.replace(/^\/api\/v1/, '');
     const routeParts = route.path.split('/').filter(p => p);
     const requestParts = cleanPath.split('/').filter(p => p);
     let targetUrl = service.url + route.targetPath;
     
-    // Replace path parameters
     for (let i = 0; i < routeParts.length; i++) {
       if (routeParts[i].startsWith(':')) {
         const paramName = routeParts[i].slice(1);
@@ -245,5 +248,11 @@ export class ServiceRegistry implements OnModuleInit {
 
   getHealthyServices(): ServiceInfo[] {
     return Array.from(this.services.values()).filter(s => s.health);
+  }
+
+  onModuleDestroy() {
+    if (this.healthCheckInterval) {
+      clearInterval(this.healthCheckInterval);
+    }
   }
 }

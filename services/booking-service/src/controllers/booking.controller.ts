@@ -32,8 +32,9 @@ export class BookingController {
     @Request() req,
     @Body() createDto: CreateBookingDto,
   ): Promise<BookingResponseDto> {
-    // req.user.sub là customerId từ JWT
-    return this.bookingService.createBooking(req.user.sub, createDto);
+    // Lấy token từ header để gọi Pricing Service
+    const authHeader = req.headers.authorization;
+    return this.bookingService.createBooking(req.user.sub, createDto, authHeader);
   }
 
   @Get()
@@ -80,9 +81,9 @@ export class BookingController {
     @Param('id') id: string,
     @Body() locationDto: UpdateLocationDto,
   ): Promise<void> {
-    // Driver cập nhật vị trí
     await this.bookingService.updateLocation(id, req.user.sub, locationDto.location);
   }
+
   @Patch(':id/assign-driver')
   @UseGuards(InternalAuthGuard)
   async assignDriver(

@@ -2,36 +2,97 @@ import { Injectable, Logger, NotFoundException, BadRequestException } from '@nes
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 import { RedisService, RabbitMQService } from '@cab-booking/shared';
-import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
-import { firstValueFrom } from 'rxjs';
 import { CreateBookingDto, AcceptBookingDto, UpdateStatusDto, BookingResponseDto } from '../dto/booking.dto';
 import { Booking, BookingDocument, BookingStatus, VehicleType } from '../schemas/booking.schema';
-
+import axios from 'axios';
 
 @Injectable()
 export class BookingService {
-  [x: string]: any;
   private readonly logger = new Logger(BookingService.name);
-  private readonly NEARBY_RADIUS = 5000; // 5km
+  private readonly NEARBY_RADIUS = 5000;
 
   constructor(
     @InjectModel(Booking.name) private bookingModel: Model<BookingDocument>,
     private redisService: RedisService,
     private rabbitMQService: RabbitMQService,
-    private httpService: HttpService,
     private configService: ConfigService,
   ) {}
 
-  async createBooking(customerId: string, createDto: CreateBookingDto): Promise<BookingResponseDto> {
+  // Gọi Pricing Service để lấy giá (có token)
+  async getPriceFromPricing(createDto: CreateBookingDto, authHeader?: string): Promise<any> {
+    try {
+      const pricingUrl = this.configService.get('PRICING_SERVICE_URL', 'http://localhost:3008');
+      
+      this.logger.log(`Calling pricing service at: ${pricingUrl}/api/v1/pricing/calculate`);
+      
+      const response = await axios.post(
+        `${pricingUrl}/api/v1/pricing/calculate`,
+        {
+          vehicleType: createDto.vehicleType,
+          pickupLocation: createDto.pickupLocation,
+          dropoffLocation: createDto.dropoffLocation,
+          distance: createDto.distance,
+          duration: createDto.duration || 0,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            ...(authHeader && { 'Authorization': authHeader }),
+          },
+          timeout: 10000,
+        }
+      );
+      
+      this.logger.log(`✅ Price from pricing service: ${JSON.stringify(response.data)}`);
+      return response.data;
+    } catch (error: any) {
+      this.logger.error(`❌ Error calling pricing service: ${error.message}`);
+      if (error.response) {
+        this.logger.error(`Status: ${error.response.status}`);
+        this.logger.error(`Data: ${JSON.stringify(error.response.data)}`);
+      }
+      // Fallback: tự tính giá nếu pricing service lỗi
+      return this.calculatePriceFallback(createDto);
+    }
+  }
+
+  // Tính giá fallback (khi pricing service lỗi)
+  private async calculatePriceFallback(createDto: CreateBookingDto): Promise<any> {
+    const basePrices = {
+      [VehicleType.MOTORBIKE]: 10000,
+      [VehicleType.CAR_4]: 20000,
+      [VehicleType.CAR_7]: 25000,
+    };
+
+    const perKmPrices = {
+      [VehicleType.MOTORBIKE]: 5000,
+      [VehicleType.CAR_4]: 10000,
+      [VehicleType.CAR_7]: 12000,
+    };
+
+    const basePrice = basePrices[createDto.vehicleType] || 20000;
+    const perKmPrice = perKmPrices[createDto.vehicleType] || 10000;
+    
+    const distancePrice = createDto.distance * perKmPrice;
+    const timePrice = (createDto.duration || 0) * 1000;
+    const total = basePrice + distancePrice + timePrice;
+
+    return {
+      basePrice,
+      distancePrice,
+      timePrice,
+      surgeMultiplier: 1,
+      total,
+      currency: 'VND',
+    };
+  }
+
+  async createBooking(customerId: string, createDto: CreateBookingDto, authHeader?: string): Promise<BookingResponseDto> {
     this.logger.log(`Creating booking for customer: ${customerId}`);
 
-    // 1. Tính giá dự kiến
-    const estimatedPrice = await this.calculatePrice(
-      createDto.distance,
-      createDto.duration || 0,
-      createDto.vehicleType,
-    );
+    // 1. Gọi Pricing Service để lấy giá (truyền token)
+    const estimatedPrice = await this.getPriceFromPricing(createDto, authHeader);
 
     // 2. Tạo booking trong MongoDB
     const booking = new this.bookingModel({
@@ -51,13 +112,7 @@ export class BookingService {
     await booking.save();
     this.logger.log(`Booking created with ID: ${booking._id}`);
 
-    // 3. Tìm tài xế gần nhất
-    //const nearbyDrivers = await this.findNearbyDrivers(
-     // createDto.pickupLocation.lat,
-     // createDto.pickupLocation.lng,
-    //);
-
-    // 4. Gửi sự kiện booking.created
+    // 3. Gửi sự kiện booking.created
     await this.rabbitMQService.publish(
       'booking.events',
       'booking.created',
@@ -76,12 +131,6 @@ export class BookingService {
       }
     );
 
-    // 5. Nếu không có tài xế nào
-    //if (nearbyDrivers.length === 0) {
-     // booking.status = BookingStatus.NO_DRIVER;
-      //await booking.save();
-    //}
-
     return this.mapToResponse(booking);
   }
 
@@ -92,8 +141,6 @@ export class BookingService {
       
       this.logger.log(`Calling driver service at: ${driverServiceUrl}/api/v1/internal/drivers/nearby?lat=${lat}&lng=${lng}&radius=5000`);
 
-      // Dùng axios trực tiếp
-      const axios = require('axios');
       const response = await axios.get(
         `${driverServiceUrl}/api/v1/internal/drivers/nearby`, 
         {
@@ -112,7 +159,7 @@ export class BookingService {
 
       this.logger.log(`Found ${response.data.length} nearby drivers`);
       return response.data;
-    } catch (error) {
+    } catch (error: any) {
       this.logger.error(`Error finding nearby drivers: ${error.message}`);
       if (error.response) {
         this.logger.error(`Status: ${error.response.status}`);
@@ -134,25 +181,22 @@ export class BookingService {
       throw new BadRequestException('Booking is not available for acceptance');
     }
 
-    // 1. Cập nhật trạng thái booking tại đây
     booking.driverId = acceptDto.driverId;
     booking.status = BookingStatus.CONFIRMED;
     booking.pickupTime = new Date(Date.now() + (acceptDto.eta || 5) * 60000);
     await booking.save();
 
-    // 2. Gửi sự kiện booking.accepted với ĐẦY ĐỦ dữ liệu
-    // RideService cần những thông tin này để tạo Ride mới
     await this.rabbitMQService.publish(
       'booking.events',
       'booking.accepted',
       {
-        id: booking._id.toString(), // RideService bóc tách trường 'id'
+        id: booking._id.toString(),
         bookingId: booking._id.toString(),
         customerId: booking.customerId,
         driverId: acceptDto.driverId,
-        pickupLocation: booking.pickupLocation,   // QUAN TRỌNG
-        dropoffLocation: booking.dropoffLocation, // QUAN TRỌNG
-        estimatedPrice: booking.estimatedPrice,   // QUAN TRỌNG
+        pickupLocation: booking.pickupLocation,
+        dropoffLocation: booking.dropoffLocation,
+        estimatedPrice: booking.estimatedPrice,
         distance: booking.distance,
         duration: booking.duration,
         waypoints: booking.waypoints || [],
@@ -174,23 +218,19 @@ export class BookingService {
     const oldStatus = booking.status;
     const newStatus = updateDto.status as BookingStatus;
 
-    // Validate status transition
     this.validateStatusTransition(oldStatus, newStatus);
 
-    // Update status
     booking.status = newStatus;
 
-    // Update timestamps based on status
     switch (newStatus) {
       case BookingStatus.PICKING_UP:
-        // Không cần update time đặc biệt
         break;
       case BookingStatus.IN_PROGRESS:
         booking.startTime = new Date();
         break;
       case BookingStatus.COMPLETED:
         booking.endTime = new Date();
-        booking.isPaid = booking.paymentMethod === 'cash'; // Cash paid immediately
+        booking.isPaid = booking.paymentMethod === 'cash';
         break;
       case BookingStatus.CANCELLED:
         booking.cancellation = {
@@ -203,7 +243,6 @@ export class BookingService {
 
     await booking.save();
 
-    // Publish status change event
     await this.rabbitMQService.publish(
       'booking.events',
       `booking.${newStatus}`,
@@ -231,13 +270,11 @@ export class BookingService {
       throw new NotFoundException('Active booking not found for this driver');
     }
 
-    // Add tracking point
     booking.trackingPath.push({
       ...location,
       timestamp: new Date(),
     });
 
-    // Keep only last 100 points
     if (booking.trackingPath.length > 100) {
       booking.trackingPath = booking.trackingPath.slice(-100);
     }
@@ -252,7 +289,6 @@ export class BookingService {
       throw new NotFoundException('Booking not found');
     }
 
-    // Check permission
     if (role === 'customer' && booking.customerId !== userId) {
       throw new BadRequestException('You do not have permission to view this booking');
     }
@@ -305,56 +341,23 @@ export class BookingService {
     };
   }
 
-  private async calculatePrice(distance: number, duration: number, vehicleType: string): Promise<any> {
-    // Price calculation logic (simplified)
-    const basePrices = {
-      [VehicleType.MOTORBIKE]: 10000,
-      [VehicleType.CAR_4]: 20000,
-      [VehicleType.CAR_7]: 25000,
-    };
-
-    const perKmPrices = {
-      [VehicleType.MOTORBIKE]: 5000,
-      [VehicleType.CAR_4]: 10000,
-      [VehicleType.CAR_7]: 12000,
-    };
-
-    const basePrice = basePrices[vehicleType] || 20000;
-    const perKmPrice = perKmPrices[vehicleType] || 10000;
-    
-    const distancePrice = distance * perKmPrice;
-    const timePrice = (duration || 0) * 1000; // 1000đ/phút
-
-    const total = basePrice + distancePrice + timePrice;
-
-    return {
-      basePrice,
-      distancePrice,
-      timePrice,
-      surgeMultiplier: 1,
-      total,
-      currency: 'VND',
-    };
-  }
-
   private validateStatusTransition(oldStatus: BookingStatus, newStatus: BookingStatus): void {
-  // Định nghĩa rõ ràng kiểu dữ liệu
-  const validTransitions: Record<BookingStatus, BookingStatus[]> = {
-    [BookingStatus.PENDING]: [BookingStatus.CONFIRMED, BookingStatus.CANCELLED, BookingStatus.NO_DRIVER],
-    [BookingStatus.CONFIRMED]: [BookingStatus.PICKING_UP, BookingStatus.CANCELLED],
-    [BookingStatus.PICKING_UP]: [BookingStatus.IN_PROGRESS, BookingStatus.CANCELLED],
-    [BookingStatus.IN_PROGRESS]: [BookingStatus.COMPLETED],
-    [BookingStatus.COMPLETED]: [],
-    [BookingStatus.CANCELLED]: [],
-    [BookingStatus.NO_DRIVER]: [BookingStatus.PENDING],
-  };
+    const validTransitions: Record<BookingStatus, BookingStatus[]> = {
+      [BookingStatus.PENDING]: [BookingStatus.CONFIRMED, BookingStatus.CANCELLED, BookingStatus.NO_DRIVER],
+      [BookingStatus.CONFIRMED]: [BookingStatus.PICKING_UP, BookingStatus.CANCELLED],
+      [BookingStatus.PICKING_UP]: [BookingStatus.IN_PROGRESS, BookingStatus.CANCELLED],
+      [BookingStatus.IN_PROGRESS]: [BookingStatus.COMPLETED],
+      [BookingStatus.COMPLETED]: [],
+      [BookingStatus.CANCELLED]: [],
+      [BookingStatus.NO_DRIVER]: [BookingStatus.PENDING],
+    };
 
-  if (!validTransitions[oldStatus]?.includes(newStatus)) {
-    throw new BadRequestException(
-      `Invalid status transition from ${oldStatus} to ${newStatus}`
-    );
+    if (!validTransitions[oldStatus]?.includes(newStatus)) {
+      throw new BadRequestException(
+        `Invalid status transition from ${oldStatus} to ${newStatus}`
+      );
+    }
   }
-}
 
   private mapToResponse(booking: BookingDocument): BookingResponseDto {
     const obj = booking.toObject();
@@ -381,35 +384,35 @@ export class BookingService {
       updatedAt: obj.updatedAt,
     };
   }
+
   async assignDriver(bookingId: string, driverId: string, eta?: number): Promise<BookingResponseDto> {
-  const booking = await this.bookingModel.findById(bookingId);
-  if (!booking) {
-    throw new NotFoundException('Booking not found');
-  }
-
-  booking.driverId = driverId;
-  booking.status = BookingStatus.CONFIRMED;
-  booking.pickupTime = new Date(Date.now() + (eta || 5) * 60000);
-  
-  await booking.save();
-
-  // Publish event cho ride service
-  await this.rabbitMQService.publish(
-    'booking.events',
-    'booking.accepted',
-    {
-      bookingId: booking._id.toString(),
-      customerId: booking.customerId,
-      driverId,
-      pickupLocation: booking.pickupLocation,
-      dropoffLocation: booking.dropoffLocation,
-      price: booking.price,
-      distance: booking.distance,
-      eta: eta || 5,
-      timestamp: new Date().toISOString(),
+    const booking = await this.bookingModel.findById(bookingId);
+    if (!booking) {
+      throw new NotFoundException('Booking not found');
     }
-  );
 
-  return this.mapToResponse(booking);
-}
+    booking.driverId = driverId;
+    booking.status = BookingStatus.CONFIRMED;
+    booking.pickupTime = new Date(Date.now() + (eta || 5) * 60000);
+    
+    await booking.save();
+
+    await this.rabbitMQService.publish(
+      'booking.events',
+      'booking.accepted',
+      {
+        bookingId: booking._id.toString(),
+        customerId: booking.customerId,
+        driverId,
+        pickupLocation: booking.pickupLocation,
+        dropoffLocation: booking.dropoffLocation,
+        price: booking.price,
+        distance: booking.distance,
+        eta: eta || 5,
+        timestamp: new Date().toISOString(),
+      }
+    );
+
+    return this.mapToResponse(booking);
+  }
 }

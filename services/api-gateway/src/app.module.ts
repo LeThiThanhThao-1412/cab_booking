@@ -9,9 +9,11 @@ import { HealthController } from './controllers/health.controller';
 import { InfoController } from './controllers/info.controller';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { RateLimiterMiddleware } from './middleware/rate-limiter.middleware';
-// Import cách khác
+
+// SỬA CÁCH IMPORT NÀY - DÙNG require thay vì import *
 const helmet = require('helmet');
 const compression = require('compression');
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -22,7 +24,7 @@ const compression = require('compression');
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        secret: configService.get('JWT_SECRET'),
+        secret: configService.get('JWT_SECRET', 'super-secret-key'),
         signOptions: { expiresIn: '1h' },
       }),
       inject: [ConfigService],
@@ -43,7 +45,11 @@ const compression = require('compression');
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(helmet(), compression(), RateLimiterMiddleware)
+      .apply(
+        helmet(),      // BỎ .default
+        compression(), // GỌI TRỰC TIẾP
+        RateLimiterMiddleware
+      )
       .forRoutes('*');
   }
 }
