@@ -12,3 +12,6 @@
 ![text](public/11.png) 
 ![text](public/12.png) 
 ![text](public/13.png)
+
+console.log(localStorage.getItem('accessToken'))
+console.log(localStorage.getItem('user'))

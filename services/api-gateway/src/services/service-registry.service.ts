@@ -33,7 +33,7 @@ export class ServiceRegistry implements OnModuleInit {
 
   async onModuleInit() {
     this.registerServices();
-    await this.checkHealth(); // Check health ngay khi start
+    await this.checkHealth();
     this.startHealthCheck();
     this.logger.log(`✅ Service Registry initialized with ${this.services.size} services`);
   }
@@ -152,7 +152,7 @@ export class ServiceRegistry implements OnModuleInit {
     for (const service of services) {
       this.services.set(service.name, {
         ...service,
-        health: true, // Mặc định true, sẽ check lại ngay
+        health: true,
         lastCheck: new Date(),
       });
       this.logger.log(`📝 Registered: ${service.name} (${service.url})`);
@@ -197,14 +197,17 @@ export class ServiceRegistry implements OnModuleInit {
 
   findRoute(path: string, method: string): { service: ServiceInfo; route: ServiceRoute } | null {
     const cleanPath = path.replace(/^\/api\/v1/, '');
+    this.logger.debug(`🔍 Finding route: ${method} ${path} -> clean: ${cleanPath}`);
     
     for (const service of this.services.values()) {
       for (const route of service.routes) {
         if (this.matchRoute(route.path, cleanPath) && route.method === method) {
+          this.logger.debug(`✅ Found route: ${service.name} ${route.method} ${route.path}`);
           return { service, route };
         }
       }
     }
+    this.logger.debug(`❌ No route found for: ${method} ${cleanPath}`);
     return null;
   }
 

@@ -13,10 +13,20 @@ export class ProxyService {
     private serviceRegistry: ServiceRegistry,
   ) {}
 
+  private getHeader(headers: any, key: string): string | undefined {
+    const value = headers[key];
+    if (!value) return undefined;
+    return Array.isArray(value) ? value[0] : value;
+  }
+
   async forwardRequest(req: Request): Promise<any> {
     const { path, method, body, query, headers } = req;
     
     this.logger.debug(`Incoming request: ${method} ${path}`);
+    
+    // LOG: Kiểm tra authorization header nhận được
+    const originalAuth = this.getHeader(headers, 'authorization');
+    this.logger.log(`🔑 Original authorization header: ${originalAuth ? originalAuth.substring(0, 50) + '...' : 'MISSING'}`);
     
     // Find route
     const routeConfig = this.serviceRegistry.findRoute(path, method);
@@ -42,9 +52,23 @@ export class ProxyService {
     this.logger.debug(`Proxying to: ${targetUrl}`);
     
     // Build request headers
-    const forwardHeaders = { ...headers };
-    delete forwardHeaders.host;
-    delete forwardHeaders['content-length'];
+    const forwardHeaders: Record<string, string> = {};
+    
+    // Forward important headers
+    const authHeader = this.getHeader(headers, 'authorization');
+    if (authHeader) {
+      forwardHeaders['Authorization'] = authHeader;  // Try with capital A
+      forwardHeaders['authorization'] = authHeader;  // And lowercase
+      this.logger.log(`✅ Forwarding authorization header: ${authHeader.substring(0, 50)}...`);
+    } else {
+      this.logger.warn(`⚠️ No authorization header to forward`);
+    }
+    
+    const contentType = this.getHeader(headers, 'content-type');
+    if (contentType) forwardHeaders['Content-Type'] = contentType;
+    
+    const accept = this.getHeader(headers, 'accept');
+    if (accept) forwardHeaders['Accept'] = accept;
     
     // Add internal service identification
     forwardHeaders['x-service-id'] = 'api-gateway';
@@ -54,7 +78,10 @@ export class ProxyService {
     if ((req as any).user) {
       forwardHeaders['x-user-id'] = (req as any).user.sub;
       forwardHeaders['x-user-role'] = (req as any).user.role;
+      this.logger.log(`✅ Forwarding user info: ${(req as any).user.sub}`);
     }
+    
+    this.logger.log(`📤 Forward headers: ${JSON.stringify(Object.keys(forwardHeaders))}`);
     
     try {
       const response = await firstValueFrom(
@@ -75,6 +102,8 @@ export class ProxyService {
       this.logger.error(`Proxy error: ${errorMessage}`);
       
       if (error instanceof Error && (error as any).response) {
+        this.logger.error(`Response status: ${(error as any).response?.status}`);
+        this.logger.error(`Response data: ${JSON.stringify((error as any).response?.data)}`);
         throw new HttpException(
           (error as any).response.data?.message || error.message,
           (error as any).response.status || HttpStatus.INTERNAL_SERVER_ERROR,

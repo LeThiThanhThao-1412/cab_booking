@@ -62,7 +62,7 @@ export class AuthService {
       fullName: registerDto.fullName,
       phone: registerDto.phone,
       role: registerDto.role as UserRole || UserRole.CUSTOMER,
-      status: UserStatus.PENDING,
+      status: UserStatus.ACTIVE,
       isEmailVerified: false,
     });
 
