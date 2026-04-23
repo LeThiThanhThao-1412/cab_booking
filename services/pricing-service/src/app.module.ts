@@ -8,7 +8,7 @@ import { PricingController } from './controllers/pricing.controller';
 import { InternalController } from './controllers/internal.controller';
 import { PricingService } from './services/pricing.service';
 import { DistanceService } from './services/distance.service';
-import { SurgePricingService } from './surge/surge-pricing.service';
+import { AIClientService } from './services/ai-client.service';
 import { BasePrice } from './entities/base-price.entity';
 import { Coupon } from './entities/coupon.entity';
 import { CouponUsage } from './entities/coupon-usage.entity';
@@ -57,8 +57,8 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
   controllers: [PricingController, InternalController],
   providers: [
     PricingService,
-    DistanceService,      // ← THÊM DÒNG NÀY
-    SurgePricingService,
+    DistanceService,
+    AIClientService,  // Thêm vào đây
     JwtAuthGuard,
   ],
 })

@@ -6,8 +6,8 @@ import { ConfigService } from '@nestjs/config';
 import { BasePrice } from '../entities/base-price.entity';
 import { Coupon } from '../entities/coupon.entity';
 import { CouponUsage } from '../entities/coupon-usage.entity';
-import { SurgePricingService } from '../surge/surge-pricing.service';
 import { DistanceService } from './distance.service';
+import { AIClientService } from './ai-client.service';
 import { CalculatePriceDto, ApplyCouponDto, PriceResponseDto, CreateCouponDto } from '../dto/pricing.dto';
 import { VehicleType, CouponStatus, CouponType, SurgeLevel } from '../enums/pricing.enum';
 
@@ -28,14 +28,13 @@ export class PricingService implements OnModuleInit {
     private redisService: RedisService,
     private rabbitMQService: RabbitMQService,
     private configService: ConfigService,
-    private surgePricingService: SurgePricingService,
     private distanceService: DistanceService,
+    private aiClientService: AIClientService,  // Thêm AI Client
   ) {}
 
   async onModuleInit() {
     await new Promise(resolve => setTimeout(resolve, 3000));
     await this.initializeBasePrices();
-    await this.initializeSurgeConfigs();
     await this.subscribeWithRetry();
   }
 
@@ -52,9 +51,10 @@ export class PricingService implements OnModuleInit {
       await this.subscribeToEvents();
       this.isSubscribed = true;
       this.logger.log('✅ Successfully subscribed to events');
-    } catch (error) {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
       if (retryCount < maxRetries) {
-        this.logger.warn(`Failed to subscribe (attempt ${retryCount + 1}/${maxRetries}): ${error.message}`);
+        this.logger.warn(`Failed to subscribe (attempt ${retryCount + 1}/${maxRetries}): ${message}`);
         setTimeout(() => this.subscribeWithRetry(retryCount + 1), retryDelay);
       } else {
         this.logger.error(`Failed to subscribe after ${maxRetries} attempts`);
@@ -64,11 +64,6 @@ export class PricingService implements OnModuleInit {
 
   async subscribeToEvents() {
     try {
-      const channel = this.rabbitMQService['channel'];
-      if (!channel) {
-        throw new Error('RabbitMQ channel is not available');
-      }
-
       await this.rabbitMQService.subscribe(
         'pricing-service.queue',
         async (msg: any) => {
@@ -80,8 +75,9 @@ export class PricingService implements OnModuleInit {
         },
       );
       this.logger.log('✅ Subscribed to booking events');
-    } catch (error) {
-      this.logger.error(`Failed to subscribe: ${error.message}`);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      this.logger.error(`Failed to subscribe: ${message}`);
       throw error;
     }
   }
@@ -103,31 +99,13 @@ export class PricingService implements OnModuleInit {
     }
   }
 
-  async initializeSurgeConfigs() {
-    try {
-      const count = await this.surgePricingService['surgeConfigRepository'].count();
-      if (count === 0) {
-        const configs = [
-          { level: SurgeLevel.NORMAL, multiplier: 1.0, minDriversOnline: 10, maxPendingBookings: 5 },
-          { level: SurgeLevel.LOW, multiplier: 1.2, minDriversOnline: 5, maxPendingBookings: 8 },
-          { level: SurgeLevel.MEDIUM, multiplier: 1.5, minDriversOnline: 3, maxPendingBookings: 12 },
-          { level: SurgeLevel.HIGH, multiplier: 2.0, minDriversOnline: 1, maxPendingBookings: 20 },
-          { level: SurgeLevel.PEAK, multiplier: 3.0, minDriversOnline: 0, maxPendingBookings: 100 },
-        ];
-        await this.surgePricingService['surgeConfigRepository'].save(configs);
-        this.logger.log('✅ Initialized surge configs');
-      }
-    } catch (error) {
-      this.logger.warn(`Surge config initialization skipped: ${error.message}`);
-    }
-  }
-
   async calculatePrice(calculateDto: CalculatePriceDto): Promise<PriceResponseDto> {
     this.logger.log(`Calculating price for ${calculateDto.vehicleType}`);
 
     let distance = calculateDto.distance;
     let estimatedDuration = calculateDto.duration;
 
+    // Tính khoảng cách nếu chưa có
     if ((!distance || !estimatedDuration) && calculateDto.pickupLocation && calculateDto.dropoffLocation) {
       const route = await this.distanceService.calculateDistance(
         calculateDto.pickupLocation,
@@ -146,6 +124,33 @@ export class PricingService implements OnModuleInit {
       estimatedDuration = (distance / this.AVERAGE_SPEED) * 60;
     }
 
+    // Lấy thông tin giờ hiện tại
+    const now = new Date();
+    const currentHour = now.getHours();
+    const isWeekend = now.getDay() === 0 || now.getDay() === 6;
+
+    // ========== GỌI AI ĐỂ TÍNH ETA VÀ SURGE ==========
+    try {
+      // Gọi AI để tính ETA chính xác hơn
+      const isPeakHour = (currentHour >= 7 && currentHour <= 9) || (currentHour >= 17 && currentHour <= 19);
+      const trafficLevel = isPeakHour ? 0.7 : 0.4;
+      
+      const aiETA = await this.aiClientService.getETAFromAI(
+        distance,
+        trafficLevel,
+        currentHour,
+        isPeakHour,
+      );
+      if (aiETA > 0) {
+        estimatedDuration = aiETA;
+        this.logger.log(`AI ETA updated: ${estimatedDuration} minutes`);
+      }
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      this.logger.warn(`AI ETA failed, using calculated duration: ${message}`);
+    }
+
+    // Lấy base price từ database
     const basePrice = await this.basePriceRepository.findOne({
       where: { vehicleType: calculateDto.vehicleType, isActive: true },
     });
@@ -154,7 +159,6 @@ export class PricingService implements OnModuleInit {
       throw new NotFoundException('Base price not found for this vehicle type');
     }
 
-    // Convert to number to ensure proper calculation
     const baseFare = Number(basePrice.baseFare);
     const perKm = Number(basePrice.perKm);
     const perMinute = Number(basePrice.perMinute);
@@ -165,15 +169,42 @@ export class PricingService implements OnModuleInit {
     const subtotal = baseFare + distancePrice + timePrice;
     const baseTotal = Math.max(subtotal, minimumFare);
 
-    const surge = await this.surgePricingService.getSurgeMultiplier(
-      calculateDto.pickupLocation?.lat || 0,
-      calculateDto.pickupLocation?.lng || 0,
-    );
+    // ========== GỌI AI ĐỂ TÍNH SURGE MULTIPLIER ==========
+    let surgeMultiplier = 1.0;
+    let surgeLevel = 'normal';
+    let surgeReason = 'Bình thường';
 
-    const surgeMultiplier = Number(surge.multiplier);
+    try {
+      const demandIndex = this.calculateDemandIndex(currentHour, isWeekend);
+      const supplyIndex = await this.getSupplyIndex(calculateDto.pickupLocation?.lat || 0, calculateDto.pickupLocation?.lng || 0);
+      
+      const aiSurge = await this.aiClientService.getSurgeFromAI(
+        demandIndex,
+        supplyIndex,
+        currentHour,
+        isWeekend,
+      );
+      surgeMultiplier = aiSurge;
+      
+      // Xác định level và reason từ multiplier
+      if (surgeMultiplier >= 2.5) surgeLevel = 'peak';
+      else if (surgeMultiplier >= 2.0) surgeLevel = 'high';
+      else if (surgeMultiplier >= 1.5) surgeLevel = 'medium';
+      else if (surgeMultiplier >= 1.2) surgeLevel = 'low';
+      else surgeLevel = 'normal';
+      
+      surgeReason = surgeMultiplier > 1.5 ? 'Nhu cầu cao, thiếu tài xế' : 'Bình thường';
+      
+      this.logger.log(`AI Surge: ${surgeMultiplier}x (${surgeLevel})`);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      this.logger.warn(`AI Surge failed, using default multiplier: ${message}`);
+    }
+
     const surgeAmount = baseTotal * (surgeMultiplier - 1);
     const subtotalWithSurge = baseTotal + surgeAmount;
 
+    // Xử lý coupon
     let couponDiscount = 0;
     let couponCode: string | undefined = undefined;
 
@@ -188,8 +219,9 @@ export class PricingService implements OnModuleInit {
         const couponResult = await this.applyCoupon(applyDto);
         couponDiscount = Number(couponResult.discount);
         couponCode = calculateDto.couponCode;
-      } catch (error) {
-        this.logger.warn(`Coupon invalid: ${error.message}`);
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : String(error);
+        this.logger.warn(`Coupon invalid: ${message}`);
       }
     }
 
@@ -201,7 +233,7 @@ export class PricingService implements OnModuleInit {
       timePrice: Math.round(timePrice),
       subtotal: Math.round(baseTotal),
       surgeMultiplier: surgeMultiplier,
-      surgeLevel: surge.level,
+      surgeLevel: surgeLevel,
       surgeAmount: Math.round(surgeAmount),
       couponDiscount: Math.round(couponDiscount),
       couponCode,
@@ -215,11 +247,44 @@ export class PricingService implements OnModuleInit {
         perMinute: Math.round(perMinute),
         distance: Number(distance.toFixed(2)),
         duration: Math.round(estimatedDuration),
-        surgeReason: surge.reason,
+        surgeReason: surgeReason,
       },
     };
   }
 
+  // Helper methods
+  private calculateDemandIndex(hour: number, isWeekend: boolean): number {
+    let demand = 1.0;
+    if (hour >= 7 && hour <= 9) demand = 2.0;
+    else if (hour >= 17 && hour <= 19) demand = 2.5;
+    else if (hour >= 11 && hour <= 13) demand = 1.5;
+    else if (hour >= 22 || hour <= 5) demand = 0.5;
+    
+    if (isWeekend && (hour >= 18 && hour <= 22)) demand *= 1.3;
+    return demand;
+  }
+
+  private async getSupplyIndex(lat: number, lng: number): Promise<number> {
+    try {
+      const redisClient = this.redisService.getClient();
+      const nearbyDrivers = await redisClient.georadius(
+        'driver:locations',
+        lng,
+        lat,
+        2000,
+        'm',
+      );
+      const driverCount = nearbyDrivers.length;
+      if (driverCount >= 10) return 1.5;
+      if (driverCount >= 5) return 1.0;
+      if (driverCount >= 2) return 0.6;
+      return 0.3;
+    } catch (error) {
+      return 1.0;
+    }
+  }
+
+  // Các methods còn lại giữ nguyên...
   async applyCoupon(applyDto: ApplyCouponDto): Promise<{ discount: number; finalAmount: number }> {
     this.logger.log(`Applying coupon ${applyDto.couponCode}`);
 

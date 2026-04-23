@@ -1,0 +1,9002 @@
+[
+  {
+    "user_id": "U000001",
+    "trip_count_30d": 27,
+    "avg_rating": 4.8,
+    "location_consistency": 0.92,
+    "amount": 260188,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000002",
+    "trip_count_30d": 6,
+    "avg_rating": 4.5,
+    "location_consistency": 0.77,
+    "amount": 50069,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000003",
+    "trip_count_30d": 5,
+    "avg_rating": 3.8,
+    "location_consistency": 0.87,
+    "amount": 293710,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000004",
+    "trip_count_30d": 48,
+    "avg_rating": 1.6,
+    "location_consistency": 0.39,
+    "amount": 334460,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000005",
+    "trip_count_30d": 19,
+    "avg_rating": 3.7,
+    "location_consistency": 0.9,
+    "amount": 65765,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000006",
+    "trip_count_30d": 33,
+    "avg_rating": 4.8,
+    "location_consistency": 0.74,
+    "amount": 79050,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000007",
+    "trip_count_30d": 11,
+    "avg_rating": 3.6,
+    "location_consistency": 0.78,
+    "amount": 181877,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000008",
+    "trip_count_30d": 31,
+    "avg_rating": 3.7,
+    "location_consistency": 1,
+    "amount": 283621,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000009",
+    "trip_count_30d": 34,
+    "avg_rating": 4.4,
+    "location_consistency": 0.99,
+    "amount": 257373,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000010",
+    "trip_count_30d": 20,
+    "avg_rating": 3.8,
+    "location_consistency": 0.85,
+    "amount": 230977,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000011",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.62,
+    "amount": 208727,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000012",
+    "trip_count_30d": 27,
+    "avg_rating": 4.1,
+    "location_consistency": 0.65,
+    "amount": 60519,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000013",
+    "trip_count_30d": 49,
+    "avg_rating": 2.8,
+    "location_consistency": 0.18,
+    "amount": 536684,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000014",
+    "trip_count_30d": 22,
+    "avg_rating": 4.4,
+    "location_consistency": 0.73,
+    "amount": 209947,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000015",
+    "trip_count_30d": 16,
+    "avg_rating": 4,
+    "location_consistency": 0.78,
+    "amount": 82180,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000016",
+    "trip_count_30d": 36,
+    "avg_rating": 2,
+    "location_consistency": 0.37,
+    "amount": 769298,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000017",
+    "trip_count_30d": 31,
+    "avg_rating": 4.7,
+    "location_consistency": 0.8,
+    "amount": 65719,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000018",
+    "trip_count_30d": 25,
+    "avg_rating": 4,
+    "location_consistency": 0.99,
+    "amount": 188528,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000019",
+    "trip_count_30d": 22,
+    "avg_rating": 3.8,
+    "location_consistency": 1,
+    "amount": 277399,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000020",
+    "trip_count_30d": 24,
+    "avg_rating": 4.3,
+    "location_consistency": 0.76,
+    "amount": 183802,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000021",
+    "trip_count_30d": 30,
+    "avg_rating": 4.2,
+    "location_consistency": 0.87,
+    "amount": 51644,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000022",
+    "trip_count_30d": 9,
+    "avg_rating": 4.6,
+    "location_consistency": 0.78,
+    "amount": 140164,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000023",
+    "trip_count_30d": 10,
+    "avg_rating": 4,
+    "location_consistency": 0.94,
+    "amount": 54176,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000024",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.81,
+    "amount": 237202,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000025",
+    "trip_count_30d": 30,
+    "avg_rating": 4.2,
+    "location_consistency": 0.81,
+    "amount": 84666,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000026",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.86,
+    "amount": 208720,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000027",
+    "trip_count_30d": 21,
+    "avg_rating": 4.4,
+    "location_consistency": 0.6,
+    "amount": 288426,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000028",
+    "trip_count_30d": 22,
+    "avg_rating": 4.3,
+    "location_consistency": 0.9,
+    "amount": 269872,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000029",
+    "trip_count_30d": 10,
+    "avg_rating": 4.8,
+    "location_consistency": 0.84,
+    "amount": 277429,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000030",
+    "trip_count_30d": 18,
+    "avg_rating": 5,
+    "location_consistency": 0.92,
+    "amount": 275557,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000031",
+    "trip_count_30d": 23,
+    "avg_rating": 3.8,
+    "location_consistency": 0.61,
+    "amount": 294663,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000032",
+    "trip_count_30d": 29,
+    "avg_rating": 5,
+    "location_consistency": 0.83,
+    "amount": 143340,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000033",
+    "trip_count_30d": 19,
+    "avg_rating": 4.6,
+    "location_consistency": 0.74,
+    "amount": 257106,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000034",
+    "trip_count_30d": 17,
+    "avg_rating": 4.7,
+    "location_consistency": 0.65,
+    "amount": 198725,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000035",
+    "trip_count_30d": 24,
+    "avg_rating": 4.2,
+    "location_consistency": 0.82,
+    "amount": 97788,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000036",
+    "trip_count_30d": 17,
+    "avg_rating": 4.2,
+    "location_consistency": 0.77,
+    "amount": 193880,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000037",
+    "trip_count_30d": 34,
+    "avg_rating": 1.3,
+    "location_consistency": 0.14,
+    "amount": 837222,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000038",
+    "trip_count_30d": 11,
+    "avg_rating": 4.9,
+    "location_consistency": 0.69,
+    "amount": 98073,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000039",
+    "trip_count_30d": 35,
+    "avg_rating": 2.1,
+    "location_consistency": 0.19,
+    "amount": 947823,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000040",
+    "trip_count_30d": 34,
+    "avg_rating": 4.9,
+    "location_consistency": 0.82,
+    "amount": 147243,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000041",
+    "trip_count_30d": 11,
+    "avg_rating": 3.9,
+    "location_consistency": 0.63,
+    "amount": 72921,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000042",
+    "trip_count_30d": 28,
+    "avg_rating": 4,
+    "location_consistency": 0.72,
+    "amount": 203205,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000043",
+    "trip_count_30d": 23,
+    "avg_rating": 3.6,
+    "location_consistency": 0.69,
+    "amount": 289619,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000044",
+    "trip_count_30d": 7,
+    "avg_rating": 3.6,
+    "location_consistency": 0.77,
+    "amount": 262385,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000045",
+    "trip_count_30d": 25,
+    "avg_rating": 4.6,
+    "location_consistency": 0.91,
+    "amount": 294075,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000046",
+    "trip_count_30d": 34,
+    "avg_rating": 3.7,
+    "location_consistency": 0.82,
+    "amount": 209719,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000047",
+    "trip_count_30d": 7,
+    "avg_rating": 3.9,
+    "location_consistency": 0.74,
+    "amount": 104170,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000048",
+    "trip_count_30d": 36,
+    "avg_rating": 2.2,
+    "location_consistency": 0.16,
+    "amount": 319264,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000049",
+    "trip_count_30d": 13,
+    "avg_rating": 4,
+    "location_consistency": 0.64,
+    "amount": 205727,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000050",
+    "trip_count_30d": 10,
+    "avg_rating": 4.4,
+    "location_consistency": 0.7,
+    "amount": 194875,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000051",
+    "trip_count_30d": 61,
+    "avg_rating": 1.3,
+    "location_consistency": 0.09,
+    "amount": 384807,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000052",
+    "trip_count_30d": 15,
+    "avg_rating": 3.6,
+    "location_consistency": 0.93,
+    "amount": 108720,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000053",
+    "trip_count_30d": 30,
+    "avg_rating": 3.8,
+    "location_consistency": 0.9,
+    "amount": 205624,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000054",
+    "trip_count_30d": 34,
+    "avg_rating": 4.7,
+    "location_consistency": 0.76,
+    "amount": 68118,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000055",
+    "trip_count_30d": 20,
+    "avg_rating": 4.2,
+    "location_consistency": 0.66,
+    "amount": 127538,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000056",
+    "trip_count_30d": 8,
+    "avg_rating": 4,
+    "location_consistency": 0.68,
+    "amount": 97256,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000057",
+    "trip_count_30d": 7,
+    "avg_rating": 4.4,
+    "location_consistency": 0.95,
+    "amount": 226430,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000058",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.67,
+    "amount": 263744,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000059",
+    "trip_count_30d": 73,
+    "avg_rating": 1.6,
+    "location_consistency": 0.02,
+    "amount": 322675,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000060",
+    "trip_count_30d": 13,
+    "avg_rating": 3.8,
+    "location_consistency": 0.7,
+    "amount": 189461,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000061",
+    "trip_count_30d": 22,
+    "avg_rating": 3.9,
+    "location_consistency": 0.99,
+    "amount": 192382,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000062",
+    "trip_count_30d": 13,
+    "avg_rating": 4.9,
+    "location_consistency": 0.79,
+    "amount": 272199,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000063",
+    "trip_count_30d": 35,
+    "avg_rating": 3.9,
+    "location_consistency": 0.77,
+    "amount": 133690,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000064",
+    "trip_count_30d": 31,
+    "avg_rating": 3.7,
+    "location_consistency": 0.93,
+    "amount": 242113,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000065",
+    "trip_count_30d": 36,
+    "avg_rating": 2.4,
+    "location_consistency": 0.02,
+    "amount": 314380,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000066",
+    "trip_count_30d": 34,
+    "avg_rating": 4.1,
+    "location_consistency": 0.66,
+    "amount": 98330,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000067",
+    "trip_count_30d": 15,
+    "avg_rating": 3.8,
+    "location_consistency": 0.63,
+    "amount": 266355,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000068",
+    "trip_count_30d": 22,
+    "avg_rating": 4.8,
+    "location_consistency": 0.68,
+    "amount": 133200,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000069",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.66,
+    "amount": 291236,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000070",
+    "trip_count_30d": 33,
+    "avg_rating": 3.5,
+    "location_consistency": 0.74,
+    "amount": 202830,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000071",
+    "trip_count_30d": 12,
+    "avg_rating": 4.6,
+    "location_consistency": 0.61,
+    "amount": 219415,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000072",
+    "trip_count_30d": 24,
+    "avg_rating": 4.3,
+    "location_consistency": 0.6,
+    "amount": 68048,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000073",
+    "trip_count_30d": 35,
+    "avg_rating": 3.8,
+    "location_consistency": 0.97,
+    "amount": 170296,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000074",
+    "trip_count_30d": 10,
+    "avg_rating": 3.8,
+    "location_consistency": 0.7,
+    "amount": 275509,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000075",
+    "trip_count_30d": 8,
+    "avg_rating": 3.9,
+    "location_consistency": 0.87,
+    "amount": 147227,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000076",
+    "trip_count_30d": 33,
+    "avg_rating": 4.3,
+    "location_consistency": 0.8,
+    "amount": 57998,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000077",
+    "trip_count_30d": 27,
+    "avg_rating": 3.9,
+    "location_consistency": 0.69,
+    "amount": 178179,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000078",
+    "trip_count_30d": 44,
+    "avg_rating": 2.4,
+    "location_consistency": 0.03,
+    "amount": 360965,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000079",
+    "trip_count_30d": 13,
+    "avg_rating": 4.3,
+    "location_consistency": 0.81,
+    "amount": 262221,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000080",
+    "trip_count_30d": 35,
+    "avg_rating": 3.7,
+    "location_consistency": 0.96,
+    "amount": 195377,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000081",
+    "trip_count_30d": 18,
+    "avg_rating": 3.7,
+    "location_consistency": 0.6,
+    "amount": 227975,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000082",
+    "trip_count_30d": 21,
+    "avg_rating": 4.3,
+    "location_consistency": 0.91,
+    "amount": 215118,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000083",
+    "trip_count_30d": 33,
+    "avg_rating": 4.1,
+    "location_consistency": 0.94,
+    "amount": 289170,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000084",
+    "trip_count_30d": 21,
+    "avg_rating": 4.4,
+    "location_consistency": 0.8,
+    "amount": 120907,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000085",
+    "trip_count_30d": 31,
+    "avg_rating": 3.6,
+    "location_consistency": 0.94,
+    "amount": 285176,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000086",
+    "trip_count_30d": 79,
+    "avg_rating": 1.7,
+    "location_consistency": 0.29,
+    "amount": 412755,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000087",
+    "trip_count_30d": 35,
+    "avg_rating": 4.9,
+    "location_consistency": 0.88,
+    "amount": 150141,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000088",
+    "trip_count_30d": 20,
+    "avg_rating": 4.4,
+    "location_consistency": 0.82,
+    "amount": 85230,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000089",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.81,
+    "amount": 289777,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000090",
+    "trip_count_30d": 23,
+    "avg_rating": 4.5,
+    "location_consistency": 0.87,
+    "amount": 177121,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000091",
+    "trip_count_30d": 29,
+    "avg_rating": 4.9,
+    "location_consistency": 0.85,
+    "amount": 218108,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000092",
+    "trip_count_30d": 40,
+    "avg_rating": 1.4,
+    "location_consistency": 0.29,
+    "amount": 433265,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000093",
+    "trip_count_30d": 14,
+    "avg_rating": 3.8,
+    "location_consistency": 0.82,
+    "amount": 195826,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000094",
+    "trip_count_30d": 38,
+    "avg_rating": 2.4,
+    "location_consistency": 0.34,
+    "amount": 351133,
+    "fraud_score": 0.7,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000095",
+    "trip_count_30d": 22,
+    "avg_rating": 3.8,
+    "location_consistency": 0.78,
+    "amount": 52653,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000096",
+    "trip_count_30d": 58,
+    "avg_rating": 2.9,
+    "location_consistency": 0.26,
+    "amount": 852959,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000097",
+    "trip_count_30d": 21,
+    "avg_rating": 4.2,
+    "location_consistency": 0.72,
+    "amount": 268725,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000098",
+    "trip_count_30d": 9,
+    "avg_rating": 3.5,
+    "location_consistency": 0.77,
+    "amount": 182931,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000099",
+    "trip_count_30d": 18,
+    "avg_rating": 3.7,
+    "location_consistency": 0.63,
+    "amount": 277562,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000100",
+    "trip_count_30d": 29,
+    "avg_rating": 4.1,
+    "location_consistency": 0.6,
+    "amount": 155221,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000101",
+    "trip_count_30d": 19,
+    "avg_rating": 4.3,
+    "location_consistency": 0.75,
+    "amount": 188052,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000102",
+    "trip_count_30d": 17,
+    "avg_rating": 3.6,
+    "location_consistency": 0.73,
+    "amount": 187508,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000103",
+    "trip_count_30d": 22,
+    "avg_rating": 4.2,
+    "location_consistency": 0.93,
+    "amount": 69294,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000104",
+    "trip_count_30d": 16,
+    "avg_rating": 4.3,
+    "location_consistency": 0.91,
+    "amount": 297528,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000105",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.67,
+    "amount": 211910,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000106",
+    "trip_count_30d": 34,
+    "avg_rating": 4.3,
+    "location_consistency": 0.82,
+    "amount": 136535,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000107",
+    "trip_count_30d": 49,
+    "avg_rating": 1.8,
+    "location_consistency": 0.25,
+    "amount": 764139,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000108",
+    "trip_count_30d": 31,
+    "avg_rating": 4.5,
+    "location_consistency": 0.65,
+    "amount": 60791,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000109",
+    "trip_count_30d": 9,
+    "avg_rating": 4.7,
+    "location_consistency": 0.63,
+    "amount": 212104,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000110",
+    "trip_count_30d": 30,
+    "avg_rating": 3.5,
+    "location_consistency": 0.62,
+    "amount": 215428,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000111",
+    "trip_count_30d": 54,
+    "avg_rating": 3,
+    "location_consistency": 0.27,
+    "amount": 675934,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000112",
+    "trip_count_30d": 19,
+    "avg_rating": 4.7,
+    "location_consistency": 0.94,
+    "amount": 214272,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000113",
+    "trip_count_30d": 27,
+    "avg_rating": 4.2,
+    "location_consistency": 0.9,
+    "amount": 264261,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000114",
+    "trip_count_30d": 20,
+    "avg_rating": 4.6,
+    "location_consistency": 0.9,
+    "amount": 65448,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000115",
+    "trip_count_30d": 61,
+    "avg_rating": 2.6,
+    "location_consistency": 0.12,
+    "amount": 576307,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000116",
+    "trip_count_30d": 20,
+    "avg_rating": 3.6,
+    "location_consistency": 0.84,
+    "amount": 235703,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000117",
+    "trip_count_30d": 5,
+    "avg_rating": 4.6,
+    "location_consistency": 0.93,
+    "amount": 138698,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000118",
+    "trip_count_30d": 8,
+    "avg_rating": 3.9,
+    "location_consistency": 0.68,
+    "amount": 270972,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000119",
+    "trip_count_30d": 58,
+    "avg_rating": 2.3,
+    "location_consistency": 0.18,
+    "amount": 755945,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000120",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.8,
+    "amount": 128631,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000121",
+    "trip_count_30d": 6,
+    "avg_rating": 4.6,
+    "location_consistency": 0.86,
+    "amount": 207637,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000122",
+    "trip_count_30d": 19,
+    "avg_rating": 3.6,
+    "location_consistency": 0.86,
+    "amount": 165672,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000123",
+    "trip_count_30d": 25,
+    "avg_rating": 5,
+    "location_consistency": 0.63,
+    "amount": 67677,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000124",
+    "trip_count_30d": 15,
+    "avg_rating": 4.2,
+    "location_consistency": 0.63,
+    "amount": 232488,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000125",
+    "trip_count_30d": 21,
+    "avg_rating": 3.9,
+    "location_consistency": 0.72,
+    "amount": 227959,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000126",
+    "trip_count_30d": 13,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 53734,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000127",
+    "trip_count_30d": 21,
+    "avg_rating": 4.9,
+    "location_consistency": 0.69,
+    "amount": 167768,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000128",
+    "trip_count_30d": 8,
+    "avg_rating": 3.7,
+    "location_consistency": 0.75,
+    "amount": 287458,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000129",
+    "trip_count_30d": 66,
+    "avg_rating": 1.9,
+    "location_consistency": 0.03,
+    "amount": 527171,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000130",
+    "trip_count_30d": 24,
+    "avg_rating": 3.5,
+    "location_consistency": 0.61,
+    "amount": 257708,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000131",
+    "trip_count_30d": 20,
+    "avg_rating": 3.8,
+    "location_consistency": 0.89,
+    "amount": 88384,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000132",
+    "trip_count_30d": 8,
+    "avg_rating": 4.9,
+    "location_consistency": 0.65,
+    "amount": 275926,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000133",
+    "trip_count_30d": 10,
+    "avg_rating": 4.1,
+    "location_consistency": 0.76,
+    "amount": 142900,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000134",
+    "trip_count_30d": 5,
+    "avg_rating": 4.2,
+    "location_consistency": 0.68,
+    "amount": 145344,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000135",
+    "trip_count_30d": 69,
+    "avg_rating": 1,
+    "location_consistency": 0.39,
+    "amount": 899099,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000136",
+    "trip_count_30d": 27,
+    "avg_rating": 4.8,
+    "location_consistency": 0.63,
+    "amount": 270377,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000137",
+    "trip_count_30d": 45,
+    "avg_rating": 1.4,
+    "location_consistency": 0.32,
+    "amount": 652096,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000138",
+    "trip_count_30d": 29,
+    "avg_rating": 4.3,
+    "location_consistency": 0.68,
+    "amount": 212978,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000139",
+    "trip_count_30d": 77,
+    "avg_rating": 2.6,
+    "location_consistency": 0.1,
+    "amount": 563823,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000140",
+    "trip_count_30d": 7,
+    "avg_rating": 3.7,
+    "location_consistency": 0.88,
+    "amount": 188444,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000141",
+    "trip_count_30d": 72,
+    "avg_rating": 1.6,
+    "location_consistency": 0.09,
+    "amount": 539230,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000142",
+    "trip_count_30d": 31,
+    "avg_rating": 4.2,
+    "location_consistency": 0.67,
+    "amount": 155814,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000143",
+    "trip_count_30d": 24,
+    "avg_rating": 3.7,
+    "location_consistency": 0.92,
+    "amount": 115560,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000144",
+    "trip_count_30d": 27,
+    "avg_rating": 4.5,
+    "location_consistency": 0.74,
+    "amount": 286001,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000145",
+    "trip_count_30d": 28,
+    "avg_rating": 4.6,
+    "location_consistency": 0.99,
+    "amount": 51197,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000146",
+    "trip_count_30d": 10,
+    "avg_rating": 3.7,
+    "location_consistency": 0.74,
+    "amount": 91975,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000147",
+    "trip_count_30d": 14,
+    "avg_rating": 4.9,
+    "location_consistency": 0.89,
+    "amount": 115128,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000148",
+    "trip_count_30d": 69,
+    "avg_rating": 2.7,
+    "location_consistency": 0.26,
+    "amount": 394769,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000149",
+    "trip_count_30d": 23,
+    "avg_rating": 4.7,
+    "location_consistency": 0.78,
+    "amount": 153171,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000150",
+    "trip_count_30d": 22,
+    "avg_rating": 4,
+    "location_consistency": 0.84,
+    "amount": 114424,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000151",
+    "trip_count_30d": 26,
+    "avg_rating": 4.4,
+    "location_consistency": 0.71,
+    "amount": 262584,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000152",
+    "trip_count_30d": 33,
+    "avg_rating": 3.9,
+    "location_consistency": 0.67,
+    "amount": 78150,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000153",
+    "trip_count_30d": 26,
+    "avg_rating": 4.6,
+    "location_consistency": 0.76,
+    "amount": 202012,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000154",
+    "trip_count_30d": 24,
+    "avg_rating": 4.2,
+    "location_consistency": 0.66,
+    "amount": 97637,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000155",
+    "trip_count_30d": 17,
+    "avg_rating": 5,
+    "location_consistency": 0.95,
+    "amount": 288126,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000156",
+    "trip_count_30d": 25,
+    "avg_rating": 4.4,
+    "location_consistency": 0.81,
+    "amount": 274152,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000157",
+    "trip_count_30d": 17,
+    "avg_rating": 4.4,
+    "location_consistency": 0.89,
+    "amount": 202321,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000158",
+    "trip_count_30d": 6,
+    "avg_rating": 4.3,
+    "location_consistency": 0.85,
+    "amount": 138460,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000159",
+    "trip_count_30d": 7,
+    "avg_rating": 4.3,
+    "location_consistency": 0.75,
+    "amount": 138876,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000160",
+    "trip_count_30d": 27,
+    "avg_rating": 3.6,
+    "location_consistency": 0.65,
+    "amount": 69064,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000161",
+    "trip_count_30d": 9,
+    "avg_rating": 3.9,
+    "location_consistency": 0.75,
+    "amount": 91149,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000162",
+    "trip_count_30d": 33,
+    "avg_rating": 4.5,
+    "location_consistency": 0.8,
+    "amount": 117522,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000163",
+    "trip_count_30d": 12,
+    "avg_rating": 4.9,
+    "location_consistency": 0.94,
+    "amount": 166932,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000164",
+    "trip_count_30d": 6,
+    "avg_rating": 4.5,
+    "location_consistency": 0.72,
+    "amount": 197883,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000165",
+    "trip_count_30d": 24,
+    "avg_rating": 4.2,
+    "location_consistency": 0.71,
+    "amount": 125451,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000166",
+    "trip_count_30d": 28,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 258604,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000167",
+    "trip_count_30d": 20,
+    "avg_rating": 4.9,
+    "location_consistency": 0.86,
+    "amount": 80056,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000168",
+    "trip_count_30d": 6,
+    "avg_rating": 4,
+    "location_consistency": 0.64,
+    "amount": 160699,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000169",
+    "trip_count_30d": 15,
+    "avg_rating": 4.8,
+    "location_consistency": 0.7,
+    "amount": 118307,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000170",
+    "trip_count_30d": 28,
+    "avg_rating": 3.9,
+    "location_consistency": 0.77,
+    "amount": 254891,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000171",
+    "trip_count_30d": 5,
+    "avg_rating": 4.1,
+    "location_consistency": 0.79,
+    "amount": 82823,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000172",
+    "trip_count_30d": 32,
+    "avg_rating": 4.2,
+    "location_consistency": 0.64,
+    "amount": 105213,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000173",
+    "trip_count_30d": 24,
+    "avg_rating": 4.5,
+    "location_consistency": 0.86,
+    "amount": 72336,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000174",
+    "trip_count_30d": 35,
+    "avg_rating": 3.6,
+    "location_consistency": 0.81,
+    "amount": 265594,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000175",
+    "trip_count_30d": 8,
+    "avg_rating": 3.5,
+    "location_consistency": 0.77,
+    "amount": 194794,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000176",
+    "trip_count_30d": 11,
+    "avg_rating": 4.9,
+    "location_consistency": 0.73,
+    "amount": 182814,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000177",
+    "trip_count_30d": 13,
+    "avg_rating": 3.8,
+    "location_consistency": 0.66,
+    "amount": 59239,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000178",
+    "trip_count_30d": 66,
+    "avg_rating": 2.5,
+    "location_consistency": 0.32,
+    "amount": 926649,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000179",
+    "trip_count_30d": 42,
+    "avg_rating": 1.8,
+    "location_consistency": 0.05,
+    "amount": 772757,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000180",
+    "trip_count_30d": 8,
+    "avg_rating": 4.1,
+    "location_consistency": 0.76,
+    "amount": 117745,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000181",
+    "trip_count_30d": 33,
+    "avg_rating": 4.1,
+    "location_consistency": 0.83,
+    "amount": 208610,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000182",
+    "trip_count_30d": 32,
+    "avg_rating": 3.9,
+    "location_consistency": 0.86,
+    "amount": 136481,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000183",
+    "trip_count_30d": 34,
+    "avg_rating": 3.9,
+    "location_consistency": 0.74,
+    "amount": 89638,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000184",
+    "trip_count_30d": 35,
+    "avg_rating": 4.1,
+    "location_consistency": 0.71,
+    "amount": 289994,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000185",
+    "trip_count_30d": 21,
+    "avg_rating": 4.6,
+    "location_consistency": 0.85,
+    "amount": 143460,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000186",
+    "trip_count_30d": 45,
+    "avg_rating": 1.9,
+    "location_consistency": 0.23,
+    "amount": 658506,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000187",
+    "trip_count_30d": 12,
+    "avg_rating": 3.9,
+    "location_consistency": 0.79,
+    "amount": 96432,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000188",
+    "trip_count_30d": 35,
+    "avg_rating": 4.9,
+    "location_consistency": 0.66,
+    "amount": 281372,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000189",
+    "trip_count_30d": 7,
+    "avg_rating": 3.6,
+    "location_consistency": 0.6,
+    "amount": 114172,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000190",
+    "trip_count_30d": 30,
+    "avg_rating": 3.7,
+    "location_consistency": 0.72,
+    "amount": 147206,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000191",
+    "trip_count_30d": 7,
+    "avg_rating": 4.3,
+    "location_consistency": 0.66,
+    "amount": 217299,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000192",
+    "trip_count_30d": 34,
+    "avg_rating": 4,
+    "location_consistency": 0.73,
+    "amount": 135461,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000193",
+    "trip_count_30d": 31,
+    "avg_rating": 2.5,
+    "location_consistency": 0.04,
+    "amount": 553628,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000194",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.95,
+    "amount": 54805,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000195",
+    "trip_count_30d": 16,
+    "avg_rating": 4.7,
+    "location_consistency": 0.94,
+    "amount": 287236,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000196",
+    "trip_count_30d": 32,
+    "avg_rating": 4.3,
+    "location_consistency": 0.8,
+    "amount": 58956,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000197",
+    "trip_count_30d": 24,
+    "avg_rating": 4.9,
+    "location_consistency": 0.91,
+    "amount": 140173,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000198",
+    "trip_count_30d": 10,
+    "avg_rating": 4.3,
+    "location_consistency": 0.92,
+    "amount": 88440,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000199",
+    "trip_count_30d": 15,
+    "avg_rating": 3.9,
+    "location_consistency": 0.87,
+    "amount": 73954,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000200",
+    "trip_count_30d": 18,
+    "avg_rating": 4,
+    "location_consistency": 0.64,
+    "amount": 119779,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000201",
+    "trip_count_30d": 26,
+    "avg_rating": 3.9,
+    "location_consistency": 0.75,
+    "amount": 179129,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000202",
+    "trip_count_30d": 16,
+    "avg_rating": 4.4,
+    "location_consistency": 0.72,
+    "amount": 178583,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000203",
+    "trip_count_30d": 10,
+    "avg_rating": 4.2,
+    "location_consistency": 0.62,
+    "amount": 185477,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000204",
+    "trip_count_30d": 17,
+    "avg_rating": 4.5,
+    "location_consistency": 0.84,
+    "amount": 159332,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000205",
+    "trip_count_30d": 60,
+    "avg_rating": 2.7,
+    "location_consistency": 0.34,
+    "amount": 928830,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000206",
+    "trip_count_30d": 27,
+    "avg_rating": 4.3,
+    "location_consistency": 0.92,
+    "amount": 128484,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000207",
+    "trip_count_30d": 24,
+    "avg_rating": 4.1,
+    "location_consistency": 0.77,
+    "amount": 54216,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000208",
+    "trip_count_30d": 31,
+    "avg_rating": 4.2,
+    "location_consistency": 0.74,
+    "amount": 103687,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000209",
+    "trip_count_30d": 39,
+    "avg_rating": 2,
+    "location_consistency": 0.02,
+    "amount": 804487,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000210",
+    "trip_count_30d": 46,
+    "avg_rating": 2.1,
+    "location_consistency": 0.29,
+    "amount": 574391,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000211",
+    "trip_count_30d": 26,
+    "avg_rating": 4.3,
+    "location_consistency": 0.86,
+    "amount": 173044,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000212",
+    "trip_count_30d": 27,
+    "avg_rating": 4.5,
+    "location_consistency": 0.74,
+    "amount": 213011,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000213",
+    "trip_count_30d": 19,
+    "avg_rating": 3.6,
+    "location_consistency": 0.75,
+    "amount": 57158,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000214",
+    "trip_count_30d": 61,
+    "avg_rating": 2.7,
+    "location_consistency": 0.4,
+    "amount": 668541,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000215",
+    "trip_count_30d": 36,
+    "avg_rating": 2.5,
+    "location_consistency": 0.15,
+    "amount": 356437,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000216",
+    "trip_count_30d": 7,
+    "avg_rating": 4.7,
+    "location_consistency": 0.79,
+    "amount": 124770,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000217",
+    "trip_count_30d": 6,
+    "avg_rating": 4.7,
+    "location_consistency": 0.94,
+    "amount": 146115,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000218",
+    "trip_count_30d": 21,
+    "avg_rating": 4.3,
+    "location_consistency": 0.73,
+    "amount": 123424,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000219",
+    "trip_count_30d": 10,
+    "avg_rating": 4.2,
+    "location_consistency": 0.84,
+    "amount": 95139,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000220",
+    "trip_count_30d": 27,
+    "avg_rating": 4,
+    "location_consistency": 0.84,
+    "amount": 219600,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000221",
+    "trip_count_30d": 8,
+    "avg_rating": 4.7,
+    "location_consistency": 0.81,
+    "amount": 280734,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000222",
+    "trip_count_30d": 26,
+    "avg_rating": 3.9,
+    "location_consistency": 0.97,
+    "amount": 107030,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000223",
+    "trip_count_30d": 25,
+    "avg_rating": 3.5,
+    "location_consistency": 0.86,
+    "amount": 95961,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000224",
+    "trip_count_30d": 9,
+    "avg_rating": 4.8,
+    "location_consistency": 0.79,
+    "amount": 90561,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000225",
+    "trip_count_30d": 30,
+    "avg_rating": 4.6,
+    "location_consistency": 0.67,
+    "amount": 123714,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000226",
+    "trip_count_30d": 32,
+    "avg_rating": 3.9,
+    "location_consistency": 0.61,
+    "amount": 156321,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000227",
+    "trip_count_30d": 12,
+    "avg_rating": 4.2,
+    "location_consistency": 0.77,
+    "amount": 56061,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000228",
+    "trip_count_30d": 12,
+    "avg_rating": 3.9,
+    "location_consistency": 0.67,
+    "amount": 114074,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000229",
+    "trip_count_30d": 11,
+    "avg_rating": 4.9,
+    "location_consistency": 0.61,
+    "amount": 204080,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000230",
+    "trip_count_30d": 34,
+    "avg_rating": 3.5,
+    "location_consistency": 0.89,
+    "amount": 204362,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000231",
+    "trip_count_30d": 20,
+    "avg_rating": 3.8,
+    "location_consistency": 0.79,
+    "amount": 157442,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000232",
+    "trip_count_30d": 29,
+    "avg_rating": 3.7,
+    "location_consistency": 0.8,
+    "amount": 133185,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000233",
+    "trip_count_30d": 10,
+    "avg_rating": 4,
+    "location_consistency": 0.93,
+    "amount": 191938,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000234",
+    "trip_count_30d": 46,
+    "avg_rating": 2.1,
+    "location_consistency": 0.13,
+    "amount": 968484,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000235",
+    "trip_count_30d": 31,
+    "avg_rating": 4.6,
+    "location_consistency": 0.98,
+    "amount": 119409,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000236",
+    "trip_count_30d": 18,
+    "avg_rating": 3.5,
+    "location_consistency": 0.81,
+    "amount": 280203,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000237",
+    "trip_count_30d": 22,
+    "avg_rating": 4.2,
+    "location_consistency": 0.67,
+    "amount": 178778,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000238",
+    "trip_count_30d": 20,
+    "avg_rating": 4.2,
+    "location_consistency": 0.72,
+    "amount": 169334,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000239",
+    "trip_count_30d": 17,
+    "avg_rating": 3.8,
+    "location_consistency": 0.9,
+    "amount": 258957,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000240",
+    "trip_count_30d": 64,
+    "avg_rating": 1.6,
+    "location_consistency": 0.18,
+    "amount": 935536,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000241",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.93,
+    "amount": 87416,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000242",
+    "trip_count_30d": 22,
+    "avg_rating": 4.6,
+    "location_consistency": 0.81,
+    "amount": 240957,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000243",
+    "trip_count_30d": 6,
+    "avg_rating": 4.6,
+    "location_consistency": 0.94,
+    "amount": 90769,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000244",
+    "trip_count_30d": 18,
+    "avg_rating": 5,
+    "location_consistency": 0.76,
+    "amount": 56799,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000245",
+    "trip_count_30d": 7,
+    "avg_rating": 4.4,
+    "location_consistency": 0.77,
+    "amount": 212338,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000246",
+    "trip_count_30d": 18,
+    "avg_rating": 4.1,
+    "location_consistency": 0.73,
+    "amount": 103372,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000247",
+    "trip_count_30d": 17,
+    "avg_rating": 3.8,
+    "location_consistency": 0.96,
+    "amount": 281858,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000248",
+    "trip_count_30d": 13,
+    "avg_rating": 4.2,
+    "location_consistency": 0.77,
+    "amount": 147731,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000249",
+    "trip_count_30d": 21,
+    "avg_rating": 5,
+    "location_consistency": 0.7,
+    "amount": 89013,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000250",
+    "trip_count_30d": 8,
+    "avg_rating": 4.5,
+    "location_consistency": 0.66,
+    "amount": 150123,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000251",
+    "trip_count_30d": 26,
+    "avg_rating": 4.3,
+    "location_consistency": 0.67,
+    "amount": 75489,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000252",
+    "trip_count_30d": 35,
+    "avg_rating": 3.5,
+    "location_consistency": 0.95,
+    "amount": 83839,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000253",
+    "trip_count_30d": 12,
+    "avg_rating": 4.1,
+    "location_consistency": 0.69,
+    "amount": 245231,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000254",
+    "trip_count_30d": 24,
+    "avg_rating": 4,
+    "location_consistency": 0.87,
+    "amount": 275829,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000255",
+    "trip_count_30d": 8,
+    "avg_rating": 3.6,
+    "location_consistency": 0.85,
+    "amount": 179018,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000256",
+    "trip_count_30d": 55,
+    "avg_rating": 1.6,
+    "location_consistency": 0.36,
+    "amount": 444001,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000257",
+    "trip_count_30d": 6,
+    "avg_rating": 3.7,
+    "location_consistency": 0.67,
+    "amount": 150170,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000258",
+    "trip_count_30d": 64,
+    "avg_rating": 1.8,
+    "location_consistency": 0.17,
+    "amount": 569745,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000259",
+    "trip_count_30d": 12,
+    "avg_rating": 3.6,
+    "location_consistency": 0.83,
+    "amount": 52378,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000260",
+    "trip_count_30d": 20,
+    "avg_rating": 4.4,
+    "location_consistency": 0.82,
+    "amount": 288109,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000261",
+    "trip_count_30d": 13,
+    "avg_rating": 4.2,
+    "location_consistency": 0.73,
+    "amount": 118780,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000262",
+    "trip_count_30d": 6,
+    "avg_rating": 4.7,
+    "location_consistency": 0.9,
+    "amount": 236158,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000263",
+    "trip_count_30d": 30,
+    "avg_rating": 4.6,
+    "location_consistency": 0.99,
+    "amount": 51792,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000264",
+    "trip_count_30d": 45,
+    "avg_rating": 1.1,
+    "location_consistency": 0.28,
+    "amount": 936296,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000265",
+    "trip_count_30d": 32,
+    "avg_rating": 4.9,
+    "location_consistency": 0.79,
+    "amount": 100506,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000266",
+    "trip_count_30d": 33,
+    "avg_rating": 1.9,
+    "location_consistency": 0.2,
+    "amount": 967363,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000267",
+    "trip_count_30d": 57,
+    "avg_rating": 1.9,
+    "location_consistency": 0.34,
+    "amount": 854140,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000268",
+    "trip_count_30d": 24,
+    "avg_rating": 3.6,
+    "location_consistency": 0.74,
+    "amount": 98107,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000269",
+    "trip_count_30d": 52,
+    "avg_rating": 2.2,
+    "location_consistency": 0.01,
+    "amount": 508904,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000270",
+    "trip_count_30d": 9,
+    "avg_rating": 4.3,
+    "location_consistency": 0.6,
+    "amount": 166571,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000271",
+    "trip_count_30d": 58,
+    "avg_rating": 2.9,
+    "location_consistency": 0.12,
+    "amount": 353317,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000272",
+    "trip_count_30d": 34,
+    "avg_rating": 1.3,
+    "location_consistency": 0.11,
+    "amount": 745665,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000273",
+    "trip_count_30d": 31,
+    "avg_rating": 3.8,
+    "location_consistency": 0.75,
+    "amount": 53994,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000274",
+    "trip_count_30d": 30,
+    "avg_rating": 3.6,
+    "location_consistency": 0.67,
+    "amount": 166152,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000275",
+    "trip_count_30d": 28,
+    "avg_rating": 4.1,
+    "location_consistency": 0.66,
+    "amount": 243700,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000276",
+    "trip_count_30d": 73,
+    "avg_rating": 1.2,
+    "location_consistency": 0.13,
+    "amount": 682306,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000277",
+    "trip_count_30d": 31,
+    "avg_rating": 3.8,
+    "location_consistency": 0.73,
+    "amount": 231490,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000278",
+    "trip_count_30d": 23,
+    "avg_rating": 4.7,
+    "location_consistency": 0.93,
+    "amount": 188809,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000279",
+    "trip_count_30d": 18,
+    "avg_rating": 5,
+    "location_consistency": 0.94,
+    "amount": 68311,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000280",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.6,
+    "amount": 236198,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000281",
+    "trip_count_30d": 20,
+    "avg_rating": 4.3,
+    "location_consistency": 0.92,
+    "amount": 185891,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000282",
+    "trip_count_30d": 7,
+    "avg_rating": 3.8,
+    "location_consistency": 0.81,
+    "amount": 151698,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000283",
+    "trip_count_30d": 16,
+    "avg_rating": 3.7,
+    "location_consistency": 0.73,
+    "amount": 171918,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000284",
+    "trip_count_30d": 12,
+    "avg_rating": 4.8,
+    "location_consistency": 0.9,
+    "amount": 159937,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000285",
+    "trip_count_30d": 17,
+    "avg_rating": 3.6,
+    "location_consistency": 0.89,
+    "amount": 72002,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000286",
+    "trip_count_30d": 50,
+    "avg_rating": 2.6,
+    "location_consistency": 0.13,
+    "amount": 567273,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000287",
+    "trip_count_30d": 25,
+    "avg_rating": 3.8,
+    "location_consistency": 0.7,
+    "amount": 252048,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000288",
+    "trip_count_30d": 31,
+    "avg_rating": 5,
+    "location_consistency": 0.77,
+    "amount": 279820,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000289",
+    "trip_count_30d": 20,
+    "avg_rating": 3.9,
+    "location_consistency": 0.69,
+    "amount": 282409,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000290",
+    "trip_count_30d": 18,
+    "avg_rating": 4.7,
+    "location_consistency": 0.62,
+    "amount": 213212,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000291",
+    "trip_count_30d": 25,
+    "avg_rating": 4.8,
+    "location_consistency": 0.62,
+    "amount": 104993,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000292",
+    "trip_count_30d": 28,
+    "avg_rating": 4.8,
+    "location_consistency": 0.61,
+    "amount": 156277,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000293",
+    "trip_count_30d": 34,
+    "avg_rating": 4.7,
+    "location_consistency": 0.93,
+    "amount": 96993,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000294",
+    "trip_count_30d": 80,
+    "avg_rating": 1.2,
+    "location_consistency": 0.14,
+    "amount": 477683,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000295",
+    "trip_count_30d": 33,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 297550,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000296",
+    "trip_count_30d": 21,
+    "avg_rating": 4.4,
+    "location_consistency": 0.79,
+    "amount": 98827,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000297",
+    "trip_count_30d": 25,
+    "avg_rating": 4,
+    "location_consistency": 0.92,
+    "amount": 281791,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000298",
+    "trip_count_30d": 17,
+    "avg_rating": 4.1,
+    "location_consistency": 0.85,
+    "amount": 282856,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000299",
+    "trip_count_30d": 22,
+    "avg_rating": 4.5,
+    "location_consistency": 0.75,
+    "amount": 287979,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000300",
+    "trip_count_30d": 6,
+    "avg_rating": 4.7,
+    "location_consistency": 0.93,
+    "amount": 212503,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000301",
+    "trip_count_30d": 25,
+    "avg_rating": 4.5,
+    "location_consistency": 0.63,
+    "amount": 74191,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000302",
+    "trip_count_30d": 14,
+    "avg_rating": 4.2,
+    "location_consistency": 0.83,
+    "amount": 299582,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000303",
+    "trip_count_30d": 32,
+    "avg_rating": 2.9,
+    "location_consistency": 0.32,
+    "amount": 380802,
+    "fraud_score": 0.7,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000304",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.86,
+    "amount": 245151,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000305",
+    "trip_count_30d": 21,
+    "avg_rating": 4.4,
+    "location_consistency": 0.95,
+    "amount": 162635,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000306",
+    "trip_count_30d": 19,
+    "avg_rating": 4.2,
+    "location_consistency": 0.91,
+    "amount": 191879,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000307",
+    "trip_count_30d": 13,
+    "avg_rating": 4.4,
+    "location_consistency": 0.9,
+    "amount": 84031,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000308",
+    "trip_count_30d": 22,
+    "avg_rating": 4.2,
+    "location_consistency": 0.61,
+    "amount": 85932,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000309",
+    "trip_count_30d": 18,
+    "avg_rating": 3.8,
+    "location_consistency": 0.92,
+    "amount": 197907,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000310",
+    "trip_count_30d": 29,
+    "avg_rating": 3.6,
+    "location_consistency": 0.62,
+    "amount": 135794,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000311",
+    "trip_count_30d": 12,
+    "avg_rating": 3.8,
+    "location_consistency": 0.93,
+    "amount": 277394,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000312",
+    "trip_count_30d": 16,
+    "avg_rating": 3.6,
+    "location_consistency": 0.8,
+    "amount": 254353,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000313",
+    "trip_count_30d": 28,
+    "avg_rating": 3.7,
+    "location_consistency": 0.6,
+    "amount": 65990,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000314",
+    "trip_count_30d": 28,
+    "avg_rating": 4.4,
+    "location_consistency": 0.72,
+    "amount": 275893,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000315",
+    "trip_count_30d": 34,
+    "avg_rating": 2.7,
+    "location_consistency": 0.18,
+    "amount": 687437,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000316",
+    "trip_count_30d": 12,
+    "avg_rating": 4,
+    "location_consistency": 0.66,
+    "amount": 186461,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000317",
+    "trip_count_30d": 5,
+    "avg_rating": 5,
+    "location_consistency": 0.74,
+    "amount": 296847,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000318",
+    "trip_count_30d": 17,
+    "avg_rating": 4,
+    "location_consistency": 0.67,
+    "amount": 192209,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000319",
+    "trip_count_30d": 19,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 291734,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000320",
+    "trip_count_30d": 21,
+    "avg_rating": 4.2,
+    "location_consistency": 0.89,
+    "amount": 92028,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000321",
+    "trip_count_30d": 12,
+    "avg_rating": 4,
+    "location_consistency": 0.66,
+    "amount": 94213,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000322",
+    "trip_count_30d": 11,
+    "avg_rating": 3.9,
+    "location_consistency": 0.9,
+    "amount": 61653,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000323",
+    "trip_count_30d": 76,
+    "avg_rating": 1.5,
+    "location_consistency": 0.07,
+    "amount": 537900,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000324",
+    "trip_count_30d": 14,
+    "avg_rating": 4.1,
+    "location_consistency": 0.83,
+    "amount": 189631,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000325",
+    "trip_count_30d": 20,
+    "avg_rating": 3.8,
+    "location_consistency": 0.84,
+    "amount": 273311,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000326",
+    "trip_count_30d": 13,
+    "avg_rating": 4.3,
+    "location_consistency": 0.9,
+    "amount": 230985,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000327",
+    "trip_count_30d": 20,
+    "avg_rating": 3.6,
+    "location_consistency": 0.82,
+    "amount": 261842,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000328",
+    "trip_count_30d": 25,
+    "avg_rating": 3.8,
+    "location_consistency": 0.9,
+    "amount": 200897,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000329",
+    "trip_count_30d": 24,
+    "avg_rating": 4.1,
+    "location_consistency": 0.78,
+    "amount": 59730,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000330",
+    "trip_count_30d": 12,
+    "avg_rating": 4.7,
+    "location_consistency": 0.94,
+    "amount": 145792,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000331",
+    "trip_count_30d": 9,
+    "avg_rating": 3.6,
+    "location_consistency": 0.83,
+    "amount": 213174,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000332",
+    "trip_count_30d": 61,
+    "avg_rating": 1.6,
+    "location_consistency": 0.08,
+    "amount": 528294,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000333",
+    "trip_count_30d": 25,
+    "avg_rating": 3.9,
+    "location_consistency": 0.79,
+    "amount": 66872,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000334",
+    "trip_count_30d": 17,
+    "avg_rating": 3.5,
+    "location_consistency": 0.77,
+    "amount": 97830,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000335",
+    "trip_count_30d": 14,
+    "avg_rating": 4.1,
+    "location_consistency": 0.84,
+    "amount": 267880,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000336",
+    "trip_count_30d": 13,
+    "avg_rating": 4.6,
+    "location_consistency": 0.83,
+    "amount": 62505,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000337",
+    "trip_count_30d": 12,
+    "avg_rating": 4.5,
+    "location_consistency": 0.61,
+    "amount": 288286,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000338",
+    "trip_count_30d": 11,
+    "avg_rating": 5,
+    "location_consistency": 0.78,
+    "amount": 198928,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000339",
+    "trip_count_30d": 24,
+    "avg_rating": 4.5,
+    "location_consistency": 0.93,
+    "amount": 241030,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000340",
+    "trip_count_30d": 59,
+    "avg_rating": 2,
+    "location_consistency": 0.23,
+    "amount": 907412,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000341",
+    "trip_count_30d": 14,
+    "avg_rating": 4.9,
+    "location_consistency": 0.6,
+    "amount": 54899,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000342",
+    "trip_count_30d": 20,
+    "avg_rating": 4.9,
+    "location_consistency": 0.62,
+    "amount": 190821,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000343",
+    "trip_count_30d": 11,
+    "avg_rating": 4.3,
+    "location_consistency": 0.66,
+    "amount": 111988,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000344",
+    "trip_count_30d": 17,
+    "avg_rating": 4.4,
+    "location_consistency": 0.8,
+    "amount": 187317,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000345",
+    "trip_count_30d": 10,
+    "avg_rating": 4.9,
+    "location_consistency": 0.9,
+    "amount": 247044,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000346",
+    "trip_count_30d": 54,
+    "avg_rating": 2.9,
+    "location_consistency": 0.04,
+    "amount": 923756,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000347",
+    "trip_count_30d": 23,
+    "avg_rating": 4.2,
+    "location_consistency": 0.86,
+    "amount": 151238,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000348",
+    "trip_count_30d": 34,
+    "avg_rating": 4.8,
+    "location_consistency": 0.68,
+    "amount": 201351,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000349",
+    "trip_count_30d": 32,
+    "avg_rating": 3.6,
+    "location_consistency": 0.92,
+    "amount": 117882,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000350",
+    "trip_count_30d": 30,
+    "avg_rating": 3.7,
+    "location_consistency": 0.79,
+    "amount": 257938,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000351",
+    "trip_count_30d": 11,
+    "avg_rating": 3.6,
+    "location_consistency": 0.87,
+    "amount": 233795,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000352",
+    "trip_count_30d": 6,
+    "avg_rating": 4.1,
+    "location_consistency": 0.64,
+    "amount": 152477,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000353",
+    "trip_count_30d": 19,
+    "avg_rating": 3.6,
+    "location_consistency": 0.98,
+    "amount": 296242,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000354",
+    "trip_count_30d": 16,
+    "avg_rating": 4.9,
+    "location_consistency": 0.83,
+    "amount": 180955,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000355",
+    "trip_count_30d": 17,
+    "avg_rating": 3.9,
+    "location_consistency": 0.65,
+    "amount": 296888,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000356",
+    "trip_count_30d": 13,
+    "avg_rating": 3.6,
+    "location_consistency": 0.61,
+    "amount": 208111,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000357",
+    "trip_count_30d": 25,
+    "avg_rating": 4.7,
+    "location_consistency": 0.88,
+    "amount": 83327,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000358",
+    "trip_count_30d": 31,
+    "avg_rating": 3.9,
+    "location_consistency": 0.93,
+    "amount": 249679,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000359",
+    "trip_count_30d": 23,
+    "avg_rating": 3.8,
+    "location_consistency": 0.81,
+    "amount": 248633,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000360",
+    "trip_count_30d": 17,
+    "avg_rating": 4.9,
+    "location_consistency": 0.84,
+    "amount": 102343,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000361",
+    "trip_count_30d": 32,
+    "avg_rating": 4.3,
+    "location_consistency": 0.82,
+    "amount": 197268,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000362",
+    "trip_count_30d": 5,
+    "avg_rating": 3.5,
+    "location_consistency": 0.62,
+    "amount": 263605,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000363",
+    "trip_count_30d": 19,
+    "avg_rating": 3.5,
+    "location_consistency": 0.77,
+    "amount": 165334,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000364",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.65,
+    "amount": 256071,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000365",
+    "trip_count_30d": 32,
+    "avg_rating": 3.9,
+    "location_consistency": 0.72,
+    "amount": 129306,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000366",
+    "trip_count_30d": 12,
+    "avg_rating": 4.8,
+    "location_consistency": 0.69,
+    "amount": 163763,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000367",
+    "trip_count_30d": 32,
+    "avg_rating": 4.3,
+    "location_consistency": 0.8,
+    "amount": 297498,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000368",
+    "trip_count_30d": 12,
+    "avg_rating": 4.1,
+    "location_consistency": 0.79,
+    "amount": 148820,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000369",
+    "trip_count_30d": 12,
+    "avg_rating": 4.9,
+    "location_consistency": 0.93,
+    "amount": 271975,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000370",
+    "trip_count_30d": 21,
+    "avg_rating": 3.6,
+    "location_consistency": 0.74,
+    "amount": 173944,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000371",
+    "trip_count_30d": 30,
+    "avg_rating": 3.7,
+    "location_consistency": 0.7,
+    "amount": 294960,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000372",
+    "trip_count_30d": 12,
+    "avg_rating": 4.6,
+    "location_consistency": 0.9,
+    "amount": 200642,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000373",
+    "trip_count_30d": 9,
+    "avg_rating": 4.4,
+    "location_consistency": 0.89,
+    "amount": 221722,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000374",
+    "trip_count_30d": 29,
+    "avg_rating": 4.7,
+    "location_consistency": 0.79,
+    "amount": 67961,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000375",
+    "trip_count_30d": 21,
+    "avg_rating": 4.3,
+    "location_consistency": 0.63,
+    "amount": 143571,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000376",
+    "trip_count_30d": 32,
+    "avg_rating": 3.7,
+    "location_consistency": 0.61,
+    "amount": 50950,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000377",
+    "trip_count_30d": 14,
+    "avg_rating": 3.9,
+    "location_consistency": 0.87,
+    "amount": 166872,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000378",
+    "trip_count_30d": 56,
+    "avg_rating": 2.7,
+    "location_consistency": 0.02,
+    "amount": 460932,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000379",
+    "trip_count_30d": 9,
+    "avg_rating": 4.3,
+    "location_consistency": 0.7,
+    "amount": 90424,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000380",
+    "trip_count_30d": 34,
+    "avg_rating": 3.7,
+    "location_consistency": 0.79,
+    "amount": 199392,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000381",
+    "trip_count_30d": 11,
+    "avg_rating": 3.9,
+    "location_consistency": 0.6,
+    "amount": 209289,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000382",
+    "trip_count_30d": 14,
+    "avg_rating": 4.4,
+    "location_consistency": 0.9,
+    "amount": 148573,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000383",
+    "trip_count_30d": 21,
+    "avg_rating": 4.8,
+    "location_consistency": 0.64,
+    "amount": 196329,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000384",
+    "trip_count_30d": 32,
+    "avg_rating": 4.6,
+    "location_consistency": 0.71,
+    "amount": 236986,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000385",
+    "trip_count_30d": 8,
+    "avg_rating": 4.8,
+    "location_consistency": 0.73,
+    "amount": 71643,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000386",
+    "trip_count_30d": 27,
+    "avg_rating": 4.6,
+    "location_consistency": 0.64,
+    "amount": 194422,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000387",
+    "trip_count_30d": 45,
+    "avg_rating": 1.8,
+    "location_consistency": 0.21,
+    "amount": 965643,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000388",
+    "trip_count_30d": 75,
+    "avg_rating": 1.5,
+    "location_consistency": 0.22,
+    "amount": 936867,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000389",
+    "trip_count_30d": 33,
+    "avg_rating": 4,
+    "location_consistency": 0.76,
+    "amount": 162437,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000390",
+    "trip_count_30d": 29,
+    "avg_rating": 4.9,
+    "location_consistency": 0.8,
+    "amount": 143632,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000391",
+    "trip_count_30d": 24,
+    "avg_rating": 4.8,
+    "location_consistency": 0.71,
+    "amount": 155466,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000392",
+    "trip_count_30d": 10,
+    "avg_rating": 4.6,
+    "location_consistency": 0.61,
+    "amount": 252941,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000393",
+    "trip_count_30d": 29,
+    "avg_rating": 3.6,
+    "location_consistency": 0.85,
+    "amount": 64793,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000394",
+    "trip_count_30d": 7,
+    "avg_rating": 4.5,
+    "location_consistency": 0.79,
+    "amount": 146089,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000395",
+    "trip_count_30d": 14,
+    "avg_rating": 4.2,
+    "location_consistency": 0.92,
+    "amount": 71836,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000396",
+    "trip_count_30d": 9,
+    "avg_rating": 4.6,
+    "location_consistency": 0.83,
+    "amount": 141360,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000397",
+    "trip_count_30d": 41,
+    "avg_rating": 2.8,
+    "location_consistency": 0.03,
+    "amount": 877142,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000398",
+    "trip_count_30d": 17,
+    "avg_rating": 3.7,
+    "location_consistency": 0.8,
+    "amount": 286410,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000399",
+    "trip_count_30d": 10,
+    "avg_rating": 4.1,
+    "location_consistency": 0.75,
+    "amount": 206572,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000400",
+    "trip_count_30d": 16,
+    "avg_rating": 4.8,
+    "location_consistency": 0.65,
+    "amount": 80203,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000401",
+    "trip_count_30d": 26,
+    "avg_rating": 3.8,
+    "location_consistency": 0.99,
+    "amount": 172830,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000402",
+    "trip_count_30d": 8,
+    "avg_rating": 4,
+    "location_consistency": 0.99,
+    "amount": 102096,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000403",
+    "trip_count_30d": 15,
+    "avg_rating": 4.5,
+    "location_consistency": 0.78,
+    "amount": 123427,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000404",
+    "trip_count_30d": 56,
+    "avg_rating": 2.4,
+    "location_consistency": 0.17,
+    "amount": 893240,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000405",
+    "trip_count_30d": 28,
+    "avg_rating": 3.8,
+    "location_consistency": 0.78,
+    "amount": 244052,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000406",
+    "trip_count_30d": 26,
+    "avg_rating": 4.5,
+    "location_consistency": 0.79,
+    "amount": 149484,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000407",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.94,
+    "amount": 90091,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000408",
+    "trip_count_30d": 23,
+    "avg_rating": 4.1,
+    "location_consistency": 0.9,
+    "amount": 291675,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000409",
+    "trip_count_30d": 30,
+    "avg_rating": 4.3,
+    "location_consistency": 0.87,
+    "amount": 294019,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000410",
+    "trip_count_30d": 34,
+    "avg_rating": 4.4,
+    "location_consistency": 0.65,
+    "amount": 127661,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000411",
+    "trip_count_30d": 27,
+    "avg_rating": 4.6,
+    "location_consistency": 0.73,
+    "amount": 299031,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000412",
+    "trip_count_30d": 20,
+    "avg_rating": 3.6,
+    "location_consistency": 0.93,
+    "amount": 249616,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000413",
+    "trip_count_30d": 55,
+    "avg_rating": 1.6,
+    "location_consistency": 0.39,
+    "amount": 978898,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000414",
+    "trip_count_30d": 28,
+    "avg_rating": 3.6,
+    "location_consistency": 0.83,
+    "amount": 258504,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000415",
+    "trip_count_30d": 12,
+    "avg_rating": 4.7,
+    "location_consistency": 0.68,
+    "amount": 287267,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000416",
+    "trip_count_30d": 18,
+    "avg_rating": 3.5,
+    "location_consistency": 0.66,
+    "amount": 142560,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000417",
+    "trip_count_30d": 16,
+    "avg_rating": 4.5,
+    "location_consistency": 0.67,
+    "amount": 163970,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000418",
+    "trip_count_30d": 9,
+    "avg_rating": 4,
+    "location_consistency": 0.95,
+    "amount": 86380,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000419",
+    "trip_count_30d": 17,
+    "avg_rating": 4.1,
+    "location_consistency": 0.8,
+    "amount": 172701,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000420",
+    "trip_count_30d": 8,
+    "avg_rating": 4.7,
+    "location_consistency": 0.78,
+    "amount": 167459,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000421",
+    "trip_count_30d": 14,
+    "avg_rating": 4.6,
+    "location_consistency": 0.68,
+    "amount": 142271,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000422",
+    "trip_count_30d": 22,
+    "avg_rating": 4.3,
+    "location_consistency": 0.67,
+    "amount": 176910,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000423",
+    "trip_count_30d": 53,
+    "avg_rating": 1.4,
+    "location_consistency": 0.1,
+    "amount": 704000,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000424",
+    "trip_count_30d": 14,
+    "avg_rating": 3.8,
+    "location_consistency": 0.73,
+    "amount": 291771,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000425",
+    "trip_count_30d": 21,
+    "avg_rating": 4.6,
+    "location_consistency": 0.89,
+    "amount": 116625,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000426",
+    "trip_count_30d": 6,
+    "avg_rating": 3.7,
+    "location_consistency": 0.67,
+    "amount": 213425,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000427",
+    "trip_count_30d": 14,
+    "avg_rating": 4.7,
+    "location_consistency": 0.91,
+    "amount": 124966,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000428",
+    "trip_count_30d": 24,
+    "avg_rating": 3.7,
+    "location_consistency": 0.86,
+    "amount": 285491,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000429",
+    "trip_count_30d": 31,
+    "avg_rating": 4.7,
+    "location_consistency": 0.88,
+    "amount": 294529,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000430",
+    "trip_count_30d": 20,
+    "avg_rating": 4.8,
+    "location_consistency": 0.79,
+    "amount": 155570,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000431",
+    "trip_count_30d": 34,
+    "avg_rating": 4.9,
+    "location_consistency": 0.97,
+    "amount": 271375,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000432",
+    "trip_count_30d": 73,
+    "avg_rating": 2.9,
+    "location_consistency": 0.14,
+    "amount": 770573,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000433",
+    "trip_count_30d": 74,
+    "avg_rating": 2.2,
+    "location_consistency": 0.24,
+    "amount": 575391,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000434",
+    "trip_count_30d": 28,
+    "avg_rating": 4.7,
+    "location_consistency": 0.98,
+    "amount": 287983,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000435",
+    "trip_count_30d": 19,
+    "avg_rating": 4.1,
+    "location_consistency": 0.76,
+    "amount": 157360,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000436",
+    "trip_count_30d": 34,
+    "avg_rating": 3.5,
+    "location_consistency": 0.82,
+    "amount": 295053,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000437",
+    "trip_count_30d": 17,
+    "avg_rating": 3.8,
+    "location_consistency": 0.92,
+    "amount": 177270,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000438",
+    "trip_count_30d": 11,
+    "avg_rating": 3.9,
+    "location_consistency": 0.77,
+    "amount": 168624,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000439",
+    "trip_count_30d": 16,
+    "avg_rating": 3.9,
+    "location_consistency": 0.8,
+    "amount": 135221,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000440",
+    "trip_count_30d": 33,
+    "avg_rating": 4.8,
+    "location_consistency": 0.61,
+    "amount": 249202,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000441",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.62,
+    "amount": 57915,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000442",
+    "trip_count_30d": 28,
+    "avg_rating": 3.8,
+    "location_consistency": 0.65,
+    "amount": 171521,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000443",
+    "trip_count_30d": 30,
+    "avg_rating": 4.8,
+    "location_consistency": 0.63,
+    "amount": 130519,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000444",
+    "trip_count_30d": 36,
+    "avg_rating": 2.5,
+    "location_consistency": 0.26,
+    "amount": 917654,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000445",
+    "trip_count_30d": 32,
+    "avg_rating": 2.4,
+    "location_consistency": 0.3,
+    "amount": 948807,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000446",
+    "trip_count_30d": 69,
+    "avg_rating": 1.5,
+    "location_consistency": 0.02,
+    "amount": 643233,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000447",
+    "trip_count_30d": 31,
+    "avg_rating": 4.8,
+    "location_consistency": 0.86,
+    "amount": 137632,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000448",
+    "trip_count_30d": 16,
+    "avg_rating": 3.7,
+    "location_consistency": 0.98,
+    "amount": 95004,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000449",
+    "trip_count_30d": 21,
+    "avg_rating": 3.7,
+    "location_consistency": 0.66,
+    "amount": 291964,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000450",
+    "trip_count_30d": 8,
+    "avg_rating": 3.6,
+    "location_consistency": 0.64,
+    "amount": 293783,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000451",
+    "trip_count_30d": 18,
+    "avg_rating": 4.1,
+    "location_consistency": 0.99,
+    "amount": 175367,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000452",
+    "trip_count_30d": 15,
+    "avg_rating": 4.9,
+    "location_consistency": 0.62,
+    "amount": 121679,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000453",
+    "trip_count_30d": 19,
+    "avg_rating": 4.6,
+    "location_consistency": 0.75,
+    "amount": 136435,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000454",
+    "trip_count_30d": 11,
+    "avg_rating": 5,
+    "location_consistency": 0.63,
+    "amount": 51411,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000455",
+    "trip_count_30d": 29,
+    "avg_rating": 4.4,
+    "location_consistency": 0.83,
+    "amount": 89009,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000456",
+    "trip_count_30d": 14,
+    "avg_rating": 3.5,
+    "location_consistency": 0.88,
+    "amount": 176359,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000457",
+    "trip_count_30d": 12,
+    "avg_rating": 3.6,
+    "location_consistency": 0.62,
+    "amount": 187801,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000458",
+    "trip_count_30d": 31,
+    "avg_rating": 4,
+    "location_consistency": 0.89,
+    "amount": 263690,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000459",
+    "trip_count_30d": 9,
+    "avg_rating": 4.4,
+    "location_consistency": 0.7,
+    "amount": 213479,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000460",
+    "trip_count_30d": 24,
+    "avg_rating": 4.7,
+    "location_consistency": 0.89,
+    "amount": 270258,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000461",
+    "trip_count_30d": 15,
+    "avg_rating": 4.6,
+    "location_consistency": 0.73,
+    "amount": 251561,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000462",
+    "trip_count_30d": 25,
+    "avg_rating": 4.4,
+    "location_consistency": 0.78,
+    "amount": 185182,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000463",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.94,
+    "amount": 187164,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000464",
+    "trip_count_30d": 10,
+    "avg_rating": 4.8,
+    "location_consistency": 0.75,
+    "amount": 135683,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000465",
+    "trip_count_30d": 12,
+    "avg_rating": 4.3,
+    "location_consistency": 0.8,
+    "amount": 231440,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000466",
+    "trip_count_30d": 26,
+    "avg_rating": 3.6,
+    "location_consistency": 0.83,
+    "amount": 248794,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000467",
+    "trip_count_30d": 25,
+    "avg_rating": 4,
+    "location_consistency": 0.91,
+    "amount": 75356,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000468",
+    "trip_count_30d": 22,
+    "avg_rating": 4.3,
+    "location_consistency": 0.68,
+    "amount": 264683,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000469",
+    "trip_count_30d": 64,
+    "avg_rating": 2.2,
+    "location_consistency": 0.07,
+    "amount": 971896,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000470",
+    "trip_count_30d": 26,
+    "avg_rating": 4.5,
+    "location_consistency": 0.68,
+    "amount": 52012,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000471",
+    "trip_count_30d": 15,
+    "avg_rating": 4.5,
+    "location_consistency": 0.67,
+    "amount": 99484,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000472",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.75,
+    "amount": 176463,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000473",
+    "trip_count_30d": 16,
+    "avg_rating": 4.8,
+    "location_consistency": 0.63,
+    "amount": 113641,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000474",
+    "trip_count_30d": 5,
+    "avg_rating": 3.7,
+    "location_consistency": 0.97,
+    "amount": 212048,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000475",
+    "trip_count_30d": 8,
+    "avg_rating": 4.9,
+    "location_consistency": 0.67,
+    "amount": 132167,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000476",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.89,
+    "amount": 284577,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000477",
+    "trip_count_30d": 13,
+    "avg_rating": 4.8,
+    "location_consistency": 0.75,
+    "amount": 221486,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000478",
+    "trip_count_30d": 27,
+    "avg_rating": 4.5,
+    "location_consistency": 0.87,
+    "amount": 153162,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000479",
+    "trip_count_30d": 15,
+    "avg_rating": 3.7,
+    "location_consistency": 0.69,
+    "amount": 238484,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000480",
+    "trip_count_30d": 28,
+    "avg_rating": 4.9,
+    "location_consistency": 0.86,
+    "amount": 296121,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000481",
+    "trip_count_30d": 13,
+    "avg_rating": 3.9,
+    "location_consistency": 0.64,
+    "amount": 147378,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000482",
+    "trip_count_30d": 6,
+    "avg_rating": 4,
+    "location_consistency": 0.77,
+    "amount": 200486,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000483",
+    "trip_count_30d": 25,
+    "avg_rating": 4.1,
+    "location_consistency": 0.72,
+    "amount": 235351,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000484",
+    "trip_count_30d": 44,
+    "avg_rating": 1.4,
+    "location_consistency": 0.18,
+    "amount": 643144,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000485",
+    "trip_count_30d": 12,
+    "avg_rating": 4.2,
+    "location_consistency": 0.82,
+    "amount": 190374,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000486",
+    "trip_count_30d": 21,
+    "avg_rating": 4.2,
+    "location_consistency": 0.67,
+    "amount": 87855,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000487",
+    "trip_count_30d": 33,
+    "avg_rating": 4.4,
+    "location_consistency": 0.68,
+    "amount": 246193,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000488",
+    "trip_count_30d": 6,
+    "avg_rating": 3.7,
+    "location_consistency": 0.66,
+    "amount": 139829,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000489",
+    "trip_count_30d": 12,
+    "avg_rating": 4.2,
+    "location_consistency": 0.98,
+    "amount": 226301,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000490",
+    "trip_count_30d": 40,
+    "avg_rating": 1.5,
+    "location_consistency": 0.02,
+    "amount": 621727,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000491",
+    "trip_count_30d": 23,
+    "avg_rating": 4.1,
+    "location_consistency": 0.84,
+    "amount": 266496,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000492",
+    "trip_count_30d": 20,
+    "avg_rating": 4.1,
+    "location_consistency": 0.67,
+    "amount": 248722,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000493",
+    "trip_count_30d": 14,
+    "avg_rating": 4.9,
+    "location_consistency": 0.6,
+    "amount": 180161,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000494",
+    "trip_count_30d": 16,
+    "avg_rating": 3.8,
+    "location_consistency": 0.96,
+    "amount": 200122,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000495",
+    "trip_count_30d": 16,
+    "avg_rating": 4.3,
+    "location_consistency": 0.95,
+    "amount": 160785,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000496",
+    "trip_count_30d": 30,
+    "avg_rating": 2.6,
+    "location_consistency": 0.17,
+    "amount": 340667,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000497",
+    "trip_count_30d": 6,
+    "avg_rating": 3.7,
+    "location_consistency": 0.81,
+    "amount": 111598,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000498",
+    "trip_count_30d": 39,
+    "avg_rating": 1.7,
+    "location_consistency": 0.06,
+    "amount": 984141,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000499",
+    "trip_count_30d": 78,
+    "avg_rating": 2.2,
+    "location_consistency": 0.29,
+    "amount": 523041,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000500",
+    "trip_count_30d": 25,
+    "avg_rating": 4.2,
+    "location_consistency": 0.96,
+    "amount": 52915,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000501",
+    "trip_count_30d": 27,
+    "avg_rating": 3.6,
+    "location_consistency": 0.75,
+    "amount": 78472,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000502",
+    "trip_count_30d": 28,
+    "avg_rating": 3.8,
+    "location_consistency": 0.97,
+    "amount": 283580,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000503",
+    "trip_count_30d": 28,
+    "avg_rating": 4.1,
+    "location_consistency": 1,
+    "amount": 161463,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000504",
+    "trip_count_30d": 61,
+    "avg_rating": 2.7,
+    "location_consistency": 0.03,
+    "amount": 698435,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000505",
+    "trip_count_30d": 32,
+    "avg_rating": 4.2,
+    "location_consistency": 0.8,
+    "amount": 244956,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000506",
+    "trip_count_30d": 57,
+    "avg_rating": 2.6,
+    "location_consistency": 0.13,
+    "amount": 461936,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000507",
+    "trip_count_30d": 15,
+    "avg_rating": 4.6,
+    "location_consistency": 0.88,
+    "amount": 182533,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000508",
+    "trip_count_30d": 33,
+    "avg_rating": 4.7,
+    "location_consistency": 0.95,
+    "amount": 254038,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000509",
+    "trip_count_30d": 25,
+    "avg_rating": 4.5,
+    "location_consistency": 0.68,
+    "amount": 131217,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000510",
+    "trip_count_30d": 23,
+    "avg_rating": 4.9,
+    "location_consistency": 0.81,
+    "amount": 163610,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000511",
+    "trip_count_30d": 19,
+    "avg_rating": 4.3,
+    "location_consistency": 0.78,
+    "amount": 204612,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000512",
+    "trip_count_30d": 32,
+    "avg_rating": 3.8,
+    "location_consistency": 0.95,
+    "amount": 67818,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000513",
+    "trip_count_30d": 22,
+    "avg_rating": 3.8,
+    "location_consistency": 0.76,
+    "amount": 169311,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000514",
+    "trip_count_30d": 8,
+    "avg_rating": 4.2,
+    "location_consistency": 0.91,
+    "amount": 177909,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000515",
+    "trip_count_30d": 10,
+    "avg_rating": 3.9,
+    "location_consistency": 0.86,
+    "amount": 252415,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000516",
+    "trip_count_30d": 24,
+    "avg_rating": 3.6,
+    "location_consistency": 0.92,
+    "amount": 214441,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000517",
+    "trip_count_30d": 34,
+    "avg_rating": 3.7,
+    "location_consistency": 0.73,
+    "amount": 85421,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000518",
+    "trip_count_30d": 11,
+    "avg_rating": 4.4,
+    "location_consistency": 0.98,
+    "amount": 105137,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000519",
+    "trip_count_30d": 7,
+    "avg_rating": 3.8,
+    "location_consistency": 0.88,
+    "amount": 270609,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000520",
+    "trip_count_30d": 33,
+    "avg_rating": 4.2,
+    "location_consistency": 0.9,
+    "amount": 277091,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000521",
+    "trip_count_30d": 37,
+    "avg_rating": 1.3,
+    "location_consistency": 0.16,
+    "amount": 888491,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000522",
+    "trip_count_30d": 15,
+    "avg_rating": 4.8,
+    "location_consistency": 0.92,
+    "amount": 160708,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000523",
+    "trip_count_30d": 15,
+    "avg_rating": 3.6,
+    "location_consistency": 0.62,
+    "amount": 74088,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000524",
+    "trip_count_30d": 22,
+    "avg_rating": 5,
+    "location_consistency": 0.8,
+    "amount": 233610,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000525",
+    "trip_count_30d": 14,
+    "avg_rating": 4.3,
+    "location_consistency": 0.73,
+    "amount": 289826,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000526",
+    "trip_count_30d": 11,
+    "avg_rating": 4.5,
+    "location_consistency": 0.98,
+    "amount": 109482,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000527",
+    "trip_count_30d": 55,
+    "avg_rating": 1,
+    "location_consistency": 0.25,
+    "amount": 308515,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000528",
+    "trip_count_30d": 30,
+    "avg_rating": 3.6,
+    "location_consistency": 0.62,
+    "amount": 148661,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000529",
+    "trip_count_30d": 11,
+    "avg_rating": 3.8,
+    "location_consistency": 0.68,
+    "amount": 178783,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000530",
+    "trip_count_30d": 79,
+    "avg_rating": 1.8,
+    "location_consistency": 0.25,
+    "amount": 302741,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000531",
+    "trip_count_30d": 66,
+    "avg_rating": 2,
+    "location_consistency": 0.01,
+    "amount": 812401,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000532",
+    "trip_count_30d": 24,
+    "avg_rating": 3.7,
+    "location_consistency": 0.95,
+    "amount": 292712,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000533",
+    "trip_count_30d": 22,
+    "avg_rating": 4.7,
+    "location_consistency": 0.65,
+    "amount": 289178,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000534",
+    "trip_count_30d": 30,
+    "avg_rating": 4.3,
+    "location_consistency": 0.64,
+    "amount": 199001,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000535",
+    "trip_count_30d": 33,
+    "avg_rating": 3.6,
+    "location_consistency": 0.94,
+    "amount": 64193,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000536",
+    "trip_count_30d": 8,
+    "avg_rating": 3.7,
+    "location_consistency": 0.84,
+    "amount": 144058,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000537",
+    "trip_count_30d": 26,
+    "avg_rating": 4.1,
+    "location_consistency": 0.87,
+    "amount": 267826,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000538",
+    "trip_count_30d": 28,
+    "avg_rating": 4.9,
+    "location_consistency": 0.95,
+    "amount": 266654,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000539",
+    "trip_count_30d": 23,
+    "avg_rating": 4,
+    "location_consistency": 0.92,
+    "amount": 281842,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000540",
+    "trip_count_30d": 8,
+    "avg_rating": 4.1,
+    "location_consistency": 0.83,
+    "amount": 150456,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000541",
+    "trip_count_30d": 9,
+    "avg_rating": 3.6,
+    "location_consistency": 0.6,
+    "amount": 220724,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000542",
+    "trip_count_30d": 8,
+    "avg_rating": 4.8,
+    "location_consistency": 0.92,
+    "amount": 205670,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000543",
+    "trip_count_30d": 24,
+    "avg_rating": 4.4,
+    "location_consistency": 0.94,
+    "amount": 248480,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000544",
+    "trip_count_30d": 73,
+    "avg_rating": 2.9,
+    "location_consistency": 0.18,
+    "amount": 872908,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000545",
+    "trip_count_30d": 30,
+    "avg_rating": 4.8,
+    "location_consistency": 0.97,
+    "amount": 114377,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000546",
+    "trip_count_30d": 26,
+    "avg_rating": 4.7,
+    "location_consistency": 0.84,
+    "amount": 299105,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000547",
+    "trip_count_30d": 29,
+    "avg_rating": 5,
+    "location_consistency": 0.99,
+    "amount": 179617,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000548",
+    "trip_count_30d": 28,
+    "avg_rating": 3.6,
+    "location_consistency": 0.77,
+    "amount": 65144,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000549",
+    "trip_count_30d": 57,
+    "avg_rating": 1.3,
+    "location_consistency": 0.2,
+    "amount": 763710,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000550",
+    "trip_count_30d": 29,
+    "avg_rating": 4,
+    "location_consistency": 0.62,
+    "amount": 177435,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000551",
+    "trip_count_30d": 11,
+    "avg_rating": 3.6,
+    "location_consistency": 0.74,
+    "amount": 240098,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000552",
+    "trip_count_30d": 14,
+    "avg_rating": 3.9,
+    "location_consistency": 0.79,
+    "amount": 189128,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000553",
+    "trip_count_30d": 8,
+    "avg_rating": 3.6,
+    "location_consistency": 0.84,
+    "amount": 74382,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000554",
+    "trip_count_30d": 6,
+    "avg_rating": 3.6,
+    "location_consistency": 0.85,
+    "amount": 52250,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000555",
+    "trip_count_30d": 35,
+    "avg_rating": 3.9,
+    "location_consistency": 0.87,
+    "amount": 191166,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000556",
+    "trip_count_30d": 57,
+    "avg_rating": 2.5,
+    "location_consistency": 0.04,
+    "amount": 688651,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000557",
+    "trip_count_30d": 7,
+    "avg_rating": 4,
+    "location_consistency": 0.93,
+    "amount": 69409,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000558",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.64,
+    "amount": 112484,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000559",
+    "trip_count_30d": 15,
+    "avg_rating": 4,
+    "location_consistency": 0.83,
+    "amount": 298840,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000560",
+    "trip_count_30d": 66,
+    "avg_rating": 1.9,
+    "location_consistency": 0.11,
+    "amount": 988365,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000561",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.7,
+    "amount": 141583,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000562",
+    "trip_count_30d": 19,
+    "avg_rating": 4.9,
+    "location_consistency": 0.68,
+    "amount": 132100,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000563",
+    "trip_count_30d": 6,
+    "avg_rating": 4.3,
+    "location_consistency": 0.86,
+    "amount": 143918,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000564",
+    "trip_count_30d": 36,
+    "avg_rating": 1.3,
+    "location_consistency": 0.06,
+    "amount": 933084,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000565",
+    "trip_count_30d": 14,
+    "avg_rating": 4.9,
+    "location_consistency": 0.75,
+    "amount": 153276,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000566",
+    "trip_count_30d": 57,
+    "avg_rating": 2,
+    "location_consistency": 0.32,
+    "amount": 712468,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000567",
+    "trip_count_30d": 17,
+    "avg_rating": 4.5,
+    "location_consistency": 0.68,
+    "amount": 139697,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000568",
+    "trip_count_30d": 29,
+    "avg_rating": 4.7,
+    "location_consistency": 0.8,
+    "amount": 157704,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000569",
+    "trip_count_30d": 28,
+    "avg_rating": 4.9,
+    "location_consistency": 0.72,
+    "amount": 183143,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000570",
+    "trip_count_30d": 74,
+    "avg_rating": 2.7,
+    "location_consistency": 0.18,
+    "amount": 505042,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000571",
+    "trip_count_30d": 17,
+    "avg_rating": 4.6,
+    "location_consistency": 0.88,
+    "amount": 92422,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000572",
+    "trip_count_30d": 30,
+    "avg_rating": 4.6,
+    "location_consistency": 0.89,
+    "amount": 223231,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000573",
+    "trip_count_30d": 31,
+    "avg_rating": 3.8,
+    "location_consistency": 0.82,
+    "amount": 253166,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000574",
+    "trip_count_30d": 23,
+    "avg_rating": 5,
+    "location_consistency": 0.91,
+    "amount": 194188,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000575",
+    "trip_count_30d": 16,
+    "avg_rating": 4.3,
+    "location_consistency": 0.67,
+    "amount": 273104,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000576",
+    "trip_count_30d": 22,
+    "avg_rating": 3.7,
+    "location_consistency": 0.88,
+    "amount": 169294,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000577",
+    "trip_count_30d": 21,
+    "avg_rating": 3.8,
+    "location_consistency": 0.98,
+    "amount": 232347,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000578",
+    "trip_count_30d": 72,
+    "avg_rating": 2.8,
+    "location_consistency": 0.07,
+    "amount": 363175,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000579",
+    "trip_count_30d": 19,
+    "avg_rating": 4.3,
+    "location_consistency": 0.92,
+    "amount": 272036,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000580",
+    "trip_count_30d": 33,
+    "avg_rating": 3.6,
+    "location_consistency": 0.89,
+    "amount": 214832,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000581",
+    "trip_count_30d": 33,
+    "avg_rating": 3.8,
+    "location_consistency": 0.84,
+    "amount": 242165,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000582",
+    "trip_count_30d": 13,
+    "avg_rating": 5,
+    "location_consistency": 0.85,
+    "amount": 55255,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000583",
+    "trip_count_30d": 21,
+    "avg_rating": 4,
+    "location_consistency": 0.71,
+    "amount": 232248,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000584",
+    "trip_count_30d": 74,
+    "avg_rating": 2.4,
+    "location_consistency": 0.37,
+    "amount": 766769,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000585",
+    "trip_count_30d": 26,
+    "avg_rating": 4,
+    "location_consistency": 0.76,
+    "amount": 184309,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000586",
+    "trip_count_30d": 49,
+    "avg_rating": 2.9,
+    "location_consistency": 0.3,
+    "amount": 553603,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000587",
+    "trip_count_30d": 32,
+    "avg_rating": 4.7,
+    "location_consistency": 0.76,
+    "amount": 129313,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000588",
+    "trip_count_30d": 13,
+    "avg_rating": 3.6,
+    "location_consistency": 0.61,
+    "amount": 284058,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000589",
+    "trip_count_30d": 19,
+    "avg_rating": 3.8,
+    "location_consistency": 0.99,
+    "amount": 51210,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000590",
+    "trip_count_30d": 5,
+    "avg_rating": 3.7,
+    "location_consistency": 0.7,
+    "amount": 60987,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000591",
+    "trip_count_30d": 34,
+    "avg_rating": 3.5,
+    "location_consistency": 0.64,
+    "amount": 203052,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000592",
+    "trip_count_30d": 34,
+    "avg_rating": 4.1,
+    "location_consistency": 0.67,
+    "amount": 259189,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000593",
+    "trip_count_30d": 32,
+    "avg_rating": 3.9,
+    "location_consistency": 0.75,
+    "amount": 70702,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000594",
+    "trip_count_30d": 19,
+    "avg_rating": 4.6,
+    "location_consistency": 0.88,
+    "amount": 131569,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000595",
+    "trip_count_30d": 17,
+    "avg_rating": 4.8,
+    "location_consistency": 0.95,
+    "amount": 182204,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000596",
+    "trip_count_30d": 23,
+    "avg_rating": 4.6,
+    "location_consistency": 0.88,
+    "amount": 156148,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000597",
+    "trip_count_30d": 22,
+    "avg_rating": 3.7,
+    "location_consistency": 0.96,
+    "amount": 108392,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000598",
+    "trip_count_30d": 18,
+    "avg_rating": 5,
+    "location_consistency": 0.73,
+    "amount": 110875,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000599",
+    "trip_count_30d": 29,
+    "avg_rating": 4.1,
+    "location_consistency": 0.92,
+    "amount": 150793,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000600",
+    "trip_count_30d": 33,
+    "avg_rating": 4.3,
+    "location_consistency": 0.97,
+    "amount": 129278,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000601",
+    "trip_count_30d": 6,
+    "avg_rating": 4.5,
+    "location_consistency": 0.67,
+    "amount": 288082,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000602",
+    "trip_count_30d": 49,
+    "avg_rating": 2.5,
+    "location_consistency": 0.02,
+    "amount": 982177,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000603",
+    "trip_count_30d": 17,
+    "avg_rating": 4.9,
+    "location_consistency": 0.74,
+    "amount": 172101,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000604",
+    "trip_count_30d": 39,
+    "avg_rating": 1.5,
+    "location_consistency": 0.38,
+    "amount": 893302,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000605",
+    "trip_count_30d": 30,
+    "avg_rating": 4.8,
+    "location_consistency": 0.98,
+    "amount": 130432,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000606",
+    "trip_count_30d": 6,
+    "avg_rating": 3.5,
+    "location_consistency": 0.98,
+    "amount": 264073,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000607",
+    "trip_count_30d": 34,
+    "avg_rating": 4.8,
+    "location_consistency": 0.93,
+    "amount": 158025,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000608",
+    "trip_count_30d": 23,
+    "avg_rating": 4,
+    "location_consistency": 0.83,
+    "amount": 196623,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000609",
+    "trip_count_30d": 34,
+    "avg_rating": 3.8,
+    "location_consistency": 0.6,
+    "amount": 261622,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000610",
+    "trip_count_30d": 20,
+    "avg_rating": 4.1,
+    "location_consistency": 0.81,
+    "amount": 253556,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000611",
+    "trip_count_30d": 25,
+    "avg_rating": 3.7,
+    "location_consistency": 0.83,
+    "amount": 130976,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000612",
+    "trip_count_30d": 35,
+    "avg_rating": 4.7,
+    "location_consistency": 0.72,
+    "amount": 292466,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000613",
+    "trip_count_30d": 19,
+    "avg_rating": 3.8,
+    "location_consistency": 0.68,
+    "amount": 104010,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000614",
+    "trip_count_30d": 14,
+    "avg_rating": 4,
+    "location_consistency": 0.68,
+    "amount": 63412,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000615",
+    "trip_count_30d": 14,
+    "avg_rating": 3.8,
+    "location_consistency": 0.65,
+    "amount": 57647,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000616",
+    "trip_count_30d": 67,
+    "avg_rating": 2.2,
+    "location_consistency": 0.15,
+    "amount": 491451,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000617",
+    "trip_count_30d": 6,
+    "avg_rating": 4.5,
+    "location_consistency": 0.73,
+    "amount": 275899,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000618",
+    "trip_count_30d": 11,
+    "avg_rating": 4,
+    "location_consistency": 0.88,
+    "amount": 242391,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000619",
+    "trip_count_30d": 11,
+    "avg_rating": 4.4,
+    "location_consistency": 0.68,
+    "amount": 230640,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000620",
+    "trip_count_30d": 35,
+    "avg_rating": 2.8,
+    "location_consistency": 0.28,
+    "amount": 886734,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000621",
+    "trip_count_30d": 39,
+    "avg_rating": 2.4,
+    "location_consistency": 0.28,
+    "amount": 637432,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000622",
+    "trip_count_30d": 10,
+    "avg_rating": 4.7,
+    "location_consistency": 0.8,
+    "amount": 168907,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000623",
+    "trip_count_30d": 33,
+    "avg_rating": 4.3,
+    "location_consistency": 0.68,
+    "amount": 273835,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000624",
+    "trip_count_30d": 59,
+    "avg_rating": 2.6,
+    "location_consistency": 0.31,
+    "amount": 359260,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000625",
+    "trip_count_30d": 29,
+    "avg_rating": 4.7,
+    "location_consistency": 0.75,
+    "amount": 119700,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000626",
+    "trip_count_30d": 79,
+    "avg_rating": 1.5,
+    "location_consistency": 0.13,
+    "amount": 865322,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000627",
+    "trip_count_30d": 9,
+    "avg_rating": 3.9,
+    "location_consistency": 0.61,
+    "amount": 130678,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000628",
+    "trip_count_30d": 26,
+    "avg_rating": 4.6,
+    "location_consistency": 0.98,
+    "amount": 78016,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000629",
+    "trip_count_30d": 62,
+    "avg_rating": 3,
+    "location_consistency": 0.28,
+    "amount": 577720,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000630",
+    "trip_count_30d": 7,
+    "avg_rating": 3.9,
+    "location_consistency": 0.7,
+    "amount": 289294,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000631",
+    "trip_count_30d": 10,
+    "avg_rating": 3.6,
+    "location_consistency": 0.67,
+    "amount": 233560,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000632",
+    "trip_count_30d": 9,
+    "avg_rating": 3.9,
+    "location_consistency": 0.6,
+    "amount": 222308,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000633",
+    "trip_count_30d": 28,
+    "avg_rating": 4.8,
+    "location_consistency": 0.71,
+    "amount": 139729,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000634",
+    "trip_count_30d": 18,
+    "avg_rating": 3.8,
+    "location_consistency": 0.99,
+    "amount": 75684,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000635",
+    "trip_count_30d": 16,
+    "avg_rating": 3.8,
+    "location_consistency": 0.94,
+    "amount": 198390,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000636",
+    "trip_count_30d": 25,
+    "avg_rating": 3.9,
+    "location_consistency": 0.96,
+    "amount": 225609,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000637",
+    "trip_count_30d": 25,
+    "avg_rating": 3.8,
+    "location_consistency": 0.79,
+    "amount": 253773,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000638",
+    "trip_count_30d": 14,
+    "avg_rating": 3.5,
+    "location_consistency": 0.61,
+    "amount": 102779,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000639",
+    "trip_count_30d": 33,
+    "avg_rating": 4.6,
+    "location_consistency": 0.7,
+    "amount": 51043,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000640",
+    "trip_count_30d": 19,
+    "avg_rating": 4.9,
+    "location_consistency": 0.68,
+    "amount": 189603,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000641",
+    "trip_count_30d": 30,
+    "avg_rating": 3.5,
+    "location_consistency": 0.99,
+    "amount": 62886,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000642",
+    "trip_count_30d": 34,
+    "avg_rating": 4.1,
+    "location_consistency": 0.64,
+    "amount": 112735,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000643",
+    "trip_count_30d": 19,
+    "avg_rating": 3.9,
+    "location_consistency": 0.61,
+    "amount": 202078,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000644",
+    "trip_count_30d": 66,
+    "avg_rating": 1.7,
+    "location_consistency": 0.01,
+    "amount": 872970,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000645",
+    "trip_count_30d": 30,
+    "avg_rating": 4.7,
+    "location_consistency": 0.91,
+    "amount": 255927,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000646",
+    "trip_count_30d": 10,
+    "avg_rating": 4.7,
+    "location_consistency": 0.62,
+    "amount": 270384,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000647",
+    "trip_count_30d": 30,
+    "avg_rating": 3.5,
+    "location_consistency": 0.78,
+    "amount": 132524,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000648",
+    "trip_count_30d": 18,
+    "avg_rating": 3.8,
+    "location_consistency": 0.73,
+    "amount": 234401,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000649",
+    "trip_count_30d": 10,
+    "avg_rating": 4.7,
+    "location_consistency": 0.73,
+    "amount": 185321,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000650",
+    "trip_count_30d": 31,
+    "avg_rating": 3.6,
+    "location_consistency": 1,
+    "amount": 55534,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000651",
+    "trip_count_30d": 77,
+    "avg_rating": 1.8,
+    "location_consistency": 0.28,
+    "amount": 709392,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000652",
+    "trip_count_30d": 24,
+    "avg_rating": 5,
+    "location_consistency": 0.76,
+    "amount": 254377,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000653",
+    "trip_count_30d": 15,
+    "avg_rating": 4.3,
+    "location_consistency": 0.78,
+    "amount": 60275,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000654",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.7,
+    "amount": 273611,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000655",
+    "trip_count_30d": 28,
+    "avg_rating": 4.5,
+    "location_consistency": 0.65,
+    "amount": 226642,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000656",
+    "trip_count_30d": 26,
+    "avg_rating": 4.7,
+    "location_consistency": 0.74,
+    "amount": 281903,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000657",
+    "trip_count_30d": 12,
+    "avg_rating": 4.2,
+    "location_consistency": 0.64,
+    "amount": 166205,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000658",
+    "trip_count_30d": 26,
+    "avg_rating": 4.2,
+    "location_consistency": 0.85,
+    "amount": 118315,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000659",
+    "trip_count_30d": 31,
+    "avg_rating": 4.1,
+    "location_consistency": 0.94,
+    "amount": 287236,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000660",
+    "trip_count_30d": 18,
+    "avg_rating": 4.4,
+    "location_consistency": 0.96,
+    "amount": 187687,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000661",
+    "trip_count_30d": 34,
+    "avg_rating": 4.7,
+    "location_consistency": 0.73,
+    "amount": 265867,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000662",
+    "trip_count_30d": 9,
+    "avg_rating": 3.6,
+    "location_consistency": 0.81,
+    "amount": 238119,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000663",
+    "trip_count_30d": 34,
+    "avg_rating": 3.7,
+    "location_consistency": 0.77,
+    "amount": 78128,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000664",
+    "trip_count_30d": 66,
+    "avg_rating": 1.4,
+    "location_consistency": 0.07,
+    "amount": 763291,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000665",
+    "trip_count_30d": 20,
+    "avg_rating": 4.6,
+    "location_consistency": 0.96,
+    "amount": 182605,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000666",
+    "trip_count_30d": 32,
+    "avg_rating": 4.8,
+    "location_consistency": 0.84,
+    "amount": 230192,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000667",
+    "trip_count_30d": 78,
+    "avg_rating": 2.7,
+    "location_consistency": 0.31,
+    "amount": 617087,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000668",
+    "trip_count_30d": 8,
+    "avg_rating": 3.9,
+    "location_consistency": 0.82,
+    "amount": 93251,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000669",
+    "trip_count_30d": 13,
+    "avg_rating": 4.1,
+    "location_consistency": 0.69,
+    "amount": 233591,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000670",
+    "trip_count_30d": 29,
+    "avg_rating": 4,
+    "location_consistency": 0.85,
+    "amount": 156185,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000671",
+    "trip_count_30d": 25,
+    "avg_rating": 3.8,
+    "location_consistency": 0.9,
+    "amount": 181142,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000672",
+    "trip_count_30d": 35,
+    "avg_rating": 3.6,
+    "location_consistency": 0.73,
+    "amount": 184499,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000673",
+    "trip_count_30d": 11,
+    "avg_rating": 5,
+    "location_consistency": 1,
+    "amount": 249443,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000674",
+    "trip_count_30d": 23,
+    "avg_rating": 4.7,
+    "location_consistency": 0.67,
+    "amount": 54673,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000675",
+    "trip_count_30d": 14,
+    "avg_rating": 4.4,
+    "location_consistency": 0.79,
+    "amount": 137539,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000676",
+    "trip_count_30d": 10,
+    "avg_rating": 4.1,
+    "location_consistency": 0.92,
+    "amount": 250117,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000677",
+    "trip_count_30d": 17,
+    "avg_rating": 4.6,
+    "location_consistency": 0.91,
+    "amount": 185927,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000678",
+    "trip_count_30d": 10,
+    "avg_rating": 4.5,
+    "location_consistency": 0.64,
+    "amount": 210733,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000679",
+    "trip_count_30d": 36,
+    "avg_rating": 2.5,
+    "location_consistency": 0.01,
+    "amount": 516454,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000680",
+    "trip_count_30d": 31,
+    "avg_rating": 4.3,
+    "location_consistency": 0.71,
+    "amount": 118290,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000681",
+    "trip_count_30d": 67,
+    "avg_rating": 1.7,
+    "location_consistency": 0.07,
+    "amount": 802211,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000682",
+    "trip_count_30d": 10,
+    "avg_rating": 4.1,
+    "location_consistency": 0.66,
+    "amount": 147277,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000683",
+    "trip_count_30d": 17,
+    "avg_rating": 3.5,
+    "location_consistency": 0.79,
+    "amount": 238582,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000684",
+    "trip_count_30d": 35,
+    "avg_rating": 1.2,
+    "location_consistency": 0.16,
+    "amount": 571603,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000685",
+    "trip_count_30d": 58,
+    "avg_rating": 1.9,
+    "location_consistency": 0.06,
+    "amount": 481180,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000686",
+    "trip_count_30d": 13,
+    "avg_rating": 4.4,
+    "location_consistency": 0.6,
+    "amount": 111531,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000687",
+    "trip_count_30d": 33,
+    "avg_rating": 4.5,
+    "location_consistency": 0.64,
+    "amount": 183172,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000688",
+    "trip_count_30d": 35,
+    "avg_rating": 4.1,
+    "location_consistency": 0.98,
+    "amount": 98119,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000689",
+    "trip_count_30d": 8,
+    "avg_rating": 4.2,
+    "location_consistency": 0.93,
+    "amount": 103049,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000690",
+    "trip_count_30d": 29,
+    "avg_rating": 4.2,
+    "location_consistency": 0.79,
+    "amount": 269470,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000691",
+    "trip_count_30d": 64,
+    "avg_rating": 2.2,
+    "location_consistency": 0.37,
+    "amount": 971586,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000692",
+    "trip_count_30d": 78,
+    "avg_rating": 2.7,
+    "location_consistency": 0.38,
+    "amount": 427425,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000693",
+    "trip_count_30d": 39,
+    "avg_rating": 2.7,
+    "location_consistency": 0.27,
+    "amount": 541635,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000694",
+    "trip_count_30d": 32,
+    "avg_rating": 4,
+    "location_consistency": 0.88,
+    "amount": 66883,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000695",
+    "trip_count_30d": 10,
+    "avg_rating": 4.6,
+    "location_consistency": 0.82,
+    "amount": 70078,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000696",
+    "trip_count_30d": 9,
+    "avg_rating": 3.7,
+    "location_consistency": 0.64,
+    "amount": 67965,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000697",
+    "trip_count_30d": 18,
+    "avg_rating": 4.9,
+    "location_consistency": 1,
+    "amount": 109104,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000698",
+    "trip_count_30d": 35,
+    "avg_rating": 3.8,
+    "location_consistency": 0.62,
+    "amount": 236000,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000699",
+    "trip_count_30d": 10,
+    "avg_rating": 3.8,
+    "location_consistency": 0.74,
+    "amount": 182082,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000700",
+    "trip_count_30d": 36,
+    "avg_rating": 1.1,
+    "location_consistency": 0.22,
+    "amount": 713062,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000701",
+    "trip_count_30d": 24,
+    "avg_rating": 4,
+    "location_consistency": 0.9,
+    "amount": 233036,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000702",
+    "trip_count_30d": 20,
+    "avg_rating": 3.6,
+    "location_consistency": 0.73,
+    "amount": 237455,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000703",
+    "trip_count_30d": 28,
+    "avg_rating": 4.6,
+    "location_consistency": 0.91,
+    "amount": 250685,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000704",
+    "trip_count_30d": 52,
+    "avg_rating": 1.5,
+    "location_consistency": 0.08,
+    "amount": 697756,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000705",
+    "trip_count_30d": 23,
+    "avg_rating": 4.9,
+    "location_consistency": 0.98,
+    "amount": 298556,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000706",
+    "trip_count_30d": 27,
+    "avg_rating": 4.5,
+    "location_consistency": 0.66,
+    "amount": 167070,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000707",
+    "trip_count_30d": 33,
+    "avg_rating": 4,
+    "location_consistency": 0.64,
+    "amount": 124007,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000708",
+    "trip_count_30d": 16,
+    "avg_rating": 4.1,
+    "location_consistency": 0.82,
+    "amount": 51250,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000709",
+    "trip_count_30d": 23,
+    "avg_rating": 4,
+    "location_consistency": 0.65,
+    "amount": 57129,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000710",
+    "trip_count_30d": 6,
+    "avg_rating": 4.2,
+    "location_consistency": 0.72,
+    "amount": 262853,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000711",
+    "trip_count_30d": 31,
+    "avg_rating": 4.7,
+    "location_consistency": 0.86,
+    "amount": 138650,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000712",
+    "trip_count_30d": 37,
+    "avg_rating": 1,
+    "location_consistency": 0.34,
+    "amount": 591952,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000713",
+    "trip_count_30d": 15,
+    "avg_rating": 5,
+    "location_consistency": 0.98,
+    "amount": 136469,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000714",
+    "trip_count_30d": 13,
+    "avg_rating": 4.7,
+    "location_consistency": 0.66,
+    "amount": 186792,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000715",
+    "trip_count_30d": 62,
+    "avg_rating": 2.5,
+    "location_consistency": 0.27,
+    "amount": 696663,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000716",
+    "trip_count_30d": 78,
+    "avg_rating": 1.6,
+    "location_consistency": 0.17,
+    "amount": 710088,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000717",
+    "trip_count_30d": 16,
+    "avg_rating": 4,
+    "location_consistency": 0.79,
+    "amount": 99803,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000718",
+    "trip_count_30d": 20,
+    "avg_rating": 4.9,
+    "location_consistency": 0.97,
+    "amount": 196732,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000719",
+    "trip_count_30d": 7,
+    "avg_rating": 4.4,
+    "location_consistency": 0.87,
+    "amount": 292722,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000720",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.67,
+    "amount": 164463,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000721",
+    "trip_count_30d": 12,
+    "avg_rating": 4.9,
+    "location_consistency": 0.73,
+    "amount": 199447,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000722",
+    "trip_count_30d": 18,
+    "avg_rating": 3.6,
+    "location_consistency": 0.92,
+    "amount": 74105,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000723",
+    "trip_count_30d": 59,
+    "avg_rating": 2.3,
+    "location_consistency": 0.1,
+    "amount": 890328,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000724",
+    "trip_count_30d": 24,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 50836,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000725",
+    "trip_count_30d": 8,
+    "avg_rating": 4.5,
+    "location_consistency": 0.7,
+    "amount": 204485,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000726",
+    "trip_count_30d": 23,
+    "avg_rating": 4.9,
+    "location_consistency": 0.78,
+    "amount": 223549,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000727",
+    "trip_count_30d": 21,
+    "avg_rating": 4.4,
+    "location_consistency": 0.83,
+    "amount": 211029,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000728",
+    "trip_count_30d": 17,
+    "avg_rating": 3.8,
+    "location_consistency": 0.9,
+    "amount": 238457,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000729",
+    "trip_count_30d": 28,
+    "avg_rating": 4.8,
+    "location_consistency": 0.63,
+    "amount": 50159,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000730",
+    "trip_count_30d": 28,
+    "avg_rating": 3.7,
+    "location_consistency": 0.97,
+    "amount": 294597,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000731",
+    "trip_count_30d": 21,
+    "avg_rating": 3.9,
+    "location_consistency": 0.84,
+    "amount": 201572,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000732",
+    "trip_count_30d": 39,
+    "avg_rating": 1.6,
+    "location_consistency": 0.01,
+    "amount": 656971,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000733",
+    "trip_count_30d": 5,
+    "avg_rating": 4.5,
+    "location_consistency": 0.97,
+    "amount": 237601,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000734",
+    "trip_count_30d": 28,
+    "avg_rating": 4,
+    "location_consistency": 0.68,
+    "amount": 138731,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000735",
+    "trip_count_30d": 18,
+    "avg_rating": 4.5,
+    "location_consistency": 0.62,
+    "amount": 168519,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000736",
+    "trip_count_30d": 28,
+    "avg_rating": 4.5,
+    "location_consistency": 0.98,
+    "amount": 255021,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000737",
+    "trip_count_30d": 10,
+    "avg_rating": 4.7,
+    "location_consistency": 0.66,
+    "amount": 111636,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000738",
+    "trip_count_30d": 9,
+    "avg_rating": 3.8,
+    "location_consistency": 0.82,
+    "amount": 275087,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000739",
+    "trip_count_30d": 10,
+    "avg_rating": 4.9,
+    "location_consistency": 0.96,
+    "amount": 257724,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000740",
+    "trip_count_30d": 23,
+    "avg_rating": 4.1,
+    "location_consistency": 0.86,
+    "amount": 206478,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000741",
+    "trip_count_30d": 16,
+    "avg_rating": 4.6,
+    "location_consistency": 0.67,
+    "amount": 109952,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000742",
+    "trip_count_30d": 60,
+    "avg_rating": 2.5,
+    "location_consistency": 0.3,
+    "amount": 301240,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000743",
+    "trip_count_30d": 17,
+    "avg_rating": 4.5,
+    "location_consistency": 0.89,
+    "amount": 153188,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000744",
+    "trip_count_30d": 28,
+    "avg_rating": 3.8,
+    "location_consistency": 0.91,
+    "amount": 255652,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000745",
+    "trip_count_30d": 14,
+    "avg_rating": 3.6,
+    "location_consistency": 0.9,
+    "amount": 127189,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000746",
+    "trip_count_30d": 17,
+    "avg_rating": 4.1,
+    "location_consistency": 0.94,
+    "amount": 204751,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000747",
+    "trip_count_30d": 25,
+    "avg_rating": 3.5,
+    "location_consistency": 0.76,
+    "amount": 175527,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000748",
+    "trip_count_30d": 43,
+    "avg_rating": 2.9,
+    "location_consistency": 0.21,
+    "amount": 917233,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000749",
+    "trip_count_30d": 21,
+    "avg_rating": 4.9,
+    "location_consistency": 0.78,
+    "amount": 63370,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000750",
+    "trip_count_30d": 22,
+    "avg_rating": 3.5,
+    "location_consistency": 0.64,
+    "amount": 216749,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000751",
+    "trip_count_30d": 31,
+    "avg_rating": 4.8,
+    "location_consistency": 0.61,
+    "amount": 58196,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000752",
+    "trip_count_30d": 12,
+    "avg_rating": 4.3,
+    "location_consistency": 0.61,
+    "amount": 261961,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000753",
+    "trip_count_30d": 20,
+    "avg_rating": 4.2,
+    "location_consistency": 1,
+    "amount": 264730,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000754",
+    "trip_count_30d": 6,
+    "avg_rating": 3.9,
+    "location_consistency": 0.78,
+    "amount": 286266,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000755",
+    "trip_count_30d": 6,
+    "avg_rating": 4.2,
+    "location_consistency": 0.98,
+    "amount": 133182,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000756",
+    "trip_count_30d": 10,
+    "avg_rating": 4.8,
+    "location_consistency": 0.88,
+    "amount": 292710,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000757",
+    "trip_count_30d": 71,
+    "avg_rating": 1.1,
+    "location_consistency": 0.19,
+    "amount": 833317,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000758",
+    "trip_count_30d": 9,
+    "avg_rating": 5,
+    "location_consistency": 0.82,
+    "amount": 107985,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000759",
+    "trip_count_30d": 18,
+    "avg_rating": 3.9,
+    "location_consistency": 0.85,
+    "amount": 56165,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000760",
+    "trip_count_30d": 9,
+    "avg_rating": 4.4,
+    "location_consistency": 0.7,
+    "amount": 175932,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000761",
+    "trip_count_30d": 11,
+    "avg_rating": 4.3,
+    "location_consistency": 0.68,
+    "amount": 55116,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000762",
+    "trip_count_30d": 21,
+    "avg_rating": 4,
+    "location_consistency": 0.69,
+    "amount": 143673,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000763",
+    "trip_count_30d": 18,
+    "avg_rating": 3.6,
+    "location_consistency": 0.72,
+    "amount": 99411,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000764",
+    "trip_count_30d": 42,
+    "avg_rating": 2.9,
+    "location_consistency": 0.06,
+    "amount": 666018,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000765",
+    "trip_count_30d": 8,
+    "avg_rating": 3.8,
+    "location_consistency": 0.86,
+    "amount": 224623,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000766",
+    "trip_count_30d": 54,
+    "avg_rating": 1.6,
+    "location_consistency": 0.1,
+    "amount": 448821,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000767",
+    "trip_count_30d": 25,
+    "avg_rating": 3.9,
+    "location_consistency": 0.93,
+    "amount": 146059,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000768",
+    "trip_count_30d": 31,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 58234,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000769",
+    "trip_count_30d": 21,
+    "avg_rating": 4,
+    "location_consistency": 0.95,
+    "amount": 180659,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000770",
+    "trip_count_30d": 26,
+    "avg_rating": 5,
+    "location_consistency": 0.65,
+    "amount": 103485,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000771",
+    "trip_count_30d": 10,
+    "avg_rating": 4.6,
+    "location_consistency": 0.96,
+    "amount": 288851,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000772",
+    "trip_count_30d": 12,
+    "avg_rating": 4.7,
+    "location_consistency": 0.61,
+    "amount": 56880,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000773",
+    "trip_count_30d": 23,
+    "avg_rating": 3.7,
+    "location_consistency": 0.61,
+    "amount": 292239,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000774",
+    "trip_count_30d": 44,
+    "avg_rating": 1.5,
+    "location_consistency": 0.24,
+    "amount": 524076,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000775",
+    "trip_count_30d": 19,
+    "avg_rating": 3.6,
+    "location_consistency": 0.92,
+    "amount": 56366,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000776",
+    "trip_count_30d": 12,
+    "avg_rating": 4,
+    "location_consistency": 0.81,
+    "amount": 98617,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000777",
+    "trip_count_30d": 21,
+    "avg_rating": 4.9,
+    "location_consistency": 0.93,
+    "amount": 263256,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000778",
+    "trip_count_30d": 22,
+    "avg_rating": 3.8,
+    "location_consistency": 0.86,
+    "amount": 140484,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000779",
+    "trip_count_30d": 12,
+    "avg_rating": 4.5,
+    "location_consistency": 0.84,
+    "amount": 141382,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000780",
+    "trip_count_30d": 13,
+    "avg_rating": 3.9,
+    "location_consistency": 0.89,
+    "amount": 50100,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000781",
+    "trip_count_30d": 28,
+    "avg_rating": 4.3,
+    "location_consistency": 0.65,
+    "amount": 176971,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000782",
+    "trip_count_30d": 26,
+    "avg_rating": 4.7,
+    "location_consistency": 0.74,
+    "amount": 229785,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000783",
+    "trip_count_30d": 33,
+    "avg_rating": 3.9,
+    "location_consistency": 0.64,
+    "amount": 293070,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000784",
+    "trip_count_30d": 19,
+    "avg_rating": 4.8,
+    "location_consistency": 0.6,
+    "amount": 111763,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000785",
+    "trip_count_30d": 11,
+    "avg_rating": 4.8,
+    "location_consistency": 0.97,
+    "amount": 211712,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000786",
+    "trip_count_30d": 29,
+    "avg_rating": 4.9,
+    "location_consistency": 0.75,
+    "amount": 207651,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000787",
+    "trip_count_30d": 29,
+    "avg_rating": 3.9,
+    "location_consistency": 0.84,
+    "amount": 204379,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000788",
+    "trip_count_30d": 8,
+    "avg_rating": 4.1,
+    "location_consistency": 0.93,
+    "amount": 207458,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000789",
+    "trip_count_30d": 31,
+    "avg_rating": 4.3,
+    "location_consistency": 0.92,
+    "amount": 84362,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000790",
+    "trip_count_30d": 31,
+    "avg_rating": 4.7,
+    "location_consistency": 0.84,
+    "amount": 180217,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000791",
+    "trip_count_30d": 8,
+    "avg_rating": 3.9,
+    "location_consistency": 0.82,
+    "amount": 287502,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000792",
+    "trip_count_30d": 15,
+    "avg_rating": 3.8,
+    "location_consistency": 0.74,
+    "amount": 177248,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000793",
+    "trip_count_30d": 19,
+    "avg_rating": 3.6,
+    "location_consistency": 0.7,
+    "amount": 183926,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000794",
+    "trip_count_30d": 33,
+    "avg_rating": 3.6,
+    "location_consistency": 0.94,
+    "amount": 236298,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000795",
+    "trip_count_30d": 23,
+    "avg_rating": 4.1,
+    "location_consistency": 0.72,
+    "amount": 219865,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000796",
+    "trip_count_30d": 32,
+    "avg_rating": 4.1,
+    "location_consistency": 0.87,
+    "amount": 149596,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000797",
+    "trip_count_30d": 12,
+    "avg_rating": 4.4,
+    "location_consistency": 0.68,
+    "amount": 256573,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000798",
+    "trip_count_30d": 24,
+    "avg_rating": 4,
+    "location_consistency": 0.67,
+    "amount": 94419,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000799",
+    "trip_count_30d": 6,
+    "avg_rating": 4.2,
+    "location_consistency": 0.87,
+    "amount": 76711,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000800",
+    "trip_count_30d": 7,
+    "avg_rating": 4.8,
+    "location_consistency": 0.87,
+    "amount": 271090,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000801",
+    "trip_count_30d": 11,
+    "avg_rating": 4.2,
+    "location_consistency": 0.64,
+    "amount": 285594,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000802",
+    "trip_count_30d": 11,
+    "avg_rating": 4.7,
+    "location_consistency": 0.82,
+    "amount": 254137,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000803",
+    "trip_count_30d": 15,
+    "avg_rating": 4.6,
+    "location_consistency": 0.71,
+    "amount": 292691,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000804",
+    "trip_count_30d": 32,
+    "avg_rating": 3.6,
+    "location_consistency": 0.88,
+    "amount": 246026,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000805",
+    "trip_count_30d": 21,
+    "avg_rating": 4.2,
+    "location_consistency": 0.74,
+    "amount": 266853,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000806",
+    "trip_count_30d": 8,
+    "avg_rating": 3.9,
+    "location_consistency": 0.99,
+    "amount": 195742,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000807",
+    "trip_count_30d": 71,
+    "avg_rating": 2.9,
+    "location_consistency": 0.15,
+    "amount": 568063,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000808",
+    "trip_count_30d": 19,
+    "avg_rating": 4.2,
+    "location_consistency": 0.79,
+    "amount": 97133,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000809",
+    "trip_count_30d": 21,
+    "avg_rating": 3.9,
+    "location_consistency": 0.6,
+    "amount": 56221,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000810",
+    "trip_count_30d": 16,
+    "avg_rating": 4.6,
+    "location_consistency": 0.85,
+    "amount": 247635,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000811",
+    "trip_count_30d": 26,
+    "avg_rating": 4.8,
+    "location_consistency": 0.81,
+    "amount": 95247,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000812",
+    "trip_count_30d": 32,
+    "avg_rating": 4.4,
+    "location_consistency": 0.77,
+    "amount": 95273,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000813",
+    "trip_count_30d": 28,
+    "avg_rating": 4.8,
+    "location_consistency": 0.98,
+    "amount": 244616,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000814",
+    "trip_count_30d": 17,
+    "avg_rating": 4.4,
+    "location_consistency": 0.81,
+    "amount": 113112,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000815",
+    "trip_count_30d": 61,
+    "avg_rating": 1.6,
+    "location_consistency": 0.27,
+    "amount": 892882,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000816",
+    "trip_count_30d": 6,
+    "avg_rating": 3.5,
+    "location_consistency": 0.69,
+    "amount": 141616,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000817",
+    "trip_count_30d": 7,
+    "avg_rating": 4.5,
+    "location_consistency": 0.78,
+    "amount": 255338,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000818",
+    "trip_count_30d": 32,
+    "avg_rating": 4.5,
+    "location_consistency": 0.95,
+    "amount": 269621,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000819",
+    "trip_count_30d": 34,
+    "avg_rating": 2.2,
+    "location_consistency": 0.05,
+    "amount": 513011,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000820",
+    "trip_count_30d": 6,
+    "avg_rating": 3.5,
+    "location_consistency": 0.78,
+    "amount": 75505,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000821",
+    "trip_count_30d": 19,
+    "avg_rating": 4.1,
+    "location_consistency": 0.64,
+    "amount": 211158,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000822",
+    "trip_count_30d": 22,
+    "avg_rating": 3.7,
+    "location_consistency": 0.73,
+    "amount": 63337,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000823",
+    "trip_count_30d": 44,
+    "avg_rating": 1.4,
+    "location_consistency": 0.31,
+    "amount": 816581,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000824",
+    "trip_count_30d": 18,
+    "avg_rating": 4.6,
+    "location_consistency": 0.74,
+    "amount": 290823,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000825",
+    "trip_count_30d": 37,
+    "avg_rating": 1.6,
+    "location_consistency": 0.25,
+    "amount": 372569,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000826",
+    "trip_count_30d": 21,
+    "avg_rating": 4.7,
+    "location_consistency": 0.79,
+    "amount": 178719,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000827",
+    "trip_count_30d": 14,
+    "avg_rating": 4.3,
+    "location_consistency": 0.84,
+    "amount": 119169,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000828",
+    "trip_count_30d": 23,
+    "avg_rating": 4.4,
+    "location_consistency": 0.65,
+    "amount": 75115,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000829",
+    "trip_count_30d": 19,
+    "avg_rating": 3.9,
+    "location_consistency": 0.96,
+    "amount": 227414,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000830",
+    "trip_count_30d": 19,
+    "avg_rating": 4.9,
+    "location_consistency": 0.91,
+    "amount": 256536,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000831",
+    "trip_count_30d": 29,
+    "avg_rating": 3.7,
+    "location_consistency": 0.87,
+    "amount": 203298,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000832",
+    "trip_count_30d": 18,
+    "avg_rating": 5,
+    "location_consistency": 0.88,
+    "amount": 222412,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000833",
+    "trip_count_30d": 8,
+    "avg_rating": 4.2,
+    "location_consistency": 0.88,
+    "amount": 252667,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000834",
+    "trip_count_30d": 11,
+    "avg_rating": 3.6,
+    "location_consistency": 0.93,
+    "amount": 208742,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000835",
+    "trip_count_30d": 33,
+    "avg_rating": 4,
+    "location_consistency": 0.81,
+    "amount": 80664,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000836",
+    "trip_count_30d": 31,
+    "avg_rating": 4.6,
+    "location_consistency": 0.73,
+    "amount": 263421,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000837",
+    "trip_count_30d": 39,
+    "avg_rating": 2.9,
+    "location_consistency": 0.12,
+    "amount": 348272,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000838",
+    "trip_count_30d": 34,
+    "avg_rating": 4.6,
+    "location_consistency": 0.61,
+    "amount": 50566,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000839",
+    "trip_count_30d": 32,
+    "avg_rating": 4.1,
+    "location_consistency": 0.99,
+    "amount": 170069,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000840",
+    "trip_count_30d": 13,
+    "avg_rating": 3.9,
+    "location_consistency": 0.83,
+    "amount": 250139,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000841",
+    "trip_count_30d": 33,
+    "avg_rating": 4.6,
+    "location_consistency": 0.71,
+    "amount": 187646,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000842",
+    "trip_count_30d": 65,
+    "avg_rating": 1.7,
+    "location_consistency": 0.4,
+    "amount": 697610,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000843",
+    "trip_count_30d": 14,
+    "avg_rating": 4.3,
+    "location_consistency": 0.9,
+    "amount": 196476,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000844",
+    "trip_count_30d": 17,
+    "avg_rating": 4.9,
+    "location_consistency": 0.7,
+    "amount": 253268,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000845",
+    "trip_count_30d": 7,
+    "avg_rating": 3.8,
+    "location_consistency": 0.74,
+    "amount": 242725,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000846",
+    "trip_count_30d": 25,
+    "avg_rating": 3.5,
+    "location_consistency": 0.78,
+    "amount": 72716,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000847",
+    "trip_count_30d": 27,
+    "avg_rating": 4.4,
+    "location_consistency": 0.88,
+    "amount": 95188,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000848",
+    "trip_count_30d": 18,
+    "avg_rating": 4,
+    "location_consistency": 0.84,
+    "amount": 155922,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000849",
+    "trip_count_30d": 49,
+    "avg_rating": 2.3,
+    "location_consistency": 0.16,
+    "amount": 556482,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000850",
+    "trip_count_30d": 8,
+    "avg_rating": 4,
+    "location_consistency": 0.98,
+    "amount": 204105,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000851",
+    "trip_count_30d": 25,
+    "avg_rating": 4.2,
+    "location_consistency": 0.91,
+    "amount": 238367,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000852",
+    "trip_count_30d": 41,
+    "avg_rating": 1.2,
+    "location_consistency": 0.01,
+    "amount": 919869,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000853",
+    "trip_count_30d": 27,
+    "avg_rating": 4.5,
+    "location_consistency": 0.96,
+    "amount": 227063,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000854",
+    "trip_count_30d": 34,
+    "avg_rating": 4,
+    "location_consistency": 0.83,
+    "amount": 210644,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000855",
+    "trip_count_30d": 14,
+    "avg_rating": 3.8,
+    "location_consistency": 0.95,
+    "amount": 299086,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000856",
+    "trip_count_30d": 33,
+    "avg_rating": 3.5,
+    "location_consistency": 0.81,
+    "amount": 175085,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000857",
+    "trip_count_30d": 8,
+    "avg_rating": 4.3,
+    "location_consistency": 0.64,
+    "amount": 176849,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000858",
+    "trip_count_30d": 64,
+    "avg_rating": 2.9,
+    "location_consistency": 0.22,
+    "amount": 992625,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000859",
+    "trip_count_30d": 27,
+    "avg_rating": 4.9,
+    "location_consistency": 0.78,
+    "amount": 100830,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000860",
+    "trip_count_30d": 14,
+    "avg_rating": 4.6,
+    "location_consistency": 0.71,
+    "amount": 221239,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000861",
+    "trip_count_30d": 14,
+    "avg_rating": 4.8,
+    "location_consistency": 0.64,
+    "amount": 261552,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000862",
+    "trip_count_30d": 9,
+    "avg_rating": 3.6,
+    "location_consistency": 0.71,
+    "amount": 206054,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000863",
+    "trip_count_30d": 61,
+    "avg_rating": 1.2,
+    "location_consistency": 0.19,
+    "amount": 830810,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000864",
+    "trip_count_30d": 9,
+    "avg_rating": 4.9,
+    "location_consistency": 0.68,
+    "amount": 91842,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000865",
+    "trip_count_30d": 20,
+    "avg_rating": 4,
+    "location_consistency": 0.88,
+    "amount": 74483,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000866",
+    "trip_count_30d": 5,
+    "avg_rating": 3.7,
+    "location_consistency": 0.78,
+    "amount": 123745,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000867",
+    "trip_count_30d": 11,
+    "avg_rating": 5,
+    "location_consistency": 0.68,
+    "amount": 93369,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000868",
+    "trip_count_30d": 13,
+    "avg_rating": 4.6,
+    "location_consistency": 0.96,
+    "amount": 256467,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000869",
+    "trip_count_30d": 27,
+    "avg_rating": 3.8,
+    "location_consistency": 1,
+    "amount": 231269,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000870",
+    "trip_count_30d": 16,
+    "avg_rating": 3.8,
+    "location_consistency": 0.84,
+    "amount": 65633,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000871",
+    "trip_count_30d": 13,
+    "avg_rating": 3.6,
+    "location_consistency": 0.63,
+    "amount": 124552,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000872",
+    "trip_count_30d": 34,
+    "avg_rating": 4.4,
+    "location_consistency": 0.71,
+    "amount": 153497,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000873",
+    "trip_count_30d": 50,
+    "avg_rating": 2.5,
+    "location_consistency": 0.06,
+    "amount": 459469,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000874",
+    "trip_count_30d": 32,
+    "avg_rating": 4.3,
+    "location_consistency": 0.72,
+    "amount": 254504,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000875",
+    "trip_count_30d": 22,
+    "avg_rating": 4.9,
+    "location_consistency": 0.99,
+    "amount": 110584,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000876",
+    "trip_count_30d": 7,
+    "avg_rating": 4.3,
+    "location_consistency": 0.9,
+    "amount": 247988,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000877",
+    "trip_count_30d": 8,
+    "avg_rating": 4.2,
+    "location_consistency": 0.96,
+    "amount": 152655,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000878",
+    "trip_count_30d": 29,
+    "avg_rating": 4.3,
+    "location_consistency": 0.99,
+    "amount": 144187,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000879",
+    "trip_count_30d": 16,
+    "avg_rating": 4.8,
+    "location_consistency": 0.73,
+    "amount": 97551,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000880",
+    "trip_count_30d": 15,
+    "avg_rating": 4.2,
+    "location_consistency": 0.68,
+    "amount": 298810,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000881",
+    "trip_count_30d": 21,
+    "avg_rating": 4.8,
+    "location_consistency": 0.95,
+    "amount": 183066,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000882",
+    "trip_count_30d": 28,
+    "avg_rating": 3.6,
+    "location_consistency": 0.62,
+    "amount": 64352,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000883",
+    "trip_count_30d": 16,
+    "avg_rating": 4.2,
+    "location_consistency": 0.65,
+    "amount": 69000,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000884",
+    "trip_count_30d": 24,
+    "avg_rating": 4.9,
+    "location_consistency": 0.69,
+    "amount": 153279,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000885",
+    "trip_count_30d": 10,
+    "avg_rating": 3.8,
+    "location_consistency": 0.68,
+    "amount": 224405,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000886",
+    "trip_count_30d": 24,
+    "avg_rating": 3.7,
+    "location_consistency": 0.95,
+    "amount": 299547,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000887",
+    "trip_count_30d": 16,
+    "avg_rating": 4.4,
+    "location_consistency": 0.76,
+    "amount": 117490,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000888",
+    "trip_count_30d": 16,
+    "avg_rating": 4.9,
+    "location_consistency": 0.82,
+    "amount": 107678,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000889",
+    "trip_count_30d": 33,
+    "avg_rating": 3.9,
+    "location_consistency": 0.93,
+    "amount": 75097,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000890",
+    "trip_count_30d": 15,
+    "avg_rating": 3.6,
+    "location_consistency": 0.67,
+    "amount": 100387,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000891",
+    "trip_count_30d": 14,
+    "avg_rating": 5,
+    "location_consistency": 0.91,
+    "amount": 189208,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000892",
+    "trip_count_30d": 25,
+    "avg_rating": 4.9,
+    "location_consistency": 0.73,
+    "amount": 178088,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000893",
+    "trip_count_30d": 28,
+    "avg_rating": 3.9,
+    "location_consistency": 0.83,
+    "amount": 247349,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000894",
+    "trip_count_30d": 49,
+    "avg_rating": 2.2,
+    "location_consistency": 0.07,
+    "amount": 333820,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000895",
+    "trip_count_30d": 34,
+    "avg_rating": 4.1,
+    "location_consistency": 0.84,
+    "amount": 160988,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000896",
+    "trip_count_30d": 27,
+    "avg_rating": 4.3,
+    "location_consistency": 0.97,
+    "amount": 149740,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000897",
+    "trip_count_30d": 19,
+    "avg_rating": 4.2,
+    "location_consistency": 0.9,
+    "amount": 223250,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000898",
+    "trip_count_30d": 18,
+    "avg_rating": 4.1,
+    "location_consistency": 0.92,
+    "amount": 229828,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000899",
+    "trip_count_30d": 25,
+    "avg_rating": 4.6,
+    "location_consistency": 0.73,
+    "amount": 121687,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000900",
+    "trip_count_30d": 21,
+    "avg_rating": 4,
+    "location_consistency": 0.88,
+    "amount": 219750,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000901",
+    "trip_count_30d": 19,
+    "avg_rating": 4.6,
+    "location_consistency": 0.96,
+    "amount": 202618,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000902",
+    "trip_count_30d": 34,
+    "avg_rating": 4.1,
+    "location_consistency": 0.74,
+    "amount": 231607,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000903",
+    "trip_count_30d": 8,
+    "avg_rating": 3.7,
+    "location_consistency": 0.67,
+    "amount": 52562,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000904",
+    "trip_count_30d": 30,
+    "avg_rating": 4.9,
+    "location_consistency": 0.83,
+    "amount": 107233,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000905",
+    "trip_count_30d": 33,
+    "avg_rating": 2.4,
+    "location_consistency": 0.33,
+    "amount": 818990,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000906",
+    "trip_count_30d": 40,
+    "avg_rating": 1.5,
+    "location_consistency": 0.13,
+    "amount": 874388,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000907",
+    "trip_count_30d": 21,
+    "avg_rating": 4,
+    "location_consistency": 0.7,
+    "amount": 222760,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000908",
+    "trip_count_30d": 26,
+    "avg_rating": 4,
+    "location_consistency": 0.84,
+    "amount": 127547,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000909",
+    "trip_count_30d": 32,
+    "avg_rating": 4.5,
+    "location_consistency": 0.66,
+    "amount": 216866,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000910",
+    "trip_count_30d": 70,
+    "avg_rating": 1.9,
+    "location_consistency": 0.22,
+    "amount": 546383,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000911",
+    "trip_count_30d": 9,
+    "avg_rating": 3.9,
+    "location_consistency": 0.9,
+    "amount": 79078,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000912",
+    "trip_count_30d": 5,
+    "avg_rating": 4.4,
+    "location_consistency": 0.6,
+    "amount": 256592,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000913",
+    "trip_count_30d": 21,
+    "avg_rating": 4.6,
+    "location_consistency": 0.8,
+    "amount": 109724,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000914",
+    "trip_count_30d": 48,
+    "avg_rating": 1.8,
+    "location_consistency": 0.16,
+    "amount": 881011,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000915",
+    "trip_count_30d": 15,
+    "avg_rating": 4.6,
+    "location_consistency": 0.72,
+    "amount": 162142,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000916",
+    "trip_count_30d": 12,
+    "avg_rating": 4.9,
+    "location_consistency": 0.95,
+    "amount": 223835,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000917",
+    "trip_count_30d": 32,
+    "avg_rating": 4.6,
+    "location_consistency": 0.93,
+    "amount": 78075,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000918",
+    "trip_count_30d": 7,
+    "avg_rating": 3.9,
+    "location_consistency": 0.93,
+    "amount": 104852,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000919",
+    "trip_count_30d": 64,
+    "avg_rating": 2.7,
+    "location_consistency": 0.21,
+    "amount": 418061,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000920",
+    "trip_count_30d": 68,
+    "avg_rating": 1.7,
+    "location_consistency": 0.22,
+    "amount": 883188,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000921",
+    "trip_count_30d": 27,
+    "avg_rating": 3.6,
+    "location_consistency": 0.7,
+    "amount": 262929,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000922",
+    "trip_count_30d": 76,
+    "avg_rating": 1.2,
+    "location_consistency": 0.36,
+    "amount": 422804,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000923",
+    "trip_count_30d": 10,
+    "avg_rating": 4.1,
+    "location_consistency": 0.66,
+    "amount": 83395,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000924",
+    "trip_count_30d": 8,
+    "avg_rating": 3.7,
+    "location_consistency": 0.74,
+    "amount": 76483,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000925",
+    "trip_count_30d": 25,
+    "avg_rating": 4.8,
+    "location_consistency": 0.68,
+    "amount": 271577,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000926",
+    "trip_count_30d": 25,
+    "avg_rating": 3.6,
+    "location_consistency": 0.91,
+    "amount": 242930,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000927",
+    "trip_count_30d": 33,
+    "avg_rating": 1,
+    "location_consistency": 0.21,
+    "amount": 456315,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000928",
+    "trip_count_30d": 24,
+    "avg_rating": 3.8,
+    "location_consistency": 0.62,
+    "amount": 261365,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000929",
+    "trip_count_30d": 15,
+    "avg_rating": 4.2,
+    "location_consistency": 0.63,
+    "amount": 283487,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000930",
+    "trip_count_30d": 20,
+    "avg_rating": 3.6,
+    "location_consistency": 0.64,
+    "amount": 132127,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000931",
+    "trip_count_30d": 7,
+    "avg_rating": 4.2,
+    "location_consistency": 0.8,
+    "amount": 268635,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000932",
+    "trip_count_30d": 17,
+    "avg_rating": 4.5,
+    "location_consistency": 0.67,
+    "amount": 161391,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000933",
+    "trip_count_30d": 16,
+    "avg_rating": 4.4,
+    "location_consistency": 0.98,
+    "amount": 253235,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000934",
+    "trip_count_30d": 8,
+    "avg_rating": 4.7,
+    "location_consistency": 0.73,
+    "amount": 250575,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000935",
+    "trip_count_30d": 30,
+    "avg_rating": 4.8,
+    "location_consistency": 0.77,
+    "amount": 198746,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000936",
+    "trip_count_30d": 21,
+    "avg_rating": 5,
+    "location_consistency": 0.95,
+    "amount": 144327,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000937",
+    "trip_count_30d": 45,
+    "avg_rating": 2.3,
+    "location_consistency": 0.1,
+    "amount": 390231,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000938",
+    "trip_count_30d": 57,
+    "avg_rating": 1.3,
+    "location_consistency": 0.06,
+    "amount": 569993,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000939",
+    "trip_count_30d": 16,
+    "avg_rating": 4.8,
+    "location_consistency": 0.93,
+    "amount": 249266,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000940",
+    "trip_count_30d": 6,
+    "avg_rating": 3.6,
+    "location_consistency": 0.69,
+    "amount": 139588,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000941",
+    "trip_count_30d": 23,
+    "avg_rating": 4.3,
+    "location_consistency": 0.98,
+    "amount": 126020,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000942",
+    "trip_count_30d": 47,
+    "avg_rating": 1.1,
+    "location_consistency": 0.39,
+    "amount": 627910,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000943",
+    "trip_count_30d": 15,
+    "avg_rating": 4.2,
+    "location_consistency": 0.83,
+    "amount": 295814,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000944",
+    "trip_count_30d": 7,
+    "avg_rating": 3.9,
+    "location_consistency": 0.93,
+    "amount": 101058,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000945",
+    "trip_count_30d": 66,
+    "avg_rating": 1,
+    "location_consistency": 0.23,
+    "amount": 583302,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000946",
+    "trip_count_30d": 32,
+    "avg_rating": 3.8,
+    "location_consistency": 0.79,
+    "amount": 253108,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000947",
+    "trip_count_30d": 26,
+    "avg_rating": 3.8,
+    "location_consistency": 0.96,
+    "amount": 147050,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000948",
+    "trip_count_30d": 31,
+    "avg_rating": 3.9,
+    "location_consistency": 0.73,
+    "amount": 150877,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000949",
+    "trip_count_30d": 24,
+    "avg_rating": 4,
+    "location_consistency": 0.68,
+    "amount": 277208,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000950",
+    "trip_count_30d": 59,
+    "avg_rating": 1,
+    "location_consistency": 0.33,
+    "amount": 903130,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000951",
+    "trip_count_30d": 16,
+    "avg_rating": 4.9,
+    "location_consistency": 0.67,
+    "amount": 125956,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000952",
+    "trip_count_30d": 64,
+    "avg_rating": 2.5,
+    "location_consistency": 0.01,
+    "amount": 963623,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000953",
+    "trip_count_30d": 48,
+    "avg_rating": 1.7,
+    "location_consistency": 0.15,
+    "amount": 889585,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000954",
+    "trip_count_30d": 15,
+    "avg_rating": 3.9,
+    "location_consistency": 0.7,
+    "amount": 55833,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000955",
+    "trip_count_30d": 21,
+    "avg_rating": 4.9,
+    "location_consistency": 0.66,
+    "amount": 151303,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000956",
+    "trip_count_30d": 8,
+    "avg_rating": 4,
+    "location_consistency": 0.71,
+    "amount": 86011,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000957",
+    "trip_count_30d": 22,
+    "avg_rating": 3.6,
+    "location_consistency": 0.91,
+    "amount": 54176,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000958",
+    "trip_count_30d": 33,
+    "avg_rating": 4.8,
+    "location_consistency": 0.65,
+    "amount": 233117,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000959",
+    "trip_count_30d": 72,
+    "avg_rating": 2.5,
+    "location_consistency": 0.19,
+    "amount": 845513,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000960",
+    "trip_count_30d": 16,
+    "avg_rating": 4.2,
+    "location_consistency": 0.97,
+    "amount": 90900,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000961",
+    "trip_count_30d": 26,
+    "avg_rating": 3.6,
+    "location_consistency": 0.84,
+    "amount": 103977,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000962",
+    "trip_count_30d": 59,
+    "avg_rating": 1.7,
+    "location_consistency": 0.23,
+    "amount": 991708,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000963",
+    "trip_count_30d": 31,
+    "avg_rating": 3.9,
+    "location_consistency": 0.69,
+    "amount": 265232,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000964",
+    "trip_count_30d": 26,
+    "avg_rating": 4.3,
+    "location_consistency": 0.75,
+    "amount": 210110,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000965",
+    "trip_count_30d": 19,
+    "avg_rating": 4.5,
+    "location_consistency": 0.84,
+    "amount": 265852,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000966",
+    "trip_count_30d": 10,
+    "avg_rating": 4.3,
+    "location_consistency": 0.64,
+    "amount": 95536,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000967",
+    "trip_count_30d": 10,
+    "avg_rating": 4,
+    "location_consistency": 0.83,
+    "amount": 135032,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000968",
+    "trip_count_30d": 25,
+    "avg_rating": 4.9,
+    "location_consistency": 0.7,
+    "amount": 142843,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000969",
+    "trip_count_30d": 29,
+    "avg_rating": 4.8,
+    "location_consistency": 0.72,
+    "amount": 193115,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000970",
+    "trip_count_30d": 28,
+    "avg_rating": 4.8,
+    "location_consistency": 0.88,
+    "amount": 177304,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000971",
+    "trip_count_30d": 31,
+    "avg_rating": 3.9,
+    "location_consistency": 0.88,
+    "amount": 282509,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000972",
+    "trip_count_30d": 30,
+    "avg_rating": 4.9,
+    "location_consistency": 0.86,
+    "amount": 291652,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000973",
+    "trip_count_30d": 33,
+    "avg_rating": 3.9,
+    "location_consistency": 0.86,
+    "amount": 57040,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000974",
+    "trip_count_30d": 16,
+    "avg_rating": 4.2,
+    "location_consistency": 0.82,
+    "amount": 183156,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000975",
+    "trip_count_30d": 25,
+    "avg_rating": 4.7,
+    "location_consistency": 0.86,
+    "amount": 207254,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000976",
+    "trip_count_30d": 24,
+    "avg_rating": 3.6,
+    "location_consistency": 0.68,
+    "amount": 158530,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000977",
+    "trip_count_30d": 77,
+    "avg_rating": 2.7,
+    "location_consistency": 0.36,
+    "amount": 660883,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000978",
+    "trip_count_30d": 15,
+    "avg_rating": 3.6,
+    "location_consistency": 0.8,
+    "amount": 94749,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000979",
+    "trip_count_30d": 15,
+    "avg_rating": 4.6,
+    "location_consistency": 0.84,
+    "amount": 291690,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000980",
+    "trip_count_30d": 23,
+    "avg_rating": 4.1,
+    "location_consistency": 0.9,
+    "amount": 163013,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000981",
+    "trip_count_30d": 50,
+    "avg_rating": 1.3,
+    "location_consistency": 0.35,
+    "amount": 817235,
+    "fraud_score": 1,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000982",
+    "trip_count_30d": 10,
+    "avg_rating": 3.7,
+    "location_consistency": 0.68,
+    "amount": 96926,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000983",
+    "trip_count_30d": 7,
+    "avg_rating": 5,
+    "location_consistency": 0.79,
+    "amount": 159569,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000984",
+    "trip_count_30d": 73,
+    "avg_rating": 2.2,
+    "location_consistency": 0.1,
+    "amount": 381117,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000985",
+    "trip_count_30d": 9,
+    "avg_rating": 5,
+    "location_consistency": 1,
+    "amount": 175500,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000986",
+    "trip_count_30d": 19,
+    "avg_rating": 4.5,
+    "location_consistency": 0.62,
+    "amount": 285078,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000987",
+    "trip_count_30d": 31,
+    "avg_rating": 3.7,
+    "location_consistency": 0.7,
+    "amount": 242954,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000988",
+    "trip_count_30d": 6,
+    "avg_rating": 4.2,
+    "location_consistency": 0.86,
+    "amount": 284657,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000989",
+    "trip_count_30d": 31,
+    "avg_rating": 4,
+    "location_consistency": 0.69,
+    "amount": 264755,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000990",
+    "trip_count_30d": 6,
+    "avg_rating": 3.9,
+    "location_consistency": 0.76,
+    "amount": 105555,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000991",
+    "trip_count_30d": 42,
+    "avg_rating": 2.3,
+    "location_consistency": 0.36,
+    "amount": 784305,
+    "fraud_score": 0.8,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000992",
+    "trip_count_30d": 34,
+    "avg_rating": 4.8,
+    "location_consistency": 0.69,
+    "amount": 154921,
+    "fraud_score": 0.3,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000993",
+    "trip_count_30d": 7,
+    "avg_rating": 4.6,
+    "location_consistency": 0.81,
+    "amount": 270205,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000994",
+    "trip_count_30d": 75,
+    "avg_rating": 2.4,
+    "location_consistency": 0.03,
+    "amount": 404461,
+    "fraud_score": 0.9,
+    "is_fraud": true
+  },
+  {
+    "user_id": "U000995",
+    "trip_count_30d": 12,
+    "avg_rating": 4.5,
+    "location_consistency": 0.66,
+    "amount": 207645,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000996",
+    "trip_count_30d": 25,
+    "avg_rating": 4.6,
+    "location_consistency": 0.74,
+    "amount": 239878,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000997",
+    "trip_count_30d": 17,
+    "avg_rating": 3.8,
+    "location_consistency": 0.64,
+    "amount": 237835,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000998",
+    "trip_count_30d": 22,
+    "avg_rating": 3.7,
+    "location_consistency": 0.96,
+    "amount": 284686,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U000999",
+    "trip_count_30d": 23,
+    "avg_rating": 4,
+    "location_consistency": 0.63,
+    "amount": 170537,
+    "fraud_score": 0,
+    "is_fraud": false
+  },
+  {
+    "user_id": "U001000",
+    "trip_count_30d": 27,
+    "avg_rating": 4,
+    "location_consistency": 0.92,
+    "amount": 62589,
+    "fraud_score": 0,
+    "is_fraud": false
+  }
+]

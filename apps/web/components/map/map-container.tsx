@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback, memo } from 'react'
 import Map, { MapRef, Marker, NavigationControl, GeolocateControl, Source, Layer, ViewState } from 'react-map-gl/maplibre'
 import type { MapMouseEvent } from 'react-map-gl/maplibre'
 import 'maplibre-gl/dist/maplibre-gl.css'
@@ -26,8 +26,9 @@ interface MapContainerProps {
   interactive?: boolean
 }
 
-const defaultCenter = { lat: 10.762622, lng: 106.660172 }
+const defaultCenter = { lat: 10.762622, lng: 106.660172 } // TP.HCM
 
+// Map style miễn phí từ OpenStreetMap
 const mapStyle = {
   version: 8,
   sources: {
@@ -49,21 +50,7 @@ const mapStyle = {
   ],
 }
 
-const routeLayerStyle = {
-  id: 'route',
-  type: 'line' as const,
-  layout: {
-    'line-join': 'round' as const,
-    'line-cap': 'round' as const,
-  },
-  paint: {
-    'line-color': '#FFD700',
-    'line-width': 4,
-    'line-opacity': 0.8,
-  },
-}
-
-export function MapContainer({
+export const MapContainer = memo(function MapContainer({
   center = defaultCenter,
   zoom = 13,
   markers = [],
@@ -80,6 +67,7 @@ export function MapContainer({
     zoom: zoom,
   })
 
+  // Update view when center prop changes
   useEffect(() => {
     setViewState({
       longitude: center.lng,
@@ -100,6 +88,7 @@ export function MapContainer({
     [interactive, onMapClick]
   )
 
+  // Fit bounds khi có route
   useEffect(() => {
     if (route && mapRef.current) {
       const bounds: [[number, number], [number, number]] = [
@@ -114,16 +103,17 @@ export function MapContainer({
     }
   }, [route])
 
+  // Tạo marker color dựa trên type
   const getMarkerColor = (type?: string) => {
     switch (type) {
       case 'pickup':
-        return '#22c55e'
+        return '#22c55e' // green
       case 'dropoff':
-        return '#ef4444'
+        return '#ef4444' // red
       case 'driver':
-        return '#3b82f6'
+        return '#3b82f6' // blue
       default:
-        return '#FFD700'
+        return '#FFD700' // yellow
     }
   }
 
@@ -138,16 +128,12 @@ export function MapContainer({
       interactive={interactive}
       attributionControl={true}
     >
+      {/* Navigation controls */}
       <NavigationControl position="top-right" />
       <GeolocateControl position="top-right" />
 
-      {route && route.geometry && (
-        <Source id="route-source" type="geojson" data={route.geometry}>
-          <Layer {...routeLayerStyle as any} />
-        </Source>
-      )}
-
-      {route && !route.geometry && (
+      {/* Route line - Straight line fallback */}
+      {route && (
         <Source
           id="route-line"
           type="geojson"
@@ -166,17 +152,21 @@ export function MapContainer({
           <Layer
             id="route-line-layer"
             type="line"
-            layout={{ 'line-join': 'round' as const, 'line-cap': 'round' as const }}
+            layout={{ 
+              'line-join': 'round' as const, 
+              'line-cap': 'round' as const 
+            }}
             paint={{
               'line-color': '#FFD700',
               'line-width': 4,
-              'line-opacity': 0.6,
+              'line-opacity': 0.8,
               'line-dasharray': [2, 2],
             }}
           />
         </Source>
       )}
 
+      {/* Markers */}
       {markers.map((marker, index) => (
         <Marker
           key={index}
@@ -189,15 +179,26 @@ export function MapContainer({
           }}
         >
           <div className="relative cursor-pointer">
+            {/* Marker pin */}
             <div
-              className="w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white"
+              className="w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white"
               style={{ backgroundColor: marker.color || getMarkerColor(marker.type) }}
             >
-              {marker.type === 'driver' && <span className="text-white text-xs">🚗</span>}
-              {marker.type === 'pickup' && <span className="text-white text-xs">📍</span>}
-              {marker.type === 'dropoff' && <span className="text-white text-xs">🎯</span>}
+              {marker.type === 'driver' && (
+                <span className="text-white text-sm">🚗</span>
+              )}
+              {marker.type === 'pickup' && (
+                <span className="text-white text-sm">📍</span>
+              )}
+              {marker.type === 'dropoff' && (
+                <span className="text-white text-sm">🎯</span>
+              )}
+              {!marker.type && (
+                <span className="text-white text-sm">📍</span>
+              )}
             </div>
             
+            {/* Marker label */}
             {marker.label && (
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                 <span className="bg-white px-2 py-1 rounded shadow text-xs font-medium">
@@ -206,12 +207,13 @@ export function MapContainer({
               </div>
             )}
             
+            {/* Pulse effect cho driver */}
             {marker.type === 'driver' && (
-              <div className="absolute inset-0 w-6 h-6 rounded-full bg-blue-500 animate-ping opacity-30" />
+              <div className="absolute inset-0 w-8 h-8 rounded-full bg-blue-500 animate-ping opacity-30" />
             )}
           </div>
         </Marker>
       ))}
     </Map>
   )
-}
+})

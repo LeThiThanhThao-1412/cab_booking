@@ -54,14 +54,14 @@ export class RateLimiterMiddleware implements NestMiddleware {
 
   private getLimitForPath(path: string): number {
     if (path.includes('/auth/login') || path.includes('/auth/register')) {
-      return this.configService.get('RATE_LIMIT_AUTH', 5);
+      return this.configService.get('RATE_LIMIT_AUTH', 100);
     }
     if (path.includes('/bookings')) {
       return this.configService.get('RATE_LIMIT_BOOKING', 10);
     }
     if (path.includes('/drivers/location')) {
-      return this.configService.get('RATE_LIMIT_LOCATION', 60);
+      return this.configService.get('RATE_LIMIT_LOCATION', 100);
     }
-    return this.configService.get('RATE_LIMIT_DEFAULT', 30);
+    return this.configService.get('RATE_LIMIT_DEFAULT', 100);
   }
 }

@@ -1,0 +1,8002 @@
+[
+  {
+    "driver_id": "D0001",
+    "distance_km": 4.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.9,
+    "total_trips": 101,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0002",
+    "distance_km": 4,
+    "rating": 4.7,
+    "acceptance_rate": 0.68,
+    "total_trips": 620,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0003",
+    "distance_km": 9.7,
+    "rating": 4.3,
+    "acceptance_rate": 0.81,
+    "total_trips": 749,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0004",
+    "distance_km": 4.8,
+    "rating": 4,
+    "acceptance_rate": 0.87,
+    "total_trips": 164,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0005",
+    "distance_km": 2.1,
+    "rating": 3.6,
+    "acceptance_rate": 0.75,
+    "total_trips": 58,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0006",
+    "distance_km": 1.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.77,
+    "total_trips": 695,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0007",
+    "distance_km": 5.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.97,
+    "total_trips": 871,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0008",
+    "distance_km": 7.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.9,
+    "total_trips": 917,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0009",
+    "distance_km": 1.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.78,
+    "total_trips": 937,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0010",
+    "distance_km": 5.1,
+    "rating": 3.6,
+    "acceptance_rate": 0.66,
+    "total_trips": 869,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0011",
+    "distance_km": 7.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.74,
+    "total_trips": 664,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0012",
+    "distance_km": 1.3,
+    "rating": 3.9,
+    "acceptance_rate": 0.55,
+    "total_trips": 706,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0013",
+    "distance_km": 3.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.92,
+    "total_trips": 62,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0014",
+    "distance_km": 2.1,
+    "rating": 3.8,
+    "acceptance_rate": 0.95,
+    "total_trips": 331,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0015",
+    "distance_km": 2.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.88,
+    "total_trips": 290,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0016",
+    "distance_km": 9.8,
+    "rating": 4.1,
+    "acceptance_rate": 0.88,
+    "total_trips": 56,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0017",
+    "distance_km": 1.6,
+    "rating": 4,
+    "acceptance_rate": 0.91,
+    "total_trips": 19,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0018",
+    "distance_km": 5.4,
+    "rating": 4.1,
+    "acceptance_rate": 0.82,
+    "total_trips": 666,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0019",
+    "distance_km": 5.9,
+    "rating": 3.2,
+    "acceptance_rate": 1,
+    "total_trips": 883,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0020",
+    "distance_km": 9.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.9,
+    "total_trips": 955,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0021",
+    "distance_km": 7.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.57,
+    "total_trips": 223,
+    "driver_score": 48
+  },
+  {
+    "driver_id": "D0022",
+    "distance_km": 5.3,
+    "rating": 3.9,
+    "acceptance_rate": 0.76,
+    "total_trips": 559,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0023",
+    "distance_km": 1.3,
+    "rating": 5,
+    "acceptance_rate": 0.5,
+    "total_trips": 71,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0024",
+    "distance_km": 0.3,
+    "rating": 3.5,
+    "acceptance_rate": 0.78,
+    "total_trips": 470,
+    "driver_score": 95
+  },
+  {
+    "driver_id": "D0025",
+    "distance_km": 9.6,
+    "rating": 3,
+    "acceptance_rate": 0.9,
+    "total_trips": 273,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0026",
+    "distance_km": 3.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.59,
+    "total_trips": 942,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0027",
+    "distance_km": 3.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.58,
+    "total_trips": 643,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0028",
+    "distance_km": 8.4,
+    "rating": 4.1,
+    "acceptance_rate": 0.88,
+    "total_trips": 276,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0029",
+    "distance_km": 5,
+    "rating": 4.3,
+    "acceptance_rate": 0.95,
+    "total_trips": 152,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0030",
+    "distance_km": 7.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.51,
+    "total_trips": 291,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0031",
+    "distance_km": 9.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.54,
+    "total_trips": 937,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0032",
+    "distance_km": 2.2,
+    "rating": 3.7,
+    "acceptance_rate": 0.59,
+    "total_trips": 689,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0033",
+    "distance_km": 1,
+    "rating": 4.4,
+    "acceptance_rate": 0.6,
+    "total_trips": 121,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0034",
+    "distance_km": 5.7,
+    "rating": 3.6,
+    "acceptance_rate": 0.69,
+    "total_trips": 872,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0035",
+    "distance_km": 8.2,
+    "rating": 4.6,
+    "acceptance_rate": 0.78,
+    "total_trips": 700,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0036",
+    "distance_km": 6.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.9,
+    "total_trips": 965,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0037",
+    "distance_km": 8.9,
+    "rating": 3.8,
+    "acceptance_rate": 0.91,
+    "total_trips": 516,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0038",
+    "distance_km": 2.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.96,
+    "total_trips": 640,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0039",
+    "distance_km": 2.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.84,
+    "total_trips": 743,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0040",
+    "distance_km": 2.7,
+    "rating": 5,
+    "acceptance_rate": 0.55,
+    "total_trips": 86,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0041",
+    "distance_km": 2,
+    "rating": 3.8,
+    "acceptance_rate": 0.56,
+    "total_trips": 979,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0042",
+    "distance_km": 2.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.74,
+    "total_trips": 624,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0043",
+    "distance_km": 4.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.51,
+    "total_trips": 765,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0044",
+    "distance_km": 2.3,
+    "rating": 3.8,
+    "acceptance_rate": 0.6,
+    "total_trips": 424,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0045",
+    "distance_km": 2.9,
+    "rating": 3.7,
+    "acceptance_rate": 0.83,
+    "total_trips": 687,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0046",
+    "distance_km": 6.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.99,
+    "total_trips": 736,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0047",
+    "distance_km": 1.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.71,
+    "total_trips": 500,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0048",
+    "distance_km": 3.2,
+    "rating": 3.4,
+    "acceptance_rate": 0.74,
+    "total_trips": 566,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0049",
+    "distance_km": 1.4,
+    "rating": 3.9,
+    "acceptance_rate": 0.55,
+    "total_trips": 851,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0050",
+    "distance_km": 3.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.99,
+    "total_trips": 862,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0051",
+    "distance_km": 7.3,
+    "rating": 4.4,
+    "acceptance_rate": 0.96,
+    "total_trips": 696,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0052",
+    "distance_km": 6.8,
+    "rating": 4.3,
+    "acceptance_rate": 0.76,
+    "total_trips": 993,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0053",
+    "distance_km": 6.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.85,
+    "total_trips": 146,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0054",
+    "distance_km": 10,
+    "rating": 4.8,
+    "acceptance_rate": 0.73,
+    "total_trips": 801,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0055",
+    "distance_km": 1.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.51,
+    "total_trips": 658,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0056",
+    "distance_km": 7.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.82,
+    "total_trips": 674,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0057",
+    "distance_km": 0.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.92,
+    "total_trips": 256,
+    "driver_score": 98
+  },
+  {
+    "driver_id": "D0058",
+    "distance_km": 5.5,
+    "rating": 4.9,
+    "acceptance_rate": 0.72,
+    "total_trips": 581,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0059",
+    "distance_km": 2.4,
+    "rating": 4.7,
+    "acceptance_rate": 0.91,
+    "total_trips": 122,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0060",
+    "distance_km": 6.1,
+    "rating": 4.4,
+    "acceptance_rate": 0.74,
+    "total_trips": 146,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0061",
+    "distance_km": 8,
+    "rating": 4.5,
+    "acceptance_rate": 0.51,
+    "total_trips": 554,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0062",
+    "distance_km": 6.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.69,
+    "total_trips": 264,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0063",
+    "distance_km": 6.2,
+    "rating": 3.5,
+    "acceptance_rate": 0.99,
+    "total_trips": 755,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0064",
+    "distance_km": 8.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.99,
+    "total_trips": 38,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0065",
+    "distance_km": 1.5,
+    "rating": 4.1,
+    "acceptance_rate": 0.5,
+    "total_trips": 799,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0066",
+    "distance_km": 3.8,
+    "rating": 4,
+    "acceptance_rate": 0.61,
+    "total_trips": 867,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0067",
+    "distance_km": 5.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.92,
+    "total_trips": 770,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0068",
+    "distance_km": 8.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.89,
+    "total_trips": 276,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0069",
+    "distance_km": 7.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.51,
+    "total_trips": 944,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0070",
+    "distance_km": 10,
+    "rating": 4.7,
+    "acceptance_rate": 0.56,
+    "total_trips": 871,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0071",
+    "distance_km": 3.6,
+    "rating": 3.4,
+    "acceptance_rate": 0.78,
+    "total_trips": 289,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0072",
+    "distance_km": 6.7,
+    "rating": 3.4,
+    "acceptance_rate": 0.7,
+    "total_trips": 524,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0073",
+    "distance_km": 9.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.79,
+    "total_trips": 898,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0074",
+    "distance_km": 0.9,
+    "rating": 3.7,
+    "acceptance_rate": 0.65,
+    "total_trips": 873,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0075",
+    "distance_km": 5.1,
+    "rating": 3,
+    "acceptance_rate": 0.87,
+    "total_trips": 300,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0076",
+    "distance_km": 3.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.67,
+    "total_trips": 724,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0077",
+    "distance_km": 5.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.69,
+    "total_trips": 374,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0078",
+    "distance_km": 8.2,
+    "rating": 3.4,
+    "acceptance_rate": 0.75,
+    "total_trips": 420,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0079",
+    "distance_km": 4.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.97,
+    "total_trips": 663,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0080",
+    "distance_km": 0.2,
+    "rating": 3.7,
+    "acceptance_rate": 0.98,
+    "total_trips": 882,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0081",
+    "distance_km": 7.7,
+    "rating": 4,
+    "acceptance_rate": 0.87,
+    "total_trips": 965,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0082",
+    "distance_km": 9.4,
+    "rating": 4.9,
+    "acceptance_rate": 0.59,
+    "total_trips": 693,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0083",
+    "distance_km": 7.7,
+    "rating": 4.7,
+    "acceptance_rate": 0.85,
+    "total_trips": 781,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0084",
+    "distance_km": 7.5,
+    "rating": 3.1,
+    "acceptance_rate": 0.79,
+    "total_trips": 357,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0085",
+    "distance_km": 0.8,
+    "rating": 4.5,
+    "acceptance_rate": 0.66,
+    "total_trips": 4,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0086",
+    "distance_km": 8.7,
+    "rating": 3.9,
+    "acceptance_rate": 0.76,
+    "total_trips": 395,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0087",
+    "distance_km": 0.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.8,
+    "total_trips": 156,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0088",
+    "distance_km": 5.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 997,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0089",
+    "distance_km": 6,
+    "rating": 4,
+    "acceptance_rate": 0.7,
+    "total_trips": 583,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0090",
+    "distance_km": 8.2,
+    "rating": 3.6,
+    "acceptance_rate": 0.55,
+    "total_trips": 0,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0091",
+    "distance_km": 0.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.96,
+    "total_trips": 517,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0092",
+    "distance_km": 3.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.81,
+    "total_trips": 765,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0093",
+    "distance_km": 1.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.84,
+    "total_trips": 844,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0094",
+    "distance_km": 7.9,
+    "rating": 4.8,
+    "acceptance_rate": 0.87,
+    "total_trips": 93,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0095",
+    "distance_km": 7.4,
+    "rating": 4,
+    "acceptance_rate": 0.81,
+    "total_trips": 616,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0096",
+    "distance_km": 1.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.89,
+    "total_trips": 329,
+    "driver_score": 84
+  },
+  {
+    "driver_id": "D0097",
+    "distance_km": 3.6,
+    "rating": 4,
+    "acceptance_rate": 0.91,
+    "total_trips": 642,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0098",
+    "distance_km": 3.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.78,
+    "total_trips": 374,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0099",
+    "distance_km": 0,
+    "rating": 4,
+    "acceptance_rate": 0.53,
+    "total_trips": 998,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0100",
+    "distance_km": 5.6,
+    "rating": 4.8,
+    "acceptance_rate": 0.87,
+    "total_trips": 347,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0101",
+    "distance_km": 2.9,
+    "rating": 5,
+    "acceptance_rate": 0.93,
+    "total_trips": 533,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0102",
+    "distance_km": 9.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.56,
+    "total_trips": 288,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0103",
+    "distance_km": 5.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.62,
+    "total_trips": 482,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0104",
+    "distance_km": 4.6,
+    "rating": 4.5,
+    "acceptance_rate": 0.53,
+    "total_trips": 431,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0105",
+    "distance_km": 0.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.71,
+    "total_trips": 722,
+    "driver_score": 98
+  },
+  {
+    "driver_id": "D0106",
+    "distance_km": 1.2,
+    "rating": 4.1,
+    "acceptance_rate": 0.97,
+    "total_trips": 158,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0107",
+    "distance_km": 4.7,
+    "rating": 3.4,
+    "acceptance_rate": 0.71,
+    "total_trips": 592,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0108",
+    "distance_km": 6.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.87,
+    "total_trips": 863,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0109",
+    "distance_km": 8.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.85,
+    "total_trips": 918,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0110",
+    "distance_km": 8.1,
+    "rating": 4,
+    "acceptance_rate": 0.99,
+    "total_trips": 842,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0111",
+    "distance_km": 5.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.58,
+    "total_trips": 44,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0112",
+    "distance_km": 0.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.61,
+    "total_trips": 699,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0113",
+    "distance_km": 7.5,
+    "rating": 4,
+    "acceptance_rate": 0.66,
+    "total_trips": 664,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0114",
+    "distance_km": 2.1,
+    "rating": 4.9,
+    "acceptance_rate": 0.98,
+    "total_trips": 313,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0115",
+    "distance_km": 2.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.89,
+    "total_trips": 969,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0116",
+    "distance_km": 9.8,
+    "rating": 3.6,
+    "acceptance_rate": 0.96,
+    "total_trips": 702,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0117",
+    "distance_km": 0.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.85,
+    "total_trips": 823,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0118",
+    "distance_km": 9.2,
+    "rating": 4,
+    "acceptance_rate": 0.6,
+    "total_trips": 712,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0119",
+    "distance_km": 8.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.77,
+    "total_trips": 820,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0120",
+    "distance_km": 7.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.75,
+    "total_trips": 84,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0121",
+    "distance_km": 8.3,
+    "rating": 4,
+    "acceptance_rate": 0.99,
+    "total_trips": 45,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0122",
+    "distance_km": 0.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.53,
+    "total_trips": 483,
+    "driver_score": 98
+  },
+  {
+    "driver_id": "D0123",
+    "distance_km": 9.6,
+    "rating": 4.6,
+    "acceptance_rate": 0.73,
+    "total_trips": 145,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0124",
+    "distance_km": 6.5,
+    "rating": 3.3,
+    "acceptance_rate": 0.94,
+    "total_trips": 733,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0125",
+    "distance_km": 9.2,
+    "rating": 4.8,
+    "acceptance_rate": 0.81,
+    "total_trips": 602,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0126",
+    "distance_km": 1.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.75,
+    "total_trips": 294,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0127",
+    "distance_km": 2.9,
+    "rating": 3.7,
+    "acceptance_rate": 0.96,
+    "total_trips": 577,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0128",
+    "distance_km": 3.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 748,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0129",
+    "distance_km": 3.9,
+    "rating": 3.5,
+    "acceptance_rate": 0.79,
+    "total_trips": 792,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0130",
+    "distance_km": 9.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.85,
+    "total_trips": 45,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0131",
+    "distance_km": 8.1,
+    "rating": 3.3,
+    "acceptance_rate": 0.91,
+    "total_trips": 450,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0132",
+    "distance_km": 10,
+    "rating": 3,
+    "acceptance_rate": 0.8,
+    "total_trips": 812,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0133",
+    "distance_km": 5.7,
+    "rating": 4.3,
+    "acceptance_rate": 0.77,
+    "total_trips": 601,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0134",
+    "distance_km": 9.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.55,
+    "total_trips": 932,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0135",
+    "distance_km": 7.3,
+    "rating": 5,
+    "acceptance_rate": 0.84,
+    "total_trips": 7,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0136",
+    "distance_km": 4.9,
+    "rating": 4.2,
+    "acceptance_rate": 0.92,
+    "total_trips": 82,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0137",
+    "distance_km": 5,
+    "rating": 3.6,
+    "acceptance_rate": 0.84,
+    "total_trips": 792,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0138",
+    "distance_km": 5.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.71,
+    "total_trips": 619,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0139",
+    "distance_km": 1.4,
+    "rating": 3.9,
+    "acceptance_rate": 0.93,
+    "total_trips": 839,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0140",
+    "distance_km": 8.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.92,
+    "total_trips": 728,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0141",
+    "distance_km": 0.8,
+    "rating": 4,
+    "acceptance_rate": 0.6,
+    "total_trips": 500,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0142",
+    "distance_km": 3.9,
+    "rating": 4.8,
+    "acceptance_rate": 0.87,
+    "total_trips": 339,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0143",
+    "distance_km": 9.1,
+    "rating": 4.9,
+    "acceptance_rate": 0.9,
+    "total_trips": 31,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0144",
+    "distance_km": 5.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.58,
+    "total_trips": 221,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0145",
+    "distance_km": 1.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.91,
+    "total_trips": 739,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0146",
+    "distance_km": 5.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.74,
+    "total_trips": 883,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0147",
+    "distance_km": 3.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.63,
+    "total_trips": 406,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0148",
+    "distance_km": 8.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.59,
+    "total_trips": 712,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0149",
+    "distance_km": 2.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.71,
+    "total_trips": 655,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0150",
+    "distance_km": 4.8,
+    "rating": 3.4,
+    "acceptance_rate": 0.93,
+    "total_trips": 492,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0151",
+    "distance_km": 3.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.91,
+    "total_trips": 706,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0152",
+    "distance_km": 9.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.72,
+    "total_trips": 644,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0153",
+    "distance_km": 1.1,
+    "rating": 4.4,
+    "acceptance_rate": 0.69,
+    "total_trips": 221,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0154",
+    "distance_km": 1,
+    "rating": 4,
+    "acceptance_rate": 0.83,
+    "total_trips": 150,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0155",
+    "distance_km": 8.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.76,
+    "total_trips": 923,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0156",
+    "distance_km": 8.4,
+    "rating": 3.5,
+    "acceptance_rate": 0.66,
+    "total_trips": 156,
+    "driver_score": 52
+  },
+  {
+    "driver_id": "D0157",
+    "distance_km": 6.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 982,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0158",
+    "distance_km": 0.6,
+    "rating": 4.7,
+    "acceptance_rate": 0.51,
+    "total_trips": 354,
+    "driver_score": 94
+  },
+  {
+    "driver_id": "D0159",
+    "distance_km": 0.1,
+    "rating": 4.3,
+    "acceptance_rate": 0.59,
+    "total_trips": 795,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0160",
+    "distance_km": 5.9,
+    "rating": 4.1,
+    "acceptance_rate": 0.85,
+    "total_trips": 542,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0161",
+    "distance_km": 9.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.94,
+    "total_trips": 759,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0162",
+    "distance_km": 4.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.65,
+    "total_trips": 19,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0163",
+    "distance_km": 7.9,
+    "rating": 3.8,
+    "acceptance_rate": 0.7,
+    "total_trips": 897,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0164",
+    "distance_km": 2.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.9,
+    "total_trips": 895,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0165",
+    "distance_km": 6.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.99,
+    "total_trips": 894,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0166",
+    "distance_km": 0.4,
+    "rating": 3.7,
+    "acceptance_rate": 0.59,
+    "total_trips": 500,
+    "driver_score": 94
+  },
+  {
+    "driver_id": "D0167",
+    "distance_km": 5.1,
+    "rating": 4,
+    "acceptance_rate": 0.83,
+    "total_trips": 749,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0168",
+    "distance_km": 7.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.59,
+    "total_trips": 758,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0169",
+    "distance_km": 2.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.65,
+    "total_trips": 833,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0170",
+    "distance_km": 0.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.85,
+    "total_trips": 623,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0171",
+    "distance_km": 2.4,
+    "rating": 3.7,
+    "acceptance_rate": 0.87,
+    "total_trips": 924,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0172",
+    "distance_km": 7.7,
+    "rating": 4.5,
+    "acceptance_rate": 0.91,
+    "total_trips": 552,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0173",
+    "distance_km": 0.9,
+    "rating": 3,
+    "acceptance_rate": 0.53,
+    "total_trips": 469,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0174",
+    "distance_km": 9.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.86,
+    "total_trips": 868,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0175",
+    "distance_km": 0.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.51,
+    "total_trips": 228,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0176",
+    "distance_km": 3.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.62,
+    "total_trips": 614,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0177",
+    "distance_km": 1.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.93,
+    "total_trips": 995,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0178",
+    "distance_km": 1.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.62,
+    "total_trips": 908,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0179",
+    "distance_km": 8.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.81,
+    "total_trips": 455,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0180",
+    "distance_km": 8.2,
+    "rating": 4,
+    "acceptance_rate": 0.97,
+    "total_trips": 211,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0181",
+    "distance_km": 1.8,
+    "rating": 4,
+    "acceptance_rate": 0.83,
+    "total_trips": 711,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0182",
+    "distance_km": 4.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.68,
+    "total_trips": 418,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0183",
+    "distance_km": 0.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.79,
+    "total_trips": 115,
+    "driver_score": 99
+  },
+  {
+    "driver_id": "D0184",
+    "distance_km": 8.8,
+    "rating": 3.4,
+    "acceptance_rate": 0.52,
+    "total_trips": 596,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0185",
+    "distance_km": 3.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.75,
+    "total_trips": 217,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0186",
+    "distance_km": 9.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.59,
+    "total_trips": 109,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0187",
+    "distance_km": 1.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.66,
+    "total_trips": 363,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0188",
+    "distance_km": 0.7,
+    "rating": 3.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 437,
+    "driver_score": 88
+  },
+  {
+    "driver_id": "D0189",
+    "distance_km": 5.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.8,
+    "total_trips": 325,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0190",
+    "distance_km": 3,
+    "rating": 5,
+    "acceptance_rate": 0.66,
+    "total_trips": 350,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0191",
+    "distance_km": 0.9,
+    "rating": 4.8,
+    "acceptance_rate": 0.6,
+    "total_trips": 972,
+    "driver_score": 92
+  },
+  {
+    "driver_id": "D0192",
+    "distance_km": 0.4,
+    "rating": 3.1,
+    "acceptance_rate": 0.68,
+    "total_trips": 596,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0193",
+    "distance_km": 4.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.89,
+    "total_trips": 734,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0194",
+    "distance_km": 1.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.8,
+    "total_trips": 558,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0195",
+    "distance_km": 4.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.68,
+    "total_trips": 880,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0196",
+    "distance_km": 1.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.78,
+    "total_trips": 524,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0197",
+    "distance_km": 9.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.86,
+    "total_trips": 197,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0198",
+    "distance_km": 5.3,
+    "rating": 4,
+    "acceptance_rate": 0.64,
+    "total_trips": 402,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0199",
+    "distance_km": 7,
+    "rating": 3.8,
+    "acceptance_rate": 0.59,
+    "total_trips": 803,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0200",
+    "distance_km": 1.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.56,
+    "total_trips": 571,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0201",
+    "distance_km": 0.4,
+    "rating": 4.8,
+    "acceptance_rate": 0.58,
+    "total_trips": 962,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0202",
+    "distance_km": 7.7,
+    "rating": 3.4,
+    "acceptance_rate": 0.95,
+    "total_trips": 242,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0203",
+    "distance_km": 3,
+    "rating": 3.6,
+    "acceptance_rate": 0.94,
+    "total_trips": 550,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0204",
+    "distance_km": 4.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.94,
+    "total_trips": 15,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0205",
+    "distance_km": 2.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.58,
+    "total_trips": 37,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0206",
+    "distance_km": 9.3,
+    "rating": 3.4,
+    "acceptance_rate": 0.93,
+    "total_trips": 445,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0207",
+    "distance_km": 6.9,
+    "rating": 4.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 502,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0208",
+    "distance_km": 5.2,
+    "rating": 5,
+    "acceptance_rate": 0.99,
+    "total_trips": 312,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0209",
+    "distance_km": 9.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.9,
+    "total_trips": 177,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0210",
+    "distance_km": 8.3,
+    "rating": 3,
+    "acceptance_rate": 0.82,
+    "total_trips": 383,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0211",
+    "distance_km": 9.6,
+    "rating": 4.7,
+    "acceptance_rate": 0.87,
+    "total_trips": 185,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0212",
+    "distance_km": 4.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.7,
+    "total_trips": 599,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0213",
+    "distance_km": 0,
+    "rating": 4.5,
+    "acceptance_rate": 0.52,
+    "total_trips": 490,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0214",
+    "distance_km": 7.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.72,
+    "total_trips": 627,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0215",
+    "distance_km": 2.4,
+    "rating": 3.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 764,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0216",
+    "distance_km": 9.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.99,
+    "total_trips": 942,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0217",
+    "distance_km": 3.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.67,
+    "total_trips": 724,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0218",
+    "distance_km": 9.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.7,
+    "total_trips": 840,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0219",
+    "distance_km": 7.1,
+    "rating": 4.8,
+    "acceptance_rate": 0.77,
+    "total_trips": 485,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0220",
+    "distance_km": 2.5,
+    "rating": 4.7,
+    "acceptance_rate": 0.98,
+    "total_trips": 58,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0221",
+    "distance_km": 5,
+    "rating": 4.2,
+    "acceptance_rate": 0.6,
+    "total_trips": 237,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0222",
+    "distance_km": 5.2,
+    "rating": 4.8,
+    "acceptance_rate": 0.58,
+    "total_trips": 281,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0223",
+    "distance_km": 3,
+    "rating": 4.4,
+    "acceptance_rate": 0.57,
+    "total_trips": 99,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0224",
+    "distance_km": 0.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.98,
+    "total_trips": 139,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0225",
+    "distance_km": 0.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.84,
+    "total_trips": 357,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0226",
+    "distance_km": 5.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.8,
+    "total_trips": 382,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0227",
+    "distance_km": 9.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.82,
+    "total_trips": 815,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0228",
+    "distance_km": 2.1,
+    "rating": 5,
+    "acceptance_rate": 0.76,
+    "total_trips": 508,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0229",
+    "distance_km": 9.1,
+    "rating": 4.3,
+    "acceptance_rate": 0.78,
+    "total_trips": 479,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0230",
+    "distance_km": 5.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.96,
+    "total_trips": 56,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0231",
+    "distance_km": 7.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.76,
+    "total_trips": 801,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0232",
+    "distance_km": 4.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.67,
+    "total_trips": 55,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0233",
+    "distance_km": 7.2,
+    "rating": 3.5,
+    "acceptance_rate": 0.91,
+    "total_trips": 901,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0234",
+    "distance_km": 5.5,
+    "rating": 4.1,
+    "acceptance_rate": 0.93,
+    "total_trips": 914,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0235",
+    "distance_km": 9.4,
+    "rating": 3,
+    "acceptance_rate": 0.69,
+    "total_trips": 786,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0236",
+    "distance_km": 5.2,
+    "rating": 4.1,
+    "acceptance_rate": 0.81,
+    "total_trips": 157,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0237",
+    "distance_km": 6,
+    "rating": 4.3,
+    "acceptance_rate": 0.86,
+    "total_trips": 615,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0238",
+    "distance_km": 8.2,
+    "rating": 4.1,
+    "acceptance_rate": 0.88,
+    "total_trips": 416,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0239",
+    "distance_km": 3.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.68,
+    "total_trips": 604,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0240",
+    "distance_km": 1,
+    "rating": 3.3,
+    "acceptance_rate": 0.93,
+    "total_trips": 115,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0241",
+    "distance_km": 1.4,
+    "rating": 3.9,
+    "acceptance_rate": 0.94,
+    "total_trips": 496,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0242",
+    "distance_km": 7.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.96,
+    "total_trips": 128,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0243",
+    "distance_km": 7.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.94,
+    "total_trips": 513,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0244",
+    "distance_km": 5.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.61,
+    "total_trips": 259,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0245",
+    "distance_km": 6.6,
+    "rating": 3.6,
+    "acceptance_rate": 0.96,
+    "total_trips": 754,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0246",
+    "distance_km": 9,
+    "rating": 3.8,
+    "acceptance_rate": 0.65,
+    "total_trips": 833,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0247",
+    "distance_km": 8.2,
+    "rating": 4.6,
+    "acceptance_rate": 0.82,
+    "total_trips": 979,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0248",
+    "distance_km": 5.5,
+    "rating": 3.6,
+    "acceptance_rate": 0.74,
+    "total_trips": 20,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0249",
+    "distance_km": 8.2,
+    "rating": 4.5,
+    "acceptance_rate": 0.65,
+    "total_trips": 6,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0250",
+    "distance_km": 9.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.74,
+    "total_trips": 367,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0251",
+    "distance_km": 2.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.55,
+    "total_trips": 533,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0252",
+    "distance_km": 8.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.84,
+    "total_trips": 567,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0253",
+    "distance_km": 3,
+    "rating": 4.9,
+    "acceptance_rate": 0.65,
+    "total_trips": 207,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0254",
+    "distance_km": 4.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.94,
+    "total_trips": 772,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0255",
+    "distance_km": 8.8,
+    "rating": 4.8,
+    "acceptance_rate": 0.54,
+    "total_trips": 173,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0256",
+    "distance_km": 5.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.78,
+    "total_trips": 465,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0257",
+    "distance_km": 2.4,
+    "rating": 4.9,
+    "acceptance_rate": 1,
+    "total_trips": 685,
+    "driver_score": 84
+  },
+  {
+    "driver_id": "D0258",
+    "distance_km": 9.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.53,
+    "total_trips": 869,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0259",
+    "distance_km": 2.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 85,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0260",
+    "distance_km": 8.6,
+    "rating": 3.9,
+    "acceptance_rate": 0.86,
+    "total_trips": 713,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0261",
+    "distance_km": 9.5,
+    "rating": 4,
+    "acceptance_rate": 0.88,
+    "total_trips": 107,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0262",
+    "distance_km": 5.2,
+    "rating": 4.5,
+    "acceptance_rate": 0.79,
+    "total_trips": 250,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0263",
+    "distance_km": 1.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.95,
+    "total_trips": 77,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0264",
+    "distance_km": 8.8,
+    "rating": 3.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 992,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0265",
+    "distance_km": 5.3,
+    "rating": 4.7,
+    "acceptance_rate": 0.97,
+    "total_trips": 991,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0266",
+    "distance_km": 2.9,
+    "rating": 4,
+    "acceptance_rate": 0.95,
+    "total_trips": 86,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0267",
+    "distance_km": 5.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.86,
+    "total_trips": 815,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0268",
+    "distance_km": 4.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.78,
+    "total_trips": 331,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0269",
+    "distance_km": 5.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.86,
+    "total_trips": 900,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0270",
+    "distance_km": 8.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.78,
+    "total_trips": 270,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0271",
+    "distance_km": 7,
+    "rating": 4,
+    "acceptance_rate": 0.91,
+    "total_trips": 121,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0272",
+    "distance_km": 6.1,
+    "rating": 3.4,
+    "acceptance_rate": 0.92,
+    "total_trips": 358,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0273",
+    "distance_km": 7.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 626,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0274",
+    "distance_km": 7.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.96,
+    "total_trips": 232,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0275",
+    "distance_km": 4.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.58,
+    "total_trips": 958,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0276",
+    "distance_km": 1.7,
+    "rating": 3.7,
+    "acceptance_rate": 0.95,
+    "total_trips": 171,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0277",
+    "distance_km": 2.3,
+    "rating": 3.7,
+    "acceptance_rate": 0.97,
+    "total_trips": 842,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0278",
+    "distance_km": 8.9,
+    "rating": 3.5,
+    "acceptance_rate": 0.54,
+    "total_trips": 452,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0279",
+    "distance_km": 1.8,
+    "rating": 4.8,
+    "acceptance_rate": 0.9,
+    "total_trips": 452,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0280",
+    "distance_km": 7.1,
+    "rating": 3.8,
+    "acceptance_rate": 0.76,
+    "total_trips": 362,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0281",
+    "distance_km": 6.8,
+    "rating": 4.9,
+    "acceptance_rate": 0.86,
+    "total_trips": 239,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0282",
+    "distance_km": 7.9,
+    "rating": 4.1,
+    "acceptance_rate": 0.92,
+    "total_trips": 656,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0283",
+    "distance_km": 2.2,
+    "rating": 4.1,
+    "acceptance_rate": 0.89,
+    "total_trips": 25,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0284",
+    "distance_km": 2.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.9,
+    "total_trips": 528,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0285",
+    "distance_km": 9,
+    "rating": 3.1,
+    "acceptance_rate": 0.97,
+    "total_trips": 394,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0286",
+    "distance_km": 1.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.55,
+    "total_trips": 148,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0287",
+    "distance_km": 8.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.9,
+    "total_trips": 467,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0288",
+    "distance_km": 7.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.98,
+    "total_trips": 604,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0289",
+    "distance_km": 5.4,
+    "rating": 3.7,
+    "acceptance_rate": 0.56,
+    "total_trips": 108,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0290",
+    "distance_km": 1.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.89,
+    "total_trips": 210,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0291",
+    "distance_km": 3.7,
+    "rating": 3.5,
+    "acceptance_rate": 0.75,
+    "total_trips": 870,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0292",
+    "distance_km": 5.8,
+    "rating": 4,
+    "acceptance_rate": 0.53,
+    "total_trips": 239,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0293",
+    "distance_km": 5.5,
+    "rating": 4.5,
+    "acceptance_rate": 0.71,
+    "total_trips": 714,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0294",
+    "distance_km": 6.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.81,
+    "total_trips": 331,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0295",
+    "distance_km": 3.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.87,
+    "total_trips": 864,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0296",
+    "distance_km": 9.1,
+    "rating": 4.9,
+    "acceptance_rate": 0.7,
+    "total_trips": 886,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0297",
+    "distance_km": 4,
+    "rating": 3.3,
+    "acceptance_rate": 0.64,
+    "total_trips": 16,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0298",
+    "distance_km": 6.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.8,
+    "total_trips": 311,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0299",
+    "distance_km": 1.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.87,
+    "total_trips": 42,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0300",
+    "distance_km": 9.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.76,
+    "total_trips": 102,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0301",
+    "distance_km": 2.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.76,
+    "total_trips": 798,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0302",
+    "distance_km": 6.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.64,
+    "total_trips": 345,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0303",
+    "distance_km": 9.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.98,
+    "total_trips": 233,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0304",
+    "distance_km": 5.6,
+    "rating": 4.6,
+    "acceptance_rate": 0.83,
+    "total_trips": 889,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0305",
+    "distance_km": 8.6,
+    "rating": 4.5,
+    "acceptance_rate": 0.62,
+    "total_trips": 927,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0306",
+    "distance_km": 8.8,
+    "rating": 3.1,
+    "acceptance_rate": 0.51,
+    "total_trips": 363,
+    "driver_score": 47
+  },
+  {
+    "driver_id": "D0307",
+    "distance_km": 4.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.54,
+    "total_trips": 75,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0308",
+    "distance_km": 4.4,
+    "rating": 3.1,
+    "acceptance_rate": 0.96,
+    "total_trips": 695,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0309",
+    "distance_km": 1.5,
+    "rating": 4,
+    "acceptance_rate": 0.75,
+    "total_trips": 72,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0310",
+    "distance_km": 0.3,
+    "rating": 4.8,
+    "acceptance_rate": 0.85,
+    "total_trips": 898,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0311",
+    "distance_km": 0.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.54,
+    "total_trips": 938,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0312",
+    "distance_km": 9.9,
+    "rating": 4.5,
+    "acceptance_rate": 0.5,
+    "total_trips": 583,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0313",
+    "distance_km": 6.9,
+    "rating": 3.6,
+    "acceptance_rate": 0.75,
+    "total_trips": 396,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0314",
+    "distance_km": 2.4,
+    "rating": 4.4,
+    "acceptance_rate": 0.55,
+    "total_trips": 668,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0315",
+    "distance_km": 0.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.65,
+    "total_trips": 708,
+    "driver_score": 95
+  },
+  {
+    "driver_id": "D0316",
+    "distance_km": 2.6,
+    "rating": 3.1,
+    "acceptance_rate": 0.84,
+    "total_trips": 976,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0317",
+    "distance_km": 0.3,
+    "rating": 3.8,
+    "acceptance_rate": 0.95,
+    "total_trips": 201,
+    "driver_score": 99
+  },
+  {
+    "driver_id": "D0318",
+    "distance_km": 0.4,
+    "rating": 3.1,
+    "acceptance_rate": 0.52,
+    "total_trips": 58,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0319",
+    "distance_km": 7,
+    "rating": 3.1,
+    "acceptance_rate": 0.78,
+    "total_trips": 520,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0320",
+    "distance_km": 8.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.7,
+    "total_trips": 140,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0321",
+    "distance_km": 6.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.84,
+    "total_trips": 906,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0322",
+    "distance_km": 5.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.74,
+    "total_trips": 973,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0323",
+    "distance_km": 7.6,
+    "rating": 4,
+    "acceptance_rate": 0.65,
+    "total_trips": 664,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0324",
+    "distance_km": 7,
+    "rating": 3.6,
+    "acceptance_rate": 0.65,
+    "total_trips": 848,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0325",
+    "distance_km": 4.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.98,
+    "total_trips": 582,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0326",
+    "distance_km": 2.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.82,
+    "total_trips": 66,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0327",
+    "distance_km": 1.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.54,
+    "total_trips": 592,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0328",
+    "distance_km": 8.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.75,
+    "total_trips": 392,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0329",
+    "distance_km": 0.5,
+    "rating": 4,
+    "acceptance_rate": 0.86,
+    "total_trips": 9,
+    "driver_score": 97
+  },
+  {
+    "driver_id": "D0330",
+    "distance_km": 7.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.67,
+    "total_trips": 649,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0331",
+    "distance_km": 8.3,
+    "rating": 3.5,
+    "acceptance_rate": 0.77,
+    "total_trips": 763,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0332",
+    "distance_km": 6.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.74,
+    "total_trips": 886,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0333",
+    "distance_km": 7.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.81,
+    "total_trips": 967,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0334",
+    "distance_km": 9.6,
+    "rating": 3.5,
+    "acceptance_rate": 0.89,
+    "total_trips": 721,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0335",
+    "distance_km": 8.2,
+    "rating": 4,
+    "acceptance_rate": 0.55,
+    "total_trips": 871,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0336",
+    "distance_km": 8.6,
+    "rating": 4.6,
+    "acceptance_rate": 0.56,
+    "total_trips": 343,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0337",
+    "distance_km": 1.5,
+    "rating": 4.6,
+    "acceptance_rate": 0.76,
+    "total_trips": 705,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0338",
+    "distance_km": 2.5,
+    "rating": 3.2,
+    "acceptance_rate": 0.71,
+    "total_trips": 343,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0339",
+    "distance_km": 5.3,
+    "rating": 3.6,
+    "acceptance_rate": 0.7,
+    "total_trips": 285,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0340",
+    "distance_km": 9.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.76,
+    "total_trips": 781,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0341",
+    "distance_km": 8.6,
+    "rating": 3.9,
+    "acceptance_rate": 0.82,
+    "total_trips": 566,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0342",
+    "distance_km": 1.2,
+    "rating": 4.5,
+    "acceptance_rate": 0.91,
+    "total_trips": 562,
+    "driver_score": 85
+  },
+  {
+    "driver_id": "D0343",
+    "distance_km": 2.1,
+    "rating": 4.8,
+    "acceptance_rate": 0.76,
+    "total_trips": 49,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0344",
+    "distance_km": 0.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.85,
+    "total_trips": 390,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0345",
+    "distance_km": 1.2,
+    "rating": 5,
+    "acceptance_rate": 0.62,
+    "total_trips": 348,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0346",
+    "distance_km": 6,
+    "rating": 3.2,
+    "acceptance_rate": 0.79,
+    "total_trips": 730,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0347",
+    "distance_km": 7.6,
+    "rating": 5,
+    "acceptance_rate": 0.85,
+    "total_trips": 844,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0348",
+    "distance_km": 0.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.8,
+    "total_trips": 165,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0349",
+    "distance_km": 1,
+    "rating": 3.4,
+    "acceptance_rate": 0.57,
+    "total_trips": 283,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0350",
+    "distance_km": 2.8,
+    "rating": 4,
+    "acceptance_rate": 0.52,
+    "total_trips": 56,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0351",
+    "distance_km": 7.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.76,
+    "total_trips": 868,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0352",
+    "distance_km": 7.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.98,
+    "total_trips": 864,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0353",
+    "distance_km": 0.5,
+    "rating": 4.8,
+    "acceptance_rate": 0.9,
+    "total_trips": 619,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0354",
+    "distance_km": 0.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.56,
+    "total_trips": 729,
+    "driver_score": 92
+  },
+  {
+    "driver_id": "D0355",
+    "distance_km": 5.2,
+    "rating": 4,
+    "acceptance_rate": 0.94,
+    "total_trips": 893,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0356",
+    "distance_km": 5.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.62,
+    "total_trips": 65,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0357",
+    "distance_km": 8.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.76,
+    "total_trips": 900,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0358",
+    "distance_km": 2.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.98,
+    "total_trips": 54,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0359",
+    "distance_km": 7.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.56,
+    "total_trips": 869,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0360",
+    "distance_km": 9.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 594,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0361",
+    "distance_km": 1.9,
+    "rating": 4.1,
+    "acceptance_rate": 0.75,
+    "total_trips": 393,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0362",
+    "distance_km": 5.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.65,
+    "total_trips": 269,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0363",
+    "distance_km": 4.3,
+    "rating": 3.7,
+    "acceptance_rate": 0.66,
+    "total_trips": 431,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0364",
+    "distance_km": 3.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.72,
+    "total_trips": 765,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0365",
+    "distance_km": 0.8,
+    "rating": 4.5,
+    "acceptance_rate": 0.54,
+    "total_trips": 485,
+    "driver_score": 86
+  },
+  {
+    "driver_id": "D0366",
+    "distance_km": 4.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.5,
+    "total_trips": 488,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0367",
+    "distance_km": 8.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.85,
+    "total_trips": 403,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0368",
+    "distance_km": 3,
+    "rating": 3,
+    "acceptance_rate": 0.6,
+    "total_trips": 898,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0369",
+    "distance_km": 6.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.68,
+    "total_trips": 586,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0370",
+    "distance_km": 1.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.85,
+    "total_trips": 153,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0371",
+    "distance_km": 3.5,
+    "rating": 3.8,
+    "acceptance_rate": 0.76,
+    "total_trips": 849,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0372",
+    "distance_km": 1.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.51,
+    "total_trips": 229,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0373",
+    "distance_km": 9.1,
+    "rating": 3.4,
+    "acceptance_rate": 0.67,
+    "total_trips": 166,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0374",
+    "distance_km": 4.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.83,
+    "total_trips": 187,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0375",
+    "distance_km": 4.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.54,
+    "total_trips": 63,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0376",
+    "distance_km": 2,
+    "rating": 3.1,
+    "acceptance_rate": 0.58,
+    "total_trips": 374,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0377",
+    "distance_km": 0.9,
+    "rating": 3.5,
+    "acceptance_rate": 0.74,
+    "total_trips": 526,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0378",
+    "distance_km": 0.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.63,
+    "total_trips": 777,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0379",
+    "distance_km": 5.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.58,
+    "total_trips": 929,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0380",
+    "distance_km": 1.1,
+    "rating": 3.8,
+    "acceptance_rate": 0.81,
+    "total_trips": 577,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0381",
+    "distance_km": 7.4,
+    "rating": 3.7,
+    "acceptance_rate": 0.84,
+    "total_trips": 800,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0382",
+    "distance_km": 2.4,
+    "rating": 4.3,
+    "acceptance_rate": 0.79,
+    "total_trips": 225,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0383",
+    "distance_km": 3,
+    "rating": 4,
+    "acceptance_rate": 0.74,
+    "total_trips": 143,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0384",
+    "distance_km": 4.5,
+    "rating": 4.7,
+    "acceptance_rate": 0.95,
+    "total_trips": 432,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0385",
+    "distance_km": 9.9,
+    "rating": 3.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 753,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0386",
+    "distance_km": 7,
+    "rating": 4.5,
+    "acceptance_rate": 0.96,
+    "total_trips": 871,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0387",
+    "distance_km": 9.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.7,
+    "total_trips": 965,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0388",
+    "distance_km": 5.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.65,
+    "total_trips": 836,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0389",
+    "distance_km": 9.5,
+    "rating": 4.6,
+    "acceptance_rate": 0.8,
+    "total_trips": 109,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0390",
+    "distance_km": 9.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.86,
+    "total_trips": 877,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0391",
+    "distance_km": 9.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.93,
+    "total_trips": 410,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0392",
+    "distance_km": 9.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.79,
+    "total_trips": 525,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0393",
+    "distance_km": 1.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.99,
+    "total_trips": 448,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0394",
+    "distance_km": 4.9,
+    "rating": 3.7,
+    "acceptance_rate": 0.72,
+    "total_trips": 467,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0395",
+    "distance_km": 6.5,
+    "rating": 4.7,
+    "acceptance_rate": 0.83,
+    "total_trips": 169,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0396",
+    "distance_km": 9.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.64,
+    "total_trips": 744,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0397",
+    "distance_km": 7,
+    "rating": 4.1,
+    "acceptance_rate": 0.93,
+    "total_trips": 148,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0398",
+    "distance_km": 4.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.94,
+    "total_trips": 153,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0399",
+    "distance_km": 9.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.61,
+    "total_trips": 516,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0400",
+    "distance_km": 7.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.9,
+    "total_trips": 979,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0401",
+    "distance_km": 4.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.62,
+    "total_trips": 16,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0402",
+    "distance_km": 8.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.95,
+    "total_trips": 524,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0403",
+    "distance_km": 6.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.73,
+    "total_trips": 959,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0404",
+    "distance_km": 2.3,
+    "rating": 4,
+    "acceptance_rate": 0.84,
+    "total_trips": 680,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0405",
+    "distance_km": 8.7,
+    "rating": 4.3,
+    "acceptance_rate": 0.53,
+    "total_trips": 876,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0406",
+    "distance_km": 4.8,
+    "rating": 3.2,
+    "acceptance_rate": 0.79,
+    "total_trips": 379,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0407",
+    "distance_km": 5.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.72,
+    "total_trips": 89,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0408",
+    "distance_km": 7,
+    "rating": 4.2,
+    "acceptance_rate": 0.61,
+    "total_trips": 606,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0409",
+    "distance_km": 5,
+    "rating": 4.3,
+    "acceptance_rate": 0.73,
+    "total_trips": 252,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0410",
+    "distance_km": 1.1,
+    "rating": 4.6,
+    "acceptance_rate": 0.89,
+    "total_trips": 549,
+    "driver_score": 87
+  },
+  {
+    "driver_id": "D0411",
+    "distance_km": 1.7,
+    "rating": 4.2,
+    "acceptance_rate": 0.8,
+    "total_trips": 559,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0412",
+    "distance_km": 1.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.75,
+    "total_trips": 821,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0413",
+    "distance_km": 5.3,
+    "rating": 3.7,
+    "acceptance_rate": 0.91,
+    "total_trips": 458,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0414",
+    "distance_km": 10,
+    "rating": 4.1,
+    "acceptance_rate": 0.72,
+    "total_trips": 786,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0415",
+    "distance_km": 9.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.53,
+    "total_trips": 64,
+    "driver_score": 44
+  },
+  {
+    "driver_id": "D0416",
+    "distance_km": 4.9,
+    "rating": 3.2,
+    "acceptance_rate": 0.9,
+    "total_trips": 490,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0417",
+    "distance_km": 2.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.68,
+    "total_trips": 23,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0418",
+    "distance_km": 1.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.99,
+    "total_trips": 747,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0419",
+    "distance_km": 9.4,
+    "rating": 5,
+    "acceptance_rate": 0.88,
+    "total_trips": 613,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0420",
+    "distance_km": 0.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.68,
+    "total_trips": 355,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0421",
+    "distance_km": 2.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.51,
+    "total_trips": 293,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0422",
+    "distance_km": 2.2,
+    "rating": 4,
+    "acceptance_rate": 0.52,
+    "total_trips": 971,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0423",
+    "distance_km": 9.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.95,
+    "total_trips": 248,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0424",
+    "distance_km": 3.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.66,
+    "total_trips": 256,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0425",
+    "distance_km": 7.9,
+    "rating": 4.8,
+    "acceptance_rate": 0.82,
+    "total_trips": 507,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0426",
+    "distance_km": 3.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.59,
+    "total_trips": 507,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0427",
+    "distance_km": 0.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.73,
+    "total_trips": 556,
+    "driver_score": 90
+  },
+  {
+    "driver_id": "D0428",
+    "distance_km": 1.8,
+    "rating": 4.3,
+    "acceptance_rate": 0.51,
+    "total_trips": 723,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0429",
+    "distance_km": 9,
+    "rating": 4.8,
+    "acceptance_rate": 0.55,
+    "total_trips": 744,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0430",
+    "distance_km": 4.8,
+    "rating": 3.4,
+    "acceptance_rate": 0.54,
+    "total_trips": 940,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0431",
+    "distance_km": 0.4,
+    "rating": 4,
+    "acceptance_rate": 0.85,
+    "total_trips": 116,
+    "driver_score": 98
+  },
+  {
+    "driver_id": "D0432",
+    "distance_km": 2.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.9,
+    "total_trips": 964,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0433",
+    "distance_km": 9.9,
+    "rating": 3.8,
+    "acceptance_rate": 0.77,
+    "total_trips": 716,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0434",
+    "distance_km": 7.1,
+    "rating": 4,
+    "acceptance_rate": 0.84,
+    "total_trips": 837,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0435",
+    "distance_km": 6.1,
+    "rating": 3.2,
+    "acceptance_rate": 0.54,
+    "total_trips": 287,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0436",
+    "distance_km": 2.7,
+    "rating": 4.7,
+    "acceptance_rate": 0.64,
+    "total_trips": 23,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0437",
+    "distance_km": 7,
+    "rating": 4.4,
+    "acceptance_rate": 0.62,
+    "total_trips": 232,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0438",
+    "distance_km": 9.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.74,
+    "total_trips": 945,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0439",
+    "distance_km": 2.4,
+    "rating": 4.7,
+    "acceptance_rate": 0.63,
+    "total_trips": 414,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0440",
+    "distance_km": 1.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.86,
+    "total_trips": 958,
+    "driver_score": 87
+  },
+  {
+    "driver_id": "D0441",
+    "distance_km": 8.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.56,
+    "total_trips": 150,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0442",
+    "distance_km": 8.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.73,
+    "total_trips": 231,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0443",
+    "distance_km": 1.6,
+    "rating": 3.5,
+    "acceptance_rate": 0.76,
+    "total_trips": 268,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0444",
+    "distance_km": 3.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.58,
+    "total_trips": 933,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0445",
+    "distance_km": 5.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.69,
+    "total_trips": 715,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0446",
+    "distance_km": 3.1,
+    "rating": 4.3,
+    "acceptance_rate": 0.77,
+    "total_trips": 889,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0447",
+    "distance_km": 1.9,
+    "rating": 4.9,
+    "acceptance_rate": 0.72,
+    "total_trips": 736,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0448",
+    "distance_km": 0.3,
+    "rating": 4.1,
+    "acceptance_rate": 0.8,
+    "total_trips": 766,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0449",
+    "distance_km": 7.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.94,
+    "total_trips": 756,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0450",
+    "distance_km": 4.7,
+    "rating": 3.9,
+    "acceptance_rate": 0.81,
+    "total_trips": 469,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0451",
+    "distance_km": 8.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.8,
+    "total_trips": 672,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0452",
+    "distance_km": 0.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.92,
+    "total_trips": 793,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0453",
+    "distance_km": 9.1,
+    "rating": 4.4,
+    "acceptance_rate": 0.82,
+    "total_trips": 116,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0454",
+    "distance_km": 1.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.66,
+    "total_trips": 511,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0455",
+    "distance_km": 4,
+    "rating": 3.9,
+    "acceptance_rate": 0.63,
+    "total_trips": 411,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0456",
+    "distance_km": 1,
+    "rating": 4.9,
+    "acceptance_rate": 0.7,
+    "total_trips": 8,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0457",
+    "distance_km": 1.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.89,
+    "total_trips": 898,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0458",
+    "distance_km": 0.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.98,
+    "total_trips": 382,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0459",
+    "distance_km": 4.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.87,
+    "total_trips": 951,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0460",
+    "distance_km": 7.5,
+    "rating": 4.6,
+    "acceptance_rate": 0.62,
+    "total_trips": 24,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0461",
+    "distance_km": 0.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.93,
+    "total_trips": 819,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0462",
+    "distance_km": 5.7,
+    "rating": 3,
+    "acceptance_rate": 0.88,
+    "total_trips": 367,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0463",
+    "distance_km": 9.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.71,
+    "total_trips": 697,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0464",
+    "distance_km": 2.6,
+    "rating": 3.1,
+    "acceptance_rate": 0.74,
+    "total_trips": 610,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0465",
+    "distance_km": 0.6,
+    "rating": 4.3,
+    "acceptance_rate": 0.63,
+    "total_trips": 906,
+    "driver_score": 98
+  },
+  {
+    "driver_id": "D0466",
+    "distance_km": 1.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.77,
+    "total_trips": 232,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0467",
+    "distance_km": 4,
+    "rating": 3.1,
+    "acceptance_rate": 0.81,
+    "total_trips": 290,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0468",
+    "distance_km": 9,
+    "rating": 3.2,
+    "acceptance_rate": 0.73,
+    "total_trips": 114,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0469",
+    "distance_km": 7.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.94,
+    "total_trips": 826,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0470",
+    "distance_km": 8.8,
+    "rating": 4.6,
+    "acceptance_rate": 0.74,
+    "total_trips": 371,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0471",
+    "distance_km": 4.3,
+    "rating": 4.6,
+    "acceptance_rate": 0.67,
+    "total_trips": 311,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0472",
+    "distance_km": 4.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.7,
+    "total_trips": 945,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0473",
+    "distance_km": 7.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.89,
+    "total_trips": 588,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0474",
+    "distance_km": 6.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.9,
+    "total_trips": 454,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0475",
+    "distance_km": 3.5,
+    "rating": 4.9,
+    "acceptance_rate": 0.8,
+    "total_trips": 712,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0476",
+    "distance_km": 5.9,
+    "rating": 4.9,
+    "acceptance_rate": 0.57,
+    "total_trips": 977,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0477",
+    "distance_km": 9.2,
+    "rating": 5,
+    "acceptance_rate": 0.52,
+    "total_trips": 647,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0478",
+    "distance_km": 4.8,
+    "rating": 3.2,
+    "acceptance_rate": 0.75,
+    "total_trips": 612,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0479",
+    "distance_km": 2.2,
+    "rating": 3.7,
+    "acceptance_rate": 0.66,
+    "total_trips": 91,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0480",
+    "distance_km": 0.3,
+    "rating": 3.6,
+    "acceptance_rate": 0.7,
+    "total_trips": 596,
+    "driver_score": 96
+  },
+  {
+    "driver_id": "D0481",
+    "distance_km": 4.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.51,
+    "total_trips": 684,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0482",
+    "distance_km": 9.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.58,
+    "total_trips": 693,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0483",
+    "distance_km": 9.2,
+    "rating": 4.6,
+    "acceptance_rate": 0.5,
+    "total_trips": 687,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0484",
+    "distance_km": 0.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.64,
+    "total_trips": 497,
+    "driver_score": 89
+  },
+  {
+    "driver_id": "D0485",
+    "distance_km": 6.1,
+    "rating": 3.2,
+    "acceptance_rate": 0.99,
+    "total_trips": 844,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0486",
+    "distance_km": 8.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.88,
+    "total_trips": 984,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0487",
+    "distance_km": 1.2,
+    "rating": 4.7,
+    "acceptance_rate": 0.91,
+    "total_trips": 264,
+    "driver_score": 85
+  },
+  {
+    "driver_id": "D0488",
+    "distance_km": 8.9,
+    "rating": 4.6,
+    "acceptance_rate": 0.9,
+    "total_trips": 252,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0489",
+    "distance_km": 9.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.77,
+    "total_trips": 543,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0490",
+    "distance_km": 4.6,
+    "rating": 3.1,
+    "acceptance_rate": 0.95,
+    "total_trips": 207,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0491",
+    "distance_km": 5.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.76,
+    "total_trips": 481,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0492",
+    "distance_km": 2,
+    "rating": 3.4,
+    "acceptance_rate": 0.81,
+    "total_trips": 909,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0493",
+    "distance_km": 6.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.89,
+    "total_trips": 292,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0494",
+    "distance_km": 9,
+    "rating": 4.3,
+    "acceptance_rate": 0.68,
+    "total_trips": 549,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0495",
+    "distance_km": 7.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.76,
+    "total_trips": 840,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0496",
+    "distance_km": 3.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.61,
+    "total_trips": 896,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0497",
+    "distance_km": 6.7,
+    "rating": 3,
+    "acceptance_rate": 0.69,
+    "total_trips": 75,
+    "driver_score": 48
+  },
+  {
+    "driver_id": "D0498",
+    "distance_km": 7.1,
+    "rating": 3,
+    "acceptance_rate": 0.8,
+    "total_trips": 76,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0499",
+    "distance_km": 1.9,
+    "rating": 5,
+    "acceptance_rate": 0.69,
+    "total_trips": 624,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0500",
+    "distance_km": 5.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.94,
+    "total_trips": 971,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0501",
+    "distance_km": 1.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.85,
+    "total_trips": 601,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0502",
+    "distance_km": 4.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.93,
+    "total_trips": 158,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0503",
+    "distance_km": 6,
+    "rating": 3.9,
+    "acceptance_rate": 0.8,
+    "total_trips": 640,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0504",
+    "distance_km": 3.2,
+    "rating": 4.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 236,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0505",
+    "distance_km": 0.3,
+    "rating": 4.5,
+    "acceptance_rate": 0.98,
+    "total_trips": 210,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0506",
+    "distance_km": 9.7,
+    "rating": 4,
+    "acceptance_rate": 0.6,
+    "total_trips": 872,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0507",
+    "distance_km": 0.8,
+    "rating": 4.5,
+    "acceptance_rate": 0.82,
+    "total_trips": 636,
+    "driver_score": 93
+  },
+  {
+    "driver_id": "D0508",
+    "distance_km": 7.8,
+    "rating": 4,
+    "acceptance_rate": 0.85,
+    "total_trips": 207,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0509",
+    "distance_km": 0.8,
+    "rating": 4,
+    "acceptance_rate": 0.6,
+    "total_trips": 553,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0510",
+    "distance_km": 2.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.5,
+    "total_trips": 983,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0511",
+    "distance_km": 5.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.99,
+    "total_trips": 651,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0512",
+    "distance_km": 5.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.76,
+    "total_trips": 745,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0513",
+    "distance_km": 5,
+    "rating": 4.5,
+    "acceptance_rate": 0.87,
+    "total_trips": 634,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0514",
+    "distance_km": 8.5,
+    "rating": 4.7,
+    "acceptance_rate": 0.69,
+    "total_trips": 370,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0515",
+    "distance_km": 0.4,
+    "rating": 3,
+    "acceptance_rate": 0.68,
+    "total_trips": 150,
+    "driver_score": 85
+  },
+  {
+    "driver_id": "D0516",
+    "distance_km": 6.7,
+    "rating": 3.6,
+    "acceptance_rate": 0.87,
+    "total_trips": 420,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0517",
+    "distance_km": 3.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.97,
+    "total_trips": 249,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0518",
+    "distance_km": 3.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.78,
+    "total_trips": 361,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0519",
+    "distance_km": 6.5,
+    "rating": 3.8,
+    "acceptance_rate": 0.56,
+    "total_trips": 975,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0520",
+    "distance_km": 8.8,
+    "rating": 3,
+    "acceptance_rate": 0.69,
+    "total_trips": 156,
+    "driver_score": 48
+  },
+  {
+    "driver_id": "D0521",
+    "distance_km": 0.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.71,
+    "total_trips": 36,
+    "driver_score": 84
+  },
+  {
+    "driver_id": "D0522",
+    "distance_km": 7,
+    "rating": 3.9,
+    "acceptance_rate": 0.57,
+    "total_trips": 77,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0523",
+    "distance_km": 4.1,
+    "rating": 4.6,
+    "acceptance_rate": 0.57,
+    "total_trips": 64,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0524",
+    "distance_km": 0.7,
+    "rating": 4,
+    "acceptance_rate": 0.7,
+    "total_trips": 769,
+    "driver_score": 90
+  },
+  {
+    "driver_id": "D0525",
+    "distance_km": 2.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.64,
+    "total_trips": 411,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0526",
+    "distance_km": 5.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.88,
+    "total_trips": 796,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0527",
+    "distance_km": 4.2,
+    "rating": 4.7,
+    "acceptance_rate": 0.88,
+    "total_trips": 156,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0528",
+    "distance_km": 2.3,
+    "rating": 3.1,
+    "acceptance_rate": 0.83,
+    "total_trips": 858,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0529",
+    "distance_km": 7.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.5,
+    "total_trips": 126,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0530",
+    "distance_km": 7.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.62,
+    "total_trips": 845,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0531",
+    "distance_km": 9.8,
+    "rating": 4.3,
+    "acceptance_rate": 0.51,
+    "total_trips": 574,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0532",
+    "distance_km": 4.8,
+    "rating": 5,
+    "acceptance_rate": 0.73,
+    "total_trips": 161,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0533",
+    "distance_km": 9.9,
+    "rating": 4.2,
+    "acceptance_rate": 0.83,
+    "total_trips": 35,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0534",
+    "distance_km": 0.8,
+    "rating": 4.8,
+    "acceptance_rate": 0.75,
+    "total_trips": 628,
+    "driver_score": 94
+  },
+  {
+    "driver_id": "D0535",
+    "distance_km": 0.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.92,
+    "total_trips": 213,
+    "driver_score": 87
+  },
+  {
+    "driver_id": "D0536",
+    "distance_km": 1.4,
+    "rating": 4.1,
+    "acceptance_rate": 0.86,
+    "total_trips": 340,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0537",
+    "distance_km": 9.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 494,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0538",
+    "distance_km": 5.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.67,
+    "total_trips": 831,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0539",
+    "distance_km": 7.6,
+    "rating": 3.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 955,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0540",
+    "distance_km": 2,
+    "rating": 4,
+    "acceptance_rate": 0.74,
+    "total_trips": 427,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0541",
+    "distance_km": 8.9,
+    "rating": 4.9,
+    "acceptance_rate": 0.84,
+    "total_trips": 256,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0542",
+    "distance_km": 1.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.95,
+    "total_trips": 684,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0543",
+    "distance_km": 7.2,
+    "rating": 4.6,
+    "acceptance_rate": 0.89,
+    "total_trips": 510,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0544",
+    "distance_km": 4.7,
+    "rating": 3.4,
+    "acceptance_rate": 0.68,
+    "total_trips": 701,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0545",
+    "distance_km": 5.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.81,
+    "total_trips": 886,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0546",
+    "distance_km": 7.7,
+    "rating": 3.5,
+    "acceptance_rate": 0.56,
+    "total_trips": 932,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0547",
+    "distance_km": 1.9,
+    "rating": 3.6,
+    "acceptance_rate": 0.5,
+    "total_trips": 889,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0548",
+    "distance_km": 9.9,
+    "rating": 4,
+    "acceptance_rate": 0.75,
+    "total_trips": 829,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0549",
+    "distance_km": 9.7,
+    "rating": 3.6,
+    "acceptance_rate": 0.9,
+    "total_trips": 856,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0550",
+    "distance_km": 1.8,
+    "rating": 4,
+    "acceptance_rate": 0.82,
+    "total_trips": 328,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0551",
+    "distance_km": 5.3,
+    "rating": 4.6,
+    "acceptance_rate": 0.87,
+    "total_trips": 567,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0552",
+    "distance_km": 8.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.51,
+    "total_trips": 175,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0553",
+    "distance_km": 8.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.66,
+    "total_trips": 489,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0554",
+    "distance_km": 7.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.84,
+    "total_trips": 36,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0555",
+    "distance_km": 1.4,
+    "rating": 4.9,
+    "acceptance_rate": 0.6,
+    "total_trips": 683,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0556",
+    "distance_km": 7.7,
+    "rating": 5,
+    "acceptance_rate": 0.71,
+    "total_trips": 911,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0557",
+    "distance_km": 9.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.81,
+    "total_trips": 440,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0558",
+    "distance_km": 9.3,
+    "rating": 3,
+    "acceptance_rate": 0.92,
+    "total_trips": 648,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0559",
+    "distance_km": 4.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.64,
+    "total_trips": 137,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0560",
+    "distance_km": 6.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.7,
+    "total_trips": 273,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0561",
+    "distance_km": 5.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.8,
+    "total_trips": 428,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0562",
+    "distance_km": 6.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.81,
+    "total_trips": 313,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0563",
+    "distance_km": 4.3,
+    "rating": 4.5,
+    "acceptance_rate": 0.66,
+    "total_trips": 366,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0564",
+    "distance_km": 1.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.65,
+    "total_trips": 320,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0565",
+    "distance_km": 6.4,
+    "rating": 4,
+    "acceptance_rate": 0.72,
+    "total_trips": 838,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0566",
+    "distance_km": 6,
+    "rating": 3.6,
+    "acceptance_rate": 0.72,
+    "total_trips": 168,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0567",
+    "distance_km": 0.7,
+    "rating": 4.2,
+    "acceptance_rate": 0.69,
+    "total_trips": 785,
+    "driver_score": 92
+  },
+  {
+    "driver_id": "D0568",
+    "distance_km": 2.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.56,
+    "total_trips": 857,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0569",
+    "distance_km": 4.2,
+    "rating": 3.4,
+    "acceptance_rate": 0.96,
+    "total_trips": 576,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0570",
+    "distance_km": 5,
+    "rating": 4.5,
+    "acceptance_rate": 0.63,
+    "total_trips": 678,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0571",
+    "distance_km": 1.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.62,
+    "total_trips": 108,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0572",
+    "distance_km": 1,
+    "rating": 3.5,
+    "acceptance_rate": 0.75,
+    "total_trips": 207,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0573",
+    "distance_km": 9.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.86,
+    "total_trips": 385,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0574",
+    "distance_km": 5.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.59,
+    "total_trips": 758,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0575",
+    "distance_km": 1.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.62,
+    "total_trips": 814,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0576",
+    "distance_km": 0.5,
+    "rating": 3.1,
+    "acceptance_rate": 0.76,
+    "total_trips": 964,
+    "driver_score": 96
+  },
+  {
+    "driver_id": "D0577",
+    "distance_km": 7.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.6,
+    "total_trips": 728,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0578",
+    "distance_km": 2.4,
+    "rating": 4.9,
+    "acceptance_rate": 0.82,
+    "total_trips": 958,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0579",
+    "distance_km": 0.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.56,
+    "total_trips": 431,
+    "driver_score": 94
+  },
+  {
+    "driver_id": "D0580",
+    "distance_km": 8,
+    "rating": 4.5,
+    "acceptance_rate": 0.65,
+    "total_trips": 969,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0581",
+    "distance_km": 2.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.77,
+    "total_trips": 634,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0582",
+    "distance_km": 0.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.66,
+    "total_trips": 970,
+    "driver_score": 89
+  },
+  {
+    "driver_id": "D0583",
+    "distance_km": 2,
+    "rating": 5,
+    "acceptance_rate": 0.66,
+    "total_trips": 746,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0584",
+    "distance_km": 5.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.65,
+    "total_trips": 294,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0585",
+    "distance_km": 2.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.93,
+    "total_trips": 701,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0586",
+    "distance_km": 6.5,
+    "rating": 4.1,
+    "acceptance_rate": 0.76,
+    "total_trips": 856,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0587",
+    "distance_km": 7.8,
+    "rating": 3.4,
+    "acceptance_rate": 0.85,
+    "total_trips": 310,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0588",
+    "distance_km": 6.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.54,
+    "total_trips": 26,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0589",
+    "distance_km": 8.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.76,
+    "total_trips": 267,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0590",
+    "distance_km": 6.2,
+    "rating": 3.5,
+    "acceptance_rate": 0.69,
+    "total_trips": 811,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0591",
+    "distance_km": 0.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 901,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0592",
+    "distance_km": 7.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.84,
+    "total_trips": 586,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0593",
+    "distance_km": 7.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.55,
+    "total_trips": 586,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0594",
+    "distance_km": 1.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.52,
+    "total_trips": 95,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0595",
+    "distance_km": 2.5,
+    "rating": 4.1,
+    "acceptance_rate": 0.85,
+    "total_trips": 920,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0596",
+    "distance_km": 4.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.61,
+    "total_trips": 57,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0597",
+    "distance_km": 1.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.7,
+    "total_trips": 860,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0598",
+    "distance_km": 4.1,
+    "rating": 4,
+    "acceptance_rate": 0.97,
+    "total_trips": 959,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0599",
+    "distance_km": 8.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.6,
+    "total_trips": 209,
+    "driver_score": 48
+  },
+  {
+    "driver_id": "D0600",
+    "distance_km": 9.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.88,
+    "total_trips": 828,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0601",
+    "distance_km": 1.2,
+    "rating": 3.7,
+    "acceptance_rate": 0.69,
+    "total_trips": 269,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0602",
+    "distance_km": 9.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.54,
+    "total_trips": 606,
+    "driver_score": 52
+  },
+  {
+    "driver_id": "D0603",
+    "distance_km": 9,
+    "rating": 4.4,
+    "acceptance_rate": 0.88,
+    "total_trips": 758,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0604",
+    "distance_km": 6.2,
+    "rating": 3.6,
+    "acceptance_rate": 0.91,
+    "total_trips": 983,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0605",
+    "distance_km": 3.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.66,
+    "total_trips": 545,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0606",
+    "distance_km": 6.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.87,
+    "total_trips": 259,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0607",
+    "distance_km": 4.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.56,
+    "total_trips": 970,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0608",
+    "distance_km": 7.4,
+    "rating": 4.9,
+    "acceptance_rate": 0.58,
+    "total_trips": 780,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0609",
+    "distance_km": 6.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.98,
+    "total_trips": 66,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0610",
+    "distance_km": 4.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.86,
+    "total_trips": 313,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0611",
+    "distance_km": 8.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.78,
+    "total_trips": 814,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0612",
+    "distance_km": 5.9,
+    "rating": 4.5,
+    "acceptance_rate": 0.77,
+    "total_trips": 363,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0613",
+    "distance_km": 9.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.56,
+    "total_trips": 417,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0614",
+    "distance_km": 6,
+    "rating": 4,
+    "acceptance_rate": 0.74,
+    "total_trips": 870,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0615",
+    "distance_km": 6.3,
+    "rating": 4.9,
+    "acceptance_rate": 0.55,
+    "total_trips": 726,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0616",
+    "distance_km": 2.9,
+    "rating": 3.5,
+    "acceptance_rate": 0.89,
+    "total_trips": 832,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0617",
+    "distance_km": 4.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.57,
+    "total_trips": 201,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0618",
+    "distance_km": 8.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.56,
+    "total_trips": 752,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0619",
+    "distance_km": 9.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.79,
+    "total_trips": 628,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0620",
+    "distance_km": 3.6,
+    "rating": 4.4,
+    "acceptance_rate": 0.75,
+    "total_trips": 927,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0621",
+    "distance_km": 8.7,
+    "rating": 4.3,
+    "acceptance_rate": 0.77,
+    "total_trips": 527,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0622",
+    "distance_km": 0.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.78,
+    "total_trips": 708,
+    "driver_score": 88
+  },
+  {
+    "driver_id": "D0623",
+    "distance_km": 7.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.88,
+    "total_trips": 27,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0624",
+    "distance_km": 8.5,
+    "rating": 3.8,
+    "acceptance_rate": 0.5,
+    "total_trips": 823,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0625",
+    "distance_km": 6.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.86,
+    "total_trips": 792,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0626",
+    "distance_km": 0.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.96,
+    "total_trips": 696,
+    "driver_score": 96
+  },
+  {
+    "driver_id": "D0627",
+    "distance_km": 6,
+    "rating": 4.1,
+    "acceptance_rate": 0.64,
+    "total_trips": 701,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0628",
+    "distance_km": 5.5,
+    "rating": 3.4,
+    "acceptance_rate": 0.98,
+    "total_trips": 381,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0629",
+    "distance_km": 4.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.75,
+    "total_trips": 846,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0630",
+    "distance_km": 4.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.75,
+    "total_trips": 436,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0631",
+    "distance_km": 6,
+    "rating": 4.2,
+    "acceptance_rate": 0.64,
+    "total_trips": 105,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0632",
+    "distance_km": 0.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.79,
+    "total_trips": 317,
+    "driver_score": 90
+  },
+  {
+    "driver_id": "D0633",
+    "distance_km": 9.6,
+    "rating": 4.3,
+    "acceptance_rate": 0.8,
+    "total_trips": 995,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0634",
+    "distance_km": 7.6,
+    "rating": 4,
+    "acceptance_rate": 0.68,
+    "total_trips": 872,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0635",
+    "distance_km": 0.8,
+    "rating": 4.1,
+    "acceptance_rate": 0.53,
+    "total_trips": 957,
+    "driver_score": 86
+  },
+  {
+    "driver_id": "D0636",
+    "distance_km": 9.3,
+    "rating": 3.8,
+    "acceptance_rate": 0.71,
+    "total_trips": 139,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0637",
+    "distance_km": 8.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.77,
+    "total_trips": 300,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0638",
+    "distance_km": 1.9,
+    "rating": 5,
+    "acceptance_rate": 0.51,
+    "total_trips": 519,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0639",
+    "distance_km": 3.5,
+    "rating": 4.9,
+    "acceptance_rate": 0.86,
+    "total_trips": 548,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0640",
+    "distance_km": 1.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.85,
+    "total_trips": 827,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0641",
+    "distance_km": 4.3,
+    "rating": 3.6,
+    "acceptance_rate": 0.65,
+    "total_trips": 829,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0642",
+    "distance_km": 4.3,
+    "rating": 4.1,
+    "acceptance_rate": 0.84,
+    "total_trips": 726,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0643",
+    "distance_km": 2.4,
+    "rating": 3.7,
+    "acceptance_rate": 0.77,
+    "total_trips": 53,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0644",
+    "distance_km": 8.9,
+    "rating": 3.8,
+    "acceptance_rate": 0.67,
+    "total_trips": 453,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0645",
+    "distance_km": 1.3,
+    "rating": 4.1,
+    "acceptance_rate": 1,
+    "total_trips": 902,
+    "driver_score": 85
+  },
+  {
+    "driver_id": "D0646",
+    "distance_km": 8.5,
+    "rating": 3.3,
+    "acceptance_rate": 0.9,
+    "total_trips": 450,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0647",
+    "distance_km": 3,
+    "rating": 3.5,
+    "acceptance_rate": 0.65,
+    "total_trips": 713,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0648",
+    "distance_km": 0.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.72,
+    "total_trips": 389,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0649",
+    "distance_km": 4.3,
+    "rating": 4,
+    "acceptance_rate": 0.84,
+    "total_trips": 763,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0650",
+    "distance_km": 6.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.6,
+    "total_trips": 459,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0651",
+    "distance_km": 4.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.56,
+    "total_trips": 576,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0652",
+    "distance_km": 2.4,
+    "rating": 3.4,
+    "acceptance_rate": 0.99,
+    "total_trips": 464,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0653",
+    "distance_km": 6.3,
+    "rating": 3.9,
+    "acceptance_rate": 0.61,
+    "total_trips": 453,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0654",
+    "distance_km": 6.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.83,
+    "total_trips": 280,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0655",
+    "distance_km": 6.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.97,
+    "total_trips": 846,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0656",
+    "distance_km": 6.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.76,
+    "total_trips": 347,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0657",
+    "distance_km": 4.1,
+    "rating": 4.3,
+    "acceptance_rate": 0.94,
+    "total_trips": 999,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0658",
+    "distance_km": 0.5,
+    "rating": 3.2,
+    "acceptance_rate": 0.57,
+    "total_trips": 117,
+    "driver_score": 85
+  },
+  {
+    "driver_id": "D0659",
+    "distance_km": 5.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.64,
+    "total_trips": 417,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0660",
+    "distance_km": 1.8,
+    "rating": 4,
+    "acceptance_rate": 0.93,
+    "total_trips": 105,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0661",
+    "distance_km": 5.6,
+    "rating": 4.4,
+    "acceptance_rate": 0.76,
+    "total_trips": 79,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0662",
+    "distance_km": 1.3,
+    "rating": 3.9,
+    "acceptance_rate": 0.55,
+    "total_trips": 873,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0663",
+    "distance_km": 0.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.7,
+    "total_trips": 152,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0664",
+    "distance_km": 5.6,
+    "rating": 3.6,
+    "acceptance_rate": 0.89,
+    "total_trips": 987,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0665",
+    "distance_km": 1,
+    "rating": 4.6,
+    "acceptance_rate": 0.83,
+    "total_trips": 321,
+    "driver_score": 86
+  },
+  {
+    "driver_id": "D0666",
+    "distance_km": 4,
+    "rating": 3.9,
+    "acceptance_rate": 0.87,
+    "total_trips": 660,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0667",
+    "distance_km": 6.9,
+    "rating": 3.2,
+    "acceptance_rate": 0.72,
+    "total_trips": 146,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0668",
+    "distance_km": 9.8,
+    "rating": 3.5,
+    "acceptance_rate": 0.85,
+    "total_trips": 977,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0669",
+    "distance_km": 4.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.69,
+    "total_trips": 944,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0670",
+    "distance_km": 7.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.65,
+    "total_trips": 716,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0671",
+    "distance_km": 6.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.92,
+    "total_trips": 883,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0672",
+    "distance_km": 5.1,
+    "rating": 3.6,
+    "acceptance_rate": 0.92,
+    "total_trips": 378,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0673",
+    "distance_km": 2.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.68,
+    "total_trips": 131,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0674",
+    "distance_km": 8.8,
+    "rating": 4.9,
+    "acceptance_rate": 0.66,
+    "total_trips": 529,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0675",
+    "distance_km": 5.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.98,
+    "total_trips": 640,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0676",
+    "distance_km": 0.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.5,
+    "total_trips": 446,
+    "driver_score": 97
+  },
+  {
+    "driver_id": "D0677",
+    "distance_km": 3.3,
+    "rating": 4.7,
+    "acceptance_rate": 0.57,
+    "total_trips": 758,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0678",
+    "distance_km": 7.2,
+    "rating": 3.5,
+    "acceptance_rate": 0.54,
+    "total_trips": 929,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0679",
+    "distance_km": 0,
+    "rating": 4.2,
+    "acceptance_rate": 0.64,
+    "total_trips": 483,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0680",
+    "distance_km": 9.3,
+    "rating": 4.5,
+    "acceptance_rate": 0.55,
+    "total_trips": 685,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0681",
+    "distance_km": 7.7,
+    "rating": 3.8,
+    "acceptance_rate": 1,
+    "total_trips": 229,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0682",
+    "distance_km": 2.7,
+    "rating": 4.9,
+    "acceptance_rate": 0.59,
+    "total_trips": 934,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0683",
+    "distance_km": 9.4,
+    "rating": 4.2,
+    "acceptance_rate": 0.53,
+    "total_trips": 474,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0684",
+    "distance_km": 9.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.92,
+    "total_trips": 513,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0685",
+    "distance_km": 2.2,
+    "rating": 4,
+    "acceptance_rate": 0.67,
+    "total_trips": 418,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0686",
+    "distance_km": 5.8,
+    "rating": 3.3,
+    "acceptance_rate": 0.92,
+    "total_trips": 102,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0687",
+    "distance_km": 5.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.52,
+    "total_trips": 959,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0688",
+    "distance_km": 6,
+    "rating": 4,
+    "acceptance_rate": 0.93,
+    "total_trips": 668,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0689",
+    "distance_km": 9.3,
+    "rating": 3.4,
+    "acceptance_rate": 0.97,
+    "total_trips": 187,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0690",
+    "distance_km": 1.4,
+    "rating": 3,
+    "acceptance_rate": 0.75,
+    "total_trips": 814,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0691",
+    "distance_km": 3.9,
+    "rating": 4.5,
+    "acceptance_rate": 0.99,
+    "total_trips": 948,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0692",
+    "distance_km": 3.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.54,
+    "total_trips": 930,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0693",
+    "distance_km": 7.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.98,
+    "total_trips": 731,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0694",
+    "distance_km": 3.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.65,
+    "total_trips": 948,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0695",
+    "distance_km": 4.5,
+    "rating": 4.9,
+    "acceptance_rate": 0.73,
+    "total_trips": 961,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0696",
+    "distance_km": 7,
+    "rating": 4.7,
+    "acceptance_rate": 0.75,
+    "total_trips": 717,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0697",
+    "distance_km": 9,
+    "rating": 4.1,
+    "acceptance_rate": 0.97,
+    "total_trips": 629,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0698",
+    "distance_km": 9.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.6,
+    "total_trips": 28,
+    "driver_score": 45
+  },
+  {
+    "driver_id": "D0699",
+    "distance_km": 9.9,
+    "rating": 4,
+    "acceptance_rate": 0.68,
+    "total_trips": 18,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0700",
+    "distance_km": 7.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.94,
+    "total_trips": 591,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0701",
+    "distance_km": 4,
+    "rating": 3.3,
+    "acceptance_rate": 0.89,
+    "total_trips": 982,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0702",
+    "distance_km": 3.8,
+    "rating": 4,
+    "acceptance_rate": 0.77,
+    "total_trips": 56,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0703",
+    "distance_km": 9.6,
+    "rating": 3,
+    "acceptance_rate": 0.98,
+    "total_trips": 466,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0704",
+    "distance_km": 6.2,
+    "rating": 4.9,
+    "acceptance_rate": 0.62,
+    "total_trips": 694,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0705",
+    "distance_km": 7.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.79,
+    "total_trips": 516,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0706",
+    "distance_km": 7.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.89,
+    "total_trips": 810,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0707",
+    "distance_km": 5.5,
+    "rating": 4.6,
+    "acceptance_rate": 0.67,
+    "total_trips": 649,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0708",
+    "distance_km": 8.3,
+    "rating": 4.8,
+    "acceptance_rate": 0.96,
+    "total_trips": 132,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0709",
+    "distance_km": 1.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.53,
+    "total_trips": 714,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0710",
+    "distance_km": 10,
+    "rating": 4.9,
+    "acceptance_rate": 0.67,
+    "total_trips": 224,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0711",
+    "distance_km": 4.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.99,
+    "total_trips": 70,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0712",
+    "distance_km": 9.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.56,
+    "total_trips": 919,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0713",
+    "distance_km": 5.3,
+    "rating": 5,
+    "acceptance_rate": 0.82,
+    "total_trips": 274,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0714",
+    "distance_km": 5.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.92,
+    "total_trips": 137,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0715",
+    "distance_km": 6.7,
+    "rating": 4.2,
+    "acceptance_rate": 0.62,
+    "total_trips": 664,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0716",
+    "distance_km": 4.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.68,
+    "total_trips": 30,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0717",
+    "distance_km": 5.4,
+    "rating": 5,
+    "acceptance_rate": 0.63,
+    "total_trips": 177,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0718",
+    "distance_km": 4.7,
+    "rating": 4.5,
+    "acceptance_rate": 0.94,
+    "total_trips": 704,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0719",
+    "distance_km": 0.5,
+    "rating": 3.8,
+    "acceptance_rate": 0.75,
+    "total_trips": 975,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0720",
+    "distance_km": 8.4,
+    "rating": 3.6,
+    "acceptance_rate": 0.76,
+    "total_trips": 170,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0721",
+    "distance_km": 4.4,
+    "rating": 3.9,
+    "acceptance_rate": 0.83,
+    "total_trips": 43,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0722",
+    "distance_km": 6.1,
+    "rating": 4,
+    "acceptance_rate": 0.72,
+    "total_trips": 473,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0723",
+    "distance_km": 3.9,
+    "rating": 4.2,
+    "acceptance_rate": 1,
+    "total_trips": 978,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0724",
+    "distance_km": 8,
+    "rating": 3.2,
+    "acceptance_rate": 0.61,
+    "total_trips": 257,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0725",
+    "distance_km": 6.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.96,
+    "total_trips": 227,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0726",
+    "distance_km": 4.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.74,
+    "total_trips": 552,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0727",
+    "distance_km": 8.9,
+    "rating": 4,
+    "acceptance_rate": 0.98,
+    "total_trips": 347,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0728",
+    "distance_km": 4.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.72,
+    "total_trips": 765,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0729",
+    "distance_km": 0.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.78,
+    "total_trips": 631,
+    "driver_score": 97
+  },
+  {
+    "driver_id": "D0730",
+    "distance_km": 8.3,
+    "rating": 3.5,
+    "acceptance_rate": 0.92,
+    "total_trips": 90,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0731",
+    "distance_km": 0.7,
+    "rating": 5,
+    "acceptance_rate": 0.95,
+    "total_trips": 397,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0732",
+    "distance_km": 9.7,
+    "rating": 3,
+    "acceptance_rate": 0.7,
+    "total_trips": 982,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0733",
+    "distance_km": 6.7,
+    "rating": 4.1,
+    "acceptance_rate": 1,
+    "total_trips": 20,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0734",
+    "distance_km": 0.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.54,
+    "total_trips": 573,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0735",
+    "distance_km": 9.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.5,
+    "total_trips": 280,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0736",
+    "distance_km": 2.5,
+    "rating": 5,
+    "acceptance_rate": 0.68,
+    "total_trips": 198,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0737",
+    "distance_km": 4.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.97,
+    "total_trips": 217,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0738",
+    "distance_km": 1.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.59,
+    "total_trips": 889,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0739",
+    "distance_km": 6.4,
+    "rating": 4,
+    "acceptance_rate": 0.79,
+    "total_trips": 29,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0740",
+    "distance_km": 3.8,
+    "rating": 3.5,
+    "acceptance_rate": 0.74,
+    "total_trips": 115,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0741",
+    "distance_km": 1.9,
+    "rating": 3,
+    "acceptance_rate": 0.51,
+    "total_trips": 707,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0742",
+    "distance_km": 5.5,
+    "rating": 3.2,
+    "acceptance_rate": 0.63,
+    "total_trips": 309,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0743",
+    "distance_km": 3.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.61,
+    "total_trips": 557,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0744",
+    "distance_km": 9.3,
+    "rating": 4.6,
+    "acceptance_rate": 0.94,
+    "total_trips": 901,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0745",
+    "distance_km": 8.1,
+    "rating": 3.8,
+    "acceptance_rate": 0.6,
+    "total_trips": 813,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0746",
+    "distance_km": 6.6,
+    "rating": 3.4,
+    "acceptance_rate": 0.5,
+    "total_trips": 923,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0747",
+    "distance_km": 4.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.51,
+    "total_trips": 774,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0748",
+    "distance_km": 2.3,
+    "rating": 4.4,
+    "acceptance_rate": 0.8,
+    "total_trips": 652,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0749",
+    "distance_km": 1.6,
+    "rating": 4.7,
+    "acceptance_rate": 0.54,
+    "total_trips": 36,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0750",
+    "distance_km": 8.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.53,
+    "total_trips": 873,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0751",
+    "distance_km": 6,
+    "rating": 4,
+    "acceptance_rate": 0.88,
+    "total_trips": 33,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0752",
+    "distance_km": 7.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.59,
+    "total_trips": 257,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0753",
+    "distance_km": 1.9,
+    "rating": 3.4,
+    "acceptance_rate": 0.51,
+    "total_trips": 435,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0754",
+    "distance_km": 9.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.57,
+    "total_trips": 414,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0755",
+    "distance_km": 0.1,
+    "rating": 3.1,
+    "acceptance_rate": 0.78,
+    "total_trips": 507,
+    "driver_score": 92
+  },
+  {
+    "driver_id": "D0756",
+    "distance_km": 8.6,
+    "rating": 3.3,
+    "acceptance_rate": 0.57,
+    "total_trips": 233,
+    "driver_score": 49
+  },
+  {
+    "driver_id": "D0757",
+    "distance_km": 1.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.58,
+    "total_trips": 627,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0758",
+    "distance_km": 0.6,
+    "rating": 4.3,
+    "acceptance_rate": 0.82,
+    "total_trips": 694,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0759",
+    "distance_km": 6.5,
+    "rating": 4.7,
+    "acceptance_rate": 1,
+    "total_trips": 642,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0760",
+    "distance_km": 0.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.92,
+    "total_trips": 795,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0761",
+    "distance_km": 9.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.66,
+    "total_trips": 354,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0762",
+    "distance_km": 3.3,
+    "rating": 3,
+    "acceptance_rate": 0.68,
+    "total_trips": 812,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0763",
+    "distance_km": 7.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.74,
+    "total_trips": 784,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0764",
+    "distance_km": 3.9,
+    "rating": 3,
+    "acceptance_rate": 0.97,
+    "total_trips": 34,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0765",
+    "distance_km": 8.1,
+    "rating": 3.4,
+    "acceptance_rate": 0.68,
+    "total_trips": 501,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0766",
+    "distance_km": 5.2,
+    "rating": 4.5,
+    "acceptance_rate": 0.8,
+    "total_trips": 593,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0767",
+    "distance_km": 1,
+    "rating": 3.5,
+    "acceptance_rate": 0.56,
+    "total_trips": 16,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0768",
+    "distance_km": 3,
+    "rating": 3.9,
+    "acceptance_rate": 0.79,
+    "total_trips": 539,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0769",
+    "distance_km": 6.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.85,
+    "total_trips": 54,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0770",
+    "distance_km": 3.9,
+    "rating": 4.7,
+    "acceptance_rate": 0.96,
+    "total_trips": 720,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0771",
+    "distance_km": 2.8,
+    "rating": 4.7,
+    "acceptance_rate": 0.54,
+    "total_trips": 430,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0772",
+    "distance_km": 9.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.58,
+    "total_trips": 640,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0773",
+    "distance_km": 9.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.72,
+    "total_trips": 956,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0774",
+    "distance_km": 4.2,
+    "rating": 4.3,
+    "acceptance_rate": 0.86,
+    "total_trips": 774,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0775",
+    "distance_km": 7.7,
+    "rating": 4.5,
+    "acceptance_rate": 0.97,
+    "total_trips": 398,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0776",
+    "distance_km": 1.3,
+    "rating": 4.5,
+    "acceptance_rate": 0.66,
+    "total_trips": 319,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0777",
+    "distance_km": 9.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.98,
+    "total_trips": 917,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0778",
+    "distance_km": 9.5,
+    "rating": 3.8,
+    "acceptance_rate": 0.79,
+    "total_trips": 528,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0779",
+    "distance_km": 8.3,
+    "rating": 3.4,
+    "acceptance_rate": 0.8,
+    "total_trips": 804,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0780",
+    "distance_km": 6,
+    "rating": 3.5,
+    "acceptance_rate": 0.83,
+    "total_trips": 906,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0781",
+    "distance_km": 5.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.87,
+    "total_trips": 350,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0782",
+    "distance_km": 0.5,
+    "rating": 3.5,
+    "acceptance_rate": 0.72,
+    "total_trips": 605,
+    "driver_score": 95
+  },
+  {
+    "driver_id": "D0783",
+    "distance_km": 6.3,
+    "rating": 4.4,
+    "acceptance_rate": 0.98,
+    "total_trips": 639,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0784",
+    "distance_km": 4.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.51,
+    "total_trips": 770,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0785",
+    "distance_km": 1.8,
+    "rating": 3,
+    "acceptance_rate": 0.89,
+    "total_trips": 577,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0786",
+    "distance_km": 0.8,
+    "rating": 3.6,
+    "acceptance_rate": 1,
+    "total_trips": 973,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0787",
+    "distance_km": 3.8,
+    "rating": 4.5,
+    "acceptance_rate": 0.87,
+    "total_trips": 301,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0788",
+    "distance_km": 2,
+    "rating": 3.2,
+    "acceptance_rate": 0.84,
+    "total_trips": 276,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0789",
+    "distance_km": 3.6,
+    "rating": 4.5,
+    "acceptance_rate": 0.77,
+    "total_trips": 858,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0790",
+    "distance_km": 6.2,
+    "rating": 3.7,
+    "acceptance_rate": 0.55,
+    "total_trips": 191,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0791",
+    "distance_km": 2.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.77,
+    "total_trips": 215,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0792",
+    "distance_km": 0.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.64,
+    "total_trips": 932,
+    "driver_score": 96
+  },
+  {
+    "driver_id": "D0793",
+    "distance_km": 0.7,
+    "rating": 4.3,
+    "acceptance_rate": 0.79,
+    "total_trips": 978,
+    "driver_score": 97
+  },
+  {
+    "driver_id": "D0794",
+    "distance_km": 5.7,
+    "rating": 3.7,
+    "acceptance_rate": 0.61,
+    "total_trips": 381,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0795",
+    "distance_km": 4.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.54,
+    "total_trips": 650,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0796",
+    "distance_km": 6,
+    "rating": 4,
+    "acceptance_rate": 0.77,
+    "total_trips": 389,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0797",
+    "distance_km": 2.4,
+    "rating": 4.5,
+    "acceptance_rate": 0.55,
+    "total_trips": 632,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0798",
+    "distance_km": 8.7,
+    "rating": 3.9,
+    "acceptance_rate": 0.97,
+    "total_trips": 200,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0799",
+    "distance_km": 2.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.53,
+    "total_trips": 64,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0800",
+    "distance_km": 5.2,
+    "rating": 4.2,
+    "acceptance_rate": 0.68,
+    "total_trips": 651,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0801",
+    "distance_km": 2.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.78,
+    "total_trips": 682,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0802",
+    "distance_km": 3.8,
+    "rating": 3.5,
+    "acceptance_rate": 0.51,
+    "total_trips": 953,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0803",
+    "distance_km": 8.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.97,
+    "total_trips": 888,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0804",
+    "distance_km": 3.8,
+    "rating": 4.9,
+    "acceptance_rate": 0.64,
+    "total_trips": 710,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0805",
+    "distance_km": 6.5,
+    "rating": 4.4,
+    "acceptance_rate": 0.84,
+    "total_trips": 950,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0806",
+    "distance_km": 8.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.57,
+    "total_trips": 710,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0807",
+    "distance_km": 0.8,
+    "rating": 4.4,
+    "acceptance_rate": 0.68,
+    "total_trips": 463,
+    "driver_score": 87
+  },
+  {
+    "driver_id": "D0808",
+    "distance_km": 5.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.66,
+    "total_trips": 1,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0809",
+    "distance_km": 2.1,
+    "rating": 4,
+    "acceptance_rate": 0.9,
+    "total_trips": 824,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0810",
+    "distance_km": 5.8,
+    "rating": 3.6,
+    "acceptance_rate": 0.95,
+    "total_trips": 965,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0811",
+    "distance_km": 0.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.97,
+    "total_trips": 452,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0812",
+    "distance_km": 9.1,
+    "rating": 4.9,
+    "acceptance_rate": 0.84,
+    "total_trips": 354,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0813",
+    "distance_km": 7.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.77,
+    "total_trips": 256,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0814",
+    "distance_km": 8.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.64,
+    "total_trips": 40,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0815",
+    "distance_km": 8.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.93,
+    "total_trips": 556,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0816",
+    "distance_km": 3.6,
+    "rating": 3.5,
+    "acceptance_rate": 0.85,
+    "total_trips": 219,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0817",
+    "distance_km": 5.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.65,
+    "total_trips": 87,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0818",
+    "distance_km": 7.2,
+    "rating": 3.2,
+    "acceptance_rate": 0.79,
+    "total_trips": 530,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0819",
+    "distance_km": 4.9,
+    "rating": 3.1,
+    "acceptance_rate": 0.63,
+    "total_trips": 520,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0820",
+    "distance_km": 5.8,
+    "rating": 3.5,
+    "acceptance_rate": 0.73,
+    "total_trips": 87,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0821",
+    "distance_km": 1.4,
+    "rating": 4.1,
+    "acceptance_rate": 0.86,
+    "total_trips": 183,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0822",
+    "distance_km": 6,
+    "rating": 4.7,
+    "acceptance_rate": 0.63,
+    "total_trips": 590,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0823",
+    "distance_km": 3.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.96,
+    "total_trips": 968,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0824",
+    "distance_km": 2.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.54,
+    "total_trips": 854,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0825",
+    "distance_km": 1.5,
+    "rating": 4.9,
+    "acceptance_rate": 0.55,
+    "total_trips": 244,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0826",
+    "distance_km": 3.4,
+    "rating": 3.4,
+    "acceptance_rate": 0.59,
+    "total_trips": 988,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0827",
+    "distance_km": 5.4,
+    "rating": 5,
+    "acceptance_rate": 0.99,
+    "total_trips": 765,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0828",
+    "distance_km": 6.6,
+    "rating": 4.9,
+    "acceptance_rate": 0.65,
+    "total_trips": 165,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0829",
+    "distance_km": 8.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.61,
+    "total_trips": 556,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0830",
+    "distance_km": 4,
+    "rating": 4.9,
+    "acceptance_rate": 0.92,
+    "total_trips": 539,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0831",
+    "distance_km": 4.8,
+    "rating": 3.4,
+    "acceptance_rate": 0.63,
+    "total_trips": 501,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0832",
+    "distance_km": 9.2,
+    "rating": 5,
+    "acceptance_rate": 0.56,
+    "total_trips": 578,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0833",
+    "distance_km": 3.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.79,
+    "total_trips": 71,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0834",
+    "distance_km": 9.9,
+    "rating": 4.4,
+    "acceptance_rate": 0.72,
+    "total_trips": 810,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0835",
+    "distance_km": 5.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.54,
+    "total_trips": 383,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0836",
+    "distance_km": 6.9,
+    "rating": 3.3,
+    "acceptance_rate": 0.64,
+    "total_trips": 517,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0837",
+    "distance_km": 5.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.61,
+    "total_trips": 984,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0838",
+    "distance_km": 7.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.7,
+    "total_trips": 167,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0839",
+    "distance_km": 1.3,
+    "rating": 4.2,
+    "acceptance_rate": 0.54,
+    "total_trips": 244,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0840",
+    "distance_km": 0.1,
+    "rating": 3.3,
+    "acceptance_rate": 0.58,
+    "total_trips": 994,
+    "driver_score": 95
+  },
+  {
+    "driver_id": "D0841",
+    "distance_km": 5.2,
+    "rating": 4.5,
+    "acceptance_rate": 0.75,
+    "total_trips": 404,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0842",
+    "distance_km": 2,
+    "rating": 3.4,
+    "acceptance_rate": 0.94,
+    "total_trips": 324,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0843",
+    "distance_km": 0.7,
+    "rating": 3.7,
+    "acceptance_rate": 0.55,
+    "total_trips": 694,
+    "driver_score": 84
+  },
+  {
+    "driver_id": "D0844",
+    "distance_km": 0.4,
+    "rating": 3.5,
+    "acceptance_rate": 0.57,
+    "total_trips": 72,
+    "driver_score": 87
+  },
+  {
+    "driver_id": "D0845",
+    "distance_km": 9.9,
+    "rating": 4.6,
+    "acceptance_rate": 0.88,
+    "total_trips": 521,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0846",
+    "distance_km": 2,
+    "rating": 5,
+    "acceptance_rate": 0.67,
+    "total_trips": 882,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0847",
+    "distance_km": 1.4,
+    "rating": 3.8,
+    "acceptance_rate": 0.85,
+    "total_trips": 677,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0848",
+    "distance_km": 1.5,
+    "rating": 4.1,
+    "acceptance_rate": 0.85,
+    "total_trips": 964,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0849",
+    "distance_km": 3.1,
+    "rating": 3.2,
+    "acceptance_rate": 0.67,
+    "total_trips": 744,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0850",
+    "distance_km": 10,
+    "rating": 3.8,
+    "acceptance_rate": 0.94,
+    "total_trips": 385,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0851",
+    "distance_km": 4,
+    "rating": 3.7,
+    "acceptance_rate": 0.7,
+    "total_trips": 422,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0852",
+    "distance_km": 4.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.58,
+    "total_trips": 866,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0853",
+    "distance_km": 4.9,
+    "rating": 3.7,
+    "acceptance_rate": 0.52,
+    "total_trips": 361,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0854",
+    "distance_km": 7.2,
+    "rating": 4.9,
+    "acceptance_rate": 0.91,
+    "total_trips": 41,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0855",
+    "distance_km": 3.4,
+    "rating": 4.4,
+    "acceptance_rate": 0.78,
+    "total_trips": 357,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0856",
+    "distance_km": 6.6,
+    "rating": 4.4,
+    "acceptance_rate": 0.94,
+    "total_trips": 884,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0857",
+    "distance_km": 5.6,
+    "rating": 3.8,
+    "acceptance_rate": 0.81,
+    "total_trips": 447,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0858",
+    "distance_km": 5.9,
+    "rating": 4.5,
+    "acceptance_rate": 0.71,
+    "total_trips": 142,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0859",
+    "distance_km": 0,
+    "rating": 3.7,
+    "acceptance_rate": 0.6,
+    "total_trips": 986,
+    "driver_score": 99
+  },
+  {
+    "driver_id": "D0860",
+    "distance_km": 3.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.7,
+    "total_trips": 860,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0861",
+    "distance_km": 0.5,
+    "rating": 3.6,
+    "acceptance_rate": 0.57,
+    "total_trips": 353,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0862",
+    "distance_km": 0.3,
+    "rating": 3.2,
+    "acceptance_rate": 0.73,
+    "total_trips": 533,
+    "driver_score": 92
+  },
+  {
+    "driver_id": "D0863",
+    "distance_km": 3.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.99,
+    "total_trips": 628,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0864",
+    "distance_km": 7.7,
+    "rating": 4.4,
+    "acceptance_rate": 1,
+    "total_trips": 600,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0865",
+    "distance_km": 3.4,
+    "rating": 4.1,
+    "acceptance_rate": 0.97,
+    "total_trips": 484,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0866",
+    "distance_km": 8.9,
+    "rating": 5,
+    "acceptance_rate": 0.63,
+    "total_trips": 721,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0867",
+    "distance_km": 9,
+    "rating": 4.3,
+    "acceptance_rate": 0.66,
+    "total_trips": 931,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0868",
+    "distance_km": 2,
+    "rating": 4.7,
+    "acceptance_rate": 0.74,
+    "total_trips": 585,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0869",
+    "distance_km": 5,
+    "rating": 3.7,
+    "acceptance_rate": 0.99,
+    "total_trips": 566,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0870",
+    "distance_km": 5.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.84,
+    "total_trips": 260,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0871",
+    "distance_km": 6.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.69,
+    "total_trips": 518,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0872",
+    "distance_km": 4,
+    "rating": 3.7,
+    "acceptance_rate": 0.93,
+    "total_trips": 472,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0873",
+    "distance_km": 0.9,
+    "rating": 3.2,
+    "acceptance_rate": 0.65,
+    "total_trips": 748,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0874",
+    "distance_km": 0.6,
+    "rating": 3.7,
+    "acceptance_rate": 0.53,
+    "total_trips": 521,
+    "driver_score": 86
+  },
+  {
+    "driver_id": "D0875",
+    "distance_km": 2.6,
+    "rating": 3,
+    "acceptance_rate": 0.54,
+    "total_trips": 111,
+    "driver_score": 50
+  },
+  {
+    "driver_id": "D0876",
+    "distance_km": 2.8,
+    "rating": 3.2,
+    "acceptance_rate": 0.76,
+    "total_trips": 825,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0877",
+    "distance_km": 8.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.98,
+    "total_trips": 445,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0878",
+    "distance_km": 2,
+    "rating": 3.7,
+    "acceptance_rate": 0.81,
+    "total_trips": 703,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0879",
+    "distance_km": 2.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.96,
+    "total_trips": 78,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0880",
+    "distance_km": 2.6,
+    "rating": 3.6,
+    "acceptance_rate": 0.83,
+    "total_trips": 940,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0881",
+    "distance_km": 3.9,
+    "rating": 4.8,
+    "acceptance_rate": 0.93,
+    "total_trips": 934,
+    "driver_score": 81
+  },
+  {
+    "driver_id": "D0882",
+    "distance_km": 9.7,
+    "rating": 3.7,
+    "acceptance_rate": 0.98,
+    "total_trips": 865,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0883",
+    "distance_km": 4.6,
+    "rating": 4,
+    "acceptance_rate": 0.6,
+    "total_trips": 214,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0884",
+    "distance_km": 5.7,
+    "rating": 4.7,
+    "acceptance_rate": 0.87,
+    "total_trips": 705,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0885",
+    "distance_km": 3.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.55,
+    "total_trips": 781,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0886",
+    "distance_km": 4.2,
+    "rating": 4.6,
+    "acceptance_rate": 0.85,
+    "total_trips": 314,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0887",
+    "distance_km": 8.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.73,
+    "total_trips": 782,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0888",
+    "distance_km": 5.2,
+    "rating": 4.4,
+    "acceptance_rate": 0.65,
+    "total_trips": 83,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0889",
+    "distance_km": 1.7,
+    "rating": 3.3,
+    "acceptance_rate": 0.89,
+    "total_trips": 294,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0890",
+    "distance_km": 9,
+    "rating": 4.7,
+    "acceptance_rate": 0.57,
+    "total_trips": 516,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0891",
+    "distance_km": 8.8,
+    "rating": 4.8,
+    "acceptance_rate": 0.8,
+    "total_trips": 144,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0892",
+    "distance_km": 1.4,
+    "rating": 3.1,
+    "acceptance_rate": 0.91,
+    "total_trips": 729,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0893",
+    "distance_km": 1.3,
+    "rating": 3.9,
+    "acceptance_rate": 0.88,
+    "total_trips": 138,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0894",
+    "distance_km": 0.7,
+    "rating": 3.2,
+    "acceptance_rate": 0.5,
+    "total_trips": 521,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0895",
+    "distance_km": 0.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.94,
+    "total_trips": 553,
+    "driver_score": 91
+  },
+  {
+    "driver_id": "D0896",
+    "distance_km": 2.8,
+    "rating": 3.6,
+    "acceptance_rate": 0.98,
+    "total_trips": 241,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0897",
+    "distance_km": 1.7,
+    "rating": 4.6,
+    "acceptance_rate": 0.73,
+    "total_trips": 136,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0898",
+    "distance_km": 7.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.57,
+    "total_trips": 986,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0899",
+    "distance_km": 7,
+    "rating": 3.1,
+    "acceptance_rate": 0.98,
+    "total_trips": 930,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0900",
+    "distance_km": 5.5,
+    "rating": 3,
+    "acceptance_rate": 0.89,
+    "total_trips": 611,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0901",
+    "distance_km": 3.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.51,
+    "total_trips": 680,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0902",
+    "distance_km": 6.1,
+    "rating": 4.8,
+    "acceptance_rate": 0.69,
+    "total_trips": 385,
+    "driver_score": 69
+  },
+  {
+    "driver_id": "D0903",
+    "distance_km": 6,
+    "rating": 3.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 206,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0904",
+    "distance_km": 5.7,
+    "rating": 3.8,
+    "acceptance_rate": 1,
+    "total_trips": 555,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0905",
+    "distance_km": 3.7,
+    "rating": 4.4,
+    "acceptance_rate": 0.65,
+    "total_trips": 587,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0906",
+    "distance_km": 7.3,
+    "rating": 3.6,
+    "acceptance_rate": 0.53,
+    "total_trips": 687,
+    "driver_score": 56
+  },
+  {
+    "driver_id": "D0907",
+    "distance_km": 2.9,
+    "rating": 4.5,
+    "acceptance_rate": 0.95,
+    "total_trips": 372,
+    "driver_score": 75
+  },
+  {
+    "driver_id": "D0908",
+    "distance_km": 5,
+    "rating": 4.2,
+    "acceptance_rate": 0.97,
+    "total_trips": 806,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0909",
+    "distance_km": 5.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.89,
+    "total_trips": 130,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0910",
+    "distance_km": 6.6,
+    "rating": 3.6,
+    "acceptance_rate": 0.94,
+    "total_trips": 635,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0911",
+    "distance_km": 6.2,
+    "rating": 4.7,
+    "acceptance_rate": 0.68,
+    "total_trips": 405,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0912",
+    "distance_km": 3.6,
+    "rating": 4.4,
+    "acceptance_rate": 0.86,
+    "total_trips": 568,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0913",
+    "distance_km": 2.7,
+    "rating": 4.2,
+    "acceptance_rate": 0.73,
+    "total_trips": 889,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0914",
+    "distance_km": 0.3,
+    "rating": 3.7,
+    "acceptance_rate": 0.61,
+    "total_trips": 355,
+    "driver_score": 93
+  },
+  {
+    "driver_id": "D0915",
+    "distance_km": 3.6,
+    "rating": 4.8,
+    "acceptance_rate": 0.5,
+    "total_trips": 241,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0916",
+    "distance_km": 4.9,
+    "rating": 3.5,
+    "acceptance_rate": 0.79,
+    "total_trips": 660,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0917",
+    "distance_km": 8.3,
+    "rating": 4.9,
+    "acceptance_rate": 0.94,
+    "total_trips": 305,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0918",
+    "distance_km": 6,
+    "rating": 4.1,
+    "acceptance_rate": 0.91,
+    "total_trips": 916,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0919",
+    "distance_km": 2.5,
+    "rating": 3.1,
+    "acceptance_rate": 0.75,
+    "total_trips": 119,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0920",
+    "distance_km": 2,
+    "rating": 4.9,
+    "acceptance_rate": 0.96,
+    "total_trips": 456,
+    "driver_score": 83
+  },
+  {
+    "driver_id": "D0921",
+    "distance_km": 3.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.7,
+    "total_trips": 726,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0922",
+    "distance_km": 0.4,
+    "rating": 3.2,
+    "acceptance_rate": 0.87,
+    "total_trips": 914,
+    "driver_score": 99
+  },
+  {
+    "driver_id": "D0923",
+    "distance_km": 8.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.69,
+    "total_trips": 789,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0924",
+    "distance_km": 2.6,
+    "rating": 4.8,
+    "acceptance_rate": 0.62,
+    "total_trips": 628,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0925",
+    "distance_km": 7.5,
+    "rating": 4.3,
+    "acceptance_rate": 0.72,
+    "total_trips": 598,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0926",
+    "distance_km": 1.3,
+    "rating": 4.7,
+    "acceptance_rate": 0.84,
+    "total_trips": 990,
+    "driver_score": 89
+  },
+  {
+    "driver_id": "D0927",
+    "distance_km": 8.6,
+    "rating": 4.5,
+    "acceptance_rate": 0.71,
+    "total_trips": 50,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0928",
+    "distance_km": 5.6,
+    "rating": 4.8,
+    "acceptance_rate": 0.51,
+    "total_trips": 501,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0929",
+    "distance_km": 7.2,
+    "rating": 3.9,
+    "acceptance_rate": 0.78,
+    "total_trips": 210,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0930",
+    "distance_km": 2.6,
+    "rating": 4.3,
+    "acceptance_rate": 0.86,
+    "total_trips": 574,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0931",
+    "distance_km": 7.2,
+    "rating": 3.1,
+    "acceptance_rate": 0.95,
+    "total_trips": 946,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0932",
+    "distance_km": 4.7,
+    "rating": 3.8,
+    "acceptance_rate": 0.52,
+    "total_trips": 240,
+    "driver_score": 55
+  },
+  {
+    "driver_id": "D0933",
+    "distance_km": 5.3,
+    "rating": 4.6,
+    "acceptance_rate": 1,
+    "total_trips": 413,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0934",
+    "distance_km": 2.1,
+    "rating": 4.7,
+    "acceptance_rate": 0.52,
+    "total_trips": 739,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0935",
+    "distance_km": 9.1,
+    "rating": 3.3,
+    "acceptance_rate": 0.86,
+    "total_trips": 927,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0936",
+    "distance_km": 4.9,
+    "rating": 3.2,
+    "acceptance_rate": 0.94,
+    "total_trips": 926,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0937",
+    "distance_km": 0.1,
+    "rating": 4.5,
+    "acceptance_rate": 0.51,
+    "total_trips": 542,
+    "driver_score": 100
+  },
+  {
+    "driver_id": "D0938",
+    "distance_km": 7.4,
+    "rating": 3.1,
+    "acceptance_rate": 0.82,
+    "total_trips": 866,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0939",
+    "distance_km": 8.6,
+    "rating": 3.2,
+    "acceptance_rate": 0.71,
+    "total_trips": 951,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0940",
+    "distance_km": 7.3,
+    "rating": 3.8,
+    "acceptance_rate": 0.52,
+    "total_trips": 595,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0941",
+    "distance_km": 0.8,
+    "rating": 4.1,
+    "acceptance_rate": 0.62,
+    "total_trips": 730,
+    "driver_score": 86
+  },
+  {
+    "driver_id": "D0942",
+    "distance_km": 3.3,
+    "rating": 4.5,
+    "acceptance_rate": 0.71,
+    "total_trips": 577,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0943",
+    "distance_km": 2.4,
+    "rating": 4.6,
+    "acceptance_rate": 0.58,
+    "total_trips": 62,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0944",
+    "distance_km": 7.2,
+    "rating": 3.4,
+    "acceptance_rate": 0.98,
+    "total_trips": 223,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0945",
+    "distance_km": 8.1,
+    "rating": 3.4,
+    "acceptance_rate": 0.69,
+    "total_trips": 384,
+    "driver_score": 54
+  },
+  {
+    "driver_id": "D0946",
+    "distance_km": 3,
+    "rating": 4.7,
+    "acceptance_rate": 0.92,
+    "total_trips": 635,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0947",
+    "distance_km": 1,
+    "rating": 4.4,
+    "acceptance_rate": 0.56,
+    "total_trips": 914,
+    "driver_score": 84
+  },
+  {
+    "driver_id": "D0948",
+    "distance_km": 1.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.57,
+    "total_trips": 659,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0949",
+    "distance_km": 8.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.88,
+    "total_trips": 795,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0950",
+    "distance_km": 6.8,
+    "rating": 4.9,
+    "acceptance_rate": 0.94,
+    "total_trips": 318,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0951",
+    "distance_km": 9.4,
+    "rating": 3.4,
+    "acceptance_rate": 0.57,
+    "total_trips": 528,
+    "driver_score": 53
+  },
+  {
+    "driver_id": "D0952",
+    "distance_km": 3.3,
+    "rating": 3.6,
+    "acceptance_rate": 0.75,
+    "total_trips": 836,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0953",
+    "distance_km": 9,
+    "rating": 4.3,
+    "acceptance_rate": 0.52,
+    "total_trips": 557,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0954",
+    "distance_km": 3.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.94,
+    "total_trips": 471,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0955",
+    "distance_km": 6.9,
+    "rating": 4.9,
+    "acceptance_rate": 0.92,
+    "total_trips": 760,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0956",
+    "distance_km": 2.1,
+    "rating": 3.5,
+    "acceptance_rate": 0.99,
+    "total_trips": 299,
+    "driver_score": 67
+  },
+  {
+    "driver_id": "D0957",
+    "distance_km": 4.5,
+    "rating": 3.2,
+    "acceptance_rate": 0.62,
+    "total_trips": 770,
+    "driver_score": 57
+  },
+  {
+    "driver_id": "D0958",
+    "distance_km": 9,
+    "rating": 4.2,
+    "acceptance_rate": 0.77,
+    "total_trips": 126,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0959",
+    "distance_km": 7.6,
+    "rating": 3.1,
+    "acceptance_rate": 0.51,
+    "total_trips": 414,
+    "driver_score": 48
+  },
+  {
+    "driver_id": "D0960",
+    "distance_km": 5.6,
+    "rating": 3.5,
+    "acceptance_rate": 0.53,
+    "total_trips": 136,
+    "driver_score": 51
+  },
+  {
+    "driver_id": "D0961",
+    "distance_km": 4.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.6,
+    "total_trips": 222,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0962",
+    "distance_km": 2.7,
+    "rating": 3.1,
+    "acceptance_rate": 0.97,
+    "total_trips": 647,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0963",
+    "distance_km": 1.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.73,
+    "total_trips": 878,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0964",
+    "distance_km": 7.4,
+    "rating": 3.3,
+    "acceptance_rate": 0.97,
+    "total_trips": 548,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0965",
+    "distance_km": 3.1,
+    "rating": 4.6,
+    "acceptance_rate": 0.54,
+    "total_trips": 427,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0966",
+    "distance_km": 5.5,
+    "rating": 4.2,
+    "acceptance_rate": 0.52,
+    "total_trips": 222,
+    "driver_score": 58
+  },
+  {
+    "driver_id": "D0967",
+    "distance_km": 1.1,
+    "rating": 4.9,
+    "acceptance_rate": 0.64,
+    "total_trips": 248,
+    "driver_score": 82
+  },
+  {
+    "driver_id": "D0968",
+    "distance_km": 3.9,
+    "rating": 4.3,
+    "acceptance_rate": 0.71,
+    "total_trips": 8,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0969",
+    "distance_km": 1.1,
+    "rating": 3.9,
+    "acceptance_rate": 0.95,
+    "total_trips": 219,
+    "driver_score": 78
+  },
+  {
+    "driver_id": "D0970",
+    "distance_km": 1.1,
+    "rating": 4.1,
+    "acceptance_rate": 0.69,
+    "total_trips": 606,
+    "driver_score": 79
+  },
+  {
+    "driver_id": "D0971",
+    "distance_km": 5.1,
+    "rating": 3.4,
+    "acceptance_rate": 0.59,
+    "total_trips": 198,
+    "driver_score": 52
+  },
+  {
+    "driver_id": "D0972",
+    "distance_km": 5.2,
+    "rating": 3.5,
+    "acceptance_rate": 0.88,
+    "total_trips": 953,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0973",
+    "distance_km": 2.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.92,
+    "total_trips": 599,
+    "driver_score": 71
+  },
+  {
+    "driver_id": "D0974",
+    "distance_km": 0.5,
+    "rating": 3.7,
+    "acceptance_rate": 0.95,
+    "total_trips": 269,
+    "driver_score": 99
+  },
+  {
+    "driver_id": "D0975",
+    "distance_km": 7.9,
+    "rating": 4.6,
+    "acceptance_rate": 0.82,
+    "total_trips": 786,
+    "driver_score": 73
+  },
+  {
+    "driver_id": "D0976",
+    "distance_km": 9.4,
+    "rating": 3.6,
+    "acceptance_rate": 0.92,
+    "total_trips": 496,
+    "driver_score": 61
+  },
+  {
+    "driver_id": "D0977",
+    "distance_km": 5.8,
+    "rating": 4.2,
+    "acceptance_rate": 0.91,
+    "total_trips": 828,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0978",
+    "distance_km": 2.9,
+    "rating": 3.9,
+    "acceptance_rate": 0.52,
+    "total_trips": 626,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0979",
+    "distance_km": 3.6,
+    "rating": 4.2,
+    "acceptance_rate": 0.98,
+    "total_trips": 836,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0980",
+    "distance_km": 4.3,
+    "rating": 4.3,
+    "acceptance_rate": 0.87,
+    "total_trips": 450,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0981",
+    "distance_km": 5.8,
+    "rating": 3.7,
+    "acceptance_rate": 0.93,
+    "total_trips": 743,
+    "driver_score": 66
+  },
+  {
+    "driver_id": "D0982",
+    "distance_km": 1.2,
+    "rating": 3.8,
+    "acceptance_rate": 0.66,
+    "total_trips": 952,
+    "driver_score": 77
+  },
+  {
+    "driver_id": "D0983",
+    "distance_km": 3.7,
+    "rating": 4.1,
+    "acceptance_rate": 0.88,
+    "total_trips": 792,
+    "driver_score": 72
+  },
+  {
+    "driver_id": "D0984",
+    "distance_km": 3,
+    "rating": 4.3,
+    "acceptance_rate": 0.51,
+    "total_trips": 990,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0985",
+    "distance_km": 7.6,
+    "rating": 4.1,
+    "acceptance_rate": 0.8,
+    "total_trips": 191,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0986",
+    "distance_km": 3.1,
+    "rating": 3.7,
+    "acceptance_rate": 0.61,
+    "total_trips": 662,
+    "driver_score": 62
+  },
+  {
+    "driver_id": "D0987",
+    "distance_km": 7.9,
+    "rating": 4.1,
+    "acceptance_rate": 0.9,
+    "total_trips": 336,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0988",
+    "distance_km": 5.5,
+    "rating": 4.6,
+    "acceptance_rate": 0.69,
+    "total_trips": 624,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0989",
+    "distance_km": 0.8,
+    "rating": 3.8,
+    "acceptance_rate": 0.66,
+    "total_trips": 336,
+    "driver_score": 80
+  },
+  {
+    "driver_id": "D0990",
+    "distance_km": 2.7,
+    "rating": 4.8,
+    "acceptance_rate": 0.85,
+    "total_trips": 402,
+    "driver_score": 76
+  },
+  {
+    "driver_id": "D0991",
+    "distance_km": 2.2,
+    "rating": 3.3,
+    "acceptance_rate": 0.7,
+    "total_trips": 772,
+    "driver_score": 64
+  },
+  {
+    "driver_id": "D0992",
+    "distance_km": 1.3,
+    "rating": 3.3,
+    "acceptance_rate": 0.55,
+    "total_trips": 325,
+    "driver_score": 63
+  },
+  {
+    "driver_id": "D0993",
+    "distance_km": 3.4,
+    "rating": 4.4,
+    "acceptance_rate": 0.53,
+    "total_trips": 723,
+    "driver_score": 68
+  },
+  {
+    "driver_id": "D0994",
+    "distance_km": 9.7,
+    "rating": 4.7,
+    "acceptance_rate": 0.99,
+    "total_trips": 505,
+    "driver_score": 74
+  },
+  {
+    "driver_id": "D0995",
+    "distance_km": 9.8,
+    "rating": 3.9,
+    "acceptance_rate": 0.83,
+    "total_trips": 142,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D0996",
+    "distance_km": 2,
+    "rating": 3.9,
+    "acceptance_rate": 0.65,
+    "total_trips": 283,
+    "driver_score": 65
+  },
+  {
+    "driver_id": "D0997",
+    "distance_km": 7.8,
+    "rating": 5,
+    "acceptance_rate": 0.61,
+    "total_trips": 556,
+    "driver_score": 70
+  },
+  {
+    "driver_id": "D0998",
+    "distance_km": 9.5,
+    "rating": 3.9,
+    "acceptance_rate": 0.83,
+    "total_trips": 187,
+    "driver_score": 60
+  },
+  {
+    "driver_id": "D0999",
+    "distance_km": 2,
+    "rating": 3.2,
+    "acceptance_rate": 0.65,
+    "total_trips": 399,
+    "driver_score": 59
+  },
+  {
+    "driver_id": "D1000",
+    "distance_km": 9.5,
+    "rating": 3.2,
+    "acceptance_rate": 0.73,
+    "total_trips": 228,
+    "driver_score": 51
+  }
+]
