@@ -17,8 +17,8 @@ async function bootstrap() {
   Logger.log(`   POST /ai/surge/calculate - Surge Pricing`);
   Logger.log(`   POST /ai/driver/score - Driver Matching`);
   Logger.log(`   POST /ai/fraud/detect - Fraud Detection`);
-  Logger.log(`   POST /ai/mcp/context - MCP Context`);
-  Logger.log(`   POST /ai/agent/decide - AI Agent Decision`);
+  Logger.log(`   POST /ai/data/eta - Save ETA history`);
+  Logger.log(`   POST /ai/retrain - Retrain models`);
 }
 
 bootstrap();

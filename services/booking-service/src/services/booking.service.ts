@@ -19,22 +19,31 @@ export class BookingService {
     private configService: ConfigService,
   ) {}
 
-  // Gọi Pricing Service để lấy giá (có token)
+  // Gọi Pricing Service để lấy giá
   async getPriceFromPricing(createDto: CreateBookingDto, authHeader?: string): Promise<any> {
     try {
       const pricingUrl = this.configService.get('PRICING_SERVICE_URL', 'http://localhost:3008');
       
       this.logger.log(`Calling pricing service at: ${pricingUrl}/api/v1/pricing/calculate`);
       
+      // ✅ KHÔNG gửi distance/duration nếu không có - để Pricing tự tính
+      const requestBody: any = {
+        vehicleType: createDto.vehicleType,
+        pickupLocation: createDto.pickupLocation,
+        dropoffLocation: createDto.dropoffLocation,
+      };
+      
+      // Chỉ thêm distance/duration nếu có giá trị
+      if (createDto.distance && createDto.distance > 0) {
+        requestBody.distance = createDto.distance;
+      }
+      if (createDto.duration && createDto.duration > 0) {
+        requestBody.duration = createDto.duration;
+      }
+      
       const response = await axios.post(
         `${pricingUrl}/api/v1/pricing/calculate`,
-        {
-          vehicleType: createDto.vehicleType,
-          pickupLocation: createDto.pickupLocation,
-          dropoffLocation: createDto.dropoffLocation,
-          distance: createDto.distance,
-          duration: createDto.duration || 0,
-        },
+        requestBody,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -74,8 +83,12 @@ export class BookingService {
     const basePrice = basePrices[createDto.vehicleType] || 20000;
     const perKmPrice = perKmPrices[createDto.vehicleType] || 10000;
     
-    const distancePrice = createDto.distance * perKmPrice;
-    const timePrice = (createDto.duration || 0) * 1000;
+    // Lấy distance và duration, mặc định là 0 nếu không có
+    const distance = createDto.distance || 5;  // Mặc định 5km
+    const duration = createDto.duration || 15; // Mặc định 15 phút
+    
+    const distancePrice = distance * perKmPrice;
+    const timePrice = duration * 1000;
     const total = basePrice + distancePrice + timePrice;
 
     return {
@@ -85,6 +98,8 @@ export class BookingService {
       surgeMultiplier: 1,
       total,
       currency: 'VND',
+      distance: distance,
+      estimatedDuration: duration,
     };
   }
 
@@ -94,6 +109,10 @@ export class BookingService {
     // 1. Gọi Pricing Service để lấy giá (truyền token)
     const estimatedPrice = await this.getPriceFromPricing(createDto, authHeader);
 
+    // Lấy distance và duration từ response của Pricing (hoặc từ DTO)
+    const distance = estimatedPrice?.distance || createDto.distance || 5;
+    const duration = estimatedPrice?.estimatedDuration || createDto.duration || 15;
+
     // 2. Tạo booking trong MongoDB
     const booking = new this.bookingModel({
       customerId,
@@ -102,8 +121,8 @@ export class BookingService {
       waypoints: createDto.waypoints || [],
       vehicleType: createDto.vehicleType,
       paymentMethod: createDto.paymentMethod || 'cash',
-      distance: createDto.distance,
-      duration: createDto.duration,
+      distance: distance,
+      duration: duration,
       status: BookingStatus.PENDING,
       estimatedPrice,
       trackingPath: [],
@@ -123,7 +142,8 @@ export class BookingService {
         dropoffLocation: createDto.dropoffLocation,
         vehicleType: createDto.vehicleType,
         estimatedPrice,
-        distance: createDto.distance,
+        distance: distance,
+        duration: duration,
         timestamp: new Date().toISOString(),
       },
       {

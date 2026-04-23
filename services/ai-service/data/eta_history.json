@@ -1,0 +1,110 @@
+[
+  {
+    "distance_km": 10.86,
+    "traffic_level": 0.65,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 27,
+    "actual_eta": 28,
+    "timestamp": "2026-04-23T20:01:44.514Z"
+  },
+  {
+    "distance_km": 10.86,
+    "traffic_level": 0.65,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 27,
+    "actual_eta": 28,
+    "timestamp": "2026-04-23T20:01:57.934Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:46.959Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.070Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.167Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.275Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.391Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.518Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.626Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.752Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.869Z"
+  },
+  {
+    "distance_km": 10,
+    "traffic_level": 0.7,
+    "hour": 18,
+    "is_peak_hour": true,
+    "predicted_eta": 25,
+    "actual_eta": 50,
+    "timestamp": "2026-04-23T20:18:47.986Z"
+  }
+]

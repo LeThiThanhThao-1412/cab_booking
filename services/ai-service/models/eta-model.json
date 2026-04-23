@@ -1,0 +1,11 @@
+{
+  "baseRatio": 4.6,
+  "trafficWeights": {
+    "low": 0.9,
+    "medium": 0.56,
+    "high": 1.09
+  },
+  "peakHourFactor": 1,
+  "sampleCount": 12,
+  "trainedAt": "2026-04-23T20:24:51.922Z"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "demand_index": 2.5,
+    "supply_index": 0.5,
+    "hour": 18,
+    "is_weekend": false,
+    "predicted_surge": 2.0,
+    "actual_surge": 3.0,
+    "timestamp": "2026-04-24T03:30:00.000Z"
+  },
+  {
+    "demand_index": 1.0,
+    "supply_index": 1.0,
+    "hour": 14,
+    "is_weekend": false,
+    "predicted_surge": 1.0,
+    "actual_surge": 1.0,
+    "timestamp": "2026-04-24T03:31:00.000Z"
+  },
+  {
+    "demand_index": 2.0,
+    "supply_index": 0.5,
+    "hour": 20,
+    "is_weekend": true,
+    "predicted_surge": 1.5,
+    "actual_surge": 2.5,
+    "timestamp": "2026-04-24T03:32:00.000Z"
+  },
+  {
+    "demand_index": 0.5,
+    "supply_index": 1.5,
+    "hour": 6,
+    "is_weekend": false,
+    "predicted_surge": 1.0,
+    "actual_surge": 1.0,
+    "timestamp": "2026-04-24T03:33:00.000Z"
+  },
+  {
+    "demand_index": 2.0,
+    "supply_index": 0.4,
+    "hour": 17,
+    "is_weekend": false,
+    "predicted_surge": 1.8,
+    "actual_surge": 2.8,
+    "timestamp": "2026-04-24T03:34:00.000Z"
+  },
+  {
+    "demand_index": 0.3,
+    "supply_index": 0.2,
+    "hour": 23,
+    "is_weekend": true,
+    "predicted_surge": 1.2,
+    "actual_surge": 1.5,
+    "timestamp": "2026-04-24T03:35:00.000Z"
+  },
+  {
+    "demand_index": 1.2,
+    "supply_index": 0.8,
+    "hour": 12,
+    "is_weekend": false,
+    "predicted_surge": 1.2,
+    "actual_surge": 1.5,
+    "timestamp": "2026-04-24T03:36:00.000Z"
+  },
+  {
+    "demand_index": 2.8,
+    "supply_index": 0.2,
+    "hour": 19,
+    "is_weekend": false,
+    "predicted_surge": 2.5,
+    "actual_surge": 3.0,
+    "timestamp": "2026-04-24T03:37:00.000Z"
+  },
+  {
+    "demand_index": 2.5,
+    "supply_index": 0.4,
+    "hour": 15,
+    "is_weekend": true,
+    "predicted_surge": 2.0,
+    "actual_surge": 2.8,
+    "timestamp": "2026-04-24T03:38:00.000Z"
+  },
+  {
+    "demand_index": 1.0,
+    "supply_index": 1.2,
+    "hour": 10,
+    "is_weekend": false,
+    "predicted_surge": 1.0,
+    "actual_surge": 0.8,
+    "timestamp": "2026-04-24T03:39:00.000Z"
+  }
+]

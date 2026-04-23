@@ -1,16 +1,11 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
-import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class MCPService {
   private readonly logger = new Logger(MCPService.name);
 
-  constructor(
-    private httpService: HttpService,
-    private configService: ConfigService,
-  ) {}
+  constructor(private configService: ConfigService) {}
 
   async getContext(booking_id: string, pickup_location: any, dropoff_location: any, vehicle_type: string): Promise<any> {
     const context = {
@@ -56,16 +51,16 @@ export class MCPService {
     } else if (action_type === 'calculate_price') {
       const basePrice = 20000;
       const distancePrice = (context.distance || 5) * 10000;
-      const surgeAmount = (basePrice + distancePrice) * (context.surge_multiplier - 1);
+      const surgeAmount = (basePrice + distancePrice) * ((context.surge_multiplier || 1) - 1);
       
       decision = {
         base_price: basePrice,
         distance_price: distancePrice,
-        surge_multiplier: context.surge_multiplier,
+        surge_multiplier: context.surge_multiplier || 1,
         surge_amount: surgeAmount,
         total_price: basePrice + distancePrice + surgeAmount
       };
-      reasoning = [`Áp dụng surge x${context.surge_multiplier} do nhu cầu cao`];
+      reasoning = [`Áp dụng surge x${context.surge_multiplier || 1} do nhu cầu cao`];
     }
     
     this.logger.log(`AI Agent decision: ${action_type}`);

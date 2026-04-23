@@ -49,11 +49,12 @@ export class CreateBookingDto {
   @IsEnum(PaymentMethod)
   @IsOptional()
   paymentMethod?: PaymentMethod;
-
+  
+  @IsOptional()
   @IsNumber()
   @Min(0.1)
   @Max(1000)
-  distance: number; // km
+  distance?: number; // km
 
   @IsOptional()
   @IsNumber()
@@ -111,7 +112,7 @@ export class BookingResponseDto {
   status: string;
   vehicleType: string;
   price: any;
-  distance: number;
+  distance?: number;
   duration?: number;
   paymentMethod: string;
   estimatedPrice?: any;

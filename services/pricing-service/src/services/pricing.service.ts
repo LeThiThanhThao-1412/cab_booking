@@ -9,7 +9,7 @@ import { CouponUsage } from '../entities/coupon-usage.entity';
 import { DistanceService } from './distance.service';
 import { AIClientService } from './ai-client.service';
 import { CalculatePriceDto, ApplyCouponDto, PriceResponseDto, CreateCouponDto } from '../dto/pricing.dto';
-import { VehicleType, CouponStatus, CouponType, SurgeLevel } from '../enums/pricing.enum';
+import { VehicleType, CouponStatus, CouponType } from '../enums/pricing.enum';
 
 @Injectable()
 export class PricingService implements OnModuleInit {
@@ -29,7 +29,7 @@ export class PricingService implements OnModuleInit {
     private rabbitMQService: RabbitMQService,
     private configService: ConfigService,
     private distanceService: DistanceService,
-    private aiClientService: AIClientService,  // Thêm AI Client
+    private aiClientService: AIClientService,
   ) {}
 
   async onModuleInit() {
@@ -105,7 +105,7 @@ export class PricingService implements OnModuleInit {
     let distance = calculateDto.distance;
     let estimatedDuration = calculateDto.duration;
 
-    // Tính khoảng cách nếu chưa có
+    // Nếu không có distance/duration, tự tính từ tọa độ
     if ((!distance || !estimatedDuration) && calculateDto.pickupLocation && calculateDto.dropoffLocation) {
       const route = await this.distanceService.calculateDistance(
         calculateDto.pickupLocation,
@@ -116,6 +116,7 @@ export class PricingService implements OnModuleInit {
       this.logger.log(`Calculated route: ${distance.toFixed(2)}km, ${estimatedDuration.toFixed(0)} min`);
     }
 
+    // Nếu vẫn không có distance, throw lỗi
     if (!distance || distance <= 0) {
       throw new BadRequestException('Invalid distance. Please provide pickup and dropoff locations.');
     }
@@ -131,7 +132,6 @@ export class PricingService implements OnModuleInit {
 
     // ========== GỌI AI ĐỂ TÍNH ETA VÀ SURGE ==========
     try {
-      // Gọi AI để tính ETA chính xác hơn
       const isPeakHour = (currentHour >= 7 && currentHour <= 9) || (currentHour >= 17 && currentHour <= 19);
       const trafficLevel = isPeakHour ? 0.7 : 0.4;
       
@@ -186,7 +186,6 @@ export class PricingService implements OnModuleInit {
       );
       surgeMultiplier = aiSurge;
       
-      // Xác định level và reason từ multiplier
       if (surgeMultiplier >= 2.5) surgeLevel = 'peak';
       else if (surgeMultiplier >= 2.0) surgeLevel = 'high';
       else if (surgeMultiplier >= 1.5) surgeLevel = 'medium';
@@ -252,7 +251,6 @@ export class PricingService implements OnModuleInit {
     };
   }
 
-  // Helper methods
   private calculateDemandIndex(hour: number, isWeekend: boolean): number {
     let demand = 1.0;
     if (hour >= 7 && hour <= 9) demand = 2.0;
@@ -284,7 +282,6 @@ export class PricingService implements OnModuleInit {
     }
   }
 
-  // Các methods còn lại giữ nguyên...
   async applyCoupon(applyDto: ApplyCouponDto): Promise<{ discount: number; finalAmount: number }> {
     this.logger.log(`Applying coupon ${applyDto.couponCode}`);
 

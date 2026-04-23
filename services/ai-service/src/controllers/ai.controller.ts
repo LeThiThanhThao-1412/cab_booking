@@ -4,6 +4,7 @@ import { SurgeService } from '../services/surge.service';
 import { MatchingService } from '../services/matching.service';
 import { FraudService } from '../services/fraud.service';
 import { MCPService } from '../services/mcp.service';
+import { RetrainService } from '../services/retrain.service';
 
 @Controller('ai')
 export class AIController {
@@ -13,6 +14,7 @@ export class AIController {
     private matchingService: MatchingService,
     private fraudService: FraudService,
     private mcpService: MCPService,
+    private retrainService: RetrainService,
   ) {}
 
   @Post('eta/predict')
@@ -40,14 +42,7 @@ export class AIController {
   @HttpCode(HttpStatus.OK)
   async detectFraud(@Body() body: { trip_count_30d: number; avg_rating: number; location_consistency: number; amount: number }) {
     const fraudScore = await this.fraudService.detectFraud(body.trip_count_30d, body.avg_rating, body.location_consistency, body.amount);
-    return { 
-      success: true, 
-      data: { 
-        fraud_score: fraudScore,
-        is_fraud_risk: fraudScore > 0.7,
-        risk_level: fraudScore > 0.8 ? 'HIGH' : fraudScore > 0.5 ? 'MEDIUM' : 'LOW'
-      }
-    };
+    return { success: true, data: { fraud_score: fraudScore } };
   }
 
   @Post('mcp/context')
@@ -62,6 +57,43 @@ export class AIController {
   async agentDecision(@Body() body: { context: any; action_type: string }) {
     const decision = await this.mcpService.agentDecision(body.context, body.action_type);
     return { success: true, data: decision };
+  }
+
+  // ============ DATA COLLECTION APIs ============
+  @Post('data/eta')
+  @HttpCode(HttpStatus.OK)
+  async saveETAData(@Body() body: any) {
+    const result = await this.retrainService.saveETAData(body);
+    return { success: true, ...result };
+  }
+
+  @Post('data/surge')
+  @HttpCode(HttpStatus.OK)
+  async saveSurgeData(@Body() body: any) {
+    const result = await this.retrainService.saveSurgeData(body);
+    return { success: true, ...result };
+  }
+
+  // ============ RETRAIN APIs ============
+  @Post('retrain')
+  @HttpCode(HttpStatus.OK)
+  async retrainModels() {
+    const result = await this.retrainService.retrainAllModels();
+    return { success: true, ...result };
+  }
+
+  @Post('retrain/eta')
+  @HttpCode(HttpStatus.OK)
+  async retrainETA() {
+    const result = await this.retrainService.retrainETAModel();
+    return { success: true, ...result };
+  }
+
+  @Post('retrain/surge')
+  @HttpCode(HttpStatus.OK)
+  async retrainSurge() {
+    const result = await this.retrainService.retrainSurgeModel();
+    return { success: true, ...result };
   }
 
   @Get('health')
