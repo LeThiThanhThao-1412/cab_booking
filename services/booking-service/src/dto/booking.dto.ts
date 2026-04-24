@@ -9,16 +9,17 @@ import {
   Min,
   Max,
   ValidateNested,
-  ArrayMinSize,
+  IsNotEmpty,
+  IsNumberString,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { VehicleType, PaymentMethod } from '../schemas/booking.schema';
 
 export class LocationDto {
-  @IsLatitude()
+  @IsLatitude({ message: 'lat must be a valid latitude number' })
   lat: number;
 
-  @IsLongitude()
+  @IsLongitude({ message: 'lng must be a valid longitude number' })
   lng: number;
 
   @IsString()
@@ -32,10 +33,12 @@ export class LocationDto {
 export class CreateBookingDto {
   @ValidateNested()
   @Type(() => LocationDto)
+  @IsNotEmpty({ message: 'pickupLocation is required' })
   pickupLocation: LocationDto;
 
   @ValidateNested()
   @Type(() => LocationDto)
+  @IsNotEmpty({ message: 'dropoffLocation is required' })
   dropoffLocation: LocationDto;
 
   @IsOptional()
@@ -54,12 +57,12 @@ export class CreateBookingDto {
   @IsNumber()
   @Min(0.1)
   @Max(1000)
-  distance?: number; // km
+  distance?: number;
 
   @IsOptional()
   @IsNumber()
   @Min(1)
-  duration?: number; // phút
+  duration?: number;
 }
 
 export class AcceptBookingDto {
@@ -68,7 +71,7 @@ export class AcceptBookingDto {
 
   @IsNumber()
   @IsOptional()
-  eta?: number; // phút
+  eta?: number;
 }
 
 export class UpdateStatusDto {
@@ -77,7 +80,7 @@ export class UpdateStatusDto {
 
   @IsOptional()
   @IsString()
-  reason?: string; // lý do hủy
+  reason?: string;
 }
 
 export class TrackingPointDto {

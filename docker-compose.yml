@@ -18,7 +18,7 @@ volumes:
 services:
   # ==================== POSTGRESQL ====================
   postgres:
-    image: postgres:15-alpine
+    image: postgis/postgis:15-3.4-alpine
     container_name: cab-postgres
     restart: unless-stopped
     environment:
@@ -26,7 +26,7 @@ services:
       POSTGRES_PASSWORD: password123
       POSTGRES_DB: postgres  # Default DB
       # Script tạo nhiều databases
-      POSTGRES_MULTIPLE_DATABASES: auth_db,user_db,payment_db,review_db,driver_db
+      POSTGRES_MULTIPLE_DATABASES: auth_db,user_db,payment_db,review_db,driver_db, 
     ports:
       - "5432:5432"
     volumes:

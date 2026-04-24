@@ -9,6 +9,7 @@ import {
 import { MatchingController } from './controllers/matching.controller';
 import { InternalController } from './controllers/internal.controller';
 import { MatchingService } from './services/matching.service';
+import { AIClientService } from './services/ai-client.service';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Module({
@@ -45,6 +46,7 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
   controllers: [MatchingController, InternalController],
   providers: [
     MatchingService,
+    AIClientService,
     JwtAuthGuard,
   ],
 })

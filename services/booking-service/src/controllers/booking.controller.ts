@@ -10,6 +10,8 @@ import {
   Request,
   HttpCode,
   HttpStatus,
+  BadRequestException,
+  UnprocessableEntityException,
 } from '@nestjs/common';
 import { BookingService } from '../services/booking.service';
 import { 
@@ -32,7 +34,36 @@ export class BookingController {
     @Request() req,
     @Body() createDto: CreateBookingDto,
   ): Promise<BookingResponseDto> {
-    // Lấy token từ header để gọi Pricing Service
+    // TC11: Kiểm tra thiếu field
+    if (!createDto.pickupLocation) {
+      throw new BadRequestException('pickupLocation is required');
+    }
+    if (!createDto.dropoffLocation) {
+      throw new BadRequestException('dropoffLocation is required');
+    }
+    if (!createDto.vehicleType) {
+      throw new BadRequestException('vehicleType is required');
+    }
+    
+    // TC12: Kiểm tra sai kiểu dữ liệu (lat/lng là string)
+    if (createDto.pickupLocation) {
+      if (typeof createDto.pickupLocation.lat !== 'number') {
+        throw new UnprocessableEntityException('lat must be a number');
+      }
+      if (typeof createDto.pickupLocation.lng !== 'number') {
+        throw new UnprocessableEntityException('lng must be a number');
+      }
+    }
+    
+    if (createDto.dropoffLocation) {
+      if (typeof createDto.dropoffLocation.lat !== 'number') {
+        throw new UnprocessableEntityException('lat must be a number');
+      }
+      if (typeof createDto.dropoffLocation.lng !== 'number') {
+        throw new UnprocessableEntityException('lng must be a number');
+      }
+    }
+    
     const authHeader = req.headers.authorization;
     return this.bookingService.createBooking(req.user.sub, createDto, authHeader);
   }

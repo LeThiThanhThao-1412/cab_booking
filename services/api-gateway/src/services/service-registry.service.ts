@@ -74,6 +74,12 @@ export class ServiceRegistry implements OnModuleInit {
           { method: 'PATCH', path: '/drivers/status', targetPath: '/api/v1/drivers/status', authRequired: true, roles: ['driver'] },
           { method: 'PATCH', path: '/drivers/location', targetPath: '/api/v1/drivers/location', authRequired: true, roles: ['driver'] },
           { method: 'GET', path: '/drivers/nearby', targetPath: '/api/v1/drivers/nearby', authRequired: true },
+          { 
+            method: 'POST', 
+            path: '/internal/drivers/:userId/approve', 
+            targetPath: '/api/v1/internal/drivers/:userId/approve', 
+            authRequired: false  // Dùng internal key, không cần JWT
+          },
         ],
       },
       {

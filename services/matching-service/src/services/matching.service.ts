@@ -3,15 +3,14 @@ import { ConfigService } from '@nestjs/config';
 import { RedisService, RabbitMQService } from '@cab-booking/shared';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
+import { AIClientService } from './ai-client.service';
 import { MATCHING_CONFIG, REDIS_KEYS } from '../constants/matching.constants';
 import { RABBITMQ_EXCHANGES, ROUTING_KEYS } from '@cab-booking/shared';
 import { 
   MatchingRequestDto, 
-  DriverScoreDto 
 } from '../dto/matching.dto';
 import { NearbyDriver, ScoredDriver, DriverInfo } from '../interfaces/driver.interface';
 
-// Định nghĩa interface cho Price
 interface PriceDetails {
   basePrice: number;
   distancePrice: number;
@@ -32,6 +31,7 @@ export class MatchingService implements OnModuleInit {
     private rabbitMQService: RabbitMQService,
     private configService: ConfigService,
     private httpService: HttpService,
+    private aiClientService: AIClientService,
   ) {}
 
   async onModuleInit() {
@@ -40,7 +40,6 @@ export class MatchingService implements OnModuleInit {
   }
 
   private async subscribeToEvents() {
-    // Lắng nghe sự kiện booking.created - Dùng queue riêng
     await this.rabbitMQService.subscribe(
       'matching.booking-created.queue',
       async (msg: any) => {
@@ -52,7 +51,6 @@ export class MatchingService implements OnModuleInit {
       },
     );
 
-    // Lắng nghe sự kiện booking.cancelled - Dùng queue riêng
     await this.rabbitMQService.subscribe(
       'matching.booking-cancelled.queue',
       async (msg: any) => {
@@ -64,7 +62,6 @@ export class MatchingService implements OnModuleInit {
       },
     );
 
-    // Lắng nghe phản hồi từ driver - Dùng queue riêng
     await this.rabbitMQService.subscribe(
       'matching.driver-response.queue',
       async (msg: any) => {
@@ -85,7 +82,6 @@ export class MatchingService implements OnModuleInit {
     try {
       const { bookingId, customerId, pickupLocation, dropoffLocation, vehicleType, distance, estimatedPrice } = event.data || event;
 
-      // Tạo matching request với price
       const matchingRequest: MatchingRequestDto = {
         bookingId,
         customerId,
@@ -97,7 +93,6 @@ export class MatchingService implements OnModuleInit {
         estimatedPrice: estimatedPrice || 0
       };
 
-      // Bắt đầu quá trình matching
       await this.startMatching(matchingRequest);
 
     } catch (error) {
@@ -111,14 +106,12 @@ export class MatchingService implements OnModuleInit {
     try {
       const { bookingId } = event.data || event;
       
-      // Hủy matching đang chờ
       const timeout = this.activeMatchings.get(bookingId);
       if (timeout) {
         clearTimeout(timeout);
         this.activeMatchings.delete(bookingId);
       }
 
-      // Xóa dữ liệu tạm trong Redis
       await this.redisService.del(REDIS_KEYS.PENDING_BOOKING(bookingId));
 
       this.logger.log(`✅ Cancelled matching for booking ${bookingId}`);
@@ -133,21 +126,15 @@ export class MatchingService implements OnModuleInit {
 
     try {
       const response = event.data || event;
-      const { driverId, bookingId, accepted, eta, reason, responseTime } = response;
+      const { driverId, bookingId, accepted, eta, reason } = response;
 
-      if (!driverId) {
-        this.logger.error('Missing driverId in response');
-        return;
-      }
-
-      if (!bookingId) {
-        this.logger.error('Missing bookingId in response');
+      if (!driverId || !bookingId) {
+        this.logger.error('Missing driverId or bookingId in response');
         return;
       }
 
       this.logger.log(`Driver ${driverId} ${accepted ? 'ACCEPTED' : 'REJECTED'} booking ${bookingId}`);
 
-      // Clear driver response timeout
       const timeoutKey = `${bookingId}:${driverId}`;
       const timeout = this.driverResponseTimeouts.get(timeoutKey);
       if (timeout) {
@@ -167,11 +154,10 @@ export class MatchingService implements OnModuleInit {
   }
 
   private async startMatching(request: MatchingRequestDto) {
-    const { bookingId, pickupLocation, vehicleType, searchRadius } = request;
+    const { bookingId, pickupLocation, searchRadius } = request;
 
     this.logger.log(`🚀 Starting matching for booking ${bookingId} at (${pickupLocation.lat}, ${pickupLocation.lng})`);
 
-    // Publish event matching started
     await this.rabbitMQService.publish(
       RABBITMQ_EXCHANGES.MATCHING_EVENTS,
       ROUTING_KEYS.MATCHING_STARTED,
@@ -181,14 +167,12 @@ export class MatchingService implements OnModuleInit {
       },
     );
 
-    // Lưu thông tin booking vào Redis để theo dõi
     await this.redisService.set(
       REDIS_KEYS.PENDING_BOOKING(bookingId),
       request,
       300,
     );
 
-    // Tìm tài xế gần nhất
     const nearbyDrivers = await this.findNearbyDrivers(
       pickupLocation.lat,
       pickupLocation.lng,
@@ -202,11 +186,8 @@ export class MatchingService implements OnModuleInit {
       return;
     }
 
-    // Lấy thông tin chi tiết của các tài xế
     const driversWithInfo = await this.enrichDriversWithInfo(nearbyDrivers);
-
-    // Tính điểm và chọn tài xế tốt nhất
-    const scoredDrivers = this.scoreDrivers(driversWithInfo, request);
+    const scoredDrivers = await this.scoreDriversWithAI(driversWithInfo, request);
     const bestDriver = scoredDrivers[0];
 
     if (!bestDriver) {
@@ -216,8 +197,49 @@ export class MatchingService implements OnModuleInit {
 
     this.logger.log(`🎯 Selected driver ${bestDriver.driverId} with score ${bestDriver.score}`);
 
-    // Gửi yêu cầu đến driver
     await this.sendRequestToDriver(bestDriver, request);
+  }
+
+  // ✅ DÙNG AI ĐỂ TÍNH ĐIỂM
+  private async scoreDriversWithAI(drivers: ScoredDriver[], request: MatchingRequestDto): Promise<ScoredDriver[]> {
+    for (const driver of drivers) {
+      try {
+        const distanceKm = driver.distance / 1000;
+        const aiScore = await this.aiClientService.getDriverScoreFromAI(
+          distanceKm,
+          driver.rating,
+          driver.acceptanceRate,
+          driver.totalTrips,
+        );
+        
+        driver.score = aiScore / 100;
+        
+        this.logger.debug(`🤖 AI Score for driver ${driver.driverId}: ${aiScore} (distance=${driver.distance}m)`);
+      } catch (error) {
+        this.logger.warn(`AI scoring failed for ${driver.driverId}, using fallback`);
+        driver.score = this.calculateFallbackScore(driver, drivers);
+      }
+    }
+
+    return drivers.sort((a, b) => b.score - a.score);
+  }
+
+  private calculateFallbackScore(driver: ScoredDriver, allDrivers: ScoredDriver[]): number {
+    const weights = MATCHING_CONFIG.WEIGHTS;
+    const maxDistance = Math.max(...allDrivers.map(d => d.distance));
+    const maxRating = 5.0;
+    const maxTrips = Math.max(...allDrivers.map(d => d.totalTrips));
+    const maxAcceptance = Math.max(...allDrivers.map(d => d.acceptanceRate));
+
+    const distanceScore = maxDistance > 0 ? 1 - (driver.distance / maxDistance) : 1;
+    const ratingScore = driver.rating / maxRating;
+    const experienceScore = maxTrips > 0 ? driver.totalTrips / maxTrips : 0.5;
+    const acceptanceScore = maxAcceptance > 0 ? driver.acceptanceRate / maxAcceptance : 0.8;
+
+    return distanceScore * weights.DISTANCE +
+           ratingScore * weights.RATING +
+           acceptanceScore * weights.ACCEPTANCE_RATE +
+           experienceScore * weights.EXPERIENCE;
   }
 
   private async findNearbyDrivers(lat: number, lng: number, radius: number): Promise<NearbyDriver[]> {
@@ -302,37 +324,11 @@ export class MatchingService implements OnModuleInit {
     }
   }
 
-  private scoreDrivers(drivers: ScoredDriver[], request: MatchingRequestDto): ScoredDriver[] {
-    const weights = MATCHING_CONFIG.WEIGHTS;
-    const maxDistance = Math.max(...drivers.map(d => d.distance));
-    const maxRating = 5.0;
-    const maxTrips = Math.max(...drivers.map(d => d.totalTrips));
-    const maxAcceptance = Math.max(...drivers.map(d => d.acceptanceRate));
-
-    drivers.forEach(driver => {
-      const distanceScore = maxDistance > 0 ? 1 - (driver.distance / maxDistance) : 1;
-      const ratingScore = driver.rating / maxRating;
-      const experienceScore = maxTrips > 0 ? driver.totalTrips / maxTrips : 0.5;
-      const acceptanceScore = maxAcceptance > 0 ? driver.acceptanceRate / maxAcceptance : 0.8;
-
-      driver.score = 
-        distanceScore * weights.DISTANCE +
-        ratingScore * weights.RATING +
-        acceptanceScore * weights.ACCEPTANCE_RATE +
-        experienceScore * weights.EXPERIENCE;
-
-      this.logger.debug(`Driver ${driver.driverId}: score=${driver.score.toFixed(3)}, distance=${driver.distance}m`);
-    });
-
-    return drivers.sort((a, b) => b.score - a.score);
-  }
-
   private async sendRequestToDriver(driver: ScoredDriver, request: MatchingRequestDto) {
-    const { bookingId, pickupLocation, dropoffLocation, vehicleType, distance, estimatedPrice } = request;
+    const { bookingId, pickupLocation, dropoffLocation, estimatedPrice } = request;
 
     this.logger.log(`📤 Sending request to driver ${driver.driverId} for booking ${bookingId}`);
 
-    // Lưu vào Redis để Driver không cần truyền bookingId khi accept
     const redisClient = this.redisService.getClient();
     await redisClient.setex(
       `driver:current:${driver.driverId}`,
@@ -359,7 +355,6 @@ export class MatchingService implements OnModuleInit {
       }
     );
 
-    // Set timeout cho driver response
     const timeoutKey = `${bookingId}:${driver.driverId}`;
     const timeout = setTimeout(
       () => this.handleDriverNoResponse(driver.driverId, bookingId),
@@ -367,7 +362,6 @@ export class MatchingService implements OnModuleInit {
     );
     this.driverResponseTimeouts.set(timeoutKey, timeout);
 
-    // Set overall matching timeout
     const matchingTimeout = setTimeout(
       () => this.handleMatchingTimeout(bookingId),
       MATCHING_CONFIG.MATCHING_TIMEOUT * 1000,
@@ -378,19 +372,16 @@ export class MatchingService implements OnModuleInit {
   private async handleDriverAccepted(driverId: string, bookingId: string, eta: number) {
     this.logger.log(`✅ Driver ${driverId} accepted booking ${bookingId}`);
 
-    // Clear matching timeout
     const timeout = this.activeMatchings.get(bookingId);
     if (timeout) {
       clearTimeout(timeout);
       this.activeMatchings.delete(bookingId);
     }
 
-    // Lấy thông tin booking để có price
     const bookingInfo = await this.redisService.get<MatchingRequestDto>(
       REDIS_KEYS.PENDING_BOOKING(bookingId)
     );
 
-    // Tính toán price chi tiết
     const priceDetails: PriceDetails = {
       basePrice: 20000,
       distancePrice: 0,
@@ -411,13 +402,10 @@ export class MatchingService implements OnModuleInit {
       priceDetails.timePrice = Math.round(estimatedDuration * pricePerMinute);
       priceDetails.surgeMultiplier = 1;
       priceDetails.total = Math.round(20000 + (distance * pricePerKm) + (estimatedDuration * pricePerMinute));
-      priceDetails.currency = 'VND';
     }
 
-    // Cập nhật booking service với price
     await this.updateBookingWithDriver(bookingId, driverId, eta, priceDetails);
 
-    // Publish event với đầy đủ price
     await this.rabbitMQService.publish(
       RABBITMQ_EXCHANGES.BOOKING_EVENTS,
       'booking.accepted',
@@ -434,7 +422,6 @@ export class MatchingService implements OnModuleInit {
       }
     );
 
-    // Publish event matching.driver.accepted
     await this.rabbitMQService.publish(
       RABBITMQ_EXCHANGES.MATCHING_EVENTS,
       ROUTING_KEYS.MATCHING_DRIVER_ACCEPTED,
@@ -460,18 +447,6 @@ export class MatchingService implements OnModuleInit {
         timestamp: new Date().toISOString(),
       },
     );
-
-    const bookingInfo = await this.redisService.get<MatchingRequestDto>(
-      REDIS_KEYS.PENDING_BOOKING(bookingId)
-    );
-
-    if (bookingInfo) {
-      const attemptData = await this.redisService.get(REDIS_KEYS.MATCHING_ATTEMPT(bookingId));
-
-      if (attemptData?.attempt >= 3) {
-        return this.handleNoDriverFound(bookingId);
-      }
-    }
   }
 
   private async handleDriverNoResponse(driverId: string, bookingId: string) {
@@ -553,11 +528,9 @@ export class MatchingService implements OnModuleInit {
     try {
       const bookingServiceUrl = this.configService.get('BOOKING_SERVICE_URL', 'http://localhost:3004');
       
-      const url = `${bookingServiceUrl}/api/v1/internal/bookings/${bookingId}/assign-driver`;
-
       await firstValueFrom(
         this.httpService.patch(
-          url,
+          `${bookingServiceUrl}/api/v1/internal/bookings/${bookingId}/assign-driver`,
           { driverId, eta, price },
           {
             headers: {
