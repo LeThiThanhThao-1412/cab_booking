@@ -360,7 +360,23 @@ export class BookingService {
       totalPages: Math.ceil(total / limit),
     };
   }
+  // Thêm method này vào class BookingService
+async getBookingById(bookingId: string, userId: string, role: string): Promise<BookingResponseDto> {
+  const booking = await this.bookingModel.findById(bookingId);
+  
+  if (!booking) {
+    throw new NotFoundException('Booking not found');
+  }
 
+  if (role === 'customer' && booking.customerId !== userId) {
+    throw new BadRequestException('You do not have permission to view this booking');
+  }
+  if (role === 'driver' && booking.driverId !== userId) {
+    throw new BadRequestException('You do not have permission to view this booking');
+  }
+
+  return this.mapToResponse(booking);
+}
   private validateStatusTransition(oldStatus: BookingStatus, newStatus: BookingStatus): void {
     const validTransitions: Record<BookingStatus, BookingStatus[]> = {
       [BookingStatus.PENDING]: [BookingStatus.CONFIRMED, BookingStatus.CANCELLED, BookingStatus.NO_DRIVER],

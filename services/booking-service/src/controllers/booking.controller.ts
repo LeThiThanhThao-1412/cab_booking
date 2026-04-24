@@ -12,7 +12,9 @@ import {
   HttpStatus,
   BadRequestException,
   UnprocessableEntityException,
+  Headers,
 } from '@nestjs/common';
+import { createHash } from 'crypto';
 import { BookingService } from '../services/booking.service';
 import { 
   CreateBookingDto, 
@@ -23,16 +25,21 @@ import {
 } from '../dto/booking.dto';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { InternalAuthGuard } from '@cab-booking/shared/dist/guards/internal-auth.guard';
+import { IdempotencyService } from '../idempotency/idempotency.service';
 
 @Controller('bookings')
 @UseGuards(JwtAuthGuard)
 export class BookingController {
-  constructor(private readonly bookingService: BookingService) {}
+  constructor(
+    private readonly bookingService: BookingService,
+    private readonly idempotencyService: IdempotencyService,
+  ) {}
 
   @Post()
   async createBooking(
     @Request() req,
     @Body() createDto: CreateBookingDto,
+    @Headers('idempotency-key') idempotencyKey?: string,
   ): Promise<BookingResponseDto> {
     // TC11: Kiểm tra thiếu field
     if (!createDto.pickupLocation) {
@@ -64,8 +71,47 @@ export class BookingController {
       }
     }
     
+    const customerId = req.user.sub;
     const authHeader = req.headers.authorization;
-    return this.bookingService.createBooking(req.user.sub, createDto, authHeader);
+    
+    // ========== IDEMPOTENCY LOGIC ==========
+    // Tự sinh key nếu client không gửi
+    let finalKey = idempotencyKey;
+    if (!finalKey) {
+      const hashContent = JSON.stringify({
+        customerId,
+        pickup: createDto.pickupLocation,
+        dropoff: createDto.dropoffLocation,
+        vehicle: createDto.vehicleType,
+        payment: createDto.paymentMethod,
+        // Đổi key mỗi phút để tránh duplicate thật sự
+        minute: Math.floor(Date.now() / 60000)
+      });
+      finalKey = createHash('sha256').update(hashContent).digest('hex');
+    }
+    
+    // Kiểm tra booking đã tồn tại chưa
+    const existingBookingId = await this.idempotencyService.getExistingBookingId(
+      customerId, 
+      finalKey
+    );
+    
+    if (existingBookingId) {
+      // Trả về booking đã tồn tại
+      return this.bookingService.getBookingById(existingBookingId, customerId, req.user.role);
+    }
+    // ======================================
+    
+    const newBooking = await this.bookingService.createBooking(customerId, createDto, authHeader);
+    
+    // Lưu idempotency record
+    await this.idempotencyService.saveIdempotencyRecord(
+      customerId,
+      finalKey,
+      newBooking.id
+    );
+    
+    return newBooking;
   }
 
   @Get()

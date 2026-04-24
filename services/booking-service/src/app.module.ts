@@ -12,6 +12,7 @@ import { InternalController } from './controllers/internal.controller';
 import { BookingService } from './services/booking.service';
 import { Booking, BookingSchema } from './schemas/booking.schema';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
+import { IdempotencyModule } from './idempotency/idempotency.module'; // THÊM DÒNG NÀY
 
 @Module({
   imports: [
@@ -55,6 +56,8 @@ import { JwtAuthGuard } from './guards/jwt-auth.guard';
     }),
 
     RedisModule.forRoot(),
+    
+    IdempotencyModule, // THÊM DÒNG NÀY
   ],
   controllers: [BookingController, InternalController],
   providers: [

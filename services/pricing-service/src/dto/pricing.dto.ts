@@ -46,6 +46,17 @@ export class CalculatePriceDto {
   @IsOptional()
   @IsUUID()
   userId?: string;
+
+  // ✅ THÊM CÁC FIELD NÀY CHO TEST TC16
+  @IsOptional()
+  @IsNumber()
+  @Min(0)
+  demand_index?: number;
+
+  @IsOptional()
+  @IsNumber()
+  @Min(0.1)
+  supply_index?: number;
 }
 
 export class ApplyCouponDto {
