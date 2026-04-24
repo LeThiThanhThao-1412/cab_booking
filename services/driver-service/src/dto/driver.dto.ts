@@ -66,7 +66,8 @@ export class DriverResponseDto {
   email: string;
   phone: string;
   avatar: string;
-  status: string;
+  accountStatus: string;      // ← ĐỔI TỪ status THÀNH accountStatus
+  onlineStatus: string;       // ← THÊM DÒNG NÀY
   vehicleType: string;
   vehicleModel: string;
   vehicleColor: string;

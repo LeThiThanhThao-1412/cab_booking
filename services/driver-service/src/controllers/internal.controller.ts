@@ -1,11 +1,11 @@
-// controllers/internal.controller.ts
 import { 
   Controller, 
   Get, 
   Param,
   Query, 
   UseGuards,
-  Logger
+  Logger,
+  Post,
 } from '@nestjs/common';
 import { InternalAuthGuard } from '@cab-booking/shared';
 import { DriverService } from '../services/driver.service';
@@ -29,7 +29,6 @@ export class InternalController {
     const checks: any = {};
     let overallStatus = 'ok';
 
-    // Check PostgreSQL
     try {
       await this.dataSource.query('SELECT 1');
       checks.postgres = 'ok';
@@ -39,7 +38,6 @@ export class InternalController {
       this.logger.error(`PostgreSQL health check failed: ${error instanceof Error ? error.message : String(error)}`);
     }
 
-    // Check Redis
     try {
       const redisClient = this.redisService.getClient();
       await redisClient.ping();
@@ -50,7 +48,6 @@ export class InternalController {
       this.logger.error(`Redis health check failed: ${error instanceof Error ? error.message : String(error)}`);
     }
 
-    // Check online drivers count (optional)
     try {
       const onlineCount = await this.driverService.getOnlineDriversCount();
       checks.onlineDrivers = onlineCount;
@@ -65,6 +62,12 @@ export class InternalController {
       timestamp: new Date().toISOString(),
       checks,
     };
+  }
+
+  @Post('drivers/:userId/approve')
+  @UseGuards(InternalAuthGuard)
+  async approveDriver(@Param('userId') userId: string) {
+    return this.driverService.approveDriver(userId);
   }
 
   @Get('drivers/nearby')

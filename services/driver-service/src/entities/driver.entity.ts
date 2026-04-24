@@ -7,13 +7,16 @@ import {
   Index 
 } from 'typeorm';
 
-export enum DriverStatus {
-  PENDING_APPROVAL = 'pending_approval',
-  ONLINE = 'active',
-  INACTIVE = 'inactive',
-  SUSPENDED = 'suspended',
-  BUSY = 'busy',
+export enum DriverAccountStatus {
+  PENDING = 'pending',      // Chờ admin duyệt
+  ACTIVE = 'active',        // Đã duyệt
+  SUSPENDED = 'suspended',  // Bị khóa
+}
+
+export enum DriverOnlineStatus {
   OFFLINE = 'offline',
+  ONLINE = 'online',
+  BUSY = 'busy',
 }
 
 export enum VehicleType {
@@ -29,7 +32,7 @@ export class Driver {
 
   @Column({ unique: true })
   @Index()
-  userId: string; // ID từ auth-service
+  userId: string;
 
   @Column({ nullable: true })
   fullName: string;
@@ -43,12 +46,21 @@ export class Driver {
   @Column({ nullable: true })
   avatar: string;
 
+  // ✅ Trạng thái tài khoản (do admin quản lý)
   @Column({
     type: 'enum',
-    enum: DriverStatus,
-    default: DriverStatus.PENDING_APPROVAL,
+    enum: DriverAccountStatus,
+    default: DriverAccountStatus.PENDING,
   })
-  status: DriverStatus;
+  accountStatus: DriverAccountStatus;
+
+  // ✅ Trạng thái online (do driver tự cập nhật)
+  @Column({
+    type: 'enum',
+    enum: DriverOnlineStatus,
+    default: DriverOnlineStatus.OFFLINE,
+  })
+  onlineStatus: DriverOnlineStatus;
 
   // Thông tin xe
   @Column({

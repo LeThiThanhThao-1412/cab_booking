@@ -15,7 +15,6 @@ import { RegisterDto, LoginDto, TokenResponseDto, UserResponseDto } from '../dto
 import * as crypto from 'crypto';
 import { NotFoundException } from '@nestjs/common';
 
-
 @Injectable()
 export class AuthService {
   private readonly logger = new Logger(AuthService.name);
@@ -27,6 +26,7 @@ export class AuthService {
     private rabbitMQService: RabbitMQService,
     private configService: ConfigService,
   ) {}
+
   async approveUser(userId: string) {
     const user = await this.userRepository.findOne({
       where: { id: userId },
@@ -37,7 +37,6 @@ export class AuthService {
     }
 
     user.status = UserStatus.ACTIVE;
-
     await this.userRepository.save(user);
 
     return user;
@@ -46,7 +45,6 @@ export class AuthService {
   async register(registerDto: RegisterDto): Promise<UserResponseDto> {
     this.logger.log(`Registering new user: ${registerDto.email}`);
 
-    // Check if user exists
     const existingUser = await this.userRepository.findOne({
       where: { email: registerDto.email },
     });
@@ -55,20 +53,21 @@ export class AuthService {
       throw new ConflictException('Email đã được đăng ký');
     }
 
-    // Create new user
+    const role = registerDto.role as UserRole || UserRole.CUSTOMER;
+    const isDriver = role === UserRole.DRIVER;
+
     const user = this.userRepository.create({
       email: registerDto.email,
       password: registerDto.password,
       fullName: registerDto.fullName,
       phone: registerDto.phone,
-      role: registerDto.role as UserRole || UserRole.CUSTOMER,
-      status: UserStatus.ACTIVE,
-      isEmailVerified: false,
+      role: role,
+      status: isDriver ? UserStatus.PENDING : UserStatus.ACTIVE,
+      isEmailVerified: !isDriver,
     });
 
     await this.userRepository.save(user);
 
-    // Publish event via RabbitMQ
     await this.rabbitMQService.publish(
       'auth.events',
       'auth.user.registered',
@@ -78,6 +77,7 @@ export class AuthService {
         fullName: user.fullName,
         phone: user.phone,
         role: user.role,
+        status: user.status,
         timestamp: new Date().toISOString(),
       },
       {
@@ -98,8 +98,8 @@ export class AuthService {
       createdAt: user.createdAt,
     });
   }
-  async approveDriver(userId: string) {
 
+  async approveDriver(userId: string) {
     const user = await this.userRepository.findOne({
       where: { id: userId }
     });
@@ -113,12 +113,10 @@ export class AuthService {
     }
 
     user.status = UserStatus.ACTIVE;
-
     await this.userRepository.save(user);
 
-    // Publish event
     await this.rabbitMQService.publish(
-      'driver.exchange',
+      'auth.events',  // Đổi từ driver.exchange sang auth.events
       'driver.approved',
       {
         userId: user.id,
@@ -128,74 +126,65 @@ export class AuthService {
       }
     );
   }
-    async login(loginDto: LoginDto): Promise<TokenResponseDto> {
-      this.logger.log(`Login attempt: ${loginDto.email}`);
 
-      // Find user
-      const user = await this.userRepository.findOne({
-        where: { email: loginDto.email },
+  async login(loginDto: LoginDto): Promise<TokenResponseDto> {
+    this.logger.log(`Login attempt: ${loginDto.email}`);
+
+    const user = await this.userRepository.findOne({
+      where: { email: loginDto.email },
+    });
+
+    if (!user) {
+      throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
+    }
+
+    const isValid = await user.validatePassword(loginDto.password);
+    if (!isValid) {
+      throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
+    }
+
+    if (user.status !== UserStatus.ACTIVE) {
+      throw new UnauthorizedException('Tài khoản chưa được kích hoạt hoặc đã bị khóa');
+    }
+
+    user.lastLoginAt = new Date();
+    await this.userRepository.save(user);
+
+    const tokens = await this.generateTokens(user);
+
+    await this.rabbitMQService.publish(
+      'auth.events',
+      'auth.user.login',
+      {
+        userId: user.id,
+        email: user.email,
+        timestamp: new Date().toISOString(),
+      }
+    );
+
+    this.logger.log(`User logged in successfully: ${user.id}`);
+    return tokens;
+  }
+
+  async refreshToken(refreshToken: string): Promise<TokenResponseDto> {
+    try {
+      const payload = this.jwtService.verify(refreshToken, {
+        secret: this.configService.get('JWT_REFRESH_SECRET', 'refresh-secret'),
       });
 
-      if (!user) {
-        throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
+      const user = await this.userRepository.findOne({
+        where: { id: payload.sub },
+      });
+
+      if (!user || user.refreshToken !== refreshToken) {
+        throw new UnauthorizedException('Refresh token không hợp lệ');
       }
 
-      // Validate password
-      const isValid = await user.validatePassword(loginDto.password);
-      if (!isValid) {
-        throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
-      }
-
-      // Check status
-      if (user.status !== UserStatus.ACTIVE) {
-        throw new UnauthorizedException('Tài khoản chưa được kích hoạt hoặc đã bị khóa');
-      }
-
-      // Update last login
-      user.lastLoginAt = new Date();
-      await this.userRepository.save(user);
-
-      // Generate tokens
-      const tokens = await this.generateTokens(user);
-
-      // Publish login event
-      await this.rabbitMQService.publish(
-        'auth.events',
-        'auth.user.login',
-        {
-          userId: user.id,
-          email: user.email,
-          timestamp: new Date().toISOString(),
-        }
-      );
-
-      this.logger.log(`User logged in successfully: ${user.id}`);
-
-      return tokens;
+      return this.generateTokens(user);
+    } catch (error) {
+      throw new UnauthorizedException('Refresh token không hợp lệ hoặc đã hết hạn');
     }
-
-    async refreshToken(refreshToken: string): Promise<TokenResponseDto> {
-      try {
-        // Verify refresh token
-        const payload = this.jwtService.verify(refreshToken, {
-          secret: this.configService.get('JWT_REFRESH_SECRET', 'refresh-secret'),
-        });
-
-        // Find user
-        const user = await this.userRepository.findOne({
-          where: { id: payload.sub },
-        });
-
-        if (!user || user.refreshToken !== refreshToken) {
-          throw new UnauthorizedException('Refresh token không hợp lệ');
-        }
-
-        // Generate new tokens
-        return this.generateTokens(user);
-      } catch (error) {
-        throw new UnauthorizedException('Refresh token không hợp lệ hoặc đã hết hạn');
-      }
-    }
+  }
 
   async validateUser(userId: string): Promise<UserResponseDto> {
     const user = await this.userRepository.findOne({
@@ -219,12 +208,10 @@ export class AuthService {
   }
 
   async logout(userId: string): Promise<void> {
-    // Clear refresh token
     await this.userRepository.update(userId, {
       refreshToken: undefined,
     });
 
-    // Publish logout event
     await this.rabbitMQService.publish(
       'auth.events',
       'auth.user.logout',
@@ -242,16 +229,12 @@ export class AuthService {
       role: user.role,
     };
 
-    // Generate access token
     const accessToken = this.jwtService.sign(payload);
-
-    // Generate refresh token
     const refreshToken = this.jwtService.sign(payload, {
       secret: this.configService.get('JWT_REFRESH_SECRET', 'refresh-secret'),
       expiresIn: this.configService.get('JWT_REFRESH_EXPIRES_IN', '7d'),
     });
 
-    // Save refresh token
     await this.userRepository.update(user.id, {
       refreshToken,
     });
@@ -259,32 +242,20 @@ export class AuthService {
     return {
       accessToken,
       refreshToken,
-      expiresIn: 3600, // 1 hour in seconds
+      expiresIn: 3600,
       tokenType: 'Bearer',
     };
   }
 
   async verifyEmail(token: string): Promise<boolean> {
-    // Implement email verification logic
-    // Decode token, verify and update user
     return true;
   }
 
   async requestPasswordReset(email: string): Promise<void> {
     const user = await this.userRepository.findOne({ where: { email } });
-    if (!user) {
-      // Don't reveal if user exists
-      return;
-    }
-
-    // Generate reset token and send via email
+    if (!user) return;
     const resetToken = crypto.randomBytes(32).toString('hex');
-    
-    // Store reset token in database with expiry
-    // Send email
   }
 
-  async resetPassword(token: string, newPassword: string): Promise<void> {
-    // Validate token and reset password
-  }
+  async resetPassword(token: string, newPassword: string): Promise<void> {}
 }

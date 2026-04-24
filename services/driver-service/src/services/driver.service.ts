@@ -1,9 +1,11 @@
-import { Injectable, Logger, NotFoundException } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RedisService } from '@cab-booking/shared';
-import { Driver, DriverStatus } from '../entities/driver.entity';
+import { ConfigService } from '@nestjs/config';
+import { Driver, DriverAccountStatus, DriverOnlineStatus } from '../entities/driver.entity';
 import { UpdateDriverDto, DriverLocationDto, DriverResponseDto } from '../dto/driver.dto';
+import axios from 'axios';
 
 @Injectable()
 export class DriverService {
@@ -13,6 +15,7 @@ export class DriverService {
     @InjectRepository(Driver)
     private driverRepository: Repository<Driver>,
     private redisService: RedisService,
+    private configService: ConfigService,
   ) {}
 
   async getDriverByUserId(userId: string): Promise<DriverResponseDto> {
@@ -24,31 +27,100 @@ export class DriverService {
       throw new NotFoundException('Driver not found');
     }
 
-    // Lấy vị trí hiện tại từ Redis
     const location = await this.redisService.getDriverLocation(driver.userId);
     
     return {
-      ...driver,
+      id: driver.id,
+      userId: driver.userId,
+      fullName: driver.fullName,
+      email: driver.email,
+      phone: driver.phone,
+      avatar: driver.avatar,
+      accountStatus: driver.accountStatus,
+      onlineStatus: driver.onlineStatus,
+      vehicleType: driver.vehicleType,
+      vehicleModel: driver.vehicleModel,
+      vehicleColor: driver.vehicleColor,
+      vehiclePlate: driver.vehiclePlate,
+      totalTrips: driver.totalTrips,
+      rating: driver.rating,
       currentLocation: location ? {
         lat: location.lat,
         lng: location.lng,
         updatedAt: new Date(),
-      } : null,
-    } as DriverResponseDto;
+      } : undefined,
+      lastActiveAt: driver.lastActiveAt,
+      createdAt: driver.createdAt,
+      updatedAt: driver.updatedAt,
+    };
   }
-  async createDriver(data: any) {
-    const driver = this.driverRepository.create({
-      userId: data.userId,
-      email: data.email,
-      fullName: data.fullName,
-      phone: data.phone,
-      status: DriverStatus.OFFLINE,
+
+  async approveDriver(userId: string): Promise<DriverResponseDto> {
+    const driver = await this.driverRepository.findOne({
+      where: { userId },
     });
 
-    return this.driverRepository.save(driver);
+    if (!driver) {
+      throw new NotFoundException('Driver not found');
+    }
+
+    if (driver.accountStatus !== DriverAccountStatus.PENDING) {
+      throw new BadRequestException('Driver is not in pending status');
+    }
+
+    // ✅ Gọi sang Auth Service để approve user
+    const authServiceUrl = this.configService.get('AUTH_SERVICE_URL', 'http://localhost:3001');
+    const internalKey = this.configService.get('INTERNAL_API_KEY', 'internal-key');
+    
+    try {
+      await axios.patch(
+        `${authServiceUrl}/api/v1/internal/users/${userId}/approve`,
+        {},
+        {
+          headers: {
+            'x-service-id': 'driver-service',
+            'x-internal-key': internalKey,
+          },
+          timeout: 5000,
+        }
+      );
+      this.logger.log(`✅ User ${userId} approved in Auth Service`);
+    } catch (error: any) {
+      this.logger.error(`Failed to approve user in Auth Service: ${error.message}`);
+      if (error.response) {
+        this.logger.error(`Response: ${JSON.stringify(error.response.data)}`);
+      }
+      throw new BadRequestException('Failed to approve driver. Please try again.');
+    }
+
+    // ✅ Cập nhật accountStatus trong Driver Service
+    driver.accountStatus = DriverAccountStatus.ACTIVE;
+    await this.driverRepository.save(driver);
+
+    this.logger.log(`✅ Driver approved for userId: ${userId}`);
+
+    return {
+      id: driver.id,
+      userId: driver.userId,
+      fullName: driver.fullName,
+      email: driver.email,
+      phone: driver.phone,
+      avatar: driver.avatar,
+      accountStatus: driver.accountStatus,
+      onlineStatus: driver.onlineStatus,
+      vehicleType: driver.vehicleType,
+      vehicleModel: driver.vehicleModel,
+      vehicleColor: driver.vehicleColor,
+      vehiclePlate: driver.vehiclePlate,
+      totalTrips: driver.totalTrips,
+      rating: driver.rating,
+      currentLocation: driver.currentLocation,
+      lastActiveAt: driver.lastActiveAt,
+      createdAt: driver.createdAt,
+      updatedAt: driver.updatedAt,
+    };
   }
 
-    
   async updateDriver(userId: string, updateDto: UpdateDriverDto): Promise<DriverResponseDto> {
     const driver = await this.driverRepository.findOne({
       where: { userId },
@@ -61,133 +133,166 @@ export class DriverService {
     Object.assign(driver, updateDto);
     await this.driverRepository.save(driver);
 
-    return driver as DriverResponseDto;
+    return {
+      id: driver.id,
+      userId: driver.userId,
+      fullName: driver.fullName,
+      email: driver.email,
+      phone: driver.phone,
+      avatar: driver.avatar,
+      accountStatus: driver.accountStatus,
+      onlineStatus: driver.onlineStatus,
+      vehicleType: driver.vehicleType,
+      vehicleModel: driver.vehicleModel,
+      vehicleColor: driver.vehicleColor,
+      vehiclePlate: driver.vehiclePlate,
+      totalTrips: driver.totalTrips,
+      rating: driver.rating,
+      currentLocation: driver.currentLocation,
+      lastActiveAt: driver.lastActiveAt,
+      createdAt: driver.createdAt,
+      updatedAt: driver.updatedAt,
+    };
   }
 
   async updateLocation(userId: string, locationDto: DriverLocationDto): Promise<void> {
-  // 1. Lưu vào Redis GEO
-  await this.redisService.setDriverLocation(
-    userId,
-    locationDto.latitude,
-    locationDto.longitude,
-  );
-
-  // 2. Lưu driver status vào Redis
-  const redisClient = this.redisService.getClient();
-  await redisClient.setex(
-    `driver:status:${userId}`,
-    3600, // 1 hour
-    'online'
-  );
-
-  // 3. Cập nhật trong PostgreSQL
-  await this.driverRepository.update(
-    { userId },
-    { 
-      currentLocation: {
-        lat: locationDto.latitude,
-        lng: locationDto.longitude,
-        updatedAt: new Date(),
-      },
-      lastActiveAt: new Date() 
-    },
-  );
-
-  this.logger.log(`📍 Driver ${userId} location updated in Redis GEO`);
-}
-
-async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
-  const driver = await this.driverRepository.findOne({
-    where: { userId },
-  });
-
-  if (!driver) {
-    throw new NotFoundException('Driver not found');
-  }
-
-  let newStatus: DriverStatus;
-  const redisClient = this.redisService.getClient();
-
-  switch (status) {
-    case 'online':
-      newStatus = DriverStatus.ONLINE;
-      await redisClient.setex(`driver:status:${userId}`, 3600, 'online');
-      break;
-    case 'offline':
-      newStatus = DriverStatus.OFFLINE;
-      await redisClient.del(`driver:status:${userId}`);
-      await this.redisService.removeDriverLocation(userId); // Xóa khỏi GEO
-      break;
-    case 'busy':
-      newStatus = DriverStatus.BUSY;
-      await redisClient.setex(`driver:status:${userId}`, 3600, 'busy');
-      break;
-    default:
-      newStatus = driver.status;
-  }
-
-  driver.status = newStatus;
-  await this.driverRepository.save(driver);
-
-  return driver as DriverResponseDto;
-}
-  
-
-  async findNearbyDrivers(
-  latitude: number,
-  longitude: number,
-  radius: number = 5000,
-): Promise<any[]> {
-  try {
-    this.logger.log(`Finding nearby drivers at (${latitude}, ${longitude}) within ${radius}m`);
-
-    // 1. Tìm tài xế gần nhất trong Redis GEO
-    const nearbyDrivers = await this.redisService.getNearbyDrivers(
-      latitude,
-      longitude,
-      radius,
+    await this.redisService.setDriverLocation(
+      userId,
+      locationDto.latitude,
+      locationDto.longitude,
     );
 
-    this.logger.log(`Found ${nearbyDrivers.length} drivers in Redis`);
+    const redisClient = this.redisService.getClient();
+    await redisClient.setex(`driver:status:${userId}`, 3600, 'online');
 
-    if (nearbyDrivers.length === 0) {
-      this.logger.log('No drivers found in Redis');
-      return []; // Trả về mảng rỗng, không throw error
-    }
+    await this.driverRepository.update(
+      { userId },
+      { 
+        currentLocation: {
+          lat: locationDto.latitude,
+          lng: locationDto.longitude,
+          updatedAt: new Date(),
+        },
+        lastActiveAt: new Date() 
+      },
+    );
 
-    // 2. Lấy thông tin chi tiết của các tài xế từ PostgreSQL
-    const driverIds = nearbyDrivers.map(d => d.driverId);
-    
-    const drivers = await this.driverRepository
-      .createQueryBuilder('driver')
-      .where('driver.userId IN (:...driverIds)', { driverIds })
-      .andWhere('driver.status = :status', { status: DriverStatus.ONLINE })
-      .getMany();
+    this.logger.log(`📍 Driver ${userId} location updated`);
+  }
 
-    this.logger.log(`Found ${drivers.length} active drivers in database`);
-
-    // 3. Kết hợp thông tin từ Redis và PostgreSQL
-    const result = drivers.map(driver => {
-      const redisInfo = nearbyDrivers.find(d => d.driverId === driver.userId);
-      return {
-        driverId: driver.userId,
-        fullName: driver.fullName,
-        vehicleType: driver.vehicleType,
-        vehicleModel: driver.vehicleModel,
-        vehicleColor: driver.vehicleColor,
-        vehiclePlate: driver.vehiclePlate,
-        rating: driver.rating,
-        distance: redisInfo ? redisInfo.distance : null, // Trả về meters
-      };
+  async updateOnlineStatus(userId: string, status: string): Promise<DriverResponseDto> {
+    const driver = await this.driverRepository.findOne({
+      where: { userId },
     });
 
-    // Sắp xếp theo khoảng cách tăng dần
-    return result.sort((a, b) => (a.distance || 0) - (b.distance || 0));
-  } catch (error) {
-    this.logger.error(`Error finding nearby drivers: ${error.message}`);
-    return []; // Luôn trả về mảng rỗng thay vì throw
+    if (!driver) {
+      throw new NotFoundException('Driver not found');
+    }
+
+    if (driver.accountStatus !== DriverAccountStatus.ACTIVE) {
+      throw new BadRequestException('Tài khoản tài xế chưa được duyệt. Vui lòng chờ admin xác nhận.');
+    }
+
+    let newOnlineStatus: DriverOnlineStatus;
+    const redisClient = this.redisService.getClient();
+
+    switch (status) {
+      case 'online':
+        newOnlineStatus = DriverOnlineStatus.ONLINE;
+        await redisClient.setex(`driver:status:${userId}`, 3600, 'online');
+        break;
+      case 'offline':
+        newOnlineStatus = DriverOnlineStatus.OFFLINE;
+        await redisClient.del(`driver:status:${userId}`);
+        await this.redisService.removeDriverLocation(userId);
+        break;
+      case 'busy':
+        newOnlineStatus = DriverOnlineStatus.BUSY;
+        await redisClient.setex(`driver:status:${userId}`, 3600, 'busy');
+        break;
+      default:
+        newOnlineStatus = driver.onlineStatus;
+    }
+
+    driver.onlineStatus = newOnlineStatus;
+    await this.driverRepository.save(driver);
+
+    this.logger.log(`Driver ${userId} online status updated to ${newOnlineStatus}`);
+
+    return {
+      id: driver.id,
+      userId: driver.userId,
+      fullName: driver.fullName,
+      email: driver.email,
+      phone: driver.phone,
+      avatar: driver.avatar,
+      accountStatus: driver.accountStatus,
+      onlineStatus: driver.onlineStatus,
+      vehicleType: driver.vehicleType,
+      vehicleModel: driver.vehicleModel,
+      vehicleColor: driver.vehicleColor,
+      vehiclePlate: driver.vehiclePlate,
+      totalTrips: driver.totalTrips,
+      rating: driver.rating,
+      currentLocation: driver.currentLocation,
+      lastActiveAt: driver.lastActiveAt,
+      createdAt: driver.createdAt,
+      updatedAt: driver.updatedAt,
+    };
   }
-}
+
+  async findNearbyDrivers(
+    latitude: number,
+    longitude: number,
+    radius: number = 5000,
+  ): Promise<any[]> {
+    try {
+      this.logger.log(`Finding nearby drivers at (${latitude}, ${longitude}) within ${radius}m`);
+
+      const nearbyDrivers = await this.redisService.getNearbyDrivers(
+        latitude,
+        longitude,
+        radius,
+      );
+
+      this.logger.log(`Found ${nearbyDrivers.length} drivers in Redis`);
+
+      if (nearbyDrivers.length === 0) {
+        return [];
+      }
+
+      const driverIds = nearbyDrivers.map(d => d.driverId);
+      
+      const drivers = await this.driverRepository
+        .createQueryBuilder('driver')
+        .where('driver.userId IN (:...driverIds)', { driverIds })
+        .andWhere('driver.accountStatus = :accStatus', { accStatus: DriverAccountStatus.ACTIVE })
+        .andWhere('driver.onlineStatus = :onlineStatus', { onlineStatus: DriverOnlineStatus.ONLINE })
+        .getMany();
+
+      this.logger.log(`Found ${drivers.length} active drivers in database`);
+
+      const result = drivers.map(driver => {
+        const redisInfo = nearbyDrivers.find(d => d.driverId === driver.userId);
+        return {
+          driverId: driver.userId,
+          fullName: driver.fullName,
+          vehicleType: driver.vehicleType,
+          vehicleModel: driver.vehicleModel,
+          vehicleColor: driver.vehicleColor,
+          vehiclePlate: driver.vehiclePlate,
+          rating: driver.rating,
+          distance: redisInfo ? redisInfo.distance : null,
+        };
+      });
+
+      return result.sort((a, b) => (a.distance || 0) - (b.distance || 0));
+    } catch (error) {
+      this.logger.error(`Error finding nearby drivers: ${error.message}`);
+      return [];
+    }
+  }
+
   async getOnlineDriversCount(): Promise<number> {
     try {
       const redisClient = this.redisService.getClient();
@@ -207,5 +312,17 @@ async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
     } catch (error) {
       return false;
     }
+  }
+
+  async createDriver(data: any) {
+    const driver = this.driverRepository.create({
+      userId: data.userId,
+      email: data.email,
+      fullName: data.fullName,
+      phone: data.phone,
+      accountStatus: DriverAccountStatus.PENDING,
+      onlineStatus: DriverOnlineStatus.OFFLINE,
+    });
+    return this.driverRepository.save(driver);
   }
 }
