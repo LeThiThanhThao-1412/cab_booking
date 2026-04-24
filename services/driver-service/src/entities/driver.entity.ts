@@ -9,7 +9,7 @@ import {
 
 export enum DriverStatus {
   PENDING_APPROVAL = 'pending_approval',
-  ACTIVE = 'active',
+  ONLINE = 'active',
   INACTIVE = 'inactive',
   SUSPENDED = 'suspended',
   BUSY = 'busy',

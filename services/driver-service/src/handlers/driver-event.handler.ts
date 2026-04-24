@@ -30,8 +30,8 @@ export class DriverEventHandler implements OnModuleInit {
           await this.handleEvent(msg);
         },
         {
-          exchange: 'driver.exchange',
-          routingKey: 'driver.approved',
+          exchange: 'auth.events',
+          routingKey: 'auth.user.registered',
         },
       );
 
@@ -62,7 +62,7 @@ export class DriverEventHandler implements OnModuleInit {
       email,
       fullName,
       phone,
-      status: DriverStatus.ACTIVE,
+      status: DriverStatus.ONLINE,
     });
 
     await this.driverRepository.save(driver);

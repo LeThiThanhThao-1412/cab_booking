@@ -1,9 +1,9 @@
 {
   "baseMultiplier": 1,
-  "demandWeight": 0.74,
-  "supplyWeight": 0.72,
-  "peakHourBonus": 1.27,
-  "weekendBonus": -0.38,
-  "sampleCount": 19,
-  "trainedAt": "2026-04-23T20:24:51.927Z"
+  "demandWeight": 0.66,
+  "supplyWeight": 0.45,
+  "peakHourBonus": 1.22,
+  "weekendBonus": 0.22,
+  "sampleCount": 9,
+  "trainedAt": "2026-04-24T11:00:04.459Z"
 }

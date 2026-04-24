@@ -110,7 +110,7 @@ async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
 
   switch (status) {
     case 'online':
-      newStatus = DriverStatus.ACTIVE;
+      newStatus = DriverStatus.ONLINE;
       await redisClient.setex(`driver:status:${userId}`, 3600, 'online');
       break;
     case 'offline':
@@ -161,7 +161,7 @@ async updateStatus(userId: string, status: string): Promise<DriverResponseDto> {
     const drivers = await this.driverRepository
       .createQueryBuilder('driver')
       .where('driver.userId IN (:...driverIds)', { driverIds })
-      .andWhere('driver.status = :status', { status: DriverStatus.ACTIVE })
+      .andWhere('driver.status = :status', { status: DriverStatus.ONLINE })
       .getMany();
 
     this.logger.log(`Found ${drivers.length} active drivers in database`);
