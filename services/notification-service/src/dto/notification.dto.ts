@@ -56,6 +56,10 @@ export class SendBulkNotificationDto {
   @IsOptional()
   @IsEnum(NotificationChannel)
   channel?: NotificationChannel;
+
+  @IsOptional()
+  @IsEnum(NotificationPriority)  // ← THÊM DÒNG NÀY
+  priority?: NotificationPriority;  // ← THÊM DÒNG NÀY
 }
 
 export class MarkAsReadDto {

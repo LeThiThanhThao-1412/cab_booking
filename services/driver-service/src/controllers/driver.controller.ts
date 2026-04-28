@@ -14,6 +14,7 @@ import { DriverService } from '../services/driver.service';
 import { UpdateDriverDto, DriverLocationDto, UpdateStatusDto, DriverResponseDto } from '../dto/driver.dto';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { RABBITMQ_EXCHANGES, RabbitMQService, RedisService, ROUTING_KEYS } from '@cab-booking/shared';
+import axios from 'axios';
 
 @Controller('drivers')
 @UseGuards(JwtAuthGuard)
@@ -41,14 +42,9 @@ export class DriverController {
       throw new BadRequestException('Không tìm thấy yêu cầu cuốc xe hoặc đã hết hạn!');
     }
 
-    let bookingData;
-    try {
-      bookingData = typeof currentBookingRaw === 'string' 
-        ? JSON.parse(currentBookingRaw) 
-        : currentBookingRaw;
-    } catch (e) {
-      bookingData = currentBookingRaw;
-    }
+    const bookingData = typeof currentBookingRaw === 'string' 
+      ? JSON.parse(currentBookingRaw) 
+      : currentBookingRaw;
 
     const { bookingId } = bookingData;
 
@@ -66,10 +62,50 @@ export class DriverController {
 
     await redisClient.del(`driver:current:${driverId}`);
 
+    // ============ CHỜ RIDE ĐƯỢC TẠO VÀ LẤY RIDE ID ============
+    const rideId = await this.waitForRideCreation(driverId, bookingId);
+
     return { 
       message: 'Đã nhận chuyến thành công',
-      rideId: bookingId 
+      bookingId: bookingId,
+      rideId: rideId || 'đang được tạo...',
     };
+  }
+
+  // ============ HELPER: CHỜ RIDE SERVICE TẠO RIDE ============
+  private async waitForRideCreation(driverId: string, bookingId: string): Promise<string | null> {
+    const rideServiceUrl = process.env.RIDE_SERVICE_URL || 'http://localhost:3005';
+    const internalKey = process.env.INTERNAL_API_KEY || 'internal-key';
+    const maxRetries = 15;
+    const retryDelay = 300;
+
+    for (let i = 0; i < maxRetries; i++) {
+      await new Promise(resolve => setTimeout(resolve, retryDelay));
+      
+      try {
+        const response = await axios.get(
+          `${rideServiceUrl}/api/v1/internal/rides/driver/${driverId}/active`,
+          {
+            headers: {
+              'x-service-id': 'driver-service',
+              'x-internal-key': internalKey,
+            },
+            timeout: 3000,
+          }
+        );
+        
+        const ride = response.data;
+        if (ride && ride.bookingId === bookingId) {
+          this.logger.log(`✅ Ride created: ${ride.id} for booking ${bookingId}`);
+          return ride.id;
+        }
+      } catch (error) {
+        this.logger.debug(`⏳ Đợi ride... (${i + 1}/${maxRetries})`);
+      }
+    }
+
+    this.logger.warn(`⚠️ Không tìm thấy ride sau ${maxRetries} lần thử`);
+    return null;
   }
 
   @Get('profile')

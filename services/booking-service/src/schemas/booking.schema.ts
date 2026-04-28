@@ -20,9 +20,12 @@ export enum VehicleType {
 }
 
 export enum PaymentMethod {
-  CASH = 'cash',
-  CARD = 'card',
-  WALLET = 'wallet',
+  CASH = 'cash',                 // Tiền mặt
+  CARD = 'card',                 // Thẻ ngân hàng
+  WALLET = 'wallet',             // Ví điện tử
+  MOMO = 'momo',                 // MoMo
+  ZALOPAY = 'zalopay',           // ZaloPay
+  VNPAY = 'vnpay',               // VNPay
 }
 
 export interface Location {

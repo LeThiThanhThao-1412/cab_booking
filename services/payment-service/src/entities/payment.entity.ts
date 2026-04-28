@@ -6,7 +6,7 @@ import {
   UpdateDateColumn,
   Index 
 } from 'typeorm';
-import { PaymentStatus, PaymentMethod, TransactionType } from '../enums/payment.enum';
+import { PaymentStatus, TransactionType } from '../enums/payment.enum';
 
 // Định nghĩa interface cho metadata
 export interface PaymentMetadata {
@@ -21,6 +21,7 @@ export interface PaymentMetadata {
   refundTransactionId?: string;
   couponDiscount?: number;
   promotionId?: string;
+  error?: string;
 }
 
 @Entity('payments')
@@ -57,8 +58,8 @@ export class Payment {
   @Column('decimal', { precision: 10, scale: 0, default: 0 })
   finalAmount: number;
 
-  @Column({ type: 'enum', enum: PaymentMethod })
-  method: PaymentMethod;
+  @Column({ type: 'varchar' })  // ← SỬA TỪ 'enum' THÀNH 'varchar'
+  method: string;               // ← SỬA TỪ PaymentMethod THÀNH string
 
   @Column({ type: 'enum', enum: PaymentStatus, default: PaymentStatus.PENDING })
   status: PaymentStatus;
@@ -70,7 +71,7 @@ export class Payment {
   couponCode: string;
 
   @Column('json', { nullable: true })
-  metadata: PaymentMetadata;  // Sử dụng interface thay vì inline type
+  metadata: PaymentMetadata;
 
   @Column({ nullable: true })
   paidAt: Date;

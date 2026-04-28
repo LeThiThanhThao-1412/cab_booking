@@ -4,17 +4,21 @@ import {
   Post,
   Body,
   Param,
-  UseGuards,
 } from '@nestjs/common';
-import { InternalAuthGuard } from '@cab-booking/shared';
 import { PaymentService } from '../services/payment.service';
 import { CreatePaymentDto } from '../dto/payment.dto';
 
 @Controller('internal')
-@UseGuards(InternalAuthGuard)
 export class InternalController {
   constructor(private readonly paymentService: PaymentService) {}
 
+  // Tạo payment record PENDING (gọi từ Booking Service)
+  @Post('create')
+  async createPayment(@Body() createDto: CreatePaymentDto) {
+    return this.paymentService.createPaymentRecord(createDto);
+  }
+
+  // Xử lý thanh toán thật (gọi từ Ride Service khi hoàn thành)
   @Post('process')
   async processPayment(@Body() createDto: CreatePaymentDto) {
     return this.paymentService.processPayment(createDto);

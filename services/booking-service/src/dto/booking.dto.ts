@@ -10,7 +10,6 @@ import {
   Max,
   ValidateNested,
   IsNotEmpty,
-  IsNumberString,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { VehicleType, PaymentMethod } from '../schemas/booking.schema';
@@ -49,9 +48,9 @@ export class CreateBookingDto {
   @IsEnum(VehicleType)
   vehicleType: VehicleType;
 
-  @IsEnum(PaymentMethod)
+  @IsString()  // ← SỬA THÀNH @IsString() để nhận mọi loại payment method
   @IsOptional()
-  paymentMethod?: PaymentMethod;
+  paymentMethod?: string;
   
   @IsOptional()
   @IsNumber()
@@ -108,7 +107,7 @@ export class UpdateLocationDto {
 export class BookingResponseDto {
   id: string;
   customerId: string;
-  driverId?: string;
+  driverId?: string | null;
   pickupLocation: LocationDto;
   dropoffLocation: LocationDto;
   waypoints?: LocationDto[];
@@ -119,11 +118,16 @@ export class BookingResponseDto {
   duration?: number;
   paymentMethod: string;
   estimatedPrice?: any;
-  pickupTime?: Date;
-  startTime?: Date;
-  endTime?: Date;
+  pickupTime?: Date | null;
+  startTime?: Date | null;
+  endTime?: Date | null;
   trackingPath?: any[];
   cancellation?: any;
+  payment?: {                   // ← THÊM FIELD NÀY
+    id: string | null;
+    status: string;
+    amount: number;
+  } | null;
   createdAt: Date;
   updatedAt: Date;
 }

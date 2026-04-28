@@ -1,21 +1,22 @@
-import { IsString, IsNumber, IsEnum, IsOptional, IsUUID, Min, Max } from 'class-validator';
+import { IsString, IsNumber, IsEnum, IsOptional, Min } from 'class-validator';
 import { PaymentMethod } from '../enums/payment.enum';
 
 export class CreatePaymentDto {
-  @IsUUID()
+  @IsString()
   rideId: string;
 
-  @IsUUID()
+  @IsString()
   bookingId: string;
 
-  @IsUUID()
+  @IsString()
   customerId: string;
 
-  @IsUUID()
-  driverId: string;
+  @IsString()
+  @IsOptional()
+  driverId?: string;  // Cho phép rỗng vì lúc tạo booking chưa có driver
 
   @IsNumber()
-  @Min(1000)
+  @Min(0)
   amount: number;
 
   @IsNumber()
@@ -23,11 +24,11 @@ export class CreatePaymentDto {
   discountAmount: number;
 
   @IsNumber()
-  @Min(1000)
+  @Min(0)
   finalAmount: number;
 
-  @IsEnum(PaymentMethod)
-  method: PaymentMethod;
+  @IsString()  // Sửa từ @IsEnum thành @IsString để nhận cả string
+  method: string;
 
   @IsOptional()
   @IsString()
